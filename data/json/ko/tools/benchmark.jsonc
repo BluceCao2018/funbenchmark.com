@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Reaction Time",
+        "description": "Test your visual reflexes",
+        "url": "/tests/reactiontime",
+        "icon":"FaClock"
+    },
+    {
+        "name": "Sequence Memory",
+        "description": "Remember an increasingly long pattern of button presses.",
+        "url": "/tests/sequence",
+        "icon": "FaList"
+    },
+    {
+        "name": "Aim Trainer",
+        "description": "How quickly can you hit all the targets?",
+        "url": "/tests/aim",
+        "icon": "FaBullseye"
+    },
+    {
+        "name": "Number Memory",
+        "description": "Remember the longest number you can.",
+        "url": "/tests/number-memory",
+        "icon": "FaHashtag"
+    },
+    {
+        "name": "Verbal Memory",
+        "description": "Keep as many words in short term memory as possible",
+        "url": "/tests/verbal-memory",
+        "icon": "FaComment"
+    },
+    {
+        "name": "Chimp Test",
+        "description": "Are you smater than a chimpanzee?",
+        "url": "/tests/chimp",
+        "icon": "FaQuestion"
+    },
+    {
+        "name": "Typing",
+        "description": "How many words per minute can you type?",
+        "url": "/tests/typing",
+        "icon": "FaKeyboard"
+    }
+]

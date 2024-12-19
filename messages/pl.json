@@ -1,0 +1,242 @@
+{
+  "website":{
+    "domain": "https://funbenchmark.com"
+  },
+  "home": {
+    "meta_title": "Fun Benchmark-Measure your ability with Reaction Time Test",
+    "meta_description": "Fun Benchmark is a professional tool that provides brain games and cognitive tests to help you measure your abilities such as reaction time and sequence memory.",
+    "h2": "Fun Benchmark",
+    "description": "Measure your ability with brain games and cognitive tests on Fun Benchmark"
+  },
+  "category": {
+    "meta_title": "Category｜All the Test tools you want are on ",
+    "meta_description": "You can look for the Test tools you need according to categories",
+    "homeBtn": "Home",
+    "categoryBtn": "Category",
+    "h1": "Test Tools Category",
+    "h2": "Find Every Test Tools You Need Here",
+    "h2description": "All Test tools are sorted alphabetically"
+  },
+  "article": {
+    "meta_title": "Article｜All the AI tools you want are on ",
+    "meta_description": "By reading these articles on AI Kratom, you can quickly acquire knowledge about AI tools and at the same time, it will help you choose the appropriate AI tools.",
+    "h1": "Articles",
+    "h2": "Read More Articles About AI Tools And Choose The Appropriate AI Tools For You",
+    "homeBtn": "Home",
+    "articleBtn": "Article",
+    "backToArticles": "Back to articles"
+  },
+  "changelog": {
+    "meta_title": "Changelog",
+    "meta_description": "Stay up to date with the latest updates in DevToolset.net",
+    "h1": "Changelog",
+    "h2": "Stay up to date with the latest updates in DevToolset.net",
+    "homeBtn": "Home",
+    "changelogBtn": "Changelog"
+  },
+  "tools": {
+    "meta_description": "Find Every Essential Developer Tools You Need For Your Development Journey",
+    "h2_1": "All AI tools related to",
+    "h2_2": "",
+    "homeBtn": "Home"
+  },
+  "search": {
+    "input_placeholder": "Search tools by name / tags...",
+    "heading": "Suggestions",
+    "more": "More",
+    "button": "Search"
+  },
+  "navigation": {
+    "homeBtn": "Home",
+    "categoryBtn": "Category",
+    "moreCategoryBtn": "More",
+    "moreCategoryDescription": "More Categories",
+    "articleBtn": "Article",
+    "articleDescription": "Discover The Best & Most Popular AI Tools With The AI Kratom ",
+    "article1Title": "One AI Directory Navigator That Understand You!",
+    "article2Title": "Deploy your own DevToolset",
+    "moreArticleBtn": "More",
+    "moreArticleDescription": "More articles",
+    "changelogBtn": "Changelog",
+    "submitToolBtn": "Submit Tool",
+    "aboutBtn": "About"
+  },
+  "footer": {
+    "description": "Measure your ability with brain games and cognitive tests on Fun Benchmark",
+    "builtWith": "Built with",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "category": "Category",
+    "article": "Article",
+    "changelog": "Changelog",
+    "privacy": "Privacy",
+    "termsOfService": "Terms of Service",
+    "legal": "Legal",
+    "connect": "Connect",
+    "support": "Support",
+    "copyright": "All rights reserved."
+  },
+  "toolsList": {
+    "more": "More",
+    "tools": "tools"
+  },
+  "articleList": {
+    "h2": "Articles",
+    "moreArticles": "More articles"
+  },
+  "about": {
+    "meta_title": "AI Kratom AI Tools Directory - Explore the Boundless World of AI",
+    "meta_description": "In today's era of rapid digital development, Artificial Intelligence (AI) has become an integral part of all fields and a powerful force driving innovation and change. To help you explore, discover and use the many excellent AI tools more conveniently, AI Kratom has carefully created this AI tools directory site.",
+    "h1": "About AI Kratom",
+    "h2": "About AI Kratom",
+    "homeBtn": "Home",
+    "aboutBtn": "About"
+  },
+  "reactionTime": {
+    "meta_title": "Reaction Time Test-Test your visual reflexes",
+    "meta_description": "The Reaction Time Test is a free online tool that accurately measures your response speed to visual,When the red box turns greeen,click as quickly as you can.",
+    "h1":"Reaction Time Test",
+    "h2":"",
+    "description":"When the red box turns greeen,click as quickly as you can.<br/>Click anywhere to start.",
+    "clickToStart": "Click to Start",
+    "waitForGreen": "Wait for Green",
+    "tooSoon":"Too Soon",
+    "clickToTryAgain": "Click to try again.",
+    "click": "Click!",
+    "reactionTime": "Reaction Time",
+    "tryAgain":"Try again",
+    "statisticsTitle": "Reaction Time Test Statistics",
+    "aboutTitle": "About The Reaction Time Test",
+    "about": "Reaction Time Test is a simple tool specifically designed to measure your Reaction Time. The average Reaction Time is 273 ms, according to the data collected so far. In addition to precisely measuring your Reaction Time, this test is affected by the latency of your computer and monitor.  Scores in this Reaction Time Test are faster than the aim trainer test, because you can react instantly without moving the cursor. This is discussed in further detail on the the statistics page about Reaction Time. While an average Reaction Time may fall between 200 - 250ms, your computer could be adding 10 - 50ms on top. If you want, you can keep track of your scores, and see your full history of Reaction Time Test. Just perform at least 5 clicks and then save to record your Reaction Time Test data."
+  },
+  "sequence": {
+    "meta_title": "Sequence Memory Test",
+    "meta_description": "The Sequence Memory Test assesses your ability to recall sequences of numbers, colors, or shapes, and it‘s a valuable tool for measuring short-term memory.",
+    "h1":"",
+    "h2":"Sequence Memory Test",
+    "description":"Memorize the pattern.",
+    "clickToStart": "Start",
+    "restart":"Restart",
+    "review":"Review",
+    "sequenceMemory":"Sequence Memory",
+    "statisticsTitle": "Sequence Memory Test Statistics",
+    "aboutTitle": "About Sequence Memory Test",
+    "about": "Sequence Memory Test is a valuable tool for measuring short-term memory.<br/>Memorize the sequence of buttons that light up, then press them in order.<br/>Every time you finish the pattern, it gets longer.<br/>Make a mistake, and the test is over."
+  },
+  "aim": {
+    "meta_title": "Aim Trainer-test your aiming reaction time",
+    "meta_description": "Aim Trainer can test your aiming reaction time. With the help of it, you can improve your aiming skills so as to achieve rapid and precise aiming.",
+    "h1":"",
+    "h2":"Aim Trainer",
+    "description":"Hit 30 targets as quickly as you can.<br/>Click the target above to begin",
+    "clickToStart": "Click to Start",
+    "tryAgain":"Try again",
+    "statisticsTitle": "Aim Trainer Statistics",
+    "aboutTitle": "About Aim Trainer",
+    "about":"Click the targets as quickly and accurately as you can.<br/>This tests reflexes and hand-eye coordination.<br/>Once you've clicked 30 targets, your score and average time per target will be displayed.<br/>This test is best taken with a mouse or tablet screen. Trackpads are difficult to score well with."
+  },
+  "numberMemory": {
+    "meta_title": "Number Memory Test",
+    "meta_description": "The average person can remember 7 numbers at onece.Can you do more?",
+    "h1":"",
+    "h2":"Number Memory Test",
+    "description":"The average person can remember 7 numbers at onece.Can you do more?",
+    "clickToStart": "Start",
+    "remaindTitle": "What was the number?",
+    "remaindDescription": "Press enter to submit",
+    "submit":"Submit",
+    "number":"Number",
+    "youAnswer":"Your answer",
+    "level":"Level",
+    "tryAgain":"Try again",
+    "statisticsTitle": "Number Memory Test Statistics",
+    "aboutTitle":"About Number Memory Test",
+    "about":"The average person can only remember 7 digit numbers reliably, but it's possible to do much better using mnemonic techniques. "
+  },
+  "memory": {
+    "meta_title": "Visual Memory Test",
+    "meta_description": "Memorize the squares",
+    "h1":"",
+    "h2":"Visual Memory Test",
+    "description":"Memorize the squares.",
+    "clickToStart": "Start",
+    "level":"Level",
+    "tryAgain":"Try again",
+    "statisticsTitle": "Visual Memory Test Statistics",
+    "aboutTitle":"About Visual Memory Test",
+    "about":"Every level, a number of tiles will flash white. Memorize them, and pick them again after the tiles are reset!<br/>Levels get progressively more difficult, to challenge your skills.<br/>If you miss 3 tiles on a level, you lose one life.<br/>You have three lives.<br/>Make it as far as you can!"
+  },
+  "verbalMemory": {
+    "meta_title": "Verbal Memory Test",
+    "meta_description": "You will be shown words, one at a time.",
+    "h1":"",
+    "h2":"Verbal Memory Test",
+    "description":"You will be shown words, one at a time.If you've seen a word during the test, click SEEN. If it's a new word, click NEW.",
+    "clickToStart": "Start",
+    "new":"NEW",
+    "seen":"SEEN",
+    "level":"Level",
+    "tryAgain":"Try again",
+    "statisticsTitle": "Verbal Memory Test Statistics",
+    "aboutTitle":"About Verbal Memory Test",
+    "about":"This test measures how many words you can keep in short term memory at once.<br/>The number of words you need to remember grows continually, until you can't keep them in your head anymore.<br/>Go as long as you can. You have 3 strikes until game over.<br/>Your score is how many turns you lasted."
+  },
+  "climp": {
+    "meta_title": "Chimp Test-Are You Smarter Than a Climp?",
+    "meta_description": "Climp Test，Click the squares in order according to their numbers.The test will get progressively harder.",
+    "h1":"Chimpanzee Test",
+    "h2":"Chimpanzee Test<br/>Are You Smarter Than a Chimpanzee?",
+    "description":"Click the squares in order according to their numbers.<br/>The Chimpanzee Test will get progressively harder.",
+    "start": "Start",
+    "score":"Score",
+    "tryAgain":"Try again",
+    "statisticsTitle": "Chimpanzee Test Statistics",
+    "aboutTitle": "About Chimpanzee Test",
+    "about":"Chimpanzee Test is a test of working memory, made famous by a study that found that chimpanzees consistently outperform humans on this task.<br/>In the study, the chimps consistently outperformed humans, and some chimps were able to remember 9 digits over 90% of the time.<br/>This Chimpanzee Test is a variant of that concept, that gets increasingly difficult every turn, starting at 4 digits, and adding one every turn. If you pass a level, the number increases. If you fail, you get a strike. Three strikes and the test is over."
+  },
+  "typing": {
+    "meta_title": "Typing Test",
+    "meta_description": "This test measures your typing speed in words per minute. It's a simple and effective way to gauge your typing efficiency. The test will display your typing speed, and you can try multiple times to see your average performance.",
+    "h1":"",
+    "h2":"Typing Test",
+    "description":"How many words per minute can you type?",
+    "clickToStart": "Start",
+    "tryAgain":"Try again",
+    "errors":"Errors",
+    "time":"Time",
+    "statisticsTitle": "Typing Test Statistics",
+    "aboutTitle": "About Typing Test",
+    "about": "Typing Test measures your typing speed in words per minute. It's a simple and effective way to gauge your typing efficiency. The test will display your typing speed, and you can try multiple times to see your average performance.",
+    "sentences":[
+      "The quick brown fox jumps over the lazy dog, while nearby birds chirp melodiously in the morning sun. The gentle breeze rustles through the autumn leaves, creating a symphony of natural sounds. A curious squirrel watches from a nearby oak tree, its tiny paws clutching an acorn. The peaceful scene unfolds in the quiet countryside, where time seems to slow down and nature's beauty takes center stage.",
+  
+      "Programming is the art of telling another human what one wants the computer to do, but it's also about solving complex problems through logical thinking and creative solutions. Writing clean, maintainable code requires careful consideration of future developers who will read and modify it. The best programmers understand that clarity and simplicity are just as important as functionality, and that documentation is an essential part of the development process.",
+  
+      "Success is not final, failure is not fatal: it is the courage to continue that counts. Every setback provides an opportunity to learn and grow stronger, while every achievement serves as a stepping stone to greater challenges. The true measure of character lies not in how many times we succeed, but in how we respond to adversity and keep moving forward despite obstacles. Persistence and determination are more powerful than talent alone.",
+  
+      "In the middle of difficulty lies opportunity, and those who persevere through challenges often discover hidden strengths they never knew they possessed. Every obstacle presents a chance to learn, adapt, and improve, shaping us into more resilient and capable individuals. The greatest achievements in history have often emerged from periods of significant hardship, proving that adversity can be a powerful catalyst for innovation and personal growth.",
+  
+      "The only way to do great work is to love what you do and approach each task with passion and dedication. When we find purpose in our work, even the most challenging projects become opportunities for growth and creativity. True excellence comes from combining skill with genuine enthusiasm, pushing boundaries, and constantly striving to improve. Success follows naturally when we pursue our goals with both heart and mind fully engaged.",
+      "Technology continues to reshape our daily lives in ways we could never have imagined just a few decades ago. From artificial intelligence and machine learning to virtual reality and quantum computing, innovations are transforming how we work, communicate, and solve problems. As we embrace these advancements, it becomes increasingly important to consider their ethical implications and ensure that technological progress serves humanity's best interests while protecting individual privacy and promoting social equality.",
+  
+      "The human mind's capacity for learning and adaptation is truly remarkable, constantly forming new neural connections and pathways as we acquire knowledge and skills. Through dedicated practice and persistent effort, we can master complex abilities that once seemed impossible. The brain's plasticity allows us to reshape our capabilities throughout our lives, proving that growth and improvement are always possible with the right mindset and consistent effort.",
+    
+      "Environmental conservation has become one of the most critical challenges facing our global community today. As we witness the effects of climate change, deforestation, and pollution, it becomes increasingly clear that protecting our planet requires immediate and collective action. Every individual's choices and behaviors contribute to the larger picture, from reducing waste and conserving energy to supporting sustainable practices and environmental initiatives.",
+    
+      "The art of effective communication involves not just speaking clearly, but also listening actively and empathetically to others' perspectives. Building strong relationships, whether personal or professional, depends on our ability to understand and respond thoughtfully to different viewpoints. The most successful communicators know that genuine connection comes from creating an atmosphere of trust, respect, and open dialogue.",
+    
+      "Scientific discovery has always been driven by human curiosity and the desire to understand the world around us. From the smallest subatomic particles to the vast expanses of space, researchers continue to uncover new mysteries and challenge our existing knowledge. Each breakthrough brings us closer to understanding our place in the universe while raising new questions that inspire further exploration.",
+    
+      "Cultural diversity enriches our global society by bringing together different perspectives, traditions, and ways of thinking. When we embrace and celebrate these differences, we create opportunities for innovation, creativity, and mutual understanding. Learning from other cultures broadens our horizons, challenges our assumptions, and helps us develop a more inclusive and empathetic worldview.",
+    
+      "Leadership in the modern world requires a delicate balance of confidence and humility, vision and adaptability, decisiveness and collaboration. Effective leaders understand that their success depends not just on their own abilities, but on their capacity to inspire and empower others. They create environments where innovation flourishes, team members feel valued, and shared goals drive collective achievement.",
+    
+      "The digital revolution has transformed how we access and share information, creating unprecedented opportunities for learning and connection. With vast knowledge available at our fingertips, the challenge becomes not finding information, but developing the critical thinking skills to evaluate and apply it effectively. Digital literacy has become essential for navigating our increasingly connected world.",
+    
+      "Creative expression, whether through art, music, writing, or other forms, allows us to explore and communicate the full range of human experience. It serves as both a personal outlet and a universal language that transcends cultural boundaries. When we engage in creative activities, we develop new perspectives, process emotions, and contribute to the rich tapestry of human culture.",
+    
+      "Building resilience involves developing the mental and emotional strength to face challenges, adapt to change, and recover from setbacks. It's not about avoiding difficulties, but rather learning to navigate them with grace and determination. Through experience and self-reflection, we can cultivate the inner resources needed to maintain balance and optimism in the face of adversity."
+    ]
+
+  }
+}

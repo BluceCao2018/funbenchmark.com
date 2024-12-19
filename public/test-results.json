@@ -1,0 +1,429 @@
+{
+  "reactionTime": [
+    {
+      "timestamp": 1733982868434,
+      "reactionTime": 418,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733982977261,
+      "reactionTime": 492,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733982998598,
+      "reactionTime": 537,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983009656,
+      "reactionTime": 548,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983034859,
+      "reactionTime": 452,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983369814,
+      "reactionTime": 420,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983388781,
+      "reactionTime": 455,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983393429,
+      "reactionTime": 749,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983401793,
+      "reactionTime": 541,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983435822,
+      "reactionTime": 491,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983445817,
+      "reactionTime": 380,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983494630,
+      "reactionTime": 521,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983504492,
+      "reactionTime": 496,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983511269,
+      "reactionTime": 512,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983515055,
+      "reactionTime": 771,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983522304,
+      "reactionTime": 610,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983552252,
+      "reactionTime": 859,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983564810,
+      "reactionTime": 629,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983581740,
+      "reactionTime": 511,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983586414,
+      "reactionTime": 648,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983589898,
+      "reactionTime": 720,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983595734,
+      "reactionTime": 485,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983602620,
+      "reactionTime": 211,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983671199,
+      "reactionTime": 320,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983675359,
+      "reactionTime": 535,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983685871,
+      "reactionTime": 425,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983927364,
+      "reactionTime": 325,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733983943870,
+      "reactionTime": 352,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733984415905,
+      "reactionTime": 392,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1733984558190,
+      "reactionTime": 498,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734076543886,
+      "reactionTime": 888,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734076701140,
+      "reactionTime": 647,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734076814971,
+      "reactionTime": 430,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734076822235,
+      "reactionTime": 398,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734076834881,
+      "reactionTime": 434,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734076858503,
+      "reactionTime": 843,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734077395076,
+      "reactionTime": 200012,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734077402793,
+      "reactionTime": 781,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734077412448,
+      "reactionTime": 414,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734078199442,
+      "reactionTime": 62878,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734078656724,
+      "reactionTime": 356,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734078792934,
+      "reactionTime": 335,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734078824265,
+      "reactionTime": 441,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734079058534,
+      "reactionTime": 29682,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734079076972,
+      "reactionTime": 380,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734079432141,
+      "reactionTime": 367,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734079634146,
+      "reactionTime": 70031,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080367252,
+      "reactionTime": 379,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080381271,
+      "reactionTime": 1020,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080499249,
+      "reactionTime": 550,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080508994,
+      "reactionTime": 2297,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080518622,
+      "reactionTime": 1007,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080525776,
+      "reactionTime": 388,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080606659,
+      "reactionTime": 475,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080612440,
+      "reactionTime": 427,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080619787,
+      "reactionTime": 428,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080624799,
+      "reactionTime": 407,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734080630753,
+      "reactionTime": 360,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734082097687,
+      "reactionTime": 414,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734082102413,
+      "reactionTime": 494,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734248429903,
+      "reactionTime": 1880,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734248488996,
+      "reactionTime": 364,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734248501632,
+      "reactionTime": 355,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734269908857,
+      "reactionTime": 866,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270048034,
+      "reactionTime": 372,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270059678,
+      "reactionTime": 357,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270066963,
+      "reactionTime": 342,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270072755,
+      "reactionTime": 460,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270093716,
+      "reactionTime": 1235,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270130885,
+      "reactionTime": 340,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270138917,
+      "reactionTime": 451,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270142977,
+      "reactionTime": 262,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270158450,
+      "reactionTime": 395,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270289366,
+      "reactionTime": 356,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734270316804,
+      "reactionTime": 516,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734272367422,
+      "reactionTime": 71547,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734321170106,
+      "reactionTime": 934,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734323073384,
+      "reactionTime": 4736,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734323079823,
+      "reactionTime": 1194,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734323106601,
+      "reactionTime": 10640,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734327650717,
+      "reactionTime": 510,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734327666702,
+      "reactionTime": 409,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734328161295,
+      "reactionTime": 207900,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734335189575,
+      "reactionTime": 386,
+      "userId": "anonymous"
+    },
+    {
+      "timestamp": 1734335201079,
+      "reactionTime": 420,
+      "userId": "anonymous"
+    }
+  ]
+}
