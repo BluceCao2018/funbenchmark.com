@@ -4,5 +4,11 @@
     "src": "benchmark.jsonc",
     "link": "benchmark",
     "description": "Measure your ability with brain games and cognitive tests"
+  },
+  {
+    "name": "Color Perception",
+    "src": "color-perception.jsonc",
+    "link": "color-perception",
+    "description": "Test your color perception ability."
   }
 ]

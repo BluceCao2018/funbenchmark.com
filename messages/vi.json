@@ -236,5 +236,17 @@
     "statisticsTitle": "Time Perception Test Statistics",
     "aboutTitle": "About Time Perception Test",
     "about": "Time Perception Test is a test of time perception ability. The Time Perception Test will display your time perception, and you can try multiple times to see your average performance."
+  },
+  "colorPerception": {
+    "meta_title": "Color Perception Test",
+    "meta_description": "Test your color perception ability.",
+    "h1": "",
+    "h2": "Color Perception Test",
+    "description": "Test your color perception ability.",
+    "clickToStart": "Start",
+    "tryAgain": "Try again",
+    "statisticsTitle": "Color Perception Test Statistics",
+    "aboutTitle": "About Color Perception Test",
+    "about": "Color Perception Test is a test of color perception ability. The Color Perception Test will display your color perception, and you can try multiple times to see your average performance."
   }
 }

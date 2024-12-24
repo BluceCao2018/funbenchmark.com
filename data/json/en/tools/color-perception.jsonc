@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Color Perception",
+        "description": "Test your color perception ability.",
+        "url": "/tests/color-perception-test",
+        "icon":"FaPalette"
+    }
+]
