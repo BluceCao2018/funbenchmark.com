@@ -238,5 +238,17 @@
       "Building resilience involves developing the mental and emotional strength to face challenges, adapt to change, and recover from setbacks. It's not about avoiding difficulties, but rather learning to navigate them with grace and determination. Through experience and self-reflection, we can cultivate the inner resources needed to maintain balance and optimism in the face of adversity."
     ]
 
+  },
+  "timePerception": {
+    "meta_title": "Time Perception Test",
+    "meta_description": "Test your time perception ability.Measure the difference between the time you perceive and the actual time.",
+    "h1":"",
+    "h2":"Time Perception Test",
+    "description":"Test your time perception ability.",
+    "clickToStart": "Start",
+    "tryAgain":"Try again",
+    "statisticsTitle": "Time Perception Test Statistics",
+    "aboutTitle": "About Time Perception Test",
+    "about": "Time Perception Test is a test of time perception ability. The Time Perception Test will display your time perception, and you can try multiple times to see your average performance."
   }
 }

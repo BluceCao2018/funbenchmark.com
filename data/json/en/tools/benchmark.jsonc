@@ -40,5 +40,11 @@
         "description": "How many words per minute can you type?",
         "url": "/tests/typing",
         "icon": "FaKeyboard"
+    },
+    {
+        "name": "Time Perception",
+        "description": "Test your time perception ability.",
+        "url": "/tests/time-perception-test",
+        "icon": "FaClock"
     }
 ]
