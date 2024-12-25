@@ -4,5 +4,11 @@
         "description": "Test your color perception ability.",
         "url": "/tests/color-perception-test",
         "icon":"FaPalette"
+    },
+    {
+        "name": "51 Shades of Gray",
+        "description": "Test your ability to distinguish subtle differences in gray shades",
+        "url": "/tests/gray-shades-test",
+        "icon":"FaAdjust"
     }
 ]

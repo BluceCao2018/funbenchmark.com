@@ -111,7 +111,7 @@
   },
   "sequence": {
     "meta_title": "Sequence Memory Test",
-    "meta_description": "The Sequence Memory Test assesses your ability to recall sequences of numbers, colors, or shapes, and it‘s a valuable tool for measuring short-term memory.",
+    "meta_description": "The Sequence Memory Test assesses your ability to recall sequences of numbers, colors, or shapes, and it's a valuable tool for measuring short-term memory.",
     "h1": "",
     "h2": "Sequence Memory Test",
     "description": "Memorize the pattern.",
@@ -248,5 +248,35 @@
     "statisticsTitle": "Color Perception Test Statistics",
     "aboutTitle": "About Color Perception Test",
     "about": "Color Perception Test is a test of color perception ability. The Color Perception Test will display your color perception, and you can try multiple times to see your average performance."
+  },
+  "colorBlindness": {
+    "h2": "Color Blindness Test",
+    "description": "Test your color vision with this Ishihara-style test",
+    "clickToStart": "Start",
+    "question": "Question",
+    "finalScore": "Your Score",
+    "tryAgain": "Try Again",
+    "statisticsTitle": "Color Vision Statistics",
+    "aboutTitle": "About Color Blindness Test",
+    "about": "The Color Blindness Test uses Ishihara-style plates to test for red-green color vision deficiencies. These tests work by hiding numbers or patterns within colored dots that are visible to people with normal color vision but may be difficult or impossible to see for those with color vision deficiencies."
+  },
+  "grayShades": {
+    "meta_title": "51 Shades of Gray Test",
+    "meta_description": "The 51 Shades of Grey Test features 51 gradients of grey. it can test your ability to distinguish subtle differences in gray shades.How many levels can you pass",
+    "h2": "51 Shades of Gray Test",
+    "description": "How many levels can you pass?",
+    "clickToStart": "Start",
+    "level": "Level",
+    "score": "Score",
+    "findDifferent": "Find the square with a slightly different shade",
+    "finalScore": "Final Score",
+    "excellent": "Excellent! You have exceptional gray shade perception!",
+    "good": "Good job! Your gray shade perception is above average.",
+    "average": "Not bad! You have average gray shade perception.",
+    "needPractice": "Keep practicing to improve your gray shade perception.",
+    "tryAgain": "Try Again",
+    "statisticsTitle": "51 Shades of Gray Test Statistics",
+    "aboutTitle": "About 51 Shades of Gray Test",
+    "about": "The 51 Shades of Gray Test measures your ability to distinguish subtle differences in gray shades. As you progress through levels, the differences become increasingly subtle, challenging your eye's ability to detect minor variations in brightness. The 51 Shades of Gray Test is particularly relevant for photographers, designers, and anyone working with grayscale images."
   }
 }
