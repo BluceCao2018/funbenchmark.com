@@ -6,9 +6,21 @@
         "icon":"FaPalette"
     },
     {
-        "name": "51 Shades of Gray",
+        "name": "Shades of Gray",
         "description": "Test your ability to distinguish subtle differences in gray shades",
         "url": "/tests/gray-shades-test",
         "icon":"FaAdjust"
+    },
+    {
+        "name": "51 Shades of Gray",
+        "description": "Test your ability to distinguish subtle differences in gray shades",
+        "url": "/tests/51-gray-shades-test",
+        "icon":"FaAdjust"
+    },
+    {
+        "name": "Color Blindness",
+        "description": "Test your color vision with this Ishihara-style test",
+        "url": "/tests/color-blindness-test",
+        "icon":"FaTrafficLight"
     }
 ]

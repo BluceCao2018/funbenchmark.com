@@ -250,20 +250,53 @@
     "about": "Color Perception Test is a test of color perception ability. The Color Perception Test will display your color perception, and you can try multiple times to see your average performance."
   },
   "colorBlindness": {
+    "meta_title": "Color Blindness Test",
+    "meta_description": "Test your color vision with these Ishihara plates",
+    "h1": "",
     "h2": "Color Blindness Test",
-    "description": "Test your color vision with this Ishihara-style test",
+    "description": "Test your color vision with these Ishihara plates",
     "clickToStart": "Start",
     "question": "Question",
     "finalScore": "Your Score",
     "tryAgain": "Try Again",
-    "statisticsTitle": "Color Vision Statistics",
+    "statisticsTitle": "Color Blindness Test Statistics",
     "aboutTitle": "About Color Blindness Test",
-    "about": "The Color Blindness Test uses Ishihara-style plates to test for red-green color vision deficiencies. These tests work by hiding numbers or patterns within colored dots that are visible to people with normal color vision but may be difficult or impossible to see for those with color vision deficiencies."
+    "about": "The Color Blindness Test uses Ishihara plates to test for color vision deficiencies. These tests work by hiding numbers or patterns within colored dots that are visible to people with normal color vision but may be difficult or impossible to see for those with color vision deficiencies.",
+    "result": {
+      "normal": "Your color vision appears to be normal.",
+      "slight": "You may have slight color vision deficiency.",
+      "moderate": "You may have moderate color vision deficiency.",
+      "severe": "You may have severe color vision deficiency."
+    },
+    "options": {
+      "dontKnow": "I don't know"
+    },
+    "answers": {
+      "peacock": "Peacock",
+      "goldfish": "Goldfish",
+      "duck": "Duck",
+      "bird": "Bird",
+      "fish": "Fish",
+      "sailboat": "Sailboat",
+      "car": "Car",
+      "plane": "Plane",
+      "dog": "Dog",
+      "cat": "Cat",
+      "rabbit": "Rabbit",
+      "butterfly": "Butterfly",
+      "bee": "Bee",
+      "star": "Star",
+      "moon": "Moon",
+      "sun": "Sun",
+      "redLine": "A red line",
+      "pinkLine": "A pink line",
+      "redAndPinkLine": "A red line and a pink line"
+    }
   },
   "grayShades": {
-    "meta_title": "51 Shades of Gray Test",
-    "meta_description": "The 51 Shades of Grey Test features 51 gradients of grey. it can test your ability to distinguish subtle differences in gray shades.How many levels can you pass",
-    "h2": "51 Shades of Gray Test",
+    "meta_title": "Shades of Gray Test",
+    "meta_description": "Test your ability to distinguish subtle differences in gray shades.How many levels can you pass?",
+    "h2": "Shades of Gray Test",
     "description": "How many levels can you pass?",
     "clickToStart": "Start",
     "level": "Level",
@@ -275,8 +308,36 @@
     "average": "Not bad! You have average gray shade perception.",
     "needPractice": "Keep practicing to improve your gray shade perception.",
     "tryAgain": "Try Again",
+    "statisticsTitle": "Shades of Gray Test Statistics",
+    "aboutTitle": "About Shades of Gray Test",
+    "about": "The Shades of Gray Test measures your ability to distinguish subtle differences in gray shades. As you progress through levels, the differences become increasingly subtle, challenging your eye's ability to detect minor variations in brightness. The 51 Shades of Gray Test is particularly relevant for photographers, designers, and anyone working with grayscale images."
+  },
+  "fiftyOneGrayShades": {
+    "meta_title": "51 Shades of Gray Test",
+    "meta_description": "Test your ability to distinguish subtle differences in gray shades. One wrong move ends the game!",
+    "h2": "51 Shades of Gray Test",
+    "description": "Test your ability to distinguish subtle differences in gray shades. One wrong move ends the game!",
+    "clickToStart": "Start Challenge",
+    "level": "Level",
+    "score": "Score",
+    "clickInstruction": "Click the squares in order from lightest to darkest shade. Choose carefully!",
+    "finalScore": "Final Score",
+    "reachedLevel": "Reached Level",
+    "tryAgain": "Try Again",
+    "result": {
+      "legendary": "Legendary! Your gray shade perception is truly extraordinary. You can distinguish differences that most people cannot see!",
+      "exceptional": "Exceptional! Your ability to perceive subtle gray variations is remarkable.",
+      "excellent": "Excellent! You have superior gray shade perception.",
+      "good": "Good job! You have above-average gray shade perception.",
+      "average": "Not bad! You have average gray shade perception.",
+      "needPractice": "Keep practicing! Gray shade perception can be improved with practice."
+    },
+    "beginnerLevel": "Beginner Level: Basic gray shade discrimination",
+    "intermediateLevel": "Intermediate Level: Enhanced perception training",
+    "expertLevel": "Expert Level: Professional grade discrimination",
+    "masterLevel": "Master Level: Ultimate perception challenge",
     "statisticsTitle": "51 Shades of Gray Test Statistics",
     "aboutTitle": "About 51 Shades of Gray Test",
-    "about": "The 51 Shades of Gray Test measures your ability to distinguish subtle differences in gray shades. As you progress through levels, the differences become increasingly subtle, challenging your eye's ability to detect minor variations in brightness. The 51 Shades of Gray Test is particularly relevant for photographers, designers, and anyone working with grayscale images."
+    "about": "This extremely challenging test measures your ability to distinguish incredibly subtle differences in gray shades. The difficulty increases dramatically with each level, with the final levels testing the absolute limits of human perception. One wrong move ends the game, demanding both exceptional visual acuity and unwavering confidence in your choices."
   }
 }
