@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Hearing Frequency Range",
+        "description": "Test your hearing frequency range from 20Hz to 20,000Hz",
+        "url": "/tests/hearing-frequency-test",
+        "icon":"FaHeadphones"
+    }
+]

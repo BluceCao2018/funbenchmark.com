@@ -339,5 +339,31 @@
     "statisticsTitle": "51 Shades of Gray Test Statistics",
     "aboutTitle": "About 51 Shades of Gray Test",
     "about": "This extremely challenging test measures your ability to distinguish incredibly subtle differences in gray shades. The difficulty increases dramatically with each level, with the final levels testing the absolute limits of human perception. One wrong move ends the game, demanding both exceptional visual acuity and unwavering confidence in your choices."
+  },
+  "hearingTest": {
+    "h2": "Hearing Frequency Range Test",
+    "description": "Test your hearing frequency range from 20Hz to 20,000Hz",
+    "clickToStart": "Start",
+    "currentFreq": "Current Frequency",
+    "playSound": "Play Sound",
+    "stopSound": "Stop Sound",
+    "canHear": "I Can Hear It",
+    "cannotHear": "Cannot Hear",
+    "testInstruction": "Click 'Play Sound' and indicate whether you can hear it",
+    "maxFreq": "Maximum Frequency",
+    "minFreq": "Minimum Frequency",
+    "estimatedAge": "Estimated Hearing Age",
+    "tryAgain": "Try Again",
+    "frequencyRangeTitle": "Normal Hearing Frequency Range by Age",
+    "age": "Age",
+    "frequency": "Frequency Range",
+    "aboutTitle": "About Hearing Frequency Range Test",
+    "about": "The human ear can typically hear frequencies between 20Hz and 20,000Hz. As we age, the upper limit of our hearing range gradually decreases. This test helps you understand your hearing frequency range.\n\nPlease use this test in a quiet environment and ensure your device's volume is at a comfortable level.",
+    "result": {
+      "excellent": "Excellent! Your hearing range is above average for your age.",
+      "good": "Good! Your hearing range is normal for your age.",
+      "normal": "Your hearing range is within normal limits.",
+      "needCheck": "You might want to consult a hearing specialist for a professional check."
+    }
   }
 }

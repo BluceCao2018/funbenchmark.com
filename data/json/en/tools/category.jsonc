@@ -10,5 +10,11 @@
     "src": "color-perception.jsonc",
     "link": "color-perception",
     "description": "Test your color perception ability."
+  },
+  {
+    "name": "Audition",
+    "src": "audition.jsonc",
+    "link": "audition",
+    "description": "Test your audition ability."
   }
 ]
