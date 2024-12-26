@@ -365,5 +365,20 @@
       "normal": "Your hearing range is within normal limits.",
       "needCheck": "You might want to consult a hearing specialist for a professional check."
     }
+  },
+  "audioReaction": {
+    "meta_title": "Audio Reaction Time Test",
+    "meta_description": "Click to start and click when you hear the beep",
+    "h1": "Audio Reaction Time Test",
+    "description": "Click to start and click when you hear the beep",
+    "waitForBeep": "Wait for the beep",
+    "tooSoon": "Too Soon!",
+    "clickToTryAgain": "Click to try again",
+    "click": "Click!",
+    "reactionTime": "Reaction Time",
+    "tryAgain": "Try again",
+    "statisticsTitle": "Audio Reaction Time Test Statistics",
+    "aboutTitle": "About Audio Reaction Time Test",
+    "about": "The Audio Reaction Time Test measures how quickly you can respond to an auditory stimulus. This test is particularly relevant for musicians, sound engineers, and anyone who needs to react quickly to audio cues. The average audio reaction time is typically between 150-300 milliseconds."
   }
 }

@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { getDataList } from '@/lib/data';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { FaLink, FaClock, FaList, FaBullseye, FaHashtag, FaComment,FaQuestion, FaKeyboard,FaPalette,FaEye,FaTrafficLight,FaAdjust,FaHeadphones} from 'react-icons/fa';
+import { FaLink, FaClock, FaList, FaBullseye, FaHashtag, FaComment,FaQuestion, FaKeyboard,FaPalette,FaEye,FaTrafficLight,FaAdjust,FaHeadphones,FaVolumeUp} from 'react-icons/fa';
 
 // type toolProps = {
 //   name: string;
@@ -66,7 +66,8 @@ const iconMap: { [key: string]: React.ElementType } = {
   FaEye,
   FaTrafficLight,
   FaAdjust,
-  FaHeadphones
+  FaHeadphones,
+  FaVolumeUp
 };
 
 const ToolsList = ({ category, locale, showMoreLink = true }: toolsListProps) => {
