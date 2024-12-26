@@ -414,5 +414,28 @@
     "submit": "Submit Answer",
     "yourAnswer": "Your Answer",
     "remainingNotes": "Remaining notes to select"
+  },
+  "faceRecognition": {
+    "meta_title": "Face Memory Test",
+    "meta_description": "Test your face memory ability，The higher the accuracy and the faster the speed, the stronger your right-brain ability is proven to be.",
+    "h1": "Face Memory Test",
+    "description": "Test your face memory ability，The higher the accuracy and the faster the speed, the stronger your right-brain ability is proven to be.",
+    "startTest": "Start Test",
+    "memorizefaces": "Memorize these faces",
+    "selectFamiliarFaces": "Select the faces you remember",
+    "submit": "Submit",
+    "level": "Level",
+    "results": "Results",
+    "correctSelections": "Correct Selections",
+    "falsePositives": "False Positives",
+    "accuracy": "Accuracy",
+    "reactionTime": "Reaction Time",
+    "levelComplete": "Level Complete!",
+    "nextLevel": "Next Level",
+    "tryAgain": "Try Again",
+    "restart": "Restart",
+    "statisticsTitle":"Face Memory Test Statistics",
+    "aboutTitle":"About Face Memory Test",
+    "about": "The Face Memory Test is designed to measure your ability to recognize and remember human faces. Starting from Level 1 with a single face, the challenge progressively increases up to Level 9. In each level, you'll be shown faces to memorize, followed by a selection phase where you need to identify the faces you've seen before among new ones. This test helps evaluate your facial recognition abilities, which is a crucial skill in social interactions and various professional fields. A score above 70% is required to advance to the next level. The test measures both accuracy and reaction time, providing a comprehensive assessment of your face memory capabilities."
   }
 }

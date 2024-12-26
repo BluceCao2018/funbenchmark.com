@@ -16,5 +16,11 @@
     "src": "audition.jsonc",
     "link": "audition",
     "description": "Test your audition ability."
+  },
+  {
+    "name": "Graphic",
+    "src": "graphic.jsonc",
+    "link": "graphic",
+    "description": "The Right Brain Test,Test your graphic memory ability."
   }
 ]
