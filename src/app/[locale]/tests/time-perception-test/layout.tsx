@@ -20,7 +20,7 @@ export async function generateMetadata() {
       type: 'article',
       title: t("meta_title"),
       description: t("meta_description"),
-      url: `${w("domain")}/tests/reactiontime`,
+      url: `${w("domain")}/tests/time-perception-test`,
       images: `${w("domain")}/twitter/timeperceptiontest.png`,
     },
   };
