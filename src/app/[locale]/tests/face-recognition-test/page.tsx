@@ -190,7 +190,7 @@ export default function FaceRecognitionTest() {
         ) : (
           <div className="bg-white rounded-lg shadow-lg p-8">
             {phase === 'learning' && (
-              <div className="w-full max-w-5xl">
+              <div className="w-full max-w-5xl px-4">
                 <div className="flex justify-between items-center mb-8">
                   <div className="flex items-center gap-4">
                     <p className="text-xl font-semibold">{t('level')} {level}</p>
@@ -200,12 +200,12 @@ export default function FaceRecognitionTest() {
                     {timeLeft}s
                   </div>
                 </div>
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
                   {learningFaces.map((face, index) => (
                     <div 
                       key={index} 
                       className="aspect-square relative rounded-lg overflow-hidden shadow-lg"
-                      style={{ minHeight: '200px' }}
+                      style={{ minHeight: '150px', maxHeight: '300px' }}
                     >
                       <Image
                         src={face}
@@ -220,9 +220,9 @@ export default function FaceRecognitionTest() {
             )}
 
             {phase === 'testing' && (
-              <div className="w-full max-w-6xl">
+              <div className="w-full max-w-6xl px-4">
                 <p className="text-xl font-semibold text-center mb-8">{t('selectFamiliarFaces')}</p>
-                <div className="grid grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-8">
                   {testingFaces.map((face, index) => (
                     <div
                       key={index}
@@ -232,7 +232,7 @@ export default function FaceRecognitionTest() {
                           ? 'ring-4 ring-blue-500 scale-105' 
                           : 'hover:scale-105'
                       }`}
-                      style={{ minHeight: '180px' }}
+                      style={{ minHeight: '120px', maxHeight: '250px' }}
                     >
                       <Image
                         src={face}
@@ -245,7 +245,7 @@ export default function FaceRecognitionTest() {
                 </div>
                 <button
                   onClick={submitTest}
-                  className="mt-12 mx-auto block bg-green-500 text-white px-8 py-4 rounded-lg hover:bg-green-600 text-lg font-semibold shadow-lg transition-colors"
+                  className="mt-8 mx-auto block bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 text-lg font-semibold shadow-lg transition-colors"
                 >
                   {t('submit')}
                 </button>
@@ -253,7 +253,7 @@ export default function FaceRecognitionTest() {
             )}
 
             {phase === 'results' && results && (
-              <div className="w-full max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
+              <div className="w-full max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6 px-4">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-2xl font-bold text-gray-800">{t('level')} {level}</h2>
                   <h3 className="text-xl text-gray-600">{t('results')}</h3>
