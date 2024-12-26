@@ -10,5 +10,11 @@
     "description": "Click to start and click when you hear the beep",
     "url": "/tests/audio-reaction-time",
     "icon": "FaVolumeUp"
+  },
+  {
+    "name": "Perfect Pitch Test",
+    "description": "Click to start and click when you hear the note",
+    "url": "/tests/perfect-pitch",
+    "icon": "FaMusic"
   }
 ]

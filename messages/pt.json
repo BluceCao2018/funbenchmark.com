@@ -380,5 +380,25 @@
     "statisticsTitle": "Audio Reaction Time Test Statistics",
     "aboutTitle": "About Audio Reaction Time Test",
     "about": "The Audio Reaction Time Test measures how quickly you can respond to an auditory stimulus. This test is particularly relevant for musicians, sound engineers, and anyone who needs to react quickly to audio cues. The average audio reaction time is typically between 150-300 milliseconds."
+  },
+  "perfectPitch": {
+    "meta_title": "Perfect Pitch Test",
+    "meta_description": "Test your ability to identify musical notes by ear",
+    "h1": "Perfect Pitch Test",
+    "description": "Test your ability to identify musical notes by ear",
+    "identifyNote": "Identify the Note",
+    "selectNote": "Select the note you hear",
+    "nextNote": "Next Note",
+    "tryAgain": "Click for next note",
+    "statisticsTitle": "Perfect Pitch Test Statistics",
+    "aboutTitle": "About Perfect Pitch Test",
+    "about": "Perfect pitch, or absolute pitch, is the ability to identify or recreate a musical note without any reference point. This test helps you assess and train your ability to recognize musical notes by ear. The test plays a single note, and you need to identify which note it is from the 12 notes in an octave.",
+    "correctAnswer": "Correct Answer",
+    "notesCount": "Number of Notes",
+    "correctNotes": "Correct Notes",
+    "selectedNotes": "Selected Notes",
+    "submit": "Submit Answer",
+    "yourAnswer": "Your Answer",
+    "remainingNotes": "Remaining notes to select"
   }
 }
