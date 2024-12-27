@@ -101,26 +101,41 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    const headersList = headers()
+    const countryCode = headersList.get('cf-ipcountry') || 'UN'
+    const region = headersList.get('cf-region') || 'Unknown'
+    const country = new Intl.DisplayNames(['en'], { type: 'region' }).of(countryCode) || 'Unknown'
+    
     const allResults = await readResultsFile()
+    const reactionTimeResults = allResults['reactionTime'] || []
     
-    // 清理24小时前的数据
     const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000
-    if (allResults['reactionTime']) {
-      allResults['reactionTime'] = allResults['reactionTime'].filter(r => r.timestamp > oneDayAgo)
-      await writeResultsFile(allResults)
-
-      const times = allResults['reactionTime'].map(r => r.reactionTime)
-      return NextResponse.json({
-        results: allResults,
-        stats: {
-          totalParticipants: times.length,
-          averageTime: times.length ? times.reduce((a, b) => a + b, 0) / times.length : 0,
-          bestTime: times.length ? Math.min(...times) : 0,
-        }
-      }, { status: 200 })
-    }
+    const filteredResults = reactionTimeResults.filter(r => r.timestamp > oneDayAgo)
     
-    return NextResponse.json(allResults, { status: 200 })
+    const rankings = {
+      regional: {
+        name: region,
+        data: filteredResults
+          .filter(r => r.region === region && r.countryCode === countryCode)
+          .sort((a, b) => a.reactionTime - b.reactionTime)
+          .slice(0, 10)
+      },
+      national: {
+        name: country,
+        data: filteredResults
+          .filter(r => r.countryCode === countryCode)
+          .sort((a, b) => a.reactionTime - b.reactionTime)
+          .slice(0, 10)
+      },
+      global: {
+        name: 'Global',
+        data: filteredResults
+          .sort((a, b) => a.reactionTime - b.reactionTime)
+          .slice(0, 10)
+      }
+    }
+
+    return NextResponse.json({ rankings }, { status: 200 })
   } catch (error) {
     return NextResponse.json({ 
       message: 'Error retrieving results', 

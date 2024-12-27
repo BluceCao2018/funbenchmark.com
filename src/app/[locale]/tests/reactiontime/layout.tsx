@@ -63,7 +63,8 @@ export default async function ReactionTimeLayout({
       </Breadcrumb>
       </div>
       {children}
-      <div className="container mx-auto py-8 space-y-16">
+      <div className="container mx-auto py-16 space-y-16">
+      <h2 className="text-3xl font-bold text-center mb-8 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-24 after:h-1 after:bg-blue-500 after:rounded-full">{t2("otherTests")}</h2>
         <ToolsPage category={categoryData} locale={locale} />
       </div>
     </>
