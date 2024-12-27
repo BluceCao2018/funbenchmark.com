@@ -49,6 +49,11 @@ export function Footer() {
                   {t('category')}
                 </Link>
               </li>
+              <li>
+                <Link href="/tests/reactiontime" className="text-base">
+                  Reaction Time Test
+                </Link>
+              </li>
               {/* <li>
                 <Link href="/article" className="text-base">
                   {t('article')}

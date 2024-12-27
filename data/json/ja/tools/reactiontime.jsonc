@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Audio Reaction Time Test",
+    "description": "Audio Reaction Time Test: Test your audio reaction time.",
+    "url": "/tests/audio-reaction-time",
+    "icon": "FaVolumeUp"
+  },
+  {
+    "name": "Time Perception Reaction Time Test",
+    "description": "Time Perception Reaction Time Test: Test your time perception reaction time.",
+    "url": "/tests/time-perception-test",
+    "icon": "FaClock"
+  },
+  {
+    "name": "Face Memory Reaction Time Test",
+    "description": "Face Memory Reaction Time Test: Test your face memory reaction time.",
+    "url": "/tests/face-recognition-test",
+    "icon": "FaFaceSmile"
+  },
+  {
+    "name": "Aim Reaction Time Test",
+    "description": "Aim Reaction Time Test: Test your aim reaction time.",
+    "url": "/tests/aim",
+    "icon": "FaBullseye"
+  }
+]

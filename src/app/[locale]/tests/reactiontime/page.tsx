@@ -1,16 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
-import { useTranslations } from 'next-intl'
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer
-} from 'recharts'
+import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Description } from '@radix-ui/react-dialog'
@@ -168,7 +158,7 @@ export default function ReactionTime() {
         <div className="w-full h-[400px]">
           <h2  className="text-xl mb-4 font-semibold">{t("aboutTitle")}</h2>
           <p>
-          {t("about")}          </p>
+          {t("about")} </p>
         </div>
       </div>
 
@@ -203,6 +193,7 @@ export default function ReactionTime() {
       </div> */}
     </div>
       </div>
+
     </div>
 
    

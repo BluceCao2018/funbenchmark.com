@@ -24,7 +24,7 @@ export default async function TestsLayout({
   return (
     <>
       {children}
-      <div className="container mx-auto py-8 space-y-16">
+      {/* <div className="container mx-auto py-8 space-y-16">
         {categories.map((category: {
           name: string;
           src: string;
@@ -33,7 +33,7 @@ export default async function TestsLayout({
         }, index: number) => (
           <ToolsList key={index} category={category} locale={locale} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 } 
