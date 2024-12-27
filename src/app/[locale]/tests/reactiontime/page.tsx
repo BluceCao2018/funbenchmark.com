@@ -201,7 +201,7 @@ export default function ReactionTime() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* 地区排名 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200">
+              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200 text-gray-800">
                 {results.regionalRanking.name}
               </h3>
               <div className="space-y-3">
@@ -221,7 +221,7 @@ export default function ReactionTime() {
                         text-white text-sm font-medium`}>
                         {index + 1}
                       </span>
-                      <span className="font-medium">{result.reactionTime}ms</span>
+                      <span className="font-medium text-gray-800">{result.reactionTime}ms</span>
                     </div>
                     <span className="text-gray-500 text-sm">
                       {new Date(result.timestamp).toLocaleDateString()}
@@ -238,7 +238,7 @@ export default function ReactionTime() {
 
             {/* 国家排名 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200">
+              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200 text-gray-800">
                 {results.nationalRanking.name}
               </h3>
               <div className="space-y-3">
@@ -258,7 +258,7 @@ export default function ReactionTime() {
                         text-white text-sm font-medium`}>
                         {index + 1}
                       </span>
-                      <span className="font-medium">{result.reactionTime}ms</span>
+                      <span className="font-medium text-gray-800">{result.reactionTime}ms</span>
                     </div>
                     <span className="text-gray-500 text-sm">
                       {new Date(result.timestamp).toLocaleDateString()}
@@ -275,7 +275,7 @@ export default function ReactionTime() {
 
             {/* 全球排名 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200">
+              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200 text-gray-800">
                 {results.globalRanking.name}
               </h3>
               <div className="space-y-3">
@@ -295,7 +295,7 @@ export default function ReactionTime() {
                         text-white text-sm font-medium`}>
                         {index + 1}
                       </span>
-                      <span className="font-medium">{result.reactionTime}ms</span>
+                      <span className="font-medium text-gray-800">{result.reactionTime}ms</span>
                     </div>
                     <span className="text-gray-500 text-sm">
                       {new Date(result.timestamp).toLocaleDateString()}
