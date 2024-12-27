@@ -49,14 +49,14 @@ export const Navigation = ({ categories }: navigationProp ) => {
       label: t('categoryBtn'),
       href: "/category",
     },
-    {
-      label: t('articleBtn'),
-      href: "/article",
-    },
-    {
-      label: t('aboutBtn'),
-      href: "/about",   
-    },
+    // {
+    //   label: t('articleBtn'),
+    //   href: "/article",
+    // },
+    // {
+    //   label: t('aboutBtn'),
+    //   href: "/about",   
+    // },
   ];
   const isMenuItemActive = (href: string) => {
     // console.log(pathname, href);

@@ -23,6 +23,7 @@ export async function generateMetadata() {
       url: `${w("domain")}/tests/face-recognition-test`,
       images: `${w("domain")}/twitter/face-memory.png`,
     },
+    pageTitle: t("h1"),
   };
 }
 

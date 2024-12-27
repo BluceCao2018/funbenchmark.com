@@ -1,4 +1,5 @@
 import {getTranslations} from 'next-intl/server';
+import { title } from 'process';
 
 export async function generateMetadata() {
   const t = await getTranslations('timePerception');
@@ -23,6 +24,7 @@ export async function generateMetadata() {
       url: `${w("domain")}/tests/time-perception-test`,
       images: `${w("domain")}/twitter/timeperceptiontest.png`,
     },
+    h1: t("h1"),
   };
 }
 

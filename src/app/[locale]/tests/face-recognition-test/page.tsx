@@ -5,9 +5,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import Image from 'next/image'
 import { downloadAndSaveFace, getRandomLocalFace } from './utils'
 import { FaFaceSmile } from 'react-icons/fa6'
+import { Breadcrumb, BreadcrumbPage, BreadcrumbItem, BreadcrumbList, BreadcrumbSeparator, BreadcrumbLink } from '@/components/ui/breadcrumb'
 
 export default function FaceRecognitionTest() {
   const t = useTranslations('faceRecognition')
+  const t2=useTranslations('navigation')
   
   // 关卡配置
   const LEVEL_CONFIG = {
@@ -170,7 +172,7 @@ export default function FaceRecognitionTest() {
   }
 
   return (
-    <div className="w-full mx-auto py-0 space-y-16">
+    <div className="w-full mx-auto">
       <div className="banner w-full h-[550px] flex flex-col justify-center items-center bg-blue-theme">
         {!isGameStarted ? (
           <>
