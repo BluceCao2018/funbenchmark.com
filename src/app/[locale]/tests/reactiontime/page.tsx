@@ -19,10 +19,12 @@ export default function ReactionTime() {
     regionalRanking: { name: string; data: RankingResult[] };
     nationalRanking: { name: string; data: RankingResult[] };
     globalRanking: { name: string; data: RankingResult[] };
+    cityRanking: { name: string; data: RankingResult[] };
   }>({
     regionalRanking: { name: '', data: [] },
     nationalRanking: { name: '', data: [] },
-    globalRanking: { name: '', data: [] }
+    globalRanking: { name: '', data: [] },
+    cityRanking: { name: '', data: [] }
   })
   const [averageTime, setAverageTime] = useState(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
@@ -154,6 +156,10 @@ export default function ReactionTime() {
         globalRanking: {
           name: data.rankings.global.name,
           data: data.rankings.global.data
+        },
+        cityRanking: {
+          name: data.rankings.city.name,
+          data: data.rankings.city.data
         }
       })
     } catch (error) {
@@ -202,7 +208,7 @@ export default function ReactionTime() {
             {/* 地区排名 */}
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200 text-gray-800">
-                {results.regionalRanking.name}
+                {results.cityRanking.name}
               </h3>
               <div className="space-y-3">
                 {results.regionalRanking.data?.map((result, index) => (

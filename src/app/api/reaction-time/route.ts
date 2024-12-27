@@ -9,6 +9,7 @@ interface TestResult {
   userId?: string
   countryCode: string
   region: string
+  city: string
 }
 
 interface AllResults {
@@ -35,9 +36,9 @@ export async function POST(request: NextRequest) {
   try {
     const { reactionTime, userId } = await request.json()
     const headersList = headers()
-    const countryCode = headersList.get('cf-ipcountry') || 'UN'
-    const region = headersList.get('cf-region') || 'Unknown'
-
+    const countryCode = headersList.get('x-vercel-ip-country') || 'UN'
+    const region = headersList.get('x-vercel-ip-country-region') || 'Unknown'
+    const city = headersList.get('x-vercel-ip-city') || 'Unknown'
     // 读取现有结果
     const allResults = await readResultsFile()
 
@@ -56,7 +57,8 @@ export async function POST(request: NextRequest) {
       reactionTime: reactionTime,
       userId: userId || 'anonymous',
       countryCode,
-      region
+      region,
+      city
     }
 
     allResults['reactionTime'].push(newResult)
@@ -72,9 +74,13 @@ export async function POST(request: NextRequest) {
     const nationalResults = results.filter(r => 
       r.countryCode === countryCode
     )
+    const cityResults = results.filter(r => 
+      r.city === city
+    )
     
     const regionalRank = regionalResults.filter(r => r.reactionTime < reactionTime).length + 1
     const nationalRank = nationalResults.filter(r => r.reactionTime < reactionTime).length + 1
+    const cityRank = cityResults.filter(r => r.reactionTime < reactionTime).length + 1
     const globalRank = results.filter(r => r.reactionTime < reactionTime).length + 1
 
     return NextResponse.json({ 
@@ -87,6 +93,8 @@ export async function POST(request: NextRequest) {
         totalNational: nationalResults.length,
         globalRank,
         totalGlobal: results.length,
+        cityRank,
+        totalCity: cityResults.length
       }
     }, { status: 200 })
 
@@ -102,9 +110,12 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   try {
     const headersList = headers()
-    const countryCode = headersList.get('cf-ipcountry') || 'UN'
-    const region = headersList.get('cf-region') || 'Unknown'
-    const country = new Intl.DisplayNames(['en'], { type: 'region' }).of(countryCode) || 'Unknown'
+    const countryCode = headersList.get('x-vercel-ip-country') || 'UN'
+    const region = headersList.get('x-vercel-ip-country-region') || 'Unknown'
+    const city = headersList.get('x-vercel-ip-city') || 'Unknown'
+    const countryName = new Intl.DisplayNames(['en'], { type: 'region' }).of(countryCode) || 'Unknown'
+    
+    console.log('Location info:', { countryCode, region, city })
     
     const allResults = await readResultsFile()
     const reactionTimeResults = allResults['reactionTime'] || []
@@ -121,9 +132,16 @@ export async function GET(request: NextRequest) {
           .slice(0, 10)
       },
       national: {
-        name: country,
+        name: countryName,
         data: filteredResults
           .filter(r => r.countryCode === countryCode)
+          .sort((a, b) => a.reactionTime - b.reactionTime)
+          .slice(0, 10)
+      },
+      city: {
+        name: city,
+        data: filteredResults
+          .filter(r => r.city === city)
           .sort((a, b) => a.reactionTime - b.reactionTime)
           .slice(0, 10)
       },
