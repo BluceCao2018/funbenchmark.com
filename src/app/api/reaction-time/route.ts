@@ -1,7 +1,46 @@
 import { NextRequest, NextResponse } from 'next/server'
-import fs from 'fs/promises'
-import path from 'path'
 import { headers } from 'next/headers'
+import { S3Client, GetObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3'
+
+// 初始化 R2 客户端
+const S3 = new S3Client({
+  region: 'auto',
+  endpoint: `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+  credentials: {
+    accessKeyId: process.env.R2_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
+  },
+})
+
+const BUCKET_NAME = process.env.R2_BUCKET_NAME!
+const RESULTS_KEY = 'test-results.json'
+
+// 辅助函数：从 R2 读取数据
+async function getResults(): Promise<AllResults> {
+  try {
+    const command = new GetObjectCommand({
+      Bucket: BUCKET_NAME,
+      Key: RESULTS_KEY,
+    })
+    const response = await S3.send(command)
+    const data = await response.Body?.transformToString()
+    return data ? JSON.parse(data) : {}
+  } catch (error) {
+    console.error('Error reading from R2:', error)
+    return {}
+  }
+}
+
+// 辅助函数：写入数据到 R2
+async function saveResults(results: AllResults) {
+  const command = new PutObjectCommand({
+    Bucket: BUCKET_NAME,
+    Key: RESULTS_KEY,
+    Body: JSON.stringify(results),
+    ContentType: 'application/json',
+  })
+  await S3.send(command)
+}
 
 interface TestResult {
   timestamp: number
@@ -16,22 +55,6 @@ interface AllResults {
   [testType: string]: TestResult[]
 }
 
-const RESULTS_FILE_PATH = path.join(process.cwd(), 'public', 'test-results.json')
-
-async function readResultsFile(): Promise<AllResults> {
-  try {
-    const fileContents = await fs.readFile(RESULTS_FILE_PATH, 'utf-8')
-    return JSON.parse(fileContents)
-  } catch (error) {
-    // 如果文件不存在，返回空对象
-    return {}
-  }
-}
-
-async function writeResultsFile(data: AllResults) {
-  await fs.writeFile(RESULTS_FILE_PATH, JSON.stringify(data, null, 2))
-}
-
 export async function POST(request: NextRequest) {
   try {
     const { reactionTime, userId } = await request.json()
@@ -39,8 +62,9 @@ export async function POST(request: NextRequest) {
     const countryCode = headersList.get('x-vercel-ip-country') || 'UN'
     const region = headersList.get('x-vercel-ip-country-region') || 'Unknown'
     const city = headersList.get('x-vercel-ip-city') || 'Unknown'
-    // 读取现有结果
-    const allResults = await readResultsFile()
+    
+    // 从 R2 读取现有结果
+    const allResults = await getResults()
 
     // 确保 'reactionTime' 测试类型存在
     if (!allResults['reactionTime']) {
@@ -63,8 +87,8 @@ export async function POST(request: NextRequest) {
 
     allResults['reactionTime'].push(newResult)
 
-    // 写回文件
-    await writeResultsFile(allResults)
+    // 保存到 R2
+    await saveResults(allResults)
 
     // 计算排名
     const results = allResults['reactionTime']
@@ -117,7 +141,8 @@ export async function GET(request: NextRequest) {
     
     console.log('Location info:', { countryCode, region, city })
     
-    const allResults = await readResultsFile()
+    // 从 R2 读取结果
+    const allResults = await getResults()
     const reactionTimeResults = allResults['reactionTime'] || []
     
     const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000
