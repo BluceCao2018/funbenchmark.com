@@ -11,9 +11,14 @@ interface SharePosterProps {
   onClose: () => void
   testType: string
   title: string
+  customData?: {
+    maxFreq?: string;
+    estimatedAge?: number;
+    result?: string;
+  };
 }
 
-const PortraitPoster = ({ reactionTime, rank, totalUsers, testType,title }: Omit<SharePosterProps, 'isOpen' | 'onClose'>) => {
+const PortraitPoster = ({ reactionTime, rank, totalUsers, testType,title, customData }: Omit<SharePosterProps, 'isOpen' | 'onClose'>) => {
   const t = useTranslations('audioReaction')
   const beatPercentage = ((totalUsers - rank) / totalUsers * 100).toFixed(1)
   
@@ -72,6 +77,14 @@ const PortraitPoster = ({ reactionTime, rank, totalUsers, testType,title }: Omit
               />
             </div>
           </div>
+
+          {testType === 'hearing' && customData && (
+            <div className="text-center space-y-2">
+              <p className="text-xl font-bold">{customData.maxFreq}</p>
+              <p className="text-lg">听力年龄: {customData.estimatedAge}岁</p>
+              <p className="text-lg">{customData.result}</p>
+            </div>
+          )}
         </div>
 
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full"></div>
@@ -81,7 +94,7 @@ const PortraitPoster = ({ reactionTime, rank, totalUsers, testType,title }: Omit
   )
 }
 
-const LandscapePoster = ({ reactionTime, rank, totalUsers, testType, title }: Omit<SharePosterProps, 'isOpen' | 'onClose'>) => {
+const LandscapePoster = ({ reactionTime, rank, totalUsers, testType, title, customData }: Omit<SharePosterProps, 'isOpen' | 'onClose'>) => {
   const t = useTranslations('audioReaction')
   const beatPercentage = ((totalUsers - rank) / totalUsers * 100).toFixed(1)
   
@@ -155,7 +168,7 @@ const LandscapePoster = ({ reactionTime, rank, totalUsers, testType, title }: Om
   )
 }
 
-export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, onClose, testType, title }: SharePosterProps) {
+export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, onClose, testType, title, customData }: SharePosterProps) {
   const t = useTranslations('audioReaction')
   const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait')
   const posterRef = useRef<HTMLDivElement>(null)
@@ -279,6 +292,7 @@ export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, on
                     totalUsers={totalUsers}
                     testType={testType}
                     title={title}
+                    customData={customData}
                   />
                 ) : (
                   <LandscapePoster 
@@ -287,6 +301,7 @@ export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, on
                     totalUsers={totalUsers}
                     testType={testType}
                     title={title}
+                    customData={customData}
                   />
                 )}
               </div>

@@ -386,6 +386,20 @@
       "good": "Good! Your hearing range is normal for your age.",
       "normal": "Your hearing range is within normal limits.",
       "needCheck": "You might want to consult a hearing specialist for a professional check."
+    },
+    "poster": {
+      "hearingAge": "Hearing Age: {age} years",
+      "scanQRCode": "Scan QR code to test your hearing"
+    },
+    "sharePop": {
+      "portraitMode": "Portrait Mode",
+      "landscapeMode": "Landscape Mode",
+      "cancel": "Cancel",
+      "download": "Download",
+      "share": "Share",
+      "processing": "Processing...",
+      "title": "Hearing Frequency Range Test",
+      "text": "My hearing frequency range is {minFreq} - {maxFreq}, My hearing age is {age} years! Come and try it!"
     }
   },
   "audioReaction": {

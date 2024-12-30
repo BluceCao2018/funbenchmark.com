@@ -2,6 +2,8 @@
 import React, { useState, useRef } from 'react'
 import { useTranslations } from 'next-intl';
 import { FaVolumeUp } from 'react-icons/fa';
+import SharePoster from '@/components/SharePoster'
+import HearingTestPoster from '@/components/HearingTestPoster'
 
 export default function HearingFrequencyTest() {
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -13,6 +15,7 @@ export default function HearingFrequencyTest() {
   const [foundMin, setFoundMin] = useState(false)
   const audioContextRef = useRef<AudioContext | null>(null)
   const oscillatorRef = useRef<OscillatorNode | null>(null)
+  const [isShareOpen, setIsShareOpen] = useState(false)
   
   const t = useTranslations('hearingTest');
 
@@ -56,13 +59,11 @@ export default function HearingFrequencyTest() {
       }
       setMaxFreq(currentFreq)
     } else if (foundMin) {
-      // 如果已经找到最低频率，且现在听不到了，说明测试完成
       setIsComplete(true)
       stopAudio()
       return
     }
 
-    // 如果还没完成，继续测试下一个频率
     const nextFreq = Math.min(
       currentFreq < 1000 ? currentFreq + 100 :
       currentFreq < 5000 ? currentFreq + 500 :
@@ -167,12 +168,21 @@ export default function HearingFrequencyTest() {
                   <p className="text-sm mb-4 text-gray-500">
                     {t("estimatedAge")}: {getAgeEstimate(maxFreq)}
                   </p>
-                  <button 
-                    onClick={restart}
-                    className="bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors"
-                  >
-                    {t("tryAgain")}
-                  </button>
+                  <div className="flex gap-4">
+                    <button 
+                      onClick={restart}
+                      className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors"
+                    >
+                      {t("tryAgain")}
+                    </button>
+                    <button
+                      onClick={() => setIsShareOpen(true)}
+                      className="mt-4 bg-green-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-green-600 transition-colors flex items-center gap-2"
+                    >
+                      <i className="fas fa-share-alt"></i>
+                      {t("share")}
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
@@ -209,6 +219,15 @@ export default function HearingFrequencyTest() {
           </div>
         </div>
       </div>
+      <HearingTestPoster
+        isOpen={isShareOpen}
+        onClose={() => setIsShareOpen(false)}
+        title={t("h2")}
+        maxFreq={`${maxFreq}Hz`}
+        minFreq={`${minFreq}Hz`}
+        estimatedAge={getAgeEstimate(maxFreq)}
+        result={getResult(maxFreq)}
+      />
     </div>
   )
 } 
