@@ -61,7 +61,7 @@ const LandscapePoster = ({ maxFreq, minFreq, estimatedAge, result, title }: Omit
                 />
               </div>
               <p className="text-sm text-white/90">
-                扫码测试你的听力
+                {t('poster.scanQRCode')}
               </p>
             </div>
           </div>
@@ -89,9 +89,9 @@ const PortraitPoster = ({ maxFreq, minFreq, estimatedAge, result, title }: Omit<
           </div>
           
           <div className="space-y-8 text-center">
-            <div className="text-5xl font-bold whitespace-nowrap">{freqRange}</div>
+            <div className="text-4xl font-bold whitespace-nowrap">{freqRange}</div>
             <div className="space-y-4">
-              <div className="text-3xl font-bold">
+              <div className="text-2xl font-bold">
                 {t('poster.hearingAge', { age: estimatedAge })}
               </div>
               <div className="inline-block bg-white/10 rounded-xl p-4">
@@ -220,7 +220,14 @@ export default function HearingTestPoster({ maxFreq, minFreq, estimatedAge, resu
 
           {/* Poster preview area */}
           <div className="overflow-auto max-h-[60vh] p-4 bg-gray-50 rounded-lg">
-            <div ref={posterRef} className="flex items-center justify-center">
+            <div 
+              ref={posterRef} 
+              className="flex items-center justify-center"
+              style={{
+                width: layout === 'landscape' ? '800px' : '375px',
+                height: layout === 'landscape' ? '450px' : '667px',
+              }}
+            >
               <div className="shadow-2xl rounded-lg overflow-hidden">
                 {layout === 'portrait' ? (
                   <PortraitPoster 

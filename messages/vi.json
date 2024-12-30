@@ -379,6 +379,7 @@
     "frequencyRangeTitle": "Normal Hearing Frequency Range by Age",
     "age": "Age",
     "frequency": "Frequency Range",
+    "share": "Share",
     "aboutTitle": "About Hearing Frequency Range Test",
     "about": "The human ear can typically hear frequencies between 20Hz and 20,000Hz. As we age, the upper limit of our hearing range gradually decreases. This test helps you understand your hearing frequency range.\n\nPlease use this test in a quiet environment and ensure your device's volume is at a comfortable level.",
     "result": {
