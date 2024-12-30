@@ -100,13 +100,79 @@ export async function POST(request: NextRequest) {
     const regionalRank = regionalResults.filter(r => r.reactionTime < reactionTime).length + 1
     const nationalRank = nationalResults.filter(r => r.reactionTime < reactionTime).length + 1
     const cityRank = cityResults.filter(r => r.reactionTime < reactionTime).length + 1
+    const globalRank = results.filter(r => r.reactionTime < reactionTime).length + 1
 
-    return NextResponse.json({
-      regionalRank,
-      nationalRank,
-      cityRank
-    })
+    return NextResponse.json({ 
+        message: 'Result saved successfully', 
+        result: newResult,
+        rankings: {
+          regionalRank,
+          totalRegional: regionalResults.length,
+          nationalRank,
+          totalNational: nationalResults.length,
+          globalRank,
+          totalGlobal: results.length,
+          cityRank,
+          totalCity: cityResults.length
+        }
+      }, { status: 200 })
   } catch (error) {
     return NextResponse.json({ error: 'An error occurred' }, { status: 500 })
   }
 } 
+
+export async function GET(request: NextRequest) {
+    try {
+      const headersList = headers()
+      const countryCode = headersList.get('x-vercel-ip-country') || 'UN'
+      const region = headersList.get('x-vercel-ip-country-region') || 'Unknown'
+      const city = headersList.get('x-vercel-ip-city') || 'Unknown'
+      const countryName = new Intl.DisplayNames(['en'], { type: 'region' }).of(countryCode) || 'Unknown'
+      
+      console.log('Location info:', { countryCode, region, city })
+      
+      // 从 R2 读取结果
+      const allResults = await getResults()
+      const reactionTimeResults = allResults['audioReactionTime'] || []
+      
+      const oneDayAgo = Date.now() - 24 * 60 * 60 * 1000
+      const filteredResults = reactionTimeResults.filter(r => r.timestamp > oneDayAgo)
+      
+      const rankings = {
+        regional: {
+          name: region,
+          data: filteredResults
+            .filter(r => r.region === region && r.countryCode === countryCode)
+            .sort((a, b) => a.reactionTime - b.reactionTime)
+            .slice(0, 10)
+        },
+        national: {
+          name: countryName,
+          data: filteredResults
+            .filter(r => r.countryCode === countryCode)
+            .sort((a, b) => a.reactionTime - b.reactionTime)
+            .slice(0, 10)
+        },
+        city: {
+          name: city,
+          data: filteredResults
+            .filter(r => r.city === city)
+            .sort((a, b) => a.reactionTime - b.reactionTime)
+            .slice(0, 10)
+        },
+        global: {
+          name: 'Global',
+          data: filteredResults
+            .sort((a, b) => a.reactionTime - b.reactionTime)
+            .slice(0, 10)
+        }
+      }
+  
+      return NextResponse.json({ rankings }, { status: 200 })
+    } catch (error) {
+      return NextResponse.json({ 
+        message: 'Error retrieving results', 
+        error: error instanceof Error ? error.message : 'Unknown error' 
+      }, { status: 500 })
+    }
+  } 
