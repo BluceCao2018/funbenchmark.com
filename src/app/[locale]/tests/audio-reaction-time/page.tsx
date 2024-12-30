@@ -4,12 +4,28 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaVolumeUp, FaHourglassStart, FaExclamationTriangle, FaPlay, FaCheck } from 'react-icons/fa'
 
+interface RankingResult {
+  reactionTime: number;
+  timestamp: number;
+}
+
 export default function AudioReactionTime() {
   const t = useTranslations('audioReaction')
   const [gameState, setGameState] = useState<'waiting' | 'ready' | 'toosoon' | 'testing' | 'result'>('waiting')
   const [startTime, setStartTime] = useState(0)
   const [reactionTime, setReactionTime] = useState(0)
-  const [results, setResults] = useState<number[]>([])
+  const [reactionTimes, setReactionTimes] = useState<number[]>([])
+  const [results, setResults] = useState<{
+    regionalRanking: { name: string; data: RankingResult[] };
+    nationalRanking: { name: string; data: RankingResult[] };
+    globalRanking: { name: string; data: RankingResult[] };
+    cityRanking: { name: string; data: RankingResult[] };
+  }>({
+    regionalRanking: { name: '', data: [] },
+    nationalRanking: { name: '', data: [] },
+    globalRanking: { name: '', data: [] },
+    cityRanking: { name: '', data: [] }
+  })
   const [averageTime, setAverageTime] = useState(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const audioContext = useRef<AudioContext | null>(null)
@@ -68,16 +84,24 @@ export default function AudioReactionTime() {
         const endTime = Date.now()
         const time = endTime - startTime - (endTime - clearTime)
         setReactionTime(time)
-        setResults([...results, time])
+        setReactionTimes(prev => [...prev, time])
         setGameState('result')
         try {
-          await fetch('/api/audio-reaction-time', {
+          const response = await fetch('/api/audio-reaction-time', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ reactionTime: time }),
+            body: JSON.stringify({ 
+              reactionTime: time,
+              // 如果有用户ID，可以传入
+              // userId: currentUser?.id 
+            }),
           })
+
+          if (!response.ok) {
+            throw new Error('Failed to save result')
+          }
         } catch (error) {
           console.error('Error saving result:', error)
         }
@@ -98,15 +122,36 @@ export default function AudioReactionTime() {
   }
 
   useEffect(() => {
-    if (results.length > 0) {
-      setAverageTime(results.reduce((a, b) => a + b, 0) / results.length)
+    if (reactionTimes.length > 0) {
+      setAverageTime(reactionTimes.reduce((a, b) => a + b, 0) / reactionTimes.length)
     }
     return () => {
       if (timerRef.current) {
         clearTimeout(timerRef.current)
       }
     }
-  }, [results])
+  }, [reactionTimes])
+
+  const fetchRankings = async () => {
+    try {
+      const response = await fetch('/api/audio-reaction-time')
+      const data = await response.json()
+      setResults({
+        regionalRanking: { name: data.rankings.regional.name, data: data.rankings.regional.data },
+        nationalRanking: { name: data.rankings.national.name, data: data.rankings.national.data },
+        globalRanking: { name: data.rankings.global.name, data: data.rankings.global.data },
+        cityRanking: { name: data.rankings.city.name, data: data.rankings.city.data }
+      })
+    } catch (error) {
+      console.error('Error fetching rankings:', error)
+    }
+  }
+
+  useEffect(() => {
+    fetchRankings()
+    const interval = setInterval(fetchRankings, 60000)
+    return () => clearInterval(interval)
+  }, [])
 
   const getGameStateMessage = () => {
     switch (gameState) {
@@ -119,7 +164,7 @@ export default function AudioReactionTime() {
       case 'ready':
         return { 
           message: t("waitForBeep"),
-          description: '', 
+          description: t("click"), 
           icon: <FaHourglassStart className="text-9xl text-white mb-8 animate-fade" />
         }
       case 'toosoon':
@@ -130,9 +175,9 @@ export default function AudioReactionTime() {
         }
       case 'testing':
         return { 
-          message: t("click"),
-          description: '', 
-          icon: <FaPlay className="text-9xl text-white mb-8 animate-fade" />
+          message: t("waitForBeep"),
+          description: t("click"), 
+          icon: <FaHourglassStart className="text-9xl text-white mb-8 animate-fade" />
         }
       case 'result':
         return { 
@@ -148,21 +193,136 @@ export default function AudioReactionTime() {
   return (
     <div className="w-full mx-auto py-0 space-y-16">
       <div className={`
-        banner w-full h-[550px] flex flex-col justify-center items-center 
-        ${gameState === 'waiting' ? 'bg-blue-theme' : 
-          gameState === 'ready' ? 'bg-yellow-500' : 
-          gameState === 'testing' ? 'bg-purple-500' : 
-          'bg-blue-theme'}
+        banner w-full h-[550px] flex flex-col justify-center items-center bg-blue-theme
+        
         transition-all duration-300 cursor-pointer user-select-none
       `} 
       onClick={handleClick}>
         {icon}
-        <h1 className="text-7xl font-bold text-center mb-4 text-white user-select-none">
-          {message}
-        </h1>
-        <p className="text-3xl text-center mb-20 text-white user-select-none">
-          {description}
-        </p>
+        <h1 className="text-7xl font-bold text-center mb-4 text-white user-select-none" 
+            dangerouslySetInnerHTML={{ __html: message }} />
+        <p className="text-3xl text-center mb-20 text-white user-select-none" 
+           dangerouslySetInnerHTML={{ __html: description?.replace(/\n/g, '<br />')  || ''}} />
+      </div>
+
+      <div className="container mx-auto px-4 py-8 max-w-6xl">
+        <div className="space-y-8">
+          <h2 className="text-3xl font-bold text-center mb-8 relative pb-3 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-24 after:h-1 after:bg-blue-500 after:rounded-full">
+            {t("rankingTitle")}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* 地区排名 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200 text-gray-800">
+                {results.cityRanking.name}
+              </h3>
+              <div className="space-y-3">
+                {results.regionalRanking.data?.map((result, index) => (
+                  <div 
+                    key={`regional-${index}`} 
+                    className={`flex justify-between items-center p-2 rounded-lg
+                      ${index === 0 ? 'bg-yellow-50' : 
+                        index === 1 ? 'bg-gray-50' : 
+                        index === 2 ? 'bg-orange-50' : 'hover:bg-gray-50'}`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className={`w-6 h-6 flex items-center justify-center rounded-full 
+                        ${index === 0 ? 'bg-yellow-500' : 
+                          index === 1 ? 'bg-gray-400' : 
+                          index === 2 ? 'bg-orange-500' : 'bg-gray-200'} 
+                        text-white text-sm font-medium`}>
+                        {index + 1}
+                      </span>
+                      <span className="font-medium text-gray-800">{result.reactionTime}ms</span>
+                    </div>
+                    <span className="text-gray-500 text-sm">
+                      {new Date(result.timestamp).toLocaleDateString()}
+                    </span>
+                  </div>
+                ))}
+                {results.regionalRanking.data.length === 0 && (
+                  <div className="text-center text-gray-500 py-4">
+                    {t("noData")}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* 国家排名 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200 text-gray-800">
+                {results.nationalRanking.name}
+              </h3>
+              <div className="space-y-3">
+                {results.nationalRanking.data?.map((result, index) => (
+                  <div 
+                    key={`national-${index}`} 
+                    className={`flex justify-between items-center p-2 rounded-lg
+                      ${index === 0 ? 'bg-yellow-50' : 
+                        index === 1 ? 'bg-gray-50' : 
+                        index === 2 ? 'bg-orange-50' : 'hover:bg-gray-50'}`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className={`w-6 h-6 flex items-center justify-center rounded-full 
+                        ${index === 0 ? 'bg-yellow-500' : 
+                          index === 1 ? 'bg-gray-400' : 
+                          index === 2 ? 'bg-orange-500' : 'bg-gray-200'} 
+                        text-white text-sm font-medium`}>
+                        {index + 1}
+                      </span>
+                      <span className="font-medium text-gray-800">{result.reactionTime}ms</span>
+                    </div>
+                    <span className="text-gray-500 text-sm">
+                      {new Date(result.timestamp).toLocaleDateString()}
+                    </span>
+                  </div>
+                ))}
+                {results.nationalRanking.data.length === 0 && (
+                  <div className="text-center text-gray-500 py-4">
+                    {t("noData")}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* 全球排名 */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold mb-6 pb-2 border-b border-gray-200 text-gray-800">
+                {results.globalRanking.name}
+              </h3>
+              <div className="space-y-3">
+                {results.globalRanking.data?.map((result, index) => (
+                  <div 
+                    key={`global-${index}`} 
+                    className={`flex justify-between items-center p-2 rounded-lg
+                      ${index === 0 ? 'bg-yellow-50' : 
+                        index === 1 ? 'bg-gray-50' : 
+                        index === 2 ? 'bg-orange-50' : 'hover:bg-gray-50'}`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className={`w-6 h-6 flex items-center justify-center rounded-full 
+                        ${index === 0 ? 'bg-yellow-500' : 
+                          index === 1 ? 'bg-gray-400' : 
+                          index === 2 ? 'bg-orange-500' : 'bg-gray-200'} 
+                        text-white text-sm font-medium`}>
+                        {index + 1}
+                      </span>
+                      <span className="font-medium text-gray-800">{result.reactionTime}ms</span>
+                    </div>
+                    <span className="text-gray-500 text-sm">
+                      {new Date(result.timestamp).toLocaleDateString()}
+                    </span>
+                  </div>
+                ))}
+                {results.globalRanking.data.length === 0 && (
+                  <div className="text-center text-gray-500 py-4">
+                    {t("noData")}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="container mx-auto px-4 py-8 max-w-6xl">
