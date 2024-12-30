@@ -382,6 +382,8 @@
     "tryAgain": "Try again",
     "rankingTitle": "Audio Reaction Time Test Ranking",
     "noData": "No data yet",
+    "otherTests": "More Reaction Time Test",
+    "otherAudition": "More Audio/Sound Test",
     "statisticsTitle": "Audio Reaction Time Test Statistics",
     "aboutTitle": "About Audio Reaction Time Test",
     "about": "The Audio Reaction Time Test measures how quickly you can respond to an auditory stimulus. This test is particularly relevant for musicians, sound engineers, and anyone who needs to react quickly to audio cues. The average audio reaction time is typically between 150-300 milliseconds."
