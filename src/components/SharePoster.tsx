@@ -168,9 +168,14 @@ export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, on
     try {
       const canvas = await html2canvas(posterRef.current, {
         scale: 2,
-        backgroundColor: '#1a1a1a'
+        backgroundColor: '#1a1a1a',
+        logging: false,
+        useCORS: true,
+        allowTaint: true,
+        windowWidth: posterRef.current.scrollWidth,
+        windowHeight: posterRef.current.scrollHeight
       })
-      return canvas.toDataURL('image/png')
+      return canvas.toDataURL('image/png', 1.0)  // 使用最高质量
     } catch (error) {
       console.error('Error generating image:', error)
       return null
@@ -225,107 +230,95 @@ export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, on
 
   return (
     <div 
-      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 backdrop-blur-sm"
+      className="fixed inset-0 bg-black/50 z-50 backdrop-blur-sm overflow-y-auto"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose()
       }}
     >
-      <div className="bg-white rounded-lg p-6 w-full max-w-[95vw] mx-4 relative">
-        <button 
-          onClick={onClose}
-          className="absolute -top-4 -right-4 w-8 h-8 bg-gray-800 hover:bg-gray-700 
-                     text-white rounded-full flex items-center justify-center shadow-lg"
-          aria-label="关闭"
-        >
-          <i className="fas fa-times"></i>
-        </button>
+      <div className="min-h-screen py-8">
+        <div className="bg-white rounded-lg p-6 w-full max-w-[1200px] mx-auto relative">
 
-        <div className="flex justify-between mb-4">
-          <h2 className="text-2xl font-bold">{t('sharePop.modalTitle')}</h2>
-        </div>
+          <div className="flex gap-4 mb-4">
+            <button
+              className={`flex-1 py-2 px-4 rounded-lg transition-colors duration-200
+                ${orientation === 'portrait' 
+                  ? 'bg-blue-500 text-white shadow-md' 
+                  : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setOrientation('portrait')}
+            >
+              <i className="fas fa-mobile-alt mr-2"></i>
+              {t('sharePop.portraitMode')}
+            </button>
+            <button
+              className={`flex-1 py-2 px-4 rounded-lg transition-colors duration-200
+                ${orientation === 'landscape' 
+                  ? 'bg-blue-500 text-white shadow-md' 
+                  : 'bg-gray-100 hover:bg-gray-200'}`}
+              onClick={() => setOrientation('landscape')}
+            >
+              <i className="fas fa-desktop mr-2"></i>
+              {t('sharePop.landscapeMode')}
+            </button>
+          </div>
 
-        <div className="flex gap-4 mb-4">
-          <button
-            className={`flex-1 py-2 px-4 rounded-lg transition-colors duration-200
-              ${orientation === 'portrait' 
-                ? 'bg-blue-500 text-white shadow-md' 
-                : 'bg-gray-100 hover:bg-gray-200'}`}
-            onClick={() => setOrientation('portrait')}
-          >
-            <i className="fas fa-mobile-alt mr-2"></i>
-            {t('sharePop.portraitMode')}
-          </button>
-          <button
-            className={`flex-1 py-2 px-4 rounded-lg transition-colors duration-200
-              ${orientation === 'landscape' 
-                ? 'bg-blue-500 text-white shadow-md' 
-                : 'bg-gray-100 hover:bg-gray-200'}`}
-            onClick={() => setOrientation('landscape')}
-          >
-            <i className="fas fa-desktop mr-2"></i>
-            {t('sharePop.landscapeMode')}
-          </button>
-        </div>
-
-        <div className="overflow-auto max-h-[70vh] p-4 bg-gray-50 rounded-lg">
-          <div 
-            ref={posterRef} 
-            className="flex items-center justify-center"
-          >
+          <div className="overflow-auto max-h-[60vh] p-4 bg-gray-50 rounded-lg">
             <div 
-              className="shadow-2xl rounded-lg overflow-hidden"
+              ref={posterRef} 
+              className="flex items-center justify-center"
               style={{
-                transform: orientation === 'landscape' ? 'scale(0.85)' : 'none',
-                transformOrigin: 'top center'
+                width: orientation === 'landscape' ? '800px' : '375px',
+                height: orientation === 'landscape' ? '450px' : '667px',
               }}
             >
-              {orientation === 'portrait' ? (
-                <PortraitPoster 
-                  reactionTime={reactionTime}
-                  rank={rank}
-                  totalUsers={totalUsers}
-                />
-              ) : (
-                <LandscapePoster 
-                  reactionTime={reactionTime}
-                  rank={rank}
-                  totalUsers={totalUsers}
-                />
-              )}
+              <div className="shadow-2xl rounded-lg overflow-hidden">
+                {orientation === 'portrait' ? (
+                  <PortraitPoster 
+                    reactionTime={reactionTime}
+                    rank={rank}
+                    totalUsers={totalUsers}
+                  />
+                ) : (
+                  <LandscapePoster 
+                    reactionTime={reactionTime}
+                    rank={rank}
+                    totalUsers={totalUsers}
+                  />
+                )}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="mt-6 flex justify-center gap-4">
-          <button
-            onClick={onClose}
-            className="py-2 px-6 rounded-lg border border-gray-300 hover:bg-gray-50 
-                     transition-colors duration-200"
-          >
-            {t('sharePop.cancel')}
-          </button>
-          <button
-            onClick={handleDownload}
-            className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 
-                     transition-colors duration-200 flex items-center gap-2"
-          >
-            <i className="fas fa-download"></i>
-            {t('sharePop.download')}
-          </button>
-          <button
-            onClick={handleShare}
-            disabled={isLoading}
-            className={`bg-green-500 text-white py-2 px-6 rounded-lg 
-                      hover:bg-green-600 transition-colors duration-200 
-                      flex items-center gap-2 disabled:opacity-50`}
-          >
-            {isLoading ? (
-              <i className="fas fa-spinner fa-spin"></i>
-            ) : (
-              <i className="fas fa-share-alt"></i>
-            )}
-            {isLoading ? '处理中...' : t('sharePop.share')}
-          </button>
+          <div className="mt-6 flex justify-center gap-4">
+            <button
+              onClick={onClose}
+              className="py-2 px-6 rounded-lg border border-gray-300 hover:bg-gray-50 
+                       transition-colors duration-200"
+            >
+              {t('sharePop.cancel')}
+            </button>
+            <button
+              onClick={handleDownload}
+              className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 
+                       transition-colors duration-200 flex items-center gap-2"
+            >
+              <i className="fas fa-download"></i>
+              {t('sharePop.download')}
+            </button>
+            <button
+              onClick={handleShare}
+              disabled={isLoading}
+              className={`bg-green-500 text-white py-2 px-6 rounded-lg 
+                        hover:bg-green-600 transition-colors duration-200 
+                        flex items-center gap-2 disabled:opacity-50`}
+            >
+              {isLoading ? (
+                <i className="fas fa-spinner fa-spin"></i>
+              ) : (
+                <i className="fas fa-share-alt"></i>
+              )}
+              {isLoading ? '处理中...' : t('sharePop.share')}
+            </button>
+          </div>
         </div>
       </div>
     </div>
