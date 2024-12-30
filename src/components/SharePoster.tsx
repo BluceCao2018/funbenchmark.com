@@ -9,9 +9,11 @@ interface SharePosterProps {
   totalUsers: number
   isOpen: boolean
   onClose: () => void
+  testType: string
+  title: string
 }
 
-const PortraitPoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterProps, 'isOpen' | 'onClose'>) => {
+const PortraitPoster = ({ reactionTime, rank, totalUsers, testType,title }: Omit<SharePosterProps, 'isOpen' | 'onClose'>) => {
   const t = useTranslations('audioReaction')
   const beatPercentage = ((totalUsers - rank) / totalUsers * 100).toFixed(1)
   
@@ -21,7 +23,7 @@ const PortraitPoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterProp
         <div className="h-full flex flex-col justify-between text-white">
           <div>
             <h1 className="text-3xl font-bold mb-2">
-              {t('poster.title')}
+              {title}
             </h1>
             <p className="text-lg opacity-90">FunBenchmark.com</p>
           </div>
@@ -62,7 +64,7 @@ const PortraitPoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterProp
             </p>
             <div className="w-24 h-24 bg-white mx-auto rounded-lg p-2">
               <Image
-                src="/qrcode/audio-reactiontime.png"
+                src={`/qrcode/${testType}-reactiontime.png`}
                 alt="QR Code"
                 width={128}
                 height={128}
@@ -79,7 +81,7 @@ const PortraitPoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterProp
   )
 }
 
-const LandscapePoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterProps, 'isOpen' | 'onClose'>) => {
+const LandscapePoster = ({ reactionTime, rank, totalUsers, testType, title }: Omit<SharePosterProps, 'isOpen' | 'onClose'>) => {
   const t = useTranslations('audioReaction')
   const beatPercentage = ((totalUsers - rank) / totalUsers * 100).toFixed(1)
   
@@ -98,7 +100,7 @@ const LandscapePoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterPro
           <div className="flex-1 space-y-6">
             <div>
               <h1 className="text-4xl font-bold text-white mb-2">
-                {t('poster.title')}
+                {title}
               </h1>
               <p className="text-xl text-white/90">FunBenchmark.com</p>
             </div>
@@ -132,7 +134,7 @@ const LandscapePoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterPro
             <div className="text-center space-y-3">
               <div className="w-32 h-32 bg-white rounded-xl mx-auto p-2">
                 <Image
-                  src="/qrcode/audio-reactiontime.png"
+                  src={`/qrcode/${testType}-reactiontime.png`}
                   alt="QR Code"
                   width={128}
                   height={128}
@@ -153,7 +155,7 @@ const LandscapePoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterPro
   )
 }
 
-export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, onClose }: SharePosterProps) {
+export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, onClose, testType, title }: SharePosterProps) {
   const t = useTranslations('audioReaction')
   const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait')
   const posterRef = useRef<HTMLDivElement>(null)
@@ -275,12 +277,16 @@ export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, on
                     reactionTime={reactionTime}
                     rank={rank}
                     totalUsers={totalUsers}
+                    testType={testType}
+                    title={title}
                   />
                 ) : (
                   <LandscapePoster 
                     reactionTime={reactionTime}
                     rank={rank}
                     totalUsers={totalUsers}
+                    testType={testType}
+                    title={title}
                   />
                 )}
               </div>

@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Description } from '@radix-ui/react-dialog'
+import SharePoster from '@/components/SharePoster'
 
 interface RankingResult {
   reactionTime: number;
@@ -28,6 +29,7 @@ export default function ReactionTime() {
   })
   const [averageTime, setAverageTime] = useState(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
+  const [isShareOpen, setIsShareOpen] = useState(false)
 
   const handleStart = () => {
     if (timerRef.current) {
@@ -194,6 +196,35 @@ export default function ReactionTime() {
             <span className="text-white text-2xl font-bold">
               {/* {getGameStateMessage()} */}
             </span>
+
+            {gameState === 'result' && (
+              <div className="flex gap-4">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    setGameState('waiting')
+                  }}
+                  className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg 
+                           hover:bg-blue-600 transition-colors duration-200
+                           flex items-center gap-2"
+                >
+                  <i className="fas fa-redo"></i>
+                  {t('tryAgain')}
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    setIsShareOpen(true)
+                  }}
+                  className="mt-4 bg-green-500 text-white px-6 py-2 rounded-lg 
+                           hover:bg-green-600 transition-colors duration-200
+                           flex items-center gap-2"
+                >
+                  <i className="fas fa-share-alt"></i>
+                  {t('share')}
+                </button>
+              </div>
+            )}
         </div>
         {/* <div className='w-full px-2 pt-10 lg:w-1/2'>
           <Search />
@@ -340,6 +371,16 @@ export default function ReactionTime() {
           </div>
         </div>
       </div>
+
+      <SharePoster
+        reactionTime={reactionTime}
+        rank={results.globalRanking.data.findIndex(r => r.reactionTime === reactionTime) + 1}
+        totalUsers={results.globalRanking.data.length}
+        isOpen={isShareOpen}
+        onClose={() => setIsShareOpen(false)}
+        testType="visual"
+        title={t("poster.title")}
+      />
 
     </div>
 

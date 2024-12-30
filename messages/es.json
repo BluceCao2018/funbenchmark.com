@@ -107,10 +107,29 @@
     "tryAgain": "Try again",
     "rankingTitle": "Reaction Time Test Ranking",
     "noData": "No data yet",
+    "share": "Share",
     "otherTests": "Other Reaction Time Test",
     "statisticsTitle": "Reaction Time Test Statistics",
     "aboutTitle": "About The Reaction Time Test",
-    "about": "Reaction Time Test is a simple tool specifically designed to measure your Reaction Time. The average Reaction Time is 273 ms, according to the data collected in Reaction Time Test so far. In addition to precisely measuring your Reaction Time. This is discussed in further detail on the the statistics page about Reaction Time. While an average Reaction Time may fall between 200 - 250ms, your computer could be adding 10 - 50ms on top. If you want, you can keep track of your scores, and see your full history of Reaction Time Test. Just perform at least 5 clicks and then save to record your Reaction Time Test data."
+    "about": "Reaction Time Test is a simple tool specifically designed to measure your Reaction Time. The average Reaction Time is 273 ms, according to the data collected in Reaction Time Test so far. In addition to precisely measuring your Reaction Time. This is discussed in further detail on the the statistics page about Reaction Time. While an average Reaction Time may fall between 200 - 250ms, your computer could be adding 10 - 50ms on top. If you want, you can keep track of your scores, and see your full history of Reaction Time Test. Just perform at least 5 clicks and then save to record your Reaction Time Test data.",
+    "poster": {
+      "title": "Reaction Time Test",
+      "milliseconds": "ms",
+      "beatPercentage": "Beat {percentage}% of opponents",
+      "surpassedUsers": "Surpassed {count} testers",
+      "currentRank": "Current Rank",
+      "scanQRCode": "Scan QR code to test your reaction time"
+    },
+    "sharePop": {
+      "modalTitle": "Share Your Result",
+      "portraitMode": "Portrait",
+      "landscapeMode": "Landscape",
+      "cancel": "Cancel",
+      "download": "Download",
+      "share": "Share",
+      "title": "Reaction Time Test Result",
+      "text": "My reaction time is {time}ms, ranked #{rank}! Come and try it!"
+    }
   },
   "sequence": {
     "meta_title": "Sequence Memory Test",

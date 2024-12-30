@@ -226,6 +226,8 @@ export default function AudioReactionTime() {
           rank={rank}
           totalUsers={totalUsers}
           isOpen={showSharePoster}
+          testType="audio"
+          title={t("poster.title")}
           onClose={() => setShowSharePoster(false)}
         />
       </div>
@@ -392,6 +394,8 @@ export default function AudioReactionTime() {
         rank={rank}
         totalUsers={totalUsers}
         isOpen={showSharePoster}
+        testType="audio"
+        title={t("poster.title")}
         onClose={() => setShowSharePoster(false)}
       />
     </div>
