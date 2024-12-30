@@ -60,13 +60,13 @@ const PortraitPoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterProp
             <p className="opacity-90">
               {t('poster.scanQRCode')}
             </p>
-            <div className="w-24 h-24 bg-white mx-auto rounded-lg">
-            <Image
-            src="/qrcode/audio-reactiontime.png"
+            <div className="w-24 h-24 bg-white mx-auto rounded-lg p-2">
+              <Image
+                src="/qrcode/audio-reactiontime.png"
                 alt="QR Code"
-                width={96}
-                height={96}
-                className="w-full h-full object-contain"
+                width={128}
+                height={128}
+                className="w-full h-full"
               />
             </div>
           </div>
@@ -130,14 +130,13 @@ const LandscapePoster = ({ reactionTime, rank, totalUsers }: Omit<SharePosterPro
 
             {/* 二维码 */}
             <div className="text-center space-y-3">
-              <div className="w-32 h-32 bg-white rounded-xl mx-auto">
-                {/* QR Code */}
+              <div className="w-32 h-32 bg-white rounded-xl mx-auto p-2">
                 <Image
-            src="/qrcode/audio-reactiontime.png"
+                  src="/qrcode/audio-reactiontime.png"
                   alt="QR Code"
-                  width={96}
-                  height={96}
-                  className="w-full h-full object-contain"
+                  width={128}
+                  height={128}
+                  className="w-full h-full"
                 />
               </div>
               <p className="text-sm text-white/90">
@@ -203,15 +202,15 @@ export default function SharePoster({ reactionTime, rank, totalUsers, isOpen, on
       const blob = await fetch(image).then(res => res.blob())
       const file = new File([blob], 'audio-reaction-time.png', { type: 'image/png' })
       
-      // Add current URL
       const shareUrl = window.location.href
+      const shareText = `${t('sharePop.text', { time: reactionTime, rank })}\n\n${shareUrl}`
 
       if (navigator.share) {
         await navigator.share({
           files: [file],
           title: t('sharePop.title'),
-          text: t('sharePop.text', { time: reactionTime, rank }),
-          url: shareUrl  // Add URL to share data
+          text: shareText,
+          url: shareUrl  // 保留 url 参数
         })
       } else {
         // Fallback handling
