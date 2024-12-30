@@ -394,13 +394,32 @@
     "click": "click when you hear the beep",
     "reactionTime": "Reaction Time",
     "tryAgain": "Try again",
+    "share": "Share",
     "rankingTitle": "Audio Reaction Time Test Ranking",
     "noData": "No data yet",
     "otherTests": "More Reaction Time Test",
     "otherAudition": "More Audio/Sound Test",
     "statisticsTitle": "Audio Reaction Time Test Statistics",
     "aboutTitle": "About Audio Reaction Time Test",
-    "about": "The Audio Reaction Time Test measures how quickly you can respond to an auditory stimulus. This test is particularly relevant for musicians, sound engineers, and anyone who needs to react quickly to audio cues. The average audio reaction time is typically between 150-300 milliseconds."
+    "about": "The Audio Reaction Time Test measures how quickly you can respond to an auditory stimulus. This test is particularly relevant for musicians, sound engineers, and anyone who needs to react quickly to audio cues. The average audio reaction time is typically between 150-300 milliseconds.",
+    "poster": {
+      "title": "Audio Reaction Time",
+      "milliseconds": "ms",
+      "beatPercentage": "Beat {percentage}% of opponents",
+      "surpassedUsers": "Surpassed {count} testers",
+      "currentRank": "Current Rank",
+      "scanQRCode": "Scan QR code to test your reaction time"
+    },
+    "sharePop": {
+      "modalTitle": "Share Your Result",
+      "portraitMode": "Portrait",
+      "landscapeMode": "Landscape",
+      "cancel": "Cancel",
+      "download": "Download",
+      "share": "Share",
+      "title": "Audio Reaction Time Test Result",
+      "text": "My reaction time is {time}ms, ranked #{rank}! Come and try it!"
+    }
   },
   "perfectPitch": {
     "meta_title": "Perfect Pitch Test",

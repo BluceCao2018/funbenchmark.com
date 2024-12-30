@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaVolumeUp, FaHourglassStart, FaExclamationTriangle, FaPlay, FaCheck } from 'react-icons/fa'
+import SharePoster from '@/components/SharePoster'
 
 interface RankingResult {
   reactionTime: number;
@@ -29,6 +30,7 @@ export default function AudioReactionTime() {
   const [averageTime, setAverageTime] = useState(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const audioContext = useRef<AudioContext | null>(null)
+  const [showSharePoster, setShowSharePoster] = useState(false)
 
   const playBeep = () => {
     if (!audioContext.current) {
@@ -190,6 +192,46 @@ export default function AudioReactionTime() {
 
   const { message, description, icon } = getGameStateMessage()
 
+  const calculateRankInfo = () => {
+    const allTimes = results.globalRanking.data.map(r => r.reactionTime)
+    const currentRank = allTimes.findIndex(time => time > reactionTime) + 1
+    return {
+      rank: currentRank || allTimes.length + 1,
+      totalUsers: allTimes.length || 1
+    }
+  }
+
+  const { rank, totalUsers } = calculateRankInfo()
+
+  const renderResultActions = () => {
+    if (gameState !== 'result') return null;
+
+    return (
+      <div className="flex gap-4 mt-6">
+        <button
+          onClick={() => setGameState('ready')}
+          className="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600"
+        >
+          {t('tryAgain')}
+        </button>
+        <button
+          onClick={() => setShowSharePoster(true)}
+          className="bg-green-500 text-white py-2 px-6 rounded hover:bg-green-600"
+        >
+          {t('share')}
+        </button>
+
+        <SharePoster
+          reactionTime={reactionTime}
+          rank={rank}
+          totalUsers={totalUsers}
+          isOpen={showSharePoster}
+          onClose={() => setShowSharePoster(false)}
+        />
+      </div>
+    )
+  }
+
   return (
     <div className="w-full mx-auto py-0 space-y-16">
       <div className={`
@@ -203,6 +245,7 @@ export default function AudioReactionTime() {
             dangerouslySetInnerHTML={{ __html: message }} />
         <p className="text-3xl text-center mb-20 text-white user-select-none" 
            dangerouslySetInnerHTML={{ __html: description?.replace(/\n/g, '<br />')  || ''}} />
+           {renderResultActions()}
       </div>
 
       <div className="container mx-auto px-4 py-8 max-w-6xl">
@@ -343,6 +386,14 @@ export default function AudioReactionTime() {
           </div>
         </div>
       </div>
+      
+      <SharePoster
+        reactionTime={reactionTime}
+        rank={rank}
+        totalUsers={totalUsers}
+        isOpen={showSharePoster}
+        onClose={() => setShowSharePoster(false)}
+      />
     </div>
   )
 } 
