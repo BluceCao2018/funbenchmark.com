@@ -1,50 +1,51 @@
+
 [
   {
-    "name": "Reaction Time",
-    "description": "Test your visual reflexes",
-    "url": "/tests/reactiontime",
+    "name": "反応時間",
+    "description": "視覚反射神経をテストする",
+    "url": "/ja/tests/reactiontime",
     "icon": "FaClock"
   },
   {
-    "name": "Sequence Memory",
-    "description": "Remember an increasingly long pattern of button presses.",
-    "url": "/tests/sequence",
+    "name": "シーケンスメモリ",
+    "description": "ボタンを押す時間がますます長くなるパターンを思い出してください。",
+    "url": "/ja/tests/sequence",
     "icon": "FaList"
   },
   {
-    "name": "Aim Trainer",
-    "description": "How quickly can you hit all the targets?",
-    "url": "/tests/aim",
+    "name": "エイムトレーナー",
+    "description": "どれくらい早くすべてのターゲットを攻撃できるでしょうか?",
+    "url": "/ja/tests/aim",
     "icon": "FaBullseye"
   },
   {
-    "name": "Number Memory",
-    "description": "Remember the longest number you can.",
-    "url": "/tests/number-memory",
+    "name": "ナンバーメモリー",
+    "description": "できるだけ長い数字を覚えておいてください。",
+    "url": "/ja/tests/number-memory",
     "icon": "FaHashtag"
   },
   {
-    "name": "Verbal Memory",
-    "description": "Keep as many words in short term memory as possible",
-    "url": "/tests/verbal-memory",
+    "name": "言語記憶",
+    "description": "できるだけ多くの単語を短期記憶に残しておく",
+    "url": "/ja/tests/verbal-memory",
     "icon": "FaComment"
   },
   {
-    "name": "Chimp Test",
-    "description": "Are you smater than a chimpanzee?",
-    "url": "/tests/chimp",
+    "name": "チンパンジーの検査",
+    "description": "あなたはチンパンジーより賢いですか？",
+    "url": "/ja/tests/chimp",
     "icon": "FaQuestion"
   },
   {
-    "name": "Typing",
-    "description": "How many words per minute can you type?",
-    "url": "/tests/typing",
+    "name": "タイピング",
+    "description": "1分間に何語入力できますか?",
+    "url": "/ja/tests/typing",
     "icon": "FaKeyboard"
   },
   {
-    "name": "Time Perception",
-    "description": "Test your time perception ability.",
-    "url": "/tests/time-perception-test",
+    "name": "時間の認識",
+    "description": "あなたの時間認識能力をテストしてください。",
+    "url": "/ja/tests/time-perception-test",
     "icon": "FaClock"
   }
 ]

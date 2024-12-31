@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Audio Reaction Time Test",
-    "description": "Audio Reaction Time Test: Test your audio reaction time.",
-    "url": "/tests/audio-reaction-time",
+    "name": "Тест времени реакции звука",
+    "description": "Тест времени реакции звука: проверьте время реакции звука.",
+    "url": "/ru/tests/audio-reaction-time",
     "icon": "FaVolumeUp"
   },
   {
-    "name": "Time Perception Reaction Time Test",
-    "description": "Time Perception Reaction Time Test: Test your time perception reaction time.",
-    "url": "/tests/time-perception-test",
+    "name": "Тест на время реакции на восприятие времени",
+    "description": "Тест на время реакции на восприятие времени: проверьте время реакции на восприятие времени.",
+    "url": "/ru/tests/time-perception-test",
     "icon": "FaClock"
   },
   {
-    "name": "Face Memory Reaction Time Test",
-    "description": "Face Memory Reaction Time Test: Test your face memory reaction time.",
-    "url": "/tests/face-recognition-test",
+    "name": "Тест на время реакции на память лица",
+    "description": "Тест на время реакции памяти лица: проверьте время реакции памяти лица.",
+    "url": "/ru/tests/face-recognition-test",
     "icon": "FaFaceSmile"
   },
   {
-    "name": "Aim Reaction Time Test",
-    "description": "Aim Reaction Time Test: Test your aim reaction time.",
-    "url": "/tests/aim",
+    "name": "Тест на время реакции прицеливания",
+    "description": "Тест на время реакции прицеливания: проверьте время реакции прицеливания.",
+    "url": "/ru/tests/aim",
     "icon": "FaBullseye"
   }
 ]

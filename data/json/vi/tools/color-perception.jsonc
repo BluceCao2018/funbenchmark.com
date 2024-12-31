@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Color Perception",
-    "description": "Test your color perception ability.",
-    "url": "/tests/color-perception-test",
+    "name": "Nhận thức màu sắc",
+    "description": "Kiểm tra khả năng nhận biết màu sắc của bạn.",
+    "url": "/vi/tests/color-perception-test",
     "icon": "FaPalette"
   },
   {
-    "name": "Shades of Gray",
-    "description": "Test your ability to distinguish subtle differences in gray shades",
-    "url": "/tests/gray-shades-test",
+    "name": "Sắc thái của màu xám",
+    "description": "Kiểm tra khả năng phân biệt sự khác biệt tinh tế trong sắc thái màu xám của bạn",
+    "url": "/vi/tests/gray-shades-test",
     "icon": "FaAdjust"
   },
   {
-    "name": "51 Shades of Gray",
-    "description": "Test your ability to distinguish subtle differences in gray shades",
-    "url": "/tests/51-gray-shades-test",
+    "name": "51 sắc thái của màu xám",
+    "description": "Kiểm tra khả năng phân biệt sự khác biệt tinh tế trong sắc thái màu xám của bạn",
+    "url": "/vi/tests/51-gray-shades-test",
     "icon": "FaAdjust"
   },
   {
-    "name": "Color Blindness",
-    "description": "Test your color vision with this Ishihara-style test",
-    "url": "/tests/color-blindness-test",
+    "name": "Bệnh mù màu",
+    "description": "Kiểm tra khả năng nhận biết màu sắc của bạn bằng bài kiểm tra kiểu Ishihara này",
+    "url": "/vi/tests/color-blindness-test",
     "icon": "FaTrafficLight"
   }
 ]

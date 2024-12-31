@@ -1,8 +1,9 @@
+
 [
   {
-    "name": "Face Memory Test",
-    "description": "Test your face memory ability.",
-    "url": "/tests/face-recognition-test",
+    "name": "Prueba de memoria facial",
+    "description": "Pon a prueba tu capacidad de memoria facial.",
+    "url": "/es/tests/face-recognition-test",
     "icon": "FaFaceSmile"
   }
 ]

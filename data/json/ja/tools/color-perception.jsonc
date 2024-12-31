@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Color Perception",
-    "description": "Test your color perception ability.",
-    "url": "/tests/color-perception-test",
+    "name": "色の知覚",
+    "description": "あなたの色知覚能力をテストしてください。",
+    "url": "/ja/tests/color-perception-test",
     "icon": "FaPalette"
   },
   {
-    "name": "Shades of Gray",
-    "description": "Test your ability to distinguish subtle differences in gray shades",
-    "url": "/tests/gray-shades-test",
+    "name": "グレーの色合い",
+    "description": "グレーの色合いの微妙な違いを区別する能力をテストします",
+    "url": "/ja/tests/gray-shades-test",
     "icon": "FaAdjust"
   },
   {
-    "name": "51 Shades of Gray",
-    "description": "Test your ability to distinguish subtle differences in gray shades",
-    "url": "/tests/51-gray-shades-test",
+    "name": "51 のグレーの色合い",
+    "description": "グレーの色合いの微妙な違いを区別する能力をテストします",
+    "url": "/ja/tests/51-gray-shades-test",
     "icon": "FaAdjust"
   },
   {
-    "name": "Color Blindness",
-    "description": "Test your color vision with this Ishihara-style test",
-    "url": "/tests/color-blindness-test",
+    "name": "色覚異常",
+    "description": "石原式テストで色覚をテストしてください",
+    "url": "/ja/tests/color-blindness-test",
     "icon": "FaTrafficLight"
   }
 ]

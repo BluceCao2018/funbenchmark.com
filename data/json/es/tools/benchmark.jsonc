@@ -1,50 +1,51 @@
+
 [
   {
-    "name": "Reaction Time",
-    "description": "Test your visual reflexes",
-    "url": "/tests/reactiontime",
+    "name": "Tiempo de reacción",
+    "description": "Pon a prueba tus reflejos visuales",
+    "url": "/es/tests/reactiontime",
     "icon": "FaClock"
   },
   {
-    "name": "Sequence Memory",
-    "description": "Remember an increasingly long pattern of button presses.",
-    "url": "/tests/sequence",
+    "name": "Memoria de secuencia",
+    "description": "Recuerde un patrón cada vez más largo de pulsaciones de botones.",
+    "url": "/es/tests/sequence",
     "icon": "FaList"
   },
   {
-    "name": "Aim Trainer",
-    "description": "How quickly can you hit all the targets?",
-    "url": "/tests/aim",
+    "name": "Entrenador de puntería",
+    "description": "¿Qué tan rápido puedes alcanzar todos los objetivos?",
+    "url": "/es/tests/aim",
     "icon": "FaBullseye"
   },
   {
-    "name": "Number Memory",
-    "description": "Remember the longest number you can.",
-    "url": "/tests/number-memory",
+    "name": "Memoria numérica",
+    "description": "Recuerda el número más largo que puedas.",
+    "url": "/es/tests/number-memory",
     "icon": "FaHashtag"
   },
   {
-    "name": "Verbal Memory",
-    "description": "Keep as many words in short term memory as possible",
-    "url": "/tests/verbal-memory",
+    "name": "Memoria verbal",
+    "description": "Mantenga tantas palabras como sea posible en la memoria a corto plazo.",
+    "url": "/es/tests/verbal-memory",
     "icon": "FaComment"
   },
   {
-    "name": "Chimp Test",
-    "description": "Are you smater than a chimpanzee?",
-    "url": "/tests/chimp",
+    "name": "Prueba de chimpancé",
+    "description": "¿Eres más inteligente que un chimpancé?",
+    "url": "/es/tests/chimp",
     "icon": "FaQuestion"
   },
   {
-    "name": "Typing",
-    "description": "How many words per minute can you type?",
-    "url": "/tests/typing",
+    "name": "Mecanografía",
+    "description": "¿Cuántas palabras por minuto puedes escribir?",
+    "url": "/es/tests/typing",
     "icon": "FaKeyboard"
   },
   {
-    "name": "Time Perception",
-    "description": "Test your time perception ability.",
-    "url": "/tests/time-perception-test",
+    "name": "Percepción del tiempo",
+    "description": "Pon a prueba tu capacidad de percepción del tiempo.",
+    "url": "/es/tests/time-perception-test",
     "icon": "FaClock"
   }
 ]

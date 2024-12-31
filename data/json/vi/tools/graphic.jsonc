@@ -1,8 +1,9 @@
+
 [
   {
-    "name": "Face Memory Test",
-    "description": "Test your face memory ability.",
-    "url": "/tests/face-recognition-test",
+    "name": "Kiểm tra trí nhớ khuôn mặt",
+    "description": "Kiểm tra khả năng ghi nhớ khuôn mặt của bạn.",
+    "url": "/vi/tests/face-recognition-test",
     "icon": "FaFaceSmile"
   }
 ]

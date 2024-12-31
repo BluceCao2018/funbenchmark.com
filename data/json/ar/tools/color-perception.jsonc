@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Color Perception",
-    "description": "Test your color perception ability.",
-    "url": "/tests/color-perception-test",
+    "name": "إدراك اللون",
+    "description": "اختبر قدرتك على إدراك الألوان.",
+    "url": "/ar/tests/color-perception-test",
     "icon": "FaPalette"
   },
   {
-    "name": "Shades of Gray",
-    "description": "Test your ability to distinguish subtle differences in gray shades",
-    "url": "/tests/gray-shades-test",
+    "name": "ظلال رمادية",
+    "description": "اختبر قدرتك على التمييز بين الاختلافات الدقيقة في الظلال الرمادية",
+    "url": "/ar/tests/gray-shades-test",
     "icon": "FaAdjust"
   },
   {
-    "name": "51 Shades of Gray",
-    "description": "Test your ability to distinguish subtle differences in gray shades",
-    "url": "/tests/51-gray-shades-test",
+    "name": "51 ظلال من الرمادي",
+    "description": "اختبر قدرتك على التمييز بين الاختلافات الدقيقة في الظلال الرمادية",
+    "url": "/ar/tests/51-gray-shades-test",
     "icon": "FaAdjust"
   },
   {
-    "name": "Color Blindness",
-    "description": "Test your color vision with this Ishihara-style test",
-    "url": "/tests/color-blindness-test",
+    "name": "عمى الألوان",
+    "description": "اختبر رؤيتك للألوان من خلال هذا الاختبار بأسلوب إيشيهارا",
+    "url": "/ar/tests/color-blindness-test",
     "icon": "FaTrafficLight"
   }
 ]

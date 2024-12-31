@@ -1,50 +1,51 @@
+
 [
   {
-    "name": "Reaction Time",
-    "description": "Test your visual reflexes",
-    "url": "/tests/reactiontime",
+    "name": "反應時間",
+    "description": "測試你的視覺反應",
+    "url": "/tw/tests/reactiontime",
     "icon": "FaClock"
   },
   {
-    "name": "Sequence Memory",
-    "description": "Remember an increasingly long pattern of button presses.",
-    "url": "/tests/sequence",
+    "name": "序列記憶",
+    "description": "請記住越來越長的按鈕按下模式。",
+    "url": "/tw/tests/sequence",
     "icon": "FaList"
   },
   {
-    "name": "Aim Trainer",
-    "description": "How quickly can you hit all the targets?",
-    "url": "/tests/aim",
+    "name": "瞄準訓練器",
+    "description": "你能多快擊中所有目標？",
+    "url": "/tw/tests/aim",
     "icon": "FaBullseye"
   },
   {
-    "name": "Number Memory",
-    "description": "Remember the longest number you can.",
-    "url": "/tests/number-memory",
+    "name": "號碼記憶",
+    "description": "盡可能記住最長的數字。",
+    "url": "/tw/tests/number-memory",
     "icon": "FaHashtag"
   },
   {
-    "name": "Verbal Memory",
-    "description": "Keep as many words in short term memory as possible",
-    "url": "/tests/verbal-memory",
+    "name": "言語記憶",
+    "description": "短期記憶中保留盡可能多的單字",
+    "url": "/tw/tests/verbal-memory",
     "icon": "FaComment"
   },
   {
-    "name": "Chimp Test",
-    "description": "Are you smater than a chimpanzee?",
-    "url": "/tests/chimp",
+    "name": "黑猩猩測試",
+    "description": "你比黑猩猩聰明嗎？",
+    "url": "/tw/tests/chimp",
     "icon": "FaQuestion"
   },
   {
-    "name": "Typing",
-    "description": "How many words per minute can you type?",
-    "url": "/tests/typing",
+    "name": "打字",
+    "description": "每分鐘可以打多少字？",
+    "url": "/tw/tests/typing",
     "icon": "FaKeyboard"
   },
   {
-    "name": "Time Perception",
-    "description": "Test your time perception ability.",
-    "url": "/tests/time-perception-test",
+    "name": "時間感知",
+    "description": "測試你的時間感知能力。",
+    "url": "/tw/tests/time-perception-test",
     "icon": "FaClock"
   }
 ]

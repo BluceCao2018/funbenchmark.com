@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Benchmark",
+    "name": "Контрольный показатель",
     "src": "benchmark.jsonc",
     "link": "benchmark",
-    "description": "Measure your ability with brain games and cognitive tests"
+    "description": "Измерьте свои способности с помощью интеллектуальных игр и когнитивных тестов."
   },
   {
-    "name": "Color Perception",
+    "name": "Восприятие цвета",
     "src": "color-perception.jsonc",
     "link": "color-perception",
-    "description": "Test your color perception ability."
+    "description": "Проверьте свою способность восприятия цвета."
   },
   {
-    "name": "Audition",
+    "name": "Прослушивание",
     "src": "audition.jsonc",
     "link": "audition",
-    "description": "Test your audition ability."
+    "description": "Проверьте свои способности на прослушивании."
   },
   {
-    "name": "Graphic",
+    "name": "Графика",
     "src": "graphic.jsonc",
     "link": "graphic",
-    "description": "The Right Brain Test,Test your graphic memory ability."
+    "description": "Тест правого мозга. Проверьте свою способность графической памяти."
   }
 ]

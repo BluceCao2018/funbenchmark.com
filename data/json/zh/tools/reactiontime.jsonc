@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Audio Reaction Time Test",
-    "description": "Audio Reaction Time Test: Test your audio reaction time.",
-    "url": "/tests/audio-reaction-time",
+    "name": "音频反应时间测试",
+    "description": "音频反应时间测试：测试您的音频反应时间。",
+    "url": "/zh/tests/audio-reaction-time",
     "icon": "FaVolumeUp"
   },
   {
-    "name": "Time Perception Reaction Time Test",
-    "description": "Time Perception Reaction Time Test: Test your time perception reaction time.",
-    "url": "/tests/time-perception-test",
+    "name": "时间感知反应时间测试",
+    "description": "时间感知反应时间测试：测试您的时间感知反应时间。",
+    "url": "/zh/tests/time-perception-test",
     "icon": "FaClock"
   },
   {
-    "name": "Face Memory Reaction Time Test",
-    "description": "Face Memory Reaction Time Test: Test your face memory reaction time.",
-    "url": "/tests/face-recognition-test",
+    "name": "面部记忆反应时间测试",
+    "description": "面部记忆反应时间测试：测试您的面部记忆反应时间。",
+    "url": "/zh/tests/face-recognition-test",
     "icon": "FaFaceSmile"
   },
   {
-    "name": "Aim Reaction Time Test",
-    "description": "Aim Reaction Time Test: Test your aim reaction time.",
-    "url": "/tests/aim",
+    "name": "瞄准反应时间测试",
+    "description": "瞄准反应时间测试：测试您的瞄准反应时间。",
+    "url": "/zh/tests/aim",
     "icon": "FaBullseye"
   }
 ]

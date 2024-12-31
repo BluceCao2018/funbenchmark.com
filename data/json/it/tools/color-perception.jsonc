@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Color Perception",
-    "description": "Test your color perception ability.",
-    "url": "/tests/color-perception-test",
+    "name": "Percezione del colore",
+    "description": "Metti alla prova la tua capacità di percezione del colore.",
+    "url": "/it/tests/color-perception-test",
     "icon": "FaPalette"
   },
   {
-    "name": "Shades of Gray",
-    "description": "Test your ability to distinguish subtle differences in gray shades",
-    "url": "/tests/gray-shades-test",
+    "name": "Sfumature di grigio",
+    "description": "Metti alla prova la tua capacità di distinguere sottili differenze nelle sfumature di grigio",
+    "url": "/it/tests/gray-shades-test",
     "icon": "FaAdjust"
   },
   {
-    "name": "51 Shades of Gray",
-    "description": "Test your ability to distinguish subtle differences in gray shades",
-    "url": "/tests/51-gray-shades-test",
+    "name": "51 sfumature di grigio",
+    "description": "Metti alla prova la tua capacità di distinguere sottili differenze nelle sfumature di grigio",
+    "url": "/it/tests/51-gray-shades-test",
     "icon": "FaAdjust"
   },
   {
-    "name": "Color Blindness",
-    "description": "Test your color vision with this Ishihara-style test",
-    "url": "/tests/color-blindness-test",
+    "name": "Daltonismo",
+    "description": "Metti alla prova la tua visione dei colori con questo test in stile Ishihara",
+    "url": "/it/tests/color-blindness-test",
     "icon": "FaTrafficLight"
   }
 ]

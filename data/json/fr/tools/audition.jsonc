@@ -1,20 +1,21 @@
+
 [
   {
-    "name": "Hearing Frequency Range",
-    "description": "Test your hearing frequency range from 20Hz to 20,000Hz",
-    "url": "/tests/hearing-frequency-test",
+    "name": "Gamme de fréquences auditives",
+    "description": "Testez votre plage de fréquences auditives de 20 Hz à 20 000 Hz",
+    "url": "/fr/tests/hearing-frequency-test",
     "icon": "FaHeadphones"
   },
   {
-    "name": "Audio Reaction Time",
-    "description": "Click to start and click when you hear the beep",
-    "url": "/tests/audio-reaction-time",
+    "name": "Temps de réaction audio",
+    "description": "Cliquez pour démarrer et cliquez lorsque vous entendez le bip",
+    "url": "/fr/tests/audio-reaction-time",
     "icon": "FaVolumeUp"
   },
   {
-    "name": "Perfect Pitch Test",
-    "description": "Click to start and click when you hear the note",
-    "url": "/tests/perfect-pitch",
+    "name": "Test de pitch parfait",
+    "description": "Cliquez pour démarrer et cliquez lorsque vous entendez la note",
+    "url": "/fr/tests/perfect-pitch",
     "icon": "FaMusic"
   }
 ]

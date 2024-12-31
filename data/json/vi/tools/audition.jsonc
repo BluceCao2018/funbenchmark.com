@@ -1,20 +1,21 @@
+
 [
   {
-    "name": "Hearing Frequency Range",
-    "description": "Test your hearing frequency range from 20Hz to 20,000Hz",
-    "url": "/tests/hearing-frequency-test",
+    "name": "Dải tần số nghe",
+    "description": "Kiểm tra dải tần nghe của bạn từ 20Hz đến 20.000Hz",
+    "url": "/vi/tests/hearing-frequency-test",
     "icon": "FaHeadphones"
   },
   {
-    "name": "Audio Reaction Time",
-    "description": "Click to start and click when you hear the beep",
-    "url": "/tests/audio-reaction-time",
+    "name": "Thời gian phản ứng âm thanh",
+    "description": "Bấm để bắt đầu và bấm khi bạn nghe thấy tiếng bíp",
+    "url": "/vi/tests/audio-reaction-time",
     "icon": "FaVolumeUp"
   },
   {
-    "name": "Perfect Pitch Test",
-    "description": "Click to start and click when you hear the note",
-    "url": "/tests/perfect-pitch",
+    "name": "Thử nghiệm quảng cáo chiêu hàng hoàn hảo",
+    "description": "Bấm để bắt đầu và bấm khi bạn nghe thấy ghi chú",
+    "url": "/vi/tests/perfect-pitch",
     "icon": "FaMusic"
   }
 ]

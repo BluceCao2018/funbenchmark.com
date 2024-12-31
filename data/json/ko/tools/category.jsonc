@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Benchmark",
+    "name": "기준",
     "src": "benchmark.jsonc",
     "link": "benchmark",
-    "description": "Measure your ability with brain games and cognitive tests"
+    "description": "두뇌 게임과 인지 테스트로 능력을 측정해보세요"
   },
   {
-    "name": "Color Perception",
+    "name": "색상 인식",
     "src": "color-perception.jsonc",
     "link": "color-perception",
-    "description": "Test your color perception ability."
+    "description": "색상 인식 능력을 테스트해 보세요."
   },
   {
-    "name": "Audition",
+    "name": "오디션",
     "src": "audition.jsonc",
     "link": "audition",
-    "description": "Test your audition ability."
+    "description": "오디션 능력을 테스트해보세요."
   },
   {
-    "name": "Graphic",
+    "name": "그래픽",
     "src": "graphic.jsonc",
     "link": "graphic",
-    "description": "The Right Brain Test,Test your graphic memory ability."
+    "description": "우뇌 테스트는 그래픽 메모리 능력을 테스트합니다."
   }
 ]

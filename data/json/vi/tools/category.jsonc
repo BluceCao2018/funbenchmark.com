@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Benchmark",
+    "name": "Điểm chuẩn",
     "src": "benchmark.jsonc",
     "link": "benchmark",
-    "description": "Measure your ability with brain games and cognitive tests"
+    "description": "Đo lường khả năng của bạn bằng các trò chơi trí tuệ và bài kiểm tra nhận thức"
   },
   {
-    "name": "Color Perception",
+    "name": "Nhận thức màu sắc",
     "src": "color-perception.jsonc",
     "link": "color-perception",
-    "description": "Test your color perception ability."
+    "description": "Kiểm tra khả năng nhận biết màu sắc của bạn."
   },
   {
-    "name": "Audition",
+    "name": "Thử giọng",
     "src": "audition.jsonc",
     "link": "audition",
-    "description": "Test your audition ability."
+    "description": "Kiểm tra khả năng thử giọng của bạn."
   },
   {
-    "name": "Graphic",
+    "name": "đồ họa",
     "src": "graphic.jsonc",
     "link": "graphic",
-    "description": "The Right Brain Test,Test your graphic memory ability."
+    "description": "Bài kiểm tra não phải, Kiểm tra khả năng ghi nhớ đồ họa của bạn."
   }
 ]

@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Audio Reaction Time Test",
-    "description": "Audio Reaction Time Test: Test your audio reaction time.",
-    "url": "/tests/audio-reaction-time",
+    "name": "اختبار وقت رد الفعل الصوتي",
+    "description": "اختبار وقت رد الفعل الصوتي: اختبر وقت رد الفعل الصوتي.",
+    "url": "/ar/tests/audio-reaction-time",
     "icon": "FaVolumeUp"
   },
   {
-    "name": "Time Perception Reaction Time Test",
-    "description": "Time Perception Reaction Time Test: Test your time perception reaction time.",
-    "url": "/tests/time-perception-test",
+    "name": "اختبار زمن رد الفعل والإدراك",
+    "description": "اختبار وقت رد الفعل الإدراكي: اختبر وقت رد فعل إدراك الوقت لديك.",
+    "url": "/ar/tests/time-perception-test",
     "icon": "FaClock"
   },
   {
-    "name": "Face Memory Reaction Time Test",
-    "description": "Face Memory Reaction Time Test: Test your face memory reaction time.",
-    "url": "/tests/face-recognition-test",
+    "name": "اختبار زمن رد فعل ذاكرة الوجه",
+    "description": "اختبار وقت رد فعل ذاكرة الوجه: اختبر وقت رد فعل ذاكرة وجهك.",
+    "url": "/ar/tests/face-recognition-test",
     "icon": "FaFaceSmile"
   },
   {
-    "name": "Aim Reaction Time Test",
-    "description": "Aim Reaction Time Test: Test your aim reaction time.",
-    "url": "/tests/aim",
+    "name": "الهدف اختبار وقت رد الفعل",
+    "description": "اختبار وقت رد الفعل على الهدف: اختبر وقت رد الفعل على هدفك.",
+    "url": "/ar/tests/aim",
     "icon": "FaBullseye"
   }
 ]

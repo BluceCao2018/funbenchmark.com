@@ -1,50 +1,51 @@
+
 [
   {
-    "name": "Reaction Time",
-    "description": "Test your visual reflexes",
-    "url": "/tests/reactiontime",
+    "name": "Thời gian phản ứng",
+    "description": "Kiểm tra phản xạ thị giác của bạn",
+    "url": "/vi/tests/reactiontime",
     "icon": "FaClock"
   },
   {
-    "name": "Sequence Memory",
-    "description": "Remember an increasingly long pattern of button presses.",
-    "url": "/tests/sequence",
+    "name": "Bộ nhớ trình tự",
+    "description": "Hãy nhớ kiểu nhấn nút ngày càng dài.",
+    "url": "/vi/tests/sequence",
     "icon": "FaList"
   },
   {
-    "name": "Aim Trainer",
-    "description": "How quickly can you hit all the targets?",
-    "url": "/tests/aim",
+    "name": "Huấn luyện viên mục tiêu",
+    "description": "Làm thế nào nhanh chóng bạn có thể đạt được tất cả các mục tiêu?",
+    "url": "/vi/tests/aim",
     "icon": "FaBullseye"
   },
   {
-    "name": "Number Memory",
-    "description": "Remember the longest number you can.",
-    "url": "/tests/number-memory",
+    "name": "Bộ nhớ số",
+    "description": "Hãy nhớ số dài nhất bạn có thể.",
+    "url": "/vi/tests/number-memory",
     "icon": "FaHashtag"
   },
   {
-    "name": "Verbal Memory",
-    "description": "Keep as many words in short term memory as possible",
-    "url": "/tests/verbal-memory",
+    "name": "Trí nhớ bằng lời nói",
+    "description": "Giữ càng nhiều từ trong bộ nhớ ngắn hạn càng tốt",
+    "url": "/vi/tests/verbal-memory",
     "icon": "FaComment"
   },
   {
-    "name": "Chimp Test",
-    "description": "Are you smater than a chimpanzee?",
-    "url": "/tests/chimp",
+    "name": "Kiểm tra tinh tinh",
+    "description": "Bạn có thông minh hơn một con tinh tinh?",
+    "url": "/vi/tests/chimp",
     "icon": "FaQuestion"
   },
   {
-    "name": "Typing",
-    "description": "How many words per minute can you type?",
-    "url": "/tests/typing",
+    "name": "đánh máy",
+    "description": "Bạn có thể gõ bao nhiêu từ mỗi phút?",
+    "url": "/vi/tests/typing",
     "icon": "FaKeyboard"
   },
   {
-    "name": "Time Perception",
-    "description": "Test your time perception ability.",
-    "url": "/tests/time-perception-test",
+    "name": "Nhận thức về thời gian",
+    "description": "Kiểm tra khả năng nhận thức thời gian của bạn.",
+    "url": "/vi/tests/time-perception-test",
     "icon": "FaClock"
   }
 ]

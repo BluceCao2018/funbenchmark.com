@@ -1,50 +1,51 @@
+
 [
   {
-    "name": "Reaction Time",
-    "description": "Test your visual reflexes",
-    "url": "/tests/reactiontime",
+    "name": "반응 시간",
+    "description": "시각적 반사 신경을 테스트해보세요",
+    "url": "/ko/tests/reactiontime",
     "icon": "FaClock"
   },
   {
-    "name": "Sequence Memory",
-    "description": "Remember an increasingly long pattern of button presses.",
-    "url": "/tests/sequence",
+    "name": "시퀀스 메모리",
+    "description": "점점 더 길어지는 버튼 누름 패턴을 기억하세요.",
+    "url": "/ko/tests/sequence",
     "icon": "FaList"
   },
   {
-    "name": "Aim Trainer",
-    "description": "How quickly can you hit all the targets?",
-    "url": "/tests/aim",
+    "name": "조준 트레이너",
+    "description": "얼마나 빨리 모든 목표물을 맞출 수 있나요?",
+    "url": "/ko/tests/aim",
     "icon": "FaBullseye"
   },
   {
-    "name": "Number Memory",
-    "description": "Remember the longest number you can.",
-    "url": "/tests/number-memory",
+    "name": "숫자 기억",
+    "description": "가능한 가장 긴 숫자를 기억하세요.",
+    "url": "/ko/tests/number-memory",
     "icon": "FaHashtag"
   },
   {
-    "name": "Verbal Memory",
-    "description": "Keep as many words in short term memory as possible",
-    "url": "/tests/verbal-memory",
+    "name": "언어 기억",
+    "description": "가능한 한 많은 단어를 단기 기억에 저장하세요",
+    "url": "/ko/tests/verbal-memory",
     "icon": "FaComment"
   },
   {
-    "name": "Chimp Test",
-    "description": "Are you smater than a chimpanzee?",
-    "url": "/tests/chimp",
+    "name": "침팬지 테스트",
+    "description": "당신은 침팬지보다 똑똑합니까?",
+    "url": "/ko/tests/chimp",
     "icon": "FaQuestion"
   },
   {
-    "name": "Typing",
-    "description": "How many words per minute can you type?",
-    "url": "/tests/typing",
+    "name": "타자",
+    "description": "분당 몇 단어를 입력할 수 있나요?",
+    "url": "/ko/tests/typing",
     "icon": "FaKeyboard"
   },
   {
-    "name": "Time Perception",
-    "description": "Test your time perception ability.",
-    "url": "/tests/time-perception-test",
+    "name": "시간 인식",
+    "description": "시간 인식 능력을 테스트해 보세요.",
+    "url": "/ko/tests/time-perception-test",
     "icon": "FaClock"
   }
 ]

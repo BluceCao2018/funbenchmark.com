@@ -377,8 +377,10 @@
     "about": "This extremely challenging test measures your ability to distinguish incredibly subtle differences in gray shades. The difficulty increases dramatically with each level, with the final levels testing the absolute limits of human perception. One wrong move ends the game, demanding both exceptional visual acuity and unwavering confidence in your choices."
   },
   "hearingTest": {
+    "meta_title": "Hearing Frequency Range Test",
+    "meta_description": "Test your hearing age,Test your hearing frequency range from 20Hz to 20,000Hz",
     "h2": "Hearing Frequency Range Test",
-    "description": "Test your hearing frequency range from 20Hz to 20,000Hz",
+    "description": "Test your hearing age,Test your hearing frequency range from 20Hz to 20,000Hz",
     "clickToStart": "Start",
     "currentFreq": "Current Frequency",
     "playSound": "Play Sound",

@@ -1,50 +1,51 @@
+
 [
   {
-    "name": "Reaction Time",
-    "description": "Test your visual reflexes",
-    "url": "/tests/reactiontime",
+    "name": "反应时间",
+    "description": "测试你的视觉反应",
+    "url": "/zh/tests/reactiontime",
     "icon": "FaClock"
   },
   {
-    "name": "Sequence Memory",
-    "description": "Remember an increasingly long pattern of button presses.",
-    "url": "/tests/sequence",
+    "name": "序列记忆",
+    "description": "请记住越来越长的按钮按下模式。",
+    "url": "/zh/tests/sequence",
     "icon": "FaList"
   },
   {
-    "name": "Aim Trainer",
-    "description": "How quickly can you hit all the targets?",
-    "url": "/tests/aim",
+    "name": "瞄准训练器",
+    "description": "你能多快击中所有目标？",
+    "url": "/zh/tests/aim",
     "icon": "FaBullseye"
   },
   {
-    "name": "Number Memory",
-    "description": "Remember the longest number you can.",
-    "url": "/tests/number-memory",
+    "name": "号码记忆",
+    "description": "尽可能记住最长的数字。",
+    "url": "/zh/tests/number-memory",
     "icon": "FaHashtag"
   },
   {
-    "name": "Verbal Memory",
-    "description": "Keep as many words in short term memory as possible",
-    "url": "/tests/verbal-memory",
+    "name": "言语记忆",
+    "description": "短期记忆中保留尽可能多的单词",
+    "url": "/zh/tests/verbal-memory",
     "icon": "FaComment"
   },
   {
-    "name": "Chimp Test",
-    "description": "Are you smater than a chimpanzee?",
-    "url": "/tests/chimp",
+    "name": "黑猩猩测试",
+    "description": "你比黑猩猩聪明吗？",
+    "url": "/zh/tests/chimp",
     "icon": "FaQuestion"
   },
   {
-    "name": "Typing",
-    "description": "How many words per minute can you type?",
-    "url": "/tests/typing",
+    "name": "打字",
+    "description": "你每分钟可以打多少字？",
+    "url": "/zh/tests/typing",
     "icon": "FaKeyboard"
   },
   {
-    "name": "Time Perception",
-    "description": "Test your time perception ability.",
-    "url": "/tests/time-perception-test",
+    "name": "时间感知",
+    "description": "测试你的时间感知能力。",
+    "url": "/zh/tests/time-perception-test",
     "icon": "FaClock"
   }
 ]

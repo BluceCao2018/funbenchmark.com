@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Benchmark",
+    "name": "基准",
     "src": "benchmark.jsonc",
     "link": "benchmark",
-    "description": "Measure your ability with brain games and cognitive tests"
+    "description": "通过脑力游戏和认知测试来衡量您的能力"
   },
   {
-    "name": "Color Perception",
+    "name": "色彩感知",
     "src": "color-perception.jsonc",
     "link": "color-perception",
-    "description": "Test your color perception ability."
+    "description": "测试你的色彩感知能力。"
   },
   {
-    "name": "Audition",
+    "name": "试镜",
     "src": "audition.jsonc",
     "link": "audition",
-    "description": "Test your audition ability."
+    "description": "测试你的听力能力。"
   },
   {
-    "name": "Graphic",
+    "name": "形象的",
     "src": "graphic.jsonc",
     "link": "graphic",
-    "description": "The Right Brain Test,Test your graphic memory ability."
+    "description": "右脑测试，测试你的图形记忆能力。"
   }
 ]

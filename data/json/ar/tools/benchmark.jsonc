@@ -1,50 +1,51 @@
+
 [
   {
-    "name": "Reaction Time",
-    "description": "Test your visual reflexes",
-    "url": "/tests/reactiontime",
+    "name": "وقت رد الفعل",
+    "description": "اختبر ردود أفعالك البصرية",
+    "url": "/ar/tests/reactiontime",
     "icon": "FaClock"
   },
   {
-    "name": "Sequence Memory",
-    "description": "Remember an increasingly long pattern of button presses.",
-    "url": "/tests/sequence",
+    "name": "ذاكرة التسلسل",
+    "description": "تذكر النمط الطويل المتزايد من الضغط على الأزرار.",
+    "url": "/ar/tests/sequence",
     "icon": "FaList"
   },
   {
-    "name": "Aim Trainer",
-    "description": "How quickly can you hit all the targets?",
-    "url": "/tests/aim",
+    "name": "مدرب الهدف",
+    "description": "ما مدى سرعة يمكنك ضرب جميع الأهداف؟",
+    "url": "/ar/tests/aim",
     "icon": "FaBullseye"
   },
   {
-    "name": "Number Memory",
-    "description": "Remember the longest number you can.",
-    "url": "/tests/number-memory",
+    "name": "ذاكرة الرقم",
+    "description": "تذكر أطول رقم يمكنك.",
+    "url": "/ar/tests/number-memory",
     "icon": "FaHashtag"
   },
   {
-    "name": "Verbal Memory",
-    "description": "Keep as many words in short term memory as possible",
-    "url": "/tests/verbal-memory",
+    "name": "الذاكرة اللفظية",
+    "description": "احتفظ بأكبر عدد ممكن من الكلمات في الذاكرة قصيرة المدى قدر الإمكان",
+    "url": "/ar/tests/verbal-memory",
     "icon": "FaComment"
   },
   {
-    "name": "Chimp Test",
-    "description": "Are you smater than a chimpanzee?",
-    "url": "/tests/chimp",
+    "name": "اختبار الشمبانزي",
+    "description": "هل أنت أذكى من الشمبانزي؟",
+    "url": "/ar/tests/chimp",
     "icon": "FaQuestion"
   },
   {
-    "name": "Typing",
-    "description": "How many words per minute can you type?",
-    "url": "/tests/typing",
+    "name": "الكتابة",
+    "description": "كم عدد الكلمات في الدقيقة التي يمكنك كتابتها؟",
+    "url": "/ar/tests/typing",
     "icon": "FaKeyboard"
   },
   {
-    "name": "Time Perception",
-    "description": "Test your time perception ability.",
-    "url": "/tests/time-perception-test",
+    "name": "إدراك الوقت",
+    "description": "اختبار القدرة على إدراك الوقت الخاص بك.",
+    "url": "/ar/tests/time-perception-test",
     "icon": "FaClock"
   }
 ]

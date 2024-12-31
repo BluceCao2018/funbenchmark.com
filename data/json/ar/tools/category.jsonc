@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Benchmark",
+    "name": "المعيار",
     "src": "benchmark.jsonc",
     "link": "benchmark",
-    "description": "Measure your ability with brain games and cognitive tests"
+    "description": "قياس قدرتك مع ألعاب الدماغ والاختبارات المعرفية"
   },
   {
-    "name": "Color Perception",
+    "name": "إدراك اللون",
     "src": "color-perception.jsonc",
     "link": "color-perception",
-    "description": "Test your color perception ability."
+    "description": "اختبر قدرتك على إدراك الألوان."
   },
   {
-    "name": "Audition",
+    "name": "الاختبار",
     "src": "audition.jsonc",
     "link": "audition",
-    "description": "Test your audition ability."
+    "description": "اختبر قدرتك على الاختبار."
   },
   {
-    "name": "Graphic",
+    "name": "رسم بياني",
     "src": "graphic.jsonc",
     "link": "graphic",
-    "description": "The Right Brain Test,Test your graphic memory ability."
+    "description": "اختبار الدماغ الأيمن، اختبر قدرة الذاكرة الرسومية لديك."
   }
 ]

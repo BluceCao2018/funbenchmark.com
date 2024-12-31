@@ -1,8 +1,9 @@
+
 [
   {
-    "name": "Face Memory Test",
-    "description": "Test your face memory ability.",
-    "url": "/tests/face-recognition-test",
+    "name": "얼굴 기억력 테스트",
+    "description": "당신의 얼굴 기억 능력을 테스트해보세요.",
+    "url": "/ko/tests/face-recognition-test",
     "icon": "FaFaceSmile"
   }
 ]

@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Benchmark",
+    "name": "ベンチマーク",
     "src": "benchmark.jsonc",
     "link": "benchmark",
-    "description": "Measure your ability with brain games and cognitive tests"
+    "description": "頭脳ゲームや認知テストで自分の能力を測定"
   },
   {
-    "name": "Color Perception",
+    "name": "色の知覚",
     "src": "color-perception.jsonc",
     "link": "color-perception",
-    "description": "Test your color perception ability."
+    "description": "あなたの色知覚能力をテストしてください。"
   },
   {
-    "name": "Audition",
+    "name": "オーディション",
     "src": "audition.jsonc",
     "link": "audition",
-    "description": "Test your audition ability."
+    "description": "あなたのオーディション能力をテストしてください。"
   },
   {
-    "name": "Graphic",
+    "name": "グラフィック",
     "src": "graphic.jsonc",
     "link": "graphic",
-    "description": "The Right Brain Test,Test your graphic memory ability."
+    "description": "右脳テスト、あなたのグラフィックメモリ能力をテストします。"
   }
 ]

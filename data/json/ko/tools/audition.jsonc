@@ -1,20 +1,21 @@
+
 [
   {
-    "name": "Hearing Frequency Range",
-    "description": "Test your hearing frequency range from 20Hz to 20,000Hz",
-    "url": "/tests/hearing-frequency-test",
+    "name": "청각 주파수 범위",
+    "description": "20Hz~20,000Hz의 청력 주파수 범위를 테스트하세요.",
+    "url": "/ko/tests/hearing-frequency-test",
     "icon": "FaHeadphones"
   },
   {
-    "name": "Audio Reaction Time",
-    "description": "Click to start and click when you hear the beep",
-    "url": "/tests/audio-reaction-time",
+    "name": "오디오 반응 시간",
+    "description": "시작하려면 클릭하고 경고음이 들리면 클릭하세요.",
+    "url": "/ko/tests/audio-reaction-time",
     "icon": "FaVolumeUp"
   },
   {
-    "name": "Perfect Pitch Test",
-    "description": "Click to start and click when you hear the note",
-    "url": "/tests/perfect-pitch",
+    "name": "퍼펙트 피치 테스트",
+    "description": "시작하려면 클릭하고 메모가 들리면 클릭하세요.",
+    "url": "/ko/tests/perfect-pitch",
     "icon": "FaMusic"
   }
 ]

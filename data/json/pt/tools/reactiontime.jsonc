@@ -1,26 +1,27 @@
+
 [
   {
-    "name": "Audio Reaction Time Test",
-    "description": "Audio Reaction Time Test: Test your audio reaction time.",
-    "url": "/tests/audio-reaction-time",
+    "name": "Teste de tempo de reação de áudio",
+    "description": "Teste de tempo de reação de áudio: teste seu tempo de reação de áudio.",
+    "url": "/pt/tests/audio-reaction-time",
     "icon": "FaVolumeUp"
   },
   {
-    "name": "Time Perception Reaction Time Test",
-    "description": "Time Perception Reaction Time Test: Test your time perception reaction time.",
-    "url": "/tests/time-perception-test",
+    "name": "Teste de tempo de reação de percepção de tempo",
+    "description": "Teste de tempo de reação de percepção de tempo: teste seu tempo de reação de percepção de tempo.",
+    "url": "/pt/tests/time-perception-test",
     "icon": "FaClock"
   },
   {
-    "name": "Face Memory Reaction Time Test",
-    "description": "Face Memory Reaction Time Test: Test your face memory reaction time.",
-    "url": "/tests/face-recognition-test",
+    "name": "Teste de tempo de reação de memória facial",
+    "description": "Teste de tempo de reação de memória facial: teste o tempo de reação de sua memória facial.",
+    "url": "/pt/tests/face-recognition-test",
     "icon": "FaFaceSmile"
   },
   {
-    "name": "Aim Reaction Time Test",
-    "description": "Aim Reaction Time Test: Test your aim reaction time.",
-    "url": "/tests/aim",
+    "name": "Teste de tempo de reação de mira",
+    "description": "Teste de tempo de reação de mira: teste seu tempo de reação de mira.",
+    "url": "/pt/tests/aim",
     "icon": "FaBullseye"
   }
 ]

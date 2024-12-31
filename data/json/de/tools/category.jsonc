@@ -1,26 +1,27 @@
+
 [
   {
     "name": "Benchmark",
     "src": "benchmark.jsonc",
     "link": "benchmark",
-    "description": "Measure your ability with brain games and cognitive tests"
+    "description": "Messen Sie Ihre Fähigkeiten mit Denkspielen und kognitiven Tests"
   },
   {
-    "name": "Color Perception",
+    "name": "Farbwahrnehmung",
     "src": "color-perception.jsonc",
     "link": "color-perception",
-    "description": "Test your color perception ability."
+    "description": "Testen Sie Ihre Farbwahrnehmungsfähigkeit."
   },
   {
-    "name": "Audition",
+    "name": "Vorsprechen",
     "src": "audition.jsonc",
     "link": "audition",
-    "description": "Test your audition ability."
+    "description": "Testen Sie Ihre Hörfähigkeiten."
   },
   {
-    "name": "Graphic",
+    "name": "Grafik",
     "src": "graphic.jsonc",
     "link": "graphic",
-    "description": "The Right Brain Test,Test your graphic memory ability."
+    "description": "Der rechte Gehirntest: Testen Sie Ihr grafisches Gedächtnis."
   }
 ]
