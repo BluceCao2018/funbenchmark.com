@@ -98,7 +98,7 @@ export default function NumberMemoryTest() {
             type="submit" 
             className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors"
           >
-            提交
+            {t("submit")}
           </button>
         </form>
       )}
