@@ -464,10 +464,10 @@
     "remainingNotes": "Resterende noten om te selecteren"
   },
   "faceRecognition": {
-    "meta_title": "Gezichtsgeheugentest",
-    "meta_description": "Test het geheugenvermogen van uw gezicht. Hoe hoger de nauwkeurigheid en hoe sneller de snelheid, hoe sterker het vermogen van uw rechterhersenhelft is.",
-    "h1": "Gezichtsgeheugentest",
-    "description": "Test het geheugenvermogen van uw gezicht. Hoe hoger de nauwkeurigheid en hoe sneller de snelheid, hoe sterker het vermogen van uw rechterhersenhelft is.",
+    "meta_title": "Gezichtsherkenningstest",
+    "meta_description": "Test uw gezichtsherkenningsvermogen. Hoe hoger de nauwkeurigheid en hoe sneller de snelheid, des te sterker is bewezen dat uw rechterhersenhelft vermogen is.",
+    "h1": "Gezichtsherkenningstest",
+    "description": "Test uw gezichtsherkenningsvermogen. Hoe hoger de nauwkeurigheid en hoe sneller de snelheid, des te sterker is bewezen dat uw rechterhersenhelft vermogen is.",
     "startTest": "Test starten",
     "memorizefaces": "Onthoud deze gezichten",
     "selectFamiliarFaces": "Selecteer de gezichten die u zich herinnert",
@@ -482,8 +482,8 @@
     "nextLevel": "Volgende niveau",
     "tryAgain": "Probeer het opnieuw",
     "restart": "Opnieuw opstarten",
-    "statisticsTitle": "Gezichtsgeheugenteststatistieken",
-    "aboutTitle": "Over gezichtsgeheugentest",
-    "about": "De Face Memory Test is ontworpen om uw vermogen te meten om menselijke gezichten te herkennen en te onthouden. Beginnend vanaf niveau 1 met één gezicht, neemt de uitdaging geleidelijk toe tot niveau 9. In elk niveau worden gezichten getoond om te onthouden, gevolgd door een selectiefase waarin je de gezichten die je eerder hebt gezien moet identificeren tussen nieuwe gezichten. degenen. Deze test helpt bij het evalueren van uw vaardigheden op het gebied van gezichtsherkenning, wat een cruciale vaardigheid is in sociale interacties en verschillende professionele velden. Een score boven de 70% is vereist om door te gaan naar het volgende niveau. De test meet zowel de nauwkeurigheid als de reactietijd en biedt een uitgebreide beoordeling van uw gezichtsgeheugencapaciteiten."
+    "statisticsTitle": "Teststatistieken voor gezichtsherkenning",
+    "aboutTitle": "Over gezichtsherkenningstest",
+    "about": "De Gezichtsherkenningstest is ontworpen om uw vermogen te meten om menselijke gezichten te herkennen en te onthouden. Beginnend vanaf niveau 1 met één gezicht, neemt de uitdaging geleidelijk toe tot niveau 9. In elk niveau worden gezichten getoond die je moet onthouden, gevolgd door een selectiefase waarin je de gezichten die je eerder hebt gezien moet identificeren tussen nieuwe gezichten. degenen. Deze gezichtsherkenningstest helpt bij het evalueren van uw gezichtsherkenningsvaardigheden, wat een cruciale vaardigheid is in sociale interacties en verschillende professionele velden. Een score boven de 70% is vereist om door te gaan naar het volgende niveau. De gezichtsherkenningstest meet zowel de nauwkeurigheid als de reactietijd en biedt een uitgebreide beoordeling van uw gezichtsherkenningsmogelijkheden."
   }
 }

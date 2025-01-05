@@ -464,17 +464,17 @@
     "remainingNotes": "Notas restantes para selecionar"
   },
   "faceRecognition": {
-    "meta_title": "Teste de memória facial",
-    "meta_description": "Teste sua capacidade de memória facial. Quanto maior a precisão e mais rápida a velocidade, mais forte será comprovada a capacidade do lado direito do cérebro.",
-    "h1": "Teste de memória facial",
-    "description": "Teste sua capacidade de memória facial. Quanto maior a precisão e mais rápida a velocidade, mais forte será comprovada a capacidade do lado direito do cérebro.",
+    "meta_title": "Teste de reconhecimento facial",
+    "meta_description": "Teste sua capacidade de reconhecimento facial. Quanto maior a precisão e mais rápida a velocidade, mais forte será comprovada a capacidade do lado direito do cérebro.",
+    "h1": "Teste de reconhecimento facial",
+    "description": "Teste sua capacidade de reconhecimento facial. Quanto maior a precisão e mais rápida a velocidade, mais forte será comprovada a capacidade do lado direito do cérebro.",
     "startTest": "Iniciar teste",
     "memorizefaces": "Memorize esses rostos",
     "selectFamiliarFaces": "Selecione os rostos que você lembra",
     "submit": "Enviar",
     "level": "Nível",
     "results": "Resultados",
-    "correctSelections": "Seleções corretas",
+    "correctSelections": "Seleções Corretas",
     "falsePositives": "Falsos Positivos",
     "accuracy": "Precisão",
     "reactionTime": "Tempo de reação",
@@ -482,8 +482,8 @@
     "nextLevel": "Próximo nível",
     "tryAgain": "Tente novamente",
     "restart": "Reiniciar",
-    "statisticsTitle": "Estatísticas de teste de memória facial",
-    "aboutTitle": "Sobre o teste de memória facial",
-    "about": "O Teste de Memória Facial foi desenvolvido para medir sua capacidade de reconhecer e lembrar rostos humanos. Começando no nível 1 com um único rosto, o desafio aumenta progressivamente até o nível 9. Em cada nível, serão mostrados rostos para memorizar, seguido por uma fase de seleção onde você precisa identificar os rostos que viu antes entre novos uns. Este teste ajuda a avaliar suas habilidades de reconhecimento facial, que é uma habilidade crucial nas interações sociais e em diversas áreas profissionais. Uma pontuação acima de 70% é necessária para avançar para o próximo nível. O teste mede a precisão e o tempo de reação, fornecendo uma avaliação abrangente das suas capacidades de memória facial."
+    "statisticsTitle": "Estatísticas de teste de reconhecimento facial",
+    "aboutTitle": "Sobre o teste de reconhecimento facial",
+    "about": "O Teste de Reconhecimento Facial foi desenvolvido para medir sua capacidade de reconhecer e lembrar rostos humanos. Começando no nível 1 com um único rosto, o desafio aumenta progressivamente até o nível 9. Em cada nível, serão mostrados rostos para memorizar, seguido por uma fase de seleção onde você precisa identificar os rostos que viu antes entre novos uns. Este teste de reconhecimento facial ajuda a avaliar suas habilidades de reconhecimento facial, que é uma habilidade crucial em interações sociais e em diversas áreas profissionais. Uma pontuação acima de 70% é necessária para avançar para o próximo nível. O Teste de Reconhecimento Facial mede a precisão e o tempo de reação, fornecendo uma avaliação abrangente de suas capacidades de reconhecimento facial."
   }
 }

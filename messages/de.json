@@ -464,10 +464,10 @@
     "remainingNotes": "Verbleibende Noten zur Auswahl"
   },
   "faceRecognition": {
-    "meta_title": "Gesichtsgedächtnistest",
-    "meta_description": "Testen Sie Ihr Gesichtsgedächtnis. Je höher die Genauigkeit und je schneller die Geschwindigkeit, desto stärker ist nachweislich Ihre Fähigkeit zur rechten Gehirnhälfte.",
-    "h1": "Gesichtsgedächtnistest",
-    "description": "Testen Sie Ihr Gesichtsgedächtnis. Je höher die Genauigkeit und je schneller die Geschwindigkeit, desto stärker ist nachweislich Ihre Fähigkeit zur rechten Gehirnhälfte.",
+    "meta_title": "Gesichtserkennungstest",
+    "meta_description": "Testen Sie Ihre Fähigkeit zur Gesichtserkennung. Je höher die Genauigkeit und je schneller die Geschwindigkeit, desto stärker ist nachweislich Ihre Fähigkeit zur rechten Gehirnhälfte.",
+    "h1": "Gesichtserkennungstest",
+    "description": "Testen Sie Ihre Fähigkeit zur Gesichtserkennung. Je höher die Genauigkeit und je schneller die Geschwindigkeit, desto stärker ist nachweislich Ihre Fähigkeit zur rechten Gehirnhälfte.",
     "startTest": "Test starten",
     "memorizefaces": "Merken Sie sich diese Gesichter",
     "selectFamiliarFaces": "Wählen Sie die Gesichter aus, an die Sie sich erinnern",
@@ -482,8 +482,8 @@
     "nextLevel": "Nächstes Level",
     "tryAgain": "Versuchen Sie es erneut",
     "restart": "Neustart",
-    "statisticsTitle": "Statistiken zum Gesichtsgedächtnistest",
-    "aboutTitle": "Über den Gesichtsgedächtnistest",
-    "about": "Der Gesichtsgedächtnistest soll Ihre Fähigkeit messen, menschliche Gesichter zu erkennen und sich daran zu erinnern. Beginnend mit Level 1 mit einem einzelnen Gesicht steigt die Herausforderung schrittweise bis Level 9. In jedem Level werden Ihnen Gesichter zum Auswendiglernen gezeigt, gefolgt von einer Auswahlphase, in der Sie die Gesichter, die Sie zuvor gesehen haben, unter neuen identifizieren müssen diejenigen. Dieser Test hilft bei der Beurteilung Ihrer Gesichtserkennungsfähigkeiten, einer entscheidenden Fähigkeit in sozialen Interaktionen und in verschiedenen Berufsfeldern. Für den Aufstieg in die nächste Stufe ist eine Punktzahl von über 70 % erforderlich. Der Test misst sowohl die Genauigkeit als auch die Reaktionszeit und bietet eine umfassende Beurteilung Ihrer Gesichtsgedächtnisfähigkeiten."
+    "statisticsTitle": "Statistiken zum Gesichtserkennungstest",
+    "aboutTitle": "Über den Gesichtserkennungstest",
+    "about": "Der Gesichtserkennungstest soll Ihre Fähigkeit messen, menschliche Gesichter zu erkennen und sich daran zu erinnern. Beginnend mit Level 1 mit einem einzelnen Gesicht steigt die Herausforderung schrittweise bis Level 9. In jedem Level werden Ihnen Gesichter gezeigt, die Sie sich merken müssen, gefolgt von einer Auswahlphase, in der Sie die Gesichter, die Sie zuvor gesehen haben, unter neuen Gesichtern identifizieren müssen diejenigen. Dieser Gesichtserkennungstest hilft bei der Beurteilung Ihrer Gesichtserkennungsfähigkeiten, die eine entscheidende Fähigkeit in sozialen Interaktionen und in verschiedenen Berufsfeldern sind. Für den Aufstieg in die nächste Stufe ist eine Punktzahl von über 70 % erforderlich. Der Gesichtserkennungstest misst sowohl die Genauigkeit als auch die Reaktionszeit und bietet eine umfassende Beurteilung Ihrer Gesichtserkennungsfähigkeiten."
   }
 }

@@ -464,10 +464,10 @@
     "remainingNotes": "Pozostałe notatki do wyboru"
   },
   "faceRecognition": {
-    "meta_title": "Test pamięci twarzy",
-    "meta_description": "Sprawdź swoją zdolność zapamiętywania twarzy. Im wyższa dokładność i większa prędkość, tym silniejsza jest zdolność prawej półkuli mózgu.",
-    "h1": "Test pamięci twarzy",
-    "description": "Sprawdź swoją zdolność zapamiętywania twarzy. Im wyższa dokładność i większa prędkość, tym silniejsza jest zdolność prawej półkuli mózgu.",
+    "meta_title": "Test rozpoznawania twarzy",
+    "meta_description": "Sprawdź swoją zdolność rozpoznawania twarzy. Im wyższa dokładność i większa prędkość, tym silniejsza jest zdolność prawej półkuli mózgu.",
+    "h1": "Test rozpoznawania twarzy",
+    "description": "Sprawdź swoją zdolność rozpoznawania twarzy. Im wyższa dokładność i większa prędkość, tym silniejsza jest zdolność prawej półkuli mózgu.",
     "startTest": "Rozpocznij test",
     "memorizefaces": "Zapamiętaj te twarze",
     "selectFamiliarFaces": "Wybierz twarze, które pamiętasz",
@@ -482,8 +482,8 @@
     "nextLevel": "Następny poziom",
     "tryAgain": "Spróbuj ponownie",
     "restart": "Uruchom ponownie",
-    "statisticsTitle": "Statystyki testu pamięci twarzy",
-    "aboutTitle": "O teście pamięci twarzy",
-    "about": "Test Pamięci Twarzy ma na celu zmierzenie Twojej zdolności rozpoznawania i zapamiętywania ludzkich twarzy. Począwszy od poziomu 1 z pojedynczą twarzą, wyzwanie stopniowo wzrasta aż do poziomu 9. Na każdym poziomie zobaczysz twarze do zapamiętania, po czym nastąpi faza selekcji, podczas której musisz zidentyfikować twarze, które widziałeś wcześniej spośród nowych te. Ten test pomaga ocenić zdolność rozpoznawania twarzy, która jest kluczową umiejętnością w interakcjach społecznych i różnych dziedzinach zawodowych. Aby przejść na następny poziom, wymagany jest wynik powyżej 70%. Test mierzy zarówno dokładność, jak i czas reakcji, zapewniając kompleksową ocenę możliwości pamięci twarzy."
+    "statisticsTitle": "Statystyki testu rozpoznawania twarzy",
+    "aboutTitle": "Informacje o teście rozpoznawania twarzy",
+    "about": "Test rozpoznawania twarzy ma na celu sprawdzenie Twojej zdolności rozpoznawania i zapamiętywania ludzkich twarzy. Począwszy od poziomu 1 z pojedynczą twarzą, wyzwanie stopniowo wzrasta aż do poziomu 9. Na każdym poziomie zobaczysz twarze do zapamiętania, po czym nastąpi faza selekcji, podczas której musisz zidentyfikować twarze, które widziałeś wcześniej spośród nowych te. Ten test rozpoznawania twarzy pomaga ocenić Twoje umiejętności rozpoznawania twarzy, co jest kluczową umiejętnością w interakcjach społecznych i różnych dziedzinach zawodowych. Aby przejść na następny poziom, wymagany jest wynik powyżej 70%. Test rozpoznawania twarzy mierzy zarówno dokładność, jak i czas reakcji, zapewniając kompleksową ocenę możliwości rozpoznawania twarzy."
   }
 }

@@ -464,10 +464,10 @@
     "remainingNotes": "Ghi chú còn lại để chọn"
   },
   "faceRecognition": {
-    "meta_title": "Kiểm tra trí nhớ khuôn mặt",
-    "meta_description": "Kiểm tra khả năng ghi nhớ khuôn mặt của bạn. Độ chính xác càng cao và tốc độ càng nhanh thì khả năng não phải của bạn càng được chứng minh là mạnh mẽ.",
-    "h1": "Kiểm tra trí nhớ khuôn mặt",
-    "description": "Kiểm tra khả năng ghi nhớ khuôn mặt của bạn. Độ chính xác càng cao và tốc độ càng nhanh thì khả năng não phải của bạn càng được chứng minh là mạnh mẽ.",
+    "meta_title": "Kiểm tra nhận dạng khuôn mặt",
+    "meta_description": "Kiểm tra khả năng nhận dạng khuôn mặt của bạn. Độ chính xác càng cao và tốc độ càng nhanh thì khả năng não phải của bạn càng được chứng minh là mạnh mẽ.",
+    "h1": "Kiểm tra nhận dạng khuôn mặt",
+    "description": "Kiểm tra khả năng nhận dạng khuôn mặt của bạn. Độ chính xác càng cao và tốc độ càng nhanh thì khả năng não phải của bạn càng được chứng minh là mạnh mẽ.",
     "startTest": "Bắt đầu kiểm tra",
     "memorizefaces": "Ghi nhớ những khuôn mặt này",
     "selectFamiliarFaces": "Chọn những khuôn mặt bạn nhớ",
@@ -482,8 +482,8 @@
     "nextLevel": "Cấp độ tiếp theo",
     "tryAgain": "Thử lại",
     "restart": "Khởi động lại",
-    "statisticsTitle": "Thống kê kiểm tra trí nhớ khuôn mặt",
-    "aboutTitle": "Giới thiệu về Kiểm tra trí nhớ khuôn mặt",
-    "about": "Bài kiểm tra trí nhớ khuôn mặt được thiết kế để đo khả năng nhận dạng và ghi nhớ khuôn mặt người của bạn. Bắt đầu từ Cấp 1 với một khuôn mặt duy nhất, thử thách tăng dần lên đến Cấp 9. Ở mỗi cấp độ, bạn sẽ được hiển thị những khuôn mặt để ghi nhớ, sau đó là giai đoạn lựa chọn trong đó bạn cần xác định những khuôn mặt bạn đã thấy trước đây trong số những khuôn mặt mới. những cái đó. Bài kiểm tra này giúp đánh giá khả năng nhận dạng khuôn mặt của bạn, đây là một kỹ năng quan trọng trong tương tác xã hội và các lĩnh vực chuyên môn khác nhau. Cần có số điểm trên 70% để chuyển sang cấp độ tiếp theo. Bài kiểm tra đo cả độ chính xác và thời gian phản ứng, đưa ra đánh giá toàn diện về khả năng ghi nhớ khuôn mặt của bạn."
+    "statisticsTitle": "Thống kê kiểm tra nhận dạng khuôn mặt",
+    "aboutTitle": "Giới thiệu về kiểm tra nhận dạng khuôn mặt",
+    "about": "Bài kiểm tra nhận dạng khuôn mặt được thiết kế để đo lường khả năng nhận dạng và ghi nhớ khuôn mặt người của bạn. Bắt đầu từ Cấp 1 với một khuôn mặt duy nhất, thử thách tăng dần lên đến Cấp 9. Ở mỗi cấp độ, bạn sẽ được hiển thị những khuôn mặt để ghi nhớ, sau đó là giai đoạn lựa chọn trong đó bạn cần xác định những khuôn mặt bạn đã thấy trước đây trong số những khuôn mặt mới. những cái đó. Bài kiểm tra nhận dạng khuôn mặt này giúp đánh giá khả năng nhận dạng khuôn mặt của bạn, đây là một kỹ năng quan trọng trong tương tác xã hội và các lĩnh vực chuyên môn khác nhau. Cần có số điểm trên 70% để chuyển sang cấp độ tiếp theo. Kiểm tra nhận dạng khuôn mặt đo lường cả độ chính xác và thời gian phản ứng, cung cấp đánh giá toàn diện về khả năng nhận dạng khuôn mặt của bạn."
   }
 }

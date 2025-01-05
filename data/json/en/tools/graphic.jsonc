@@ -1,7 +1,7 @@
 [
     {
-        "name": "Face Memory Test",
-        "description": "Test your face memory ability.",
+        "name": "Face Recognition Test",
+        "description": "Test your face recognition ability.",
         "url": "/tests/face-recognition-test",
         "icon":"FaFaceSmile"
     }
