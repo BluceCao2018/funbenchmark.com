@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "Kontinuierlicher Leistungstest (CPT-II)",
     "meta_description": "Testen Sie Ihre kontinuierliche Leistungsfähigkeit",
-    "title": "Kontinuierlicher Leistungstest (CPT-II)",
-    "instructions": "Klicken Sie auf eine beliebige Stelle auf dem Bildschirm, wenn Sie den Buchstaben „X“ sehen.",
+    "h1": "Kontinuierlicher Leistungstest (CPT-II)",
+    "description": "Klicken Sie auf eine beliebige Stelle auf dem Bildschirm, wenn Sie den Buchstaben „X“ sehen.",
     "duration": "Der kontinuierliche Leistungstest dauert 5 Minuten",
     "startButton": "Test starten",
     "results": "Kontinuierliche Leistungstestergebnisse",
@@ -515,5 +515,18 @@
     "omissions": "Auslassungen",
     "averageResponse": "Durchschnittliche Antwort (ms)",
     "accuracy": "Genauigkeit"
+  },
+  "embed": {
+    "button": "Einbetten",
+    "title": "Einbettungstest",
+    "description": "Betten Sie diesen Test auf Ihrer Website ein",
+    "instructions1": "Kopieren Sie den folgenden Code und fügen Sie ihn in den HTML-Code Ihrer Website ein:",
+    "instructions2": "Wichtige Hinweise:",
+    "instruction1": "Die Iframe-Höhe kann nach Bedarf angepasst werden",
+    "instruction2": "Stellen Sie sicher, dass Ihre Website das Laden von Iframe-Inhalten zulässt",
+    "instruction3": "Empfohlen für die Verwendung in responsiven Layouts",
+    "copyCode": "Code kopieren",
+    "codeCopied": "Code in die Zwischenablage kopiert",
+    "copyError": "Der Kopiervorgang ist fehlgeschlagen. Bitte manuell kopieren"
   }
 }

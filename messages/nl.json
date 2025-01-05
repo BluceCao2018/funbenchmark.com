@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "Continue prestatietest (CPT-II)",
     "meta_description": "Test uw continue prestatievermogen",
-    "title": "Continue prestatietest (CPT-II)",
-    "instructions": "Klik ergens op het scherm wanneer u de letter \"X\" ziet",
+    "h1": "Continue prestatietest (CPT-II)",
+    "description": "Klik ergens op het scherm wanneer u de letter \"X\" ziet",
     "duration": "De Continue Prestatietest duurt 5 minuten",
     "startButton": "Test starten",
     "results": "Continue prestatietestresultaten",
@@ -515,5 +515,18 @@
     "omissions": "Weglatingen",
     "averageResponse": "Gemiddelde respons (ms)",
     "accuracy": "Nauwkeurigheid"
+  },
+  "embed": {
+    "button": "Insluiten",
+    "title": "Test insluiten",
+    "description": "Embed deze test op uw website",
+    "instructions1": "Kopieer en plak de volgende code in de HTML van uw website:",
+    "instructions2": "Belangrijke opmerkingen:",
+    "instruction1": "De iframe-hoogte kan indien nodig worden aangepast",
+    "instruction2": "Zorg ervoor dat uw website het laden van iframe-inhoud toestaat",
+    "instruction3": "Aanbevolen voor gebruik in responsieve lay-outs",
+    "copyCode": "Kopieer code",
+    "codeCopied": "Code gekopieerd naar klembord",
+    "copyError": "Kopiëren mislukt. Kopieer handmatig"
   }
 }

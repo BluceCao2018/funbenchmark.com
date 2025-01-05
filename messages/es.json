@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "Prueba de rendimiento continuo (CPT-II)",
     "meta_description": "Pon a prueba tu capacidad de rendimiento continuo",
-    "title": "Prueba de rendimiento continuo (CPT-II)",
-    "instructions": "Haga clic en cualquier lugar de la pantalla cuando vea la letra \"X\"",
+    "h1": "Prueba de rendimiento continuo (CPT-II)",
+    "description": "Haga clic en cualquier lugar de la pantalla cuando vea la letra \"X\"",
     "duration": "La Prueba de Rendimiento Continuo tendrá una duración de 5 minutos",
     "startButton": "Iniciar prueba",
     "results": "Resultados de las pruebas de rendimiento continuo",
@@ -515,5 +515,18 @@
     "omissions": "Omisiones",
     "averageResponse": "Respuesta promedio (ms)",
     "accuracy": "Exactitud"
+  },
+  "embed": {
+    "button": "Empotrar",
+    "title": "Prueba de inserción",
+    "description": "Inserta esta prueba en tu sitio web",
+    "instructions1": "Copie y pegue el siguiente código en el HTML de su sitio web:",
+    "instructions2": "Notas importantes:",
+    "instruction1": "La altura del iframe se puede ajustar según sea necesario",
+    "instruction2": "Asegúrese de que su sitio web permita la carga de contenido iframe",
+    "instruction3": "Recomendado para usar en diseños responsivos",
+    "copyCode": "Copiar código",
+    "codeCopied": "Código copiado al portapapeles",
+    "copyError": "Error al copiar, copie manualmente"
   }
 }

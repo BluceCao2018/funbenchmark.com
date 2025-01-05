@@ -13,27 +13,13 @@ export async function generateMetadata() {
 
 export default async function TestsLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
-  const locale = await getLocale();
-  const categories = getCategories(locale);
 
   return (
     <>
       {children}
-      {/* <div className="container mx-auto py-8 space-y-16">
-        {categories.map((category: {
-          name: string;
-          src: string;
-          description: string;
-          link: string;
-        }, index: number) => (
-          <ToolsList key={index} category={category} locale={locale} />
-        ))}
-      </div> */}
     </>
   );
 } 

@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "Teste de desempenho contínuo （CPT-II）",
     "meta_description": "Teste sua capacidade de desempenho contínuo",
-    "title": "Teste de desempenho contínuo （CPT-II）",
-    "instructions": "Clique em qualquer lugar da tela ao ver a letra \"X\"",
+    "h1": "Teste de desempenho contínuo （CPT-II）",
+    "description": "Clique em qualquer lugar da tela ao ver a letra \"X\"",
     "duration": "O Teste de Desempenho Contínuo durará 5 minutos",
     "startButton": "Iniciar teste",
     "results": "Resultados de testes de desempenho contínuo",
@@ -515,5 +515,18 @@
     "omissions": "Omissões",
     "averageResponse": "Resposta média (ms)",
     "accuracy": "Precisão"
+  },
+  "embed": {
+    "button": "Incorporar",
+    "title": "Teste de incorporação",
+    "description": "Incorpore este teste em seu site",
+    "instructions1": "Copie e cole o seguinte código no HTML do seu site:",
+    "instructions2": "Notas importantes:",
+    "instruction1": "A altura do iframe pode ser ajustada conforme necessário",
+    "instruction2": "Certifique-se de que seu site permita o carregamento de conteúdo iframe",
+    "instruction3": "Recomendado para uso em layouts responsivos",
+    "copyCode": "Copiar código",
+    "codeCopied": "Código copiado para a área de transferência",
+    "copyError": "Falha na cópia, copie manualmente"
   }
 }

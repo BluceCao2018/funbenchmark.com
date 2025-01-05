@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "연속 성능 테스트(CPT-II)",
     "meta_description": "지속적인 수행 능력을 테스트하십시오",
-    "title": "연속 성능 테스트(CPT-II)",
-    "instructions": "문자 \"X\"가 보이면 화면 아무 곳이나 클릭하세요.",
+    "h1": "연속 성능 테스트(CPT-II)",
+    "description": "문자 \"X\"가 보이면 화면 아무 곳이나 클릭하세요.",
     "duration": "지속적인 성능 테스트는 5분 동안 지속됩니다.",
     "startButton": "테스트 시작",
     "results": "지속적인 성능 테스트 결과",
@@ -515,5 +515,18 @@
     "omissions": "누락",
     "averageResponse": "평균 응답(ms)",
     "accuracy": "정확성"
+  },
+  "embed": {
+    "button": "포함시키다",
+    "title": "테스트 삽입",
+    "description": "이 테스트를 웹사이트에 삽입하세요.",
+    "instructions1": "다음 코드를 복사하여 웹사이트 HTML에 붙여넣으세요.",
+    "instructions2": "중요 사항:",
+    "instruction1": "iframe 높이는 필요에 따라 조정될 수 있습니다.",
+    "instruction2": "웹사이트에서 iframe 콘텐츠 로드를 허용하는지 확인하세요.",
+    "instruction3": "반응형 레이아웃에 사용하는 것이 좋습니다.",
+    "copyCode": "코드 복사",
+    "codeCopied": "코드가 클립보드에 복사되었습니다.",
+    "copyError": "복사하지 못했습니다. 수동으로 복사하세요."
   }
 }

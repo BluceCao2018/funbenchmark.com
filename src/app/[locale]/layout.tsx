@@ -13,6 +13,8 @@ import { cn } from "@/lib/utils";
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { headers } from 'next/headers';
+import { Toaster } from 'sonner'
 
 const inter = Inter({ subsets: ['latin'] })
 const sansFont = DM_Sans({
@@ -46,28 +48,40 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale }
+  params,
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
   const messages = await getMessages();
+  const headersList = headers();
+  
+  // 检查是否是 iframe 请求
+  const fetchDest = headersList.get('sec-fetch-dest');
+  console.log('Fetch destination:', fetchDest);
+  
+  const searchParams = {
+    embed: fetchDest === 'iframe' ? 'true' : 'false'
+  };
+  
+  console.log('Generated searchParams:', searchParams);
 
   return (
     <>
-      <html lang={locale} suppressHydrationWarning>
+      <html lang={params.locale} suppressHydrationWarning>
         <head />
-        <body className={cn(inter.className, sansFont.variable,
-        )}>
+        <body className={cn(inter.className, sansFont.variable)}>
           <NextIntlClientProvider messages={messages}>
-            <ThemeProvider
-              attribute="class"
-
-            >
-              <Layout>{children}</Layout>
+            <ThemeProvider attribute="class">
+              <Layout params={params} searchParams={searchParams}>{children}</Layout>
               <GoogleAdsenseScript />
               <GoogleAnalyticsScript />
               <PlausibleAnalyticsScript />
+              <Toaster 
+                theme="system" 
+                closeButton
+                richColors
+              />
             </ThemeProvider>
           </NextIntlClientProvider>
         </body>

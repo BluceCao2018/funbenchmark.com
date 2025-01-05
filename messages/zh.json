@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "连续性能测试（CPT-II）",
     "meta_description": "测试你的持续表现能力",
-    "title": "连续性能测试（CPT-II）",
-    "instructions": "当您看到字母“X”时，单击屏幕上的任意位置",
+    "h1": "连续性能测试（CPT-II）",
+    "description": "当您看到字母“X”时，单击屏幕上的任意位置",
     "duration": "连续性能测试将持续 5 分钟",
     "startButton": "开始测试",
     "results": "连续性能测试结果",
@@ -515,5 +515,18 @@
     "omissions": "遗漏",
     "averageResponse": "平均响应（毫秒）",
     "accuracy": "准确性"
+  },
+  "embed": {
+    "button": "嵌入",
+    "title": "嵌入测试",
+    "description": "将此测试嵌入您的网站",
+    "instructions1": "将以下代码复制并粘贴到您网站的 HTML 中：",
+    "instructions2": "重要提示：",
+    "instruction1": "iframe高度可以根据需要调整",
+    "instruction2": "确保您的网站允许加载 iframe 内容",
+    "instruction3": "推荐在响应式布局中使用",
+    "copyCode": "复制代码",
+    "codeCopied": "代码已复制到剪贴板",
+    "copyError": "复制失败，请手动复制"
   }
 }

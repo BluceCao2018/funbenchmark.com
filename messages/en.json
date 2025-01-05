@@ -2,6 +2,19 @@
   "website":{
     "domain": "https://funbenchmark.com"
   },
+  "embed": {
+    "button": "Embed",
+    "title": "Embed Test",
+    "description": "Embed this test on your website",
+    "instructions1": "Copy and paste the following code into your website HTML:",
+    "instructions2": "Important notes:",
+    "instruction1": "The iframe height can be adjusted as needed",
+    "instruction2": "Ensure your website allows iframe content loading",
+    "instruction3": "Recommended for use in responsive layouts",
+    "copyCode": "Copy Code",
+    "codeCopied": "Code copied to clipboard",
+    "copyError": "Copy failed, please copy manually"
+  },
   "home": {
     "meta_title": "Fun Benchmark-Measure your ability with Reaction Time Test",
     "meta_description": "Fun Benchmark is a professional tool that provides brain games and cognitive tests to help you measure your abilities such as reaction time and sequence memory.",
@@ -503,9 +516,9 @@
   "cpt": {
     "meta_title": "Continuous Performance Test（CPT-II）",
     "meta_description": "Test your continuous performance ability",
-    "title": "Continuous Performance Test（CPT-II）",
-    "instructions": "Click anywhere on the screen when you see the letter \"X\"",
-    "duration": "The Continuous Performance Test will last for 5 minutes",
+    "h1": "Continuous Performance Test（CPT-II）",
+    "description": "Click anywhere on the screen when you see the letter \"X\"",
+    "duration": "Continuous Performance Test will last for 5 minutes",
     "startButton": "Start Test",
     "results": "Continuous Performance Test Results",
     "correctResponses": "Correct Responses",
@@ -516,8 +529,8 @@
     "tryAgain": "Try Again",
     "statisticsTitle": "Continuous Performance Test Statistics",
     "aboutTitle": "About Continuous Performance Test",
-    "aboutDescription": "The Continuous Performance Test (CPT) is a neuropsychological test that measures sustained attention, selective attention, and impulsivity. During the Continuous Performance Test, participants are presented with a series of letters and must respond only to specific target stimuli while inhibiting responses to non-target stimuli.",
-    "evaluatesTitle": "The Continuous Performance Test evaluates",
+    "aboutDescription": "Continuous Performance Test (CPT) is a neuropsychological test that measures sustained attention, selective attention, and impulsivity. During Continuous Performance Test, participants are presented with a series of letters and must respond only to specific target stimuli while inhibiting responses to non-target stimuli.",
+    "evaluatesTitle": "Continuous Performance Test evaluates",
     "evaluatesPoint1": "Sustained attention",
     "evaluatesPoint2": "Response speed",
     "evaluatesPoint3": "Inhibitory control",

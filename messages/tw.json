@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "連續性能測試（CPT-II）",
     "meta_description": "測試你的持續表現能力",
-    "title": "連續性能測試（CPT-II）",
-    "instructions": "當您看到字母“X”時，請點擊螢幕上的任意位置",
+    "h1": "連續性能測試（CPT-II）",
+    "description": "當您看到字母“X”時，請點擊螢幕上的任意位置",
     "duration": "連續性能測試將持續 5 分鐘",
     "startButton": "開始測試",
     "results": "連續性能測試結果",
@@ -515,5 +515,18 @@
     "omissions": "遺漏",
     "averageResponse": "平均響應（毫秒）",
     "accuracy": "準確性"
+  },
+  "embed": {
+    "button": "嵌入",
+    "title": "嵌入測試",
+    "description": "將此測試嵌入您的網站",
+    "instructions1": "將以下程式碼複製並貼上到您網站的 HTML 中：",
+    "instructions2": "重要提示：",
+    "instruction1": "iframe高度可以依需求調整",
+    "instruction2": "確保您的網站允許加載 iframe 內容",
+    "instruction3": "推薦在響應式佈局中使用",
+    "copyCode": "複製程式碼",
+    "codeCopied": "代碼已複製到剪貼簿",
+    "copyError": "複製失敗，請手動複製"
   }
 }

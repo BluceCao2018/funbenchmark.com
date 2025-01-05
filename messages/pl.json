@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "Ciągły test wydajności (CPT-II)",
     "meta_description": "Sprawdź swoją zdolność do ciągłej wydajności",
-    "title": "Ciągły test wydajności (CPT-II)",
-    "instructions": "Kliknij w dowolnym miejscu na ekranie, gdy zobaczysz literę „X”",
+    "h1": "Ciągły test wydajności (CPT-II)",
+    "description": "Kliknij w dowolnym miejscu na ekranie, gdy zobaczysz literę „X”",
     "duration": "Ciągły test wydajności będzie trwał 5 minut",
     "startButton": "Rozpocznij test",
     "results": "Wyniki ciągłych testów wydajności",
@@ -515,5 +515,18 @@
     "omissions": "Pominięcia",
     "averageResponse": "Średnia odpowiedź (ms)",
     "accuracy": "Dokładność"
+  },
+  "embed": {
+    "button": "Osadzać",
+    "title": "Umieść test",
+    "description": "Umieść ten test na swojej stronie internetowej",
+    "instructions1": "Skopiuj i wklej następujący kod do kodu HTML swojej witryny:",
+    "instructions2": "Ważne uwagi:",
+    "instruction1": "Wysokość elementu iframe można dostosować w razie potrzeby",
+    "instruction2": "Upewnij się, że Twoja witryna umożliwia ładowanie treści iframe",
+    "instruction3": "Zalecane do stosowania w układach responsywnych",
+    "copyCode": "Skopiuj kod",
+    "codeCopied": "Kod skopiowany do schowka",
+    "copyError": "Kopiowanie nie powiodło się. Skopiuj ręcznie"
   }
 }

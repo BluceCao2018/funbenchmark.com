@@ -3,6 +3,11 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Copy } from 'lucide-react'
+import { toast } from 'sonner'
 
 interface TestResult {
   correctResponses: number
@@ -21,6 +26,9 @@ interface PeriodStats {
 }
 
 export default function CPTTest() {
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+
   const [gameState, setGameState] = useState<'start' | 'test' | 'result'>('start')
   const [currentLetter, setCurrentLetter] = useState<string>('')
   const [results, setResults] = useState<TestResult>({
@@ -35,6 +43,8 @@ export default function CPTTest() {
   const [progress, setProgress] = useState(0)
   const [periodStats, setPeriodStats] = useState<PeriodStats[]>([])
   const [testStartTime, setTestStartTime] = useState<number>(0)
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+  const [embedUrl, setEmbedUrl] = useState('')
 
   const testDuration = 300000 // 5 minutes in milliseconds
   const stimulusDuration = 500 // Changed to 500ms
@@ -44,6 +54,7 @@ export default function CPTTest() {
   const targetLetter = 'X'
 
   const t = useTranslations('cpt')
+  const te = useTranslations('embed')
 
   const intervalsRef = useRef<{
     stimulus?: NodeJS.Timeout;
@@ -254,23 +265,184 @@ export default function CPTTest() {
     }
   }, []);
 
+  // 添加 iframe 消息通信
+  useEffect(() => {
+    if (isIframe) {
+      // 发送高度信息给父窗口
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      // 监听高度变化
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      // 当测试结束时发送结果
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            correctResponses: results.correctResponses,
+            omissionErrors: results.omissionErrors,
+            commissionErrors: results.commissionErrors,
+            averageReactionTime: Math.round(results.averageReactionTime),
+            accuracy: ((results.correctResponses / results.totalTrials) * 100).toFixed(1)
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, gameState, results])
+
+  // 在客户端获取 URL
+  useEffect(() => {
+    const currentUrl = window.location.href.split('?')[0]
+    setEmbedUrl(`${currentUrl}?embed=true`)
+  }, [])
+
+  // 复制链接到剪贴板
+  const copyEmbedCode = async () => {
+    const embedCode = `<iframe src="${embedUrl}" width="100%" height="600" frameborder="0"></iframe>`
+    try {
+      await navigator.clipboard.writeText(embedCode)
+      toast.success(te('codeCopied'))
+    } catch (err) {
+      toast.error(te('copyError'))
+    }
+  }
+
+  // 在开始和结果页面显示嵌入按钮
+  const renderEmbedButton = () => {
+    if (gameState === 'test') return null;
+    
+    return (
+      <Button
+        variant="outline"
+        className="absolute top-4 right-4"
+        onClick={() => setShowEmbedDialog(true)}
+      >
+        <i className="fas fa-code mr-2" />
+        {te('button')}
+      </Button>
+    );
+  }
+
+  // iframe 模式下只渲染测试区域
+  if (isIframe) {
+    return (
+      <div className="w-full">
+        <div className="banner w-full min-h-[550px] flex flex-col justify-center items-center bg-blue-theme text-white relative">
+          {gameState === 'start' && (
+            <div className='flex flex-col justify-center items-center'>
+              <i className="fas fa-bullseye text-9xl text-white mb-8 animate-fade cursor-pointer"></i>
+              <h1 className="text-4xl font-bold text-center mb-4">{t('h1')}</h1>
+              <p className="text-lg text-center mb-20">
+                {t('description')}<br />
+                {t('duration')}
+              </p>
+              <div className="flex gap-4">
+                <Button 
+                  onClick={startTest}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+                >
+                  {t('startButton')}
+                </Button>
+              </div>
+            </div>
+          )}
+
+          {gameState === 'test' && (
+            <div className="flex items-center justify-center h-full">
+              {/* 测试内容 */}
+              {currentLetter && (
+                <div 
+                  className="text-9xl cursor-pointer"
+                  onClick={handleClick}
+                >
+                  {currentLetter}
+                </div>
+              )}
+            </div>
+          )}
+
+          {gameState === 'result' && (
+            <div className='flex flex-col justify-center items-center max-w-2xl mx-auto p-8 bg-white/10 rounded-xl backdrop-blur-sm'>
+              <h2 className="text-4xl font-bold mb-8">{t('results')}</h2>
+              <div className="w-full grid grid-cols-2 gap-4">
+                <div className="flex justify-between items-center p-4 bg-white/5 rounded-lg">
+                  <span>{t('correctResponses')}:</span>
+                  <span className="font-bold text-xl">{results.correctResponses}</span>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-white/5 rounded-lg">
+                  <span>{t('omissionErrors')}:</span>
+                  <span className="font-bold text-xl">{results.omissionErrors}</span>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-white/5 rounded-lg">
+                  <span>{t('commissionErrors')}:</span>
+                  <span className="font-bold text-xl">{results.commissionErrors}</span>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-white/5 rounded-lg">
+                  <span>{t('averageReactionTime')}:</span>
+                  <span className="font-bold text-xl">{Math.round(results.averageReactionTime)}ms</span>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-white/5 rounded-lg col-span-2">
+                  <span>{t('accuracyRate')}:</span>
+                  <span className="font-bold text-xl">
+                    {((results.correctResponses / results.totalTrials) * 100).toFixed(1)}%
+                  </span>
+                </div>
+              </div>
+              <div className="flex gap-4 mt-8">
+                <Button 
+                  onClick={() => setGameState('start')}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+                >
+                  {t('tryAgain')}
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  // 完整模式下渲染所有内容
   return (
     <div className="w-full mx-auto py-0 space-y-16">
-      <div className="banner w-full h-[550px] flex flex-col justify-center items-center bg-blue-theme text-white">
+      <div className="banner w-full h-[550px] flex flex-col justify-center items-center bg-blue-theme text-white relative">
         {gameState === 'start' && (
           <div className='flex flex-col justify-center items-center'>
             <i className="fas fa-bullseye text-9xl text-white mb-8 animate-fade cursor-pointer"></i>
-            <h1 className="text-4xl font-bold text-center mb-4">{t('title')}</h1>
+            <h1 className="text-4xl font-bold text-center mb-4">{t('h1')}</h1>
             <p className="text-lg text-center mb-20">
-              {t('instructions')}<br />
+              {t('description')}<br />
               {t('duration')}
             </p>
-            <button 
-              onClick={startTest}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
-            >
-              {t('startButton')}
-            </button>
+            <div className="flex gap-4">
+              <Button 
+                onClick={startTest}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+              >
+                {t('startButton')}
+              </Button>
+              <Button
+                className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            </div>
           </div>
         )}
 
@@ -321,14 +493,61 @@ export default function CPTTest() {
                 </span>
               </div>
             </div>
-            <button 
-              onClick={() => setGameState('start')}
-              className="mt-8 bg-blue-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors font-semibold"
-            >
-              {t('tryAgain')}
-            </button>
+            <div className="flex gap-4 mt-8">
+              <Button 
+                onClick={() => setGameState('start')}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+              >
+                {t('tryAgain')}
+              </Button>
+              <Button
+                variant="outline"
+                className="px-6 py-3"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            </div>
           </div>
         )}
+        
+        <Dialog open={showEmbedDialog} onOpenChange={setShowEmbedDialog}>
+          <DialogContent className="max-w-2xl">
+            <DialogHeader>
+              <DialogTitle>{te('title')}</DialogTitle>
+              <DialogDescription>
+                {te('description')}
+              </DialogDescription>
+            </DialogHeader>
+            
+            <div className="space-y-4">
+              <div className="bg-muted p-4 rounded-md relative">
+                <pre className="text-sm overflow-x-auto whitespace-pre-wrap break-all">
+                  {`<iframe src="${embedUrl}" width="100%" height="600" frameborder="0"></iframe>`}
+                </pre>
+              </div>
+              
+              <Button
+                className="w-full"
+                onClick={copyEmbedCode}
+              >
+                <Copy className="h-4 w-4 mr-2" />
+                {te('copyCode')}
+              </Button>
+              
+              <div className="text-sm text-muted-foreground space-y-2">
+                <p>{te('instructions1')}</p>
+                <p>{te('instructions2')}</p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>{te('instruction1')}</li>
+                  <li>{te('instruction2')}</li>
+                  <li>{te('instruction3')}</li>
+                </ul>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
       <div className="container mx-auto py-0 space-y-16">
         <div className="container mx-auto px-4 py-8 max-w-6xl">

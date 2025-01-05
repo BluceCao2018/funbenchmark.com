@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "Kiểm tra hiệu suất liên tục（CPT-II）",
     "meta_description": "Kiểm tra khả năng thực hiện liên tục của bạn",
-    "title": "Kiểm tra hiệu suất liên tục（CPT-II）",
-    "instructions": "Nhấp vào bất kỳ đâu trên màn hình khi bạn nhìn thấy chữ \"X\"",
+    "h1": "Kiểm tra hiệu suất liên tục（CPT-II）",
+    "description": "Nhấp vào bất kỳ đâu trên màn hình khi bạn nhìn thấy chữ \"X\"",
     "duration": "Bài kiểm tra hiệu suất liên tục sẽ kéo dài trong 5 phút",
     "startButton": "Bắt đầu kiểm tra",
     "results": "Kết quả kiểm tra hiệu suất liên tục",
@@ -515,5 +515,18 @@
     "omissions": "Thiếu sót",
     "averageResponse": "Phản hồi trung bình (ms)",
     "accuracy": "Sự chính xác"
+  },
+  "embed": {
+    "button": "Nhúng",
+    "title": "Kiểm tra nhúng",
+    "description": "Nhúng bài kiểm tra này vào trang web của bạn",
+    "instructions1": "Sao chép và dán đoạn mã sau vào HTML trang web của bạn:",
+    "instructions2": "Lưu ý quan trọng:",
+    "instruction1": "Chiều cao iframe có thể được điều chỉnh khi cần thiết",
+    "instruction2": "Đảm bảo trang web của bạn cho phép tải nội dung iframe",
+    "instruction3": "Được khuyến nghị sử dụng trong bố cục đáp ứng",
+    "copyCode": "Sao chép mã",
+    "codeCopied": "Đã sao chép mã vào bảng nhớ tạm",
+    "copyError": "Sao chép không thành công, vui lòng sao chép thủ công"
   }
 }

@@ -489,8 +489,8 @@
   "cpt": {
     "meta_title": "連続性能試験（CPT-Ⅱ）",
     "meta_description": "継続的なパフォーマンス能力をテストする",
-    "title": "連続性能試験（CPT-Ⅱ）",
-    "instructions": "「X」の文字が表示されたら、画面上の任意の場所をクリックします。",
+    "h1": "連続性能試験（CPT-Ⅱ）",
+    "description": "「X」の文字が表示されたら、画面上の任意の場所をクリックします。",
     "duration": "連続パフォーマンス テストは 5 分間続きます。",
     "startButton": "テストの開始",
     "results": "継続的なパフォーマンステストの結果",
@@ -515,5 +515,18 @@
     "omissions": "省略",
     "averageResponse": "平均応答 (ミリ秒)",
     "accuracy": "正確さ"
+  },
+  "embed": {
+    "button": "埋め込む",
+    "title": "埋め込みテスト",
+    "description": "このテストをウェブサイトに埋め込みます",
+    "instructions1": "次のコードをコピーして Web サイトの HTML に貼り付けます。",
+    "instructions2": "重要な注意事項:",
+    "instruction1": "iframe の高さは必要に応じて調整できます",
+    "instruction2": "Web サイトで iframe コンテンツの読み込みが許可されていることを確認してください",
+    "instruction3": "レスポンシブ レイアウトでの使用を推奨",
+    "copyCode": "コードをコピーする",
+    "codeCopied": "コードをクリップボードにコピーしました",
+    "copyError": "コピーに失敗しました。手動でコピーしてください"
   }
 }
