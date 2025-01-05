@@ -1,7 +1,12 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl';
 import { FaAdjust } from 'react-icons/fa';
+import { useSearchParams } from 'next/navigation'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import { Button } from "@/components/ui/button"
+import { Copy } from 'lucide-react'
+import { EmbedDialog } from '@/components/EmbedDialog'
 
 export default function FiftyOneGrayShadesTest() {
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -11,6 +16,50 @@ export default function FiftyOneGrayShadesTest() {
   const [selectedOrder, setSelectedOrder] = useState<number[]>([])
   
   const t = useTranslations('fiftyOneGrayShades');
+  const te = useTranslations('embed');
+  
+  const searchParams = useSearchParams();
+  const isIframe = searchParams.get('embed') === 'true';
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false);
+  const [embedUrl, setEmbedUrl] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (isComplete) {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            score,
+            level,
+            accuracy: ((score / level) * 100).toFixed(1)
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, isComplete, score, level])
 
   // 生成关卡数据，增加难度
   const generateLevel = (level: number) => {
@@ -101,14 +150,25 @@ export default function FiftyOneGrayShadesTest() {
           </div>
         )}
 
-        <div className="w-full max-w-md text-center">
+        <div className="flex flex-col justify-center items-center">
           {!isGameStarted ? (
-            <button 
-              onClick={() => setIsGameStarted(true)}
-              className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
-            >
-              {t("clickToStart")}
-            </button>
+            <div className="flex gap-4">
+              <Button 
+                onClick={() => setIsGameStarted(true)}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
+              >
+                {t("clickToStart")}
+              </Button>
+              {!isIframe && (
+                <Button
+                  className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                  onClick={() => setShowEmbedDialog(true)}
+                >
+                   <i className="fas fa-code mr-2" />
+                  {te('button')}
+                </Button>
+              )}
+            </div>
           ) : (
             <div className="bg-white p-6 rounded-xl shadow-lg">
               {!isComplete ? (
@@ -188,6 +248,12 @@ export default function FiftyOneGrayShadesTest() {
           </div>
         </div>
       </div>
+
+      <EmbedDialog 
+        isOpen={showEmbedDialog}
+        onClose={() => setShowEmbedDialog(false)}
+        embedUrl={embedUrl}
+      />
     </div>
   )
 }

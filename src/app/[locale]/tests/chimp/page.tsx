@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
+import { Button } from "@/components/ui/button"
+import { Copy } from 'lucide-react'
+import { EmbedDialog } from '@/components/EmbedDialog'
 
 export default function ChimpTest() {
   const [gameState, setGameState] = useState<'start' | 'show' | 'play' | 'playing' | 'result'>('start')
@@ -13,6 +17,12 @@ export default function ChimpTest() {
   const [level, setLevel] = useState(1)
 
   const t =  useTranslations('climp');
+  const te = useTranslations('embed');
+  
+  const searchParams = useSearchParams();
+  const isIframe = searchParams.get('embed') === 'true';
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false);
+  const [embedUrl, setEmbedUrl] = useState('');
 
   const generateSequence = (gridSize:number,currentTarget:number) => {
     const totalCells = gridSize * gridSize
@@ -96,6 +106,45 @@ export default function ChimpTest() {
     }
   }, [gameState])
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            level,
+            gridSize,
+            currentTarget,
+            accuracy: ((selectedNumbers.length / currentTarget) * 100).toFixed(1)
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, gameState, level, gridSize, currentTarget, selectedNumbers])
+
   return (
     <div 
       className="w-full mx-auto py-0 space-y-16 "
@@ -106,12 +155,13 @@ export default function ChimpTest() {
           <i className="fas fa-brain text-9xl text-white mb-8 animate-fade cursor-pointer" ></i>
           <h1 className="text-3xl font-bold mb-6 text-center"  dangerouslySetInnerHTML={{ __html: t("h2")?.replace(/\n/g, '<br />')  || ''}} ></h1>
           <p className="text-lg text-center mb-20 text-white" dangerouslySetInnerHTML={{ __html: t("description")?.replace(/\n/g, '<br />')  || ''}} ></p>
-          <button 
+          
+          <Button 
             onClick={startGame} 
             className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
           >
             {t("start")}
-          </button>
+          </Button>
         </div>
       )}
 
@@ -203,6 +253,13 @@ export default function ChimpTest() {
             </p>
   </div>
   </div>
+
+  <EmbedDialog 
+        isOpen={showEmbedDialog}
+        onClose={() => setShowEmbedDialog(false)}
+        embedUrl={embedUrl}
+      />
+
   </div>
 </div>
 </div>

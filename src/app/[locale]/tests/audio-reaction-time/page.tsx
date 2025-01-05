@@ -4,6 +4,11 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaVolumeUp, FaHourglassStart, FaExclamationTriangle, FaPlay, FaCheck } from 'react-icons/fa'
 import SharePoster from '@/components/SharePoster'
+import { useSearchParams } from 'next/navigation'
+import { Button } from "@/components/ui/button"
+import { Copy } from 'lucide-react'
+import { EmbedDialog } from '@/components/EmbedDialog'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 interface RankingResult {
   reactionTime: number;
@@ -12,6 +17,12 @@ interface RankingResult {
 
 export default function AudioReactionTime() {
   const t = useTranslations('audioReaction')
+  const te = useTranslations('embed')
+  
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+  const [embedUrl, setEmbedUrl] = useState('')
   const [gameState, setGameState] = useState<'waiting' | 'ready' | 'toosoon' | 'testing' | 'result'>('waiting')
   const [startTime, setStartTime] = useState(0)
   const [reactionTime, setReactionTime] = useState(0)
@@ -234,6 +245,45 @@ export default function AudioReactionTime() {
     )
   }
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            reactionTime,
+            averageTime,
+            rank,
+            totalUsers
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, gameState, reactionTime, averageTime, rank, totalUsers])
+
   return (
     <div className="w-full mx-auto py-0 space-y-16">
       <div className={`
@@ -248,6 +298,15 @@ export default function AudioReactionTime() {
         <p className="text-3xl text-center mb-20 text-white user-select-none" 
            dangerouslySetInnerHTML={{ __html: description?.replace(/\n/g, '<br />')  || ''}} />
            {renderResultActions()}
+           {!isIframe && gameState === 'waiting' && (
+        <Button
+        className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3"
+        onClick={() => setShowEmbedDialog(true)}
+      >
+        <i className="fas fa-code mr-2" />
+        {te('button')}
+      </Button>
+      )}
       </div>
 
       <div className="container mx-auto px-4 py-8 max-w-6xl">
@@ -388,6 +447,11 @@ export default function AudioReactionTime() {
           </div>
         </div>
       </div>
+      <EmbedDialog 
+        isOpen={showEmbedDialog}
+        onClose={() => setShowEmbedDialog(false)}
+        embedUrl={embedUrl}
+      />
       
       <SharePoster
         reactionTime={reactionTime}
