@@ -4,13 +4,16 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 
-
 export default function NumberMemoryTest() {
   const [gameState, setGameState] = useState<'start' | 'show' | 'input' | 'result'>('start')
   const [currentNumber, setCurrentNumber] = useState<string>('')
   const [userInput, setUserInput] = useState<string>('')
   const [level, setLevel] = useState(1)
   const [timer, setTimer] = useState<number>(0)
+  const [progress, setProgress] = useState(100)
+  
+  const baseTime = 1000
+  const timePerDigit = 1000
 
   const t =  useTranslations('numberMemory');
 
@@ -27,8 +30,10 @@ export default function NumberMemoryTest() {
     setCurrentNumber(number)
     setUserInput('')
 
-    // 显示数字的时间随级别增加
-    const displayTime = Math.max(1000, 3000 - (level * 200))
+    // 根据数字位数调整显示时间
+    // 基础时间 2000ms
+    // 每位数字增加 1000ms
+    const displayTime = baseTime + (level * timePerDigit)
     
     setTimeout(() => {
       setGameState('input')
@@ -55,6 +60,25 @@ export default function NumberMemoryTest() {
     return level - 1
   }
 
+  useEffect(() => {
+    if (gameState === 'show') {
+      setProgress(100)
+      const duration = baseTime + (level * timePerDigit)
+      const interval = 10
+      const steps = duration / interval
+      const decrementPerStep = 100 / steps + 0.02
+
+      const timer = setInterval(() => {
+        setProgress(prev => {
+          const next = prev - decrementPerStep
+          return next < 0 ? 0 : next
+        })
+      }, interval)
+
+      return () => clearInterval(timer)
+    }
+  }, [gameState, level, baseTime, timePerDigit])
+
   return (
 
     <div 
@@ -76,8 +100,19 @@ export default function NumberMemoryTest() {
       )}
 
       {gameState === 'show' && (
-        <div className="text-6xl font-bold">
-          {currentNumber}
+        <div className="flex flex-col items-center">
+          <div className="text-6xl font-bold mb-4">
+            {currentNumber}
+          </div>
+          <div className="w-full max-w-[400px] h-2 bg-white/0 rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-white"
+              style={{ 
+                width: `${progress}%`,
+                transition: 'width 10ms linear'
+              }}
+            />
+          </div>
         </div>
       )}
 
@@ -108,7 +143,7 @@ export default function NumberMemoryTest() {
           <h2 className="text-2xl mb-4">{t("number")}</h2>
           
           <p className="text-3xl font-bold mb-6">{currentNumber}</p>
-          <h2 className="text-2xl mb-4">{t("yourAnswer")}</h2>
+          <h2 className="text-2xl mb-4">{t("youAnswer")}</h2>
           <p className="text-3xl font-bold mb-4 line-through text-red">{userInput}</p>
           <h2  className="text-7xl font-bold mb-6">{t("level")} {level}</h2>
           <button 
