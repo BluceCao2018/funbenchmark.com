@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "Bài kiểm tra não phải, Kiểm tra khả năng ghi nhớ đồ họa của bạn."
+  },
+  {
+    "name": "Chú ý",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "Kiểm tra khả năng chú ý của bạn."
   }
 ]

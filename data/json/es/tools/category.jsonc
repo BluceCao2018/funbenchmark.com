@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "La prueba del cerebro derecho, prueba tu capacidad de memoria gráfica."
+  },
+  {
+    "name": "Atención",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "Pon a prueba tu capacidad de atención."
   }
 ]

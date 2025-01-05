@@ -22,5 +22,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "The Right Brain Test,Test your graphic memory ability."
+  },
+  {
+    "name": "Attention",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "Test your attention ability."
   }
 ]

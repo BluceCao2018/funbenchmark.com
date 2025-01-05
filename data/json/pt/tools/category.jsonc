@@ -4,7 +4,7 @@
     "name": "Referência",
     "src": "benchmark.jsonc",
     "link": "benchmark",
-    "description": "Meça sua habilidade com jogos cerebrais e testes cognitivos"
+    "description": "Meça sua capacidade com jogos cerebrais e testes cognitivos"
   },
   {
     "name": "Percepção de cores",
@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "O teste do cérebro direito, teste sua capacidade de memória gráfica."
+  },
+  {
+    "name": "Atenção",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "Teste sua capacidade de atenção."
   }
 ]

@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "Le test cérébral droit, testez votre capacité de mémoire graphique."
+  },
+  {
+    "name": "Attention",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "Testez votre capacité d'attention."
   }
 ]

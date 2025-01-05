@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "Il Right Brain Test, prova la tua capacità di memoria grafica."
+  },
+  {
+    "name": "Attenzione",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "Metti alla prova la tua capacità di attenzione."
   }
 ]

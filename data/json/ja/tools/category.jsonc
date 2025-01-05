@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "右脳テスト、あなたのグラフィックメモリ能力をテストします。"
+  },
+  {
+    "name": "注意",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "注意力をテストしてください。"
   }
 ]

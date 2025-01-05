@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "اختبار الدماغ الأيمن، اختبر قدرة الذاكرة الرسومية لديك."
+  },
+  {
+    "name": "انتباه",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "اختبار قدرة انتباهك."
   }
 ]

@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "Der rechte Gehirntest: Testen Sie Ihr grafisches Gedächtnis."
+  },
+  {
+    "name": "Aufmerksamkeit",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "Testen Sie Ihre Aufmerksamkeitsfähigkeit."
   }
 ]

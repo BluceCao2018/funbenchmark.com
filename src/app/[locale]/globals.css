@@ -102,3 +102,8 @@
 .animate-fade {
   animation: fade 2s infinite; /* 2秒循环动画 */
 }
+
+.time-period::after {
+  content: 's';
+  margin-left: 1px;
+}

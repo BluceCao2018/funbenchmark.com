@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "右脑测试，测试你的图形记忆能力。"
+  },
+  {
+    "name": "注意力",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "测试你的注意力能力。"
   }
 ]

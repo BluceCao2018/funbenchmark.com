@@ -23,5 +23,11 @@
     "src": "graphic.jsonc",
     "link": "graphic",
     "description": "우뇌 테스트는 그래픽 메모리 능력을 테스트합니다."
+  },
+  {
+    "name": "주목",
+    "src": "attention.jsonc",
+    "link": "attention",
+    "description": "당신의 주의력을 테스트해보세요."
   }
 ]
