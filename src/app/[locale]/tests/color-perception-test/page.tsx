@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { FaPalette } from 'react-icons/fa';
+import { useSearchParams } from 'next/navigation';
+import { Button } from '@/components/ui/button';
 
 export default function ColorPerceptionTest() {
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -10,7 +12,14 @@ export default function ColorPerceptionTest() {
   const [score, setScore] = useState(0)
   const [gameOver, setGameOver] = useState(false)
   const [grid, setGrid] = useState<number[][]>([])
-  
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+  const [embedUrl, setEmbedUrl] = useState('')
+  const [correctAnswers, setCorrectAnswers] = useState(0)
+  const [totalAttempts, setTotalAttempts] = useState(0)
+  const [gameState, setGameState] = useState<'start' | 'playing' | 'result'>('start')
+  const te = useTranslations('embed');
   const t = useTranslations('colorPerception');
 
   const generateGrid = (level: number) => {
@@ -37,9 +46,11 @@ export default function ColorPerceptionTest() {
     setScore(0)
     setGameOver(false)
     setGrid(generateGrid(1))
+    setGameState('playing')
   }
 
   const handleSquareClick = (row: number, col: number) => {
+    setTotalAttempts(prev => prev + 1)
     const size = grid.length;
     const flatGrid = grid.flat();
     const clickedColor = grid[row][col];
@@ -49,14 +60,31 @@ export default function ColorPerceptionTest() {
 
     if (clickedColor !== baseColor) {
       // 正确点击
+      setCorrectAnswers(prev => prev + 1)
       setScore(score + level)
       setLevel(level + 1)
       setGrid(generateGrid(level + 1))
     } else {
       // 错误点击
       setGameOver(true)
+      setGameState('result')
     }
   }
+
+  useEffect(() => {
+    if (isIframe) {
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            score: correctAnswers,
+            totalAttempts: totalAttempts,
+            accuracy: (correctAnswers / totalAttempts * 100).toFixed(1)
+          }
+        }, '*')
+      }
+    }
+  }, [isIframe, gameState, correctAnswers, totalAttempts])
 
   return (
     <div className="w-full mx-auto py-0 space-y-16">
@@ -72,12 +100,23 @@ export default function ColorPerceptionTest() {
 
         <div className="w-full max-w-md text-center">
           {!isGameStarted ? (
-            <button 
+            <div className="flex gap-4 justify-center items-center">
+            <Button 
               onClick={startGame}
-              className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
             >
               {t("clickToStart")}
-            </button>
+            </Button>
+            {!isIframe && (
+              <Button
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                 <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            )}
+            </div>
           ) : (
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="mb-4">

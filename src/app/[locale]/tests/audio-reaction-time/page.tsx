@@ -39,6 +39,7 @@ export default function AudioReactionTime() {
     cityRanking: { name: '', data: [] }
   })
   const [averageTime, setAverageTime] = useState(0)
+  const [bestTime, setBestTime] = useState(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const audioContext = useRef<AudioContext | null>(null)
   const [showSharePoster, setShowSharePoster] = useState(false)
@@ -137,6 +138,7 @@ export default function AudioReactionTime() {
   useEffect(() => {
     if (reactionTimes.length > 0) {
       setAverageTime(reactionTimes.reduce((a, b) => a + b, 0) / reactionTimes.length)
+      setBestTime(Math.min(...reactionTimes))
     }
     return () => {
       if (timerRef.current) {
@@ -270,10 +272,10 @@ export default function AudioReactionTime() {
         window.parent.postMessage({
           type: 'testComplete',
           results: {
-            reactionTime,
-            averageTime,
-            rank,
-            totalUsers
+            reactionTime: reactionTime,
+            averageTime: averageTime,
+            bestTime: bestTime,
+            rank: rank
           }
         }, '*')
       }
@@ -282,7 +284,7 @@ export default function AudioReactionTime() {
         observer.disconnect()
       }
     }
-  }, [isIframe, gameState, reactionTime, averageTime, rank, totalUsers])
+  }, [isIframe, gameState, reactionTime, averageTime, bestTime, rank])
 
   return (
     <div className="w-full mx-auto py-0 space-y-16">

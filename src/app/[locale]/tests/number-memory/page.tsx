@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
+import { EmbedDialog } from '@/components/EmbedDialog'
+import { Button } from '@/components/ui/button';
 
 export default function NumberMemoryTest() {
   const [gameState, setGameState] = useState<'start' | 'show' | 'input' | 'result'>('start')
@@ -11,11 +14,55 @@ export default function NumberMemoryTest() {
   const [level, setLevel] = useState(1)
   const [timer, setTimer] = useState<number>(0)
   const [progress, setProgress] = useState(100)
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
   
   const baseTime = 1000
   const timePerDigit = 1000
 
   const t =  useTranslations('numberMemory');
+  const te = useTranslations('embed');
+
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+  const [embedUrl, setEmbedUrl] = useState('')
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            level: level,
+            number: currentNumber,
+            userAnswer: userInput
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, gameState, level, currentNumber, userInput])
 
   const generateNumber = () => {
     // 随机生成数字，长度随级别增加
@@ -90,12 +137,24 @@ export default function NumberMemoryTest() {
           <i className="fas fa-th text-9xl text-white mb-8 animate-fade cursor-pointer"></i>
           <h1 className="text-4xl font-bold text-center mb-4 text-white">{t("h2")}</h1>
             <p className="text-lg text-center mb-20 text-white" dangerouslySetInnerHTML={{ __html: t("description")?.replace(/\n/g, '<br />')  || ''}} ></p>
-          <button 
+          
+          <div className="flex gap-4 justify-center items-center">
+          <Button 
             onClick={startGame} 
             className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
           >
             {t("clickToStart")}
-          </button>
+          </Button>
+          {!isIframe && (
+            <Button
+              className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+              onClick={() => setShowEmbedDialog(true)}
+            >
+              <i className="fas fa-code mr-2" />
+              {te('button')}
+            </Button>
+          )}
+          </div>
         </div>
       )}
 
@@ -180,6 +239,12 @@ export default function NumberMemoryTest() {
   </div>
   </div>
 </div>
+
+<EmbedDialog 
+  isOpen={showEmbedDialog}
+  onClose={() => setShowEmbedDialog(false)}
+  embedUrl={embedUrl}
+/>
 
 </div>
 

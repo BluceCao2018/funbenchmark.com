@@ -156,12 +156,23 @@ export default function ChimpTest() {
           <h1 className="text-3xl font-bold mb-6 text-center"  dangerouslySetInnerHTML={{ __html: t("h2")?.replace(/\n/g, '<br />')  || ''}} ></h1>
           <p className="text-lg text-center mb-20 text-white" dangerouslySetInnerHTML={{ __html: t("description")?.replace(/\n/g, '<br />')  || ''}} ></p>
           
+          <div className="flex gap-4 justify-center items-center">
           <Button 
             onClick={startGame} 
             className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
           >
             {t("start")}
           </Button>
+          {!isIframe && (
+            <Button
+              className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+              onClick={() => setShowEmbedDialog(true)}
+            >
+              <i className="fas fa-code mr-2" />
+              {te('button')}
+            </Button>
+          )}
+          </div>
         </div>
       )}
 

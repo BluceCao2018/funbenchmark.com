@@ -6,10 +6,15 @@ import Image from 'next/image'
 import { downloadAndSaveFace, getRandomLocalFace } from './utils'
 import { FaFaceSmile } from 'react-icons/fa6'
 import { Breadcrumb, BreadcrumbPage, BreadcrumbItem, BreadcrumbList, BreadcrumbSeparator, BreadcrumbLink } from '@/components/ui/breadcrumb'
+import { useSearchParams } from 'next/navigation'
+import { Button } from '@/components/ui/button'
 
 export default function FaceRecognitionTest() {
   const t = useTranslations('faceRecognition')
   const t2=useTranslations('navigation')
+  const te = useTranslations('embed');
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
   
   // 关卡配置
   const LEVEL_CONFIG = {
@@ -40,6 +45,10 @@ export default function FaceRecognitionTest() {
   const [startTime, setStartTime] = useState<number>(0)
   const [timeLeft, setTimeLeft] = useState(0)
   const [correctAnswers, setCorrectAnswers] = useState<Set<number>>(new Set())
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+  const [embedUrl, setEmbedUrl] = useState('')
+  const [accuracy, setAccuracy] = useState(0)
+  const [averageReactionTime, setAverageReactionTime] = useState(0)
 
   const currentConfig = LEVEL_CONFIG[level as keyof typeof LEVEL_CONFIG]
   const LEARNING_FACES_COUNT = currentConfig.faces
@@ -143,33 +152,59 @@ export default function FaceRecognitionTest() {
     const endTime = Date.now()
     const selectedArray = Array.from(selectedFaces)
     
-    console.log('Selected faces:', selectedArray) // 调试信息
-    console.log('Correct answers:', Array.from(correctAnswers)) // 调试信息
-    
     const correctSelections = selectedArray.filter(index => correctAnswers.has(index)).length
     const falsePositives = selectedArray.length - correctSelections
-    const accuracy = (correctSelections / correctAnswers.size) * 100
+    const newAccuracy = (correctSelections / correctAnswers.size) * 100
     const reactionTime = (endTime - startTime) / 1000
 
-    console.log('Accuracy calculation:', { // 调试信息
-      correctSelections,
-      totalCorrect: correctAnswers.size,
-      accuracy
-    })
+    setAccuracy(newAccuracy)
+    setAverageReactionTime(reactionTime)
 
     const newResults = {
       correctSelections,
       falsePositives,
-      accuracy,
+      accuracy: newAccuracy,
       reactionTime
     }
     setResults(newResults)
     setPhase('results')
 
-    if (accuracy >= 70 && level < 9) {
+    if (newAccuracy >= 70 && level < 9) {
       setLevel(prev => prev + 1)
     }
   }
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (phase === 'results') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            level: level,
+            accuracy: accuracy,
+            reactionTime: averageReactionTime
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, phase, level, accuracy, averageReactionTime])
 
   return (
     <div className="w-full mx-auto">
@@ -182,12 +217,22 @@ export default function FaceRecognitionTest() {
             <p className="text-lg text-center mb-20">{t("description")}</p>
           </div>
              
-            <button
+            <div className="flex gap-4 justify-center items-center">
+            <Button
               onClick={startTest}
-              className="mx-auto block bg-blue-500 text-white px-8 py-4 rounded-lg hover:bg-blue-600 text-lg font-semibold shadow-lg transition-colors"
+              className="mx-auto block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600  shadow-md transition-colors"
             >
               {t('startTest')}
-            </button>
+            </Button>
+            {!isIframe && (
+              <Button
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                 <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>)}
+            </div>
           </>
         ) : (
           <div className="bg-white rounded-lg shadow-lg p-8">

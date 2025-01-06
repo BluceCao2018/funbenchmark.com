@@ -1,16 +1,24 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl';
 import { FaAdjust } from 'react-icons/fa';
+import { useSearchParams } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { EmbedDialog } from '@/components/EmbedDialog';
 
 export default function GrayShadesTest() {
   const [isGameStarted, setIsGameStarted] = useState(false)
   const [level, setLevel] = useState(1)
   const [score, setScore] = useState(0)
   const [isComplete, setIsComplete] = useState(false)
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+  const [embedUrl, setEmbedUrl] = useState('')
+  const [gameState, setGameState] = useState<'start' | 'playing' | 'result'>('start')
   
   const t = useTranslations('grayShades');
-
+  const te = useTranslations('embed');
   // 生成关卡数据
   const generateLevel = (level: number) => {
     // 基础色值，从深到浅
@@ -40,10 +48,12 @@ export default function GrayShadesTest() {
         setCurrentLevel(generateLevel(level + 1))
       } else {
         setIsComplete(true)
+        setGameState('result')
       }
     } else {
       // 错误选择
       setIsComplete(true)
+      setGameState('result')
     }
   }
 
@@ -53,6 +63,29 @@ export default function GrayShadesTest() {
     setIsComplete(false)
     setCurrentLevel(generateLevel(1))
   }
+
+  useEffect(() => {
+    if (isIframe) {
+      // ...通用的height调整代码
+      
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            level: level,
+            score: score
+          }
+        }, '*')
+      }
+    }
+  }, [isIframe, gameState, level, score])
+
+  useEffect(() => {
+    // Set embed URL when component mounts
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
 
   return (
     <div className="w-full mx-auto py-0 space-y-16">
@@ -67,12 +100,23 @@ export default function GrayShadesTest() {
 
         <div className="w-full max-w-md text-center">
           {!isGameStarted ? (
-            <button 
+            <div className="flex gap-4 justify-center items-center">
+            <Button 
               onClick={() => setIsGameStarted(true)}
-              className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
             >
               {t("clickToStart")}
-            </button>
+            </Button>
+            {!isIframe && (
+              <Button
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                 <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            )}
+            </div>
           ) : (
             <div className="bg-white p-6 rounded-xl shadow-lg">
               {!isComplete ? (
@@ -140,6 +184,13 @@ export default function GrayShadesTest() {
               </p>
             </div>
           </div>
+
+          <EmbedDialog 
+        isOpen={showEmbedDialog}
+        onClose={() => setShowEmbedDialog(false)}
+        embedUrl={embedUrl}
+      />
+      
         </div>
       </div>
     </div>

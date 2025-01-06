@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button"
 import { Copy } from 'lucide-react'
 import { toast } from 'sonner'
+import { EmbedDialog } from '@/components/EmbedDialog'
 
 interface TestResult {
   correctResponses: number
@@ -268,7 +269,6 @@ export default function CPTTest() {
   // 添加 iframe 消息通信
   useEffect(() => {
     if (isIframe) {
-      // 发送高度信息给父窗口
       const sendHeight = () => {
         const height = document.querySelector('.banner')?.scrollHeight
         if (height) {
@@ -276,14 +276,12 @@ export default function CPTTest() {
         }
       }
 
-      // 监听高度变化
       const observer = new ResizeObserver(sendHeight)
       const banner = document.querySelector('.banner')
       if (banner) {
         observer.observe(banner)
       }
 
-      // 当测试结束时发送结果
       if (gameState === 'result') {
         window.parent.postMessage({
           type: 'testComplete',
@@ -305,8 +303,9 @@ export default function CPTTest() {
 
   // 在客户端获取 URL
   useEffect(() => {
-    const currentUrl = window.location.href.split('?')[0]
-    setEmbedUrl(`${currentUrl}?embed=true`)
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
   }, [])
 
   // 复制链接到剪贴板
@@ -512,42 +511,11 @@ export default function CPTTest() {
           </div>
         )}
         
-        <Dialog open={showEmbedDialog} onOpenChange={setShowEmbedDialog}>
-          <DialogContent className="max-w-2xl">
-            <DialogHeader>
-              <DialogTitle>{te('title')}</DialogTitle>
-              <DialogDescription>
-                {te('description')}
-              </DialogDescription>
-            </DialogHeader>
-            
-            <div className="space-y-4">
-              <div className="bg-muted p-4 rounded-md relative">
-                <pre className="text-sm overflow-x-auto whitespace-pre-wrap break-all">
-                  {`<iframe src="${embedUrl}" width="100%" height="600" frameborder="0"></iframe>`}
-                </pre>
-              </div>
-              
-              <Button
-                className="w-full"
-                onClick={copyEmbedCode}
-              >
-                <Copy className="h-4 w-4 mr-2" />
-                {te('copyCode')}
-              </Button>
-              
-              <div className="text-sm text-muted-foreground space-y-2">
-                <p>{te('instructions1')}</p>
-                <p>{te('instructions2')}</p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>{te('instruction1')}</li>
-                  <li>{te('instruction2')}</li>
-                  <li>{te('instruction3')}</li>
-                </ul>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
+        <EmbedDialog 
+          isOpen={showEmbedDialog}
+          onClose={() => setShowEmbedDialog(false)}
+          embedUrl={embedUrl}
+        />
       </div>
       <div className="container mx-auto py-0 space-y-16">
         <div className="container mx-auto px-4 py-8 max-w-6xl">

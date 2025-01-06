@@ -4,6 +4,9 @@ import {getTranslations, getLocale} from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
+import { EmbedDialog } from '@/components/EmbedDialog'
+import { Button } from '@/components/ui/button';
 
 
 export default function SequenceMemoryTest() {
@@ -23,6 +26,50 @@ export default function SequenceMemoryTest() {
   }
 
   const t = useTranslations('sequence');
+  const te = useTranslations('embed');
+
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+  const [embedUrl, setEmbedUrl] = useState('')
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            level: level,
+            score: score,
+            sequence: sequence
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, gameState, level, score, sequence])
 
   const generateSequence = useCallback((length: number) => {
     const sequence = Array.from({ length }).map(() => Math.floor(Math.random() * GRID_SIZE));
@@ -129,7 +176,8 @@ export default function SequenceMemoryTest() {
 
   
   return (
-    <div className="w-full mx-auto py-0 space-y-16 ">
+    <>
+      <div className="w-full mx-auto py-0 space-y-16 ">
         <div className="banner w-full h-[550px] flex flex-col justify-center items-center" style={{ backgroundColor: 'rgb(43, 135, 209)' }}>
           {!isGameStarted && (
             <div className="flex flex-col justify-center items-center">
@@ -141,13 +189,22 @@ export default function SequenceMemoryTest() {
           
           <div className="w-full max-w-md text-center">
         {gameState === 'start' && (
-          <div>
-            <button 
+          <div className="flex gap-4 justify-center items-center">
+            <Button 
               onClick={() => startGame(1)} 
-              className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
             >
               {t("clickToStart")}
-            </button>
+            </Button>
+            {!isIframe && (
+              <Button
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            )}
           </div>
         )}
 
@@ -222,5 +279,11 @@ export default function SequenceMemoryTest() {
         </div>
       </div>
     </div>
+    <EmbedDialog 
+      isOpen={showEmbedDialog}
+      onClose={() => setShowEmbedDialog(false)}
+      embedUrl={embedUrl}
+    />
+    </>
   )
 } 

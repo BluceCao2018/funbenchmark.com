@@ -1,16 +1,25 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl';
 import { FaEye } from 'react-icons/fa';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation'
+import { EmbedDialog } from '@/components/EmbedDialog'
+import { Button } from '@/components/ui/button';
 
 export default function ColorBlindnessTest() {
   const [isGameStarted, setIsGameStarted] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [isComplete, setIsComplete] = useState(false)
-  
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+  const [embedUrl, setEmbedUrl] = useState('')
+
   const t = useTranslations('colorBlindness');
+  const te = useTranslations('embed');
+
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
 
   // 测试题目数据
   const questions = [
@@ -169,6 +178,44 @@ export default function ColorBlindnessTest() {
     setIsComplete(false)
   }
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (isComplete) {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            score: score,
+            totalQuestions: questions.length,
+            accuracy: (score / questions.length * 100).toFixed(1)
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, isComplete, score])
+
   return (
     <div className="w-full mx-auto py-0 space-y-16">
       <div className="banner w-full h-[550px] flex flex-col justify-center items-center bg-blue-theme text-white">
@@ -180,14 +227,25 @@ export default function ColorBlindnessTest() {
           </div>
         )}
 
-        <div className="w-full max-w-md text-center">
+        <div className="flex flex-col justify-center items-center">
           {!isGameStarted ? (
-            <button 
+            <div className="flex gap-4">
+            <Button 
               onClick={() => setIsGameStarted(true)}
-              className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
             >
               {t("clickToStart")}
-            </button>
+            </Button>
+            {!isIframe && (
+              <Button
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                 <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            )}
+            </div>
           ) : (
             <div className="bg-white p-6 rounded-xl shadow-lg">
               {!isComplete ? (
@@ -256,6 +314,12 @@ export default function ColorBlindnessTest() {
           </div>
         </div>
       </div>
+
+      <EmbedDialog 
+        isOpen={showEmbedDialog}
+        onClose={() => setShowEmbedDialog(false)}
+        embedUrl={embedUrl}
+      />
     </div>
   )
 } 

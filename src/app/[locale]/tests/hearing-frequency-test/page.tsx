@@ -1,9 +1,12 @@
 'use client'
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useTranslations } from 'next-intl';
 import { FaVolumeUp } from 'react-icons/fa';
 import SharePoster from '@/components/SharePoster'
 import HearingTestPoster from '@/components/HearingTestPoster'
+import { useSearchParams } from 'next/navigation'
+import { EmbedDialog } from '@/components/EmbedDialog'
+import { Button } from '@/components/ui/button';
 
 export default function HearingFrequencyTest() {
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -16,8 +19,51 @@ export default function HearingFrequencyTest() {
   const audioContextRef = useRef<AudioContext | null>(null)
   const oscillatorRef = useRef<OscillatorNode | null>(null)
   const [isShareOpen, setIsShareOpen] = useState(false)
-  
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+  const [embedUrl, setEmbedUrl] = useState('')
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+
   const t = useTranslations('hearingTest');
+  const te = useTranslations('embed');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (isComplete) {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            maxFrequency: maxFreq,
+            minFrequency: minFreq,
+            estimatedAge: getAgeEstimate(maxFreq)
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, isComplete, maxFreq, minFreq])
 
   const startAudio = () => {
     if (!audioContextRef.current) {
@@ -110,12 +156,23 @@ export default function HearingFrequencyTest() {
 
         <div className="w-full max-w-md text-center">
           {!isGameStarted ? (
-            <button 
+            <div className="flex gap-4 justify-center items-center">
+            <Button 
               onClick={() => setIsGameStarted(true)}
-              className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors"
             >
               {t("clickToStart")}
-            </button>
+            </Button>
+            {!isIframe && (
+              <Button
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                 <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            )}
+            </div>
           ) : (
             <div className="bg-white p-6 rounded-xl shadow-lg">
               {!isComplete ? (
@@ -227,6 +284,11 @@ export default function HearingFrequencyTest() {
         minFreq={`${minFreq}Hz`}
         estimatedAge={getAgeEstimate(maxFreq)}
         result={getResult(maxFreq)}
+      />
+      <EmbedDialog 
+        isOpen={showEmbedDialog}
+        onClose={() => setShowEmbedDialog(false)}
+        embedUrl={embedUrl}
       />
     </div>
   )

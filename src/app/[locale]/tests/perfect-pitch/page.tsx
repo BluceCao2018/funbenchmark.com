@@ -3,6 +3,9 @@ import { useState, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaMusic, FaPlay, FaCheck, FaTimes } from 'react-icons/fa'
+import { useSearchParams } from 'next/navigation'
+import { EmbedDialog } from '@/components/EmbedDialog'
+import { Button } from '@/components/ui/button'
 
 const NOTES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
 const NOTE_FREQUENCIES: { [key: string]: number } = {
@@ -22,6 +25,7 @@ const NOTE_FREQUENCIES: { [key: string]: number } = {
 
 export default function PerfectPitch() {
   const t = useTranslations('perfectPitch')
+  const te = useTranslations('embed');
   const [gameState, setGameState] = useState<'waiting' | 'testing' | 'result'>('waiting')
   const [currentNotes, setCurrentNotes] = useState<string[]>([])
   const [notesCount, setNotesCount] = useState(1)
@@ -29,6 +33,48 @@ export default function PerfectPitch() {
   const [totalAttempts, setTotalAttempts] = useState(0)
   const [selectedNotes, setSelectedNotes] = useState<string[]>([])
   const audioContext = useRef<AudioContext | null>(null)
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+  const [embedUrl, setEmbedUrl] = useState('')
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            correctNotes: score,
+            totalNotes: totalAttempts,
+            accuracy: ((score / totalAttempts) * 100).toFixed(1)
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, gameState, score, totalAttempts])
 
   const playNotes = (frequencies: number[]) => {
     if (!audioContext.current) {
@@ -168,7 +214,7 @@ export default function PerfectPitch() {
         
         {gameState === 'waiting' && (
           <div className="mt-4 flex gap-4 items-center">
-            <button
+            <Button
               onClick={(e) => {
                 e.stopPropagation()
                 setNotesCount(Math.max(1, notesCount - 1))
@@ -176,11 +222,11 @@ export default function PerfectPitch() {
               className="px-4 py-2 bg-white text-blue-500 rounded-lg hover:bg-gray-100"
             >
               -
-            </button>
+            </Button>
             <span className="text-white text-xl">
               {t("notesCount")}: {notesCount}
             </span>
-            <button
+            <Button
               onClick={(e) => {
                 e.stopPropagation()
                 setNotesCount(Math.min(10, notesCount + 1))
@@ -188,7 +234,16 @@ export default function PerfectPitch() {
               className="px-4 py-2 bg-white text-blue-500 rounded-lg hover:bg-gray-100"
             >
               +
-            </button>
+            </Button>
+            {!isIframe && (
+              <Button
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            )}
           </div>
         )}
         
@@ -251,6 +306,12 @@ export default function PerfectPitch() {
           </div>
         </div>
       </div>
+
+      <EmbedDialog 
+        isOpen={showEmbedDialog}
+        onClose={() => setShowEmbedDialog(false)}
+        embedUrl={embedUrl}
+      />
     </div>
   )
 } 

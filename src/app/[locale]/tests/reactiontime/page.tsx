@@ -5,6 +5,9 @@ import Image from 'next/image'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Description } from '@radix-ui/react-dialog'
 import SharePoster from '@/components/SharePoster'
+import { useSearchParams } from 'next/navigation'
+import { EmbedDialog } from '@/components/EmbedDialog'
+import { Button } from '@/components/ui/button';
 
 interface RankingResult {
   reactionTime: number;
@@ -13,6 +16,7 @@ interface RankingResult {
 
 export default function ReactionTime() {
   const t = useTranslations('reactionTime')
+  const te = useTranslations('embed');
   const [gameState, setGameState] = useState<'waiting' | 'ready'|'toosoon' | 'testing' | 'result'>('waiting')
   const [startTime, setStartTime] = useState(0)
   const [reactionTime, setReactionTime] = useState(0)
@@ -28,8 +32,13 @@ export default function ReactionTime() {
     cityRanking: { name: '', data: [] }
   })
   const [averageTime, setAverageTime] = useState(0)
+  const [bestTime, setBestTime] = useState(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const [isShareOpen, setIsShareOpen] = useState(false)
+  const searchParams = useSearchParams()
+  const isIframe = searchParams.get('embed') === 'true'
+  const [embedUrl, setEmbedUrl] = useState('')
+  const [showEmbedDialog, setShowEmbedDialog] = useState(false)
 
   const handleStart = () => {
     if (timerRef.current) {
@@ -107,7 +116,9 @@ export default function ReactionTime() {
   useEffect(() => {
     if (results.regionalRanking.data.length > 0) {
       const avg = results.regionalRanking.data.reduce((a, b) => a + b.reactionTime, 0) / results.regionalRanking.data.length;
+      const best = Math.min(...results.regionalRanking.data.map(r => r.reactionTime));
       setAverageTime(avg);
+      setBestTime(best);
     }
   }, [results]);
 
@@ -176,6 +187,44 @@ export default function ReactionTime() {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setEmbedUrl(`${window.location.origin}${window.location.pathname}?embed=true`)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isIframe) {
+      const sendHeight = () => {
+        const height = document.querySelector('.banner')?.scrollHeight
+        if (height) {
+          window.parent.postMessage({ type: 'resize', height }, '*')
+        }
+      }
+
+      const observer = new ResizeObserver(sendHeight)
+      const banner = document.querySelector('.banner')
+      if (banner) {
+        observer.observe(banner)
+      }
+
+      if (gameState === 'result') {
+        window.parent.postMessage({
+          type: 'testComplete',
+          results: {
+            reactionTime: reactionTime,
+            averageTime: averageTime,
+            bestTime: bestTime
+          }
+        }, '*')
+      }
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+  }, [isIframe, gameState, reactionTime, averageTime, bestTime])
+
   return (
     <div className="w-full mx-auto py-0 space-y-16 ">
         <div className={`
@@ -196,6 +245,17 @@ export default function ReactionTime() {
             <span className="text-white text-2xl font-bold">
               {/* {getGameStateMessage()} */}
             </span>
+            <div className="flex gap-4 justify-center items-center">
+            {!isIframe && gameState === 'waiting' && (
+              <Button
+                className="bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-yellow-700 transition-colors"
+                onClick={() => setShowEmbedDialog(true)}
+              >
+                <i className="fas fa-code mr-2" />
+                {te('button')}
+              </Button>
+            )}
+            </div>
 
             {gameState === 'result' && (
               <div className="flex gap-4">
@@ -380,6 +440,12 @@ export default function ReactionTime() {
         onClose={() => setIsShareOpen(false)}
         testType="visual"
         title={t("poster.title")}
+      />
+
+      <EmbedDialog 
+        isOpen={showEmbedDialog}
+        onClose={() => setShowEmbedDialog(false)}
+        embedUrl={embedUrl}
       />
 
     </div>
