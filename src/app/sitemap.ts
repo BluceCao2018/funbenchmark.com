@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const routeUrl = route.url === '' ? '' : `/${route.url}`;
     return {
         ...route,
-        url: `https://aikratom.com${routeUrl}`,
+        url: `https://funbenchmark.com${routeUrl}`,
       };
     }
   );
