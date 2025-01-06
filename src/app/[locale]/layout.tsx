@@ -15,6 +15,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { headers } from 'next/headers';
 import { Toaster } from 'sonner'
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const inter = Inter({ subsets: ['latin'] })
 const sansFont = DM_Sans({
@@ -56,7 +57,6 @@ export default async function RootLayout({
   const messages = await getMessages();
   const headersList = headers();
   
-  // 检查是否是 iframe 请求
   const fetchDest = headersList.get('sec-fetch-dest');
   console.log('Fetch destination:', fetchDest);
   
@@ -64,7 +64,12 @@ export default async function RootLayout({
     embed: fetchDest === 'iframe' ? 'true' : 'false'
   };
   
-  console.log('Generated searchParams:', searchParams);
+  const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+
+  if (!clientId) {
+    console.error('Google Client ID is not configured');
+    return null;
+  }
 
   return (
     <>
@@ -73,15 +78,17 @@ export default async function RootLayout({
         <body className={cn(inter.className, sansFont.variable)}>
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider attribute="class">
-              <Layout params={params} searchParams={searchParams}>{children}</Layout>
-              <GoogleAdsenseScript />
-              <GoogleAnalyticsScript />
-              <PlausibleAnalyticsScript />
-              <Toaster 
-                theme="system" 
-                closeButton
-                richColors
-              />
+              <GoogleOAuthProvider clientId={clientId}>
+                <Layout params={params} searchParams={searchParams}>{children}</Layout>
+                <GoogleAdsenseScript />
+                <GoogleAnalyticsScript />
+                <PlausibleAnalyticsScript />
+                <Toaster 
+                  theme="system" 
+                  closeButton
+                  richColors
+                />
+              </GoogleOAuthProvider>
             </ThemeProvider>
           </NextIntlClientProvider>
         </body>

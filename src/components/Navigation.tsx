@@ -20,6 +20,7 @@ import {
 import { ThemeModeButton } from "@/components/ThemeModeButton";
 import { LocaleButton } from "@/components/LocaleButton";
 import {useTranslations} from 'next-intl';
+import LoginButton from './LoginButton';
 type categoriesType = {
   name: string,
   src: string,
@@ -189,7 +190,7 @@ export const Navigation = ({ categories }: navigationProp ) => {
           <div className="flex items-center gap-1">
             <ThemeModeButton />
             <LocaleButton />
-            
+            <LoginButton />
           </div>
           {/*<Link
             href={"https://github.com/iAmCorey/devtoolset"}
