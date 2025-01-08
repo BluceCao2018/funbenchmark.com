@@ -9,6 +9,11 @@ const s3 = new S3Client({
   },
 });
 
+export interface UserAttempt {
+  attempts: number;
+  reactionTime?: number;
+}
+
 export interface TimedMessage {
   id: string;
   title: string;
@@ -17,11 +22,11 @@ export interface TimedMessage {
   mediaUrl: string;
   visibleDuration: number;
   maxAttempts: number;
-  attempts: number;
-  creatorId: string;
   createdAt: string;
-  reactionTime?: number;
-  reactionTimes?: { [userId: string]: number };
+  creatorId: string;
+  users: {
+    [userId: string]: UserAttempt;
+  };
 }
 
 const DATA_FILE_KEY = 'timedMessages.json';

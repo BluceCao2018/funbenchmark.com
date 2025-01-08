@@ -31,9 +31,9 @@ export async function POST(req: Request) {
       mediaUrl,
       visibleDuration,
       maxAttempts,
-      attempts: 0,
-      creatorId: 'default',
       createdAt: new Date().toISOString(),
+      creatorId: 'default',
+      users: {}
     };
 
     data.messages.push(newMessage);
@@ -65,9 +65,13 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'Message not found' }, { status: 404 });
   }
 
+  const userAttempt = message.users?.[userId || 'default'] || { attempts: 0 };
+
   return NextResponse.json({
     ...message,
-    reactionTime: userId ? message.reactionTimes?.[userId] : undefined
+    attempts: userAttempt.attempts,
+    reactionTime: userAttempt.reactionTime,
+    users: undefined
   });
 }
 
@@ -95,17 +99,29 @@ export async function PATCH(req: Request) {
       );
     }
 
+    const currentMessage = data.messages[messageIndex];
+    const currentUserAttempt = currentMessage.users?.[userId] || { attempts: 0 };
+    
     data.messages[messageIndex] = {
-      ...data.messages[messageIndex],
-      attempts: data.messages[messageIndex].attempts + 1,
-      reactionTimes: {
-        ...data.messages[messageIndex].reactionTimes,
-        [userId]: reactionTime
+      ...currentMessage,
+      users: {
+        ...currentMessage.users,
+        [userId]: {
+          attempts: currentUserAttempt.attempts + 1,
+          reactionTime: reactionTime
+        }
       }
     };
 
     await saveMessagesData(data);
-    return NextResponse.json(data.messages[messageIndex]);
+
+    const updatedUserAttempt = data.messages[messageIndex].users[userId];
+    return NextResponse.json({
+      ...data.messages[messageIndex],
+      attempts: updatedUserAttempt.attempts,
+      reactionTime: updatedUserAttempt.reactionTime,
+      users: undefined
+    });
   } catch (error) {
     console.error('Error updating reaction time:', error);
     return NextResponse.json(
