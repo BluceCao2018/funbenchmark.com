@@ -528,5 +528,155 @@
     "copyCode": "Kopieer code",
     "codeCopied": "Code gekopieerd naar klembord",
     "copyError": "Kopiëren mislukt. Kopieer handmatig"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "Tijdelijk beperkte zichtbaarheid voor uw inhoud",
+      "description": "Creëer inhoud die automatisch verdwijnt na een bepaalde tijd of aantal weergaven. Perfect voor tijdgevoelige informatie en het delen van exclusieve inhoud.",
+      "cta": "Creëer tijdgebonden inhoud"
+    },
+    "features": {
+      "timing": {
+        "title": "Tijd beperkte zichtbaarheidscontrole",
+        "description": "Stel een precieze duur in voor de zichtbaarheid van de inhoud, zodat uw informatie alleen beschikbaar is wanneer dat nodig is."
+      },
+      "attempts": {
+        "title": "Pogingslimieten bekijken",
+        "description": "Bepaal hoe vaak uw inhoud kan worden bekeken, door een extra laag Time Limited-zichtbaarheidsbescherming toe te voegen."
+      },
+      "sharing": {
+        "title": "Veilig tijdelijk delen",
+        "description": "Deel inhoud met vertrouwen, wetende dat deze ontoegankelijk zal worden na de tijdelijke zichtbaarheidsperiode."
+      }
+    },
+    "useCases": {
+      "title": "Tijdgebonden zichtbaarheidstoepassingen",
+      "personal": {
+        "title": "Persoonlijke tijd beperkte inhoud",
+        "case1": "Tijd Beperkte zichtbaarheid voor tijdelijke aankondigingen",
+        "case2": "Zelfvernietigende persoonlijke berichten met tijdsbeperkte toegang",
+        "case3": "Tijd Beperkte zichtbaarheid voor evenementspecifieke informatie"
+      },
+      "business": {
+        "title": "Zakelijke tijd Beperkte inhoud",
+        "case1": "Tijd Beperkte zichtbaarheid voor promotionele aanbiedingen",
+        "case2": "Tijdelijke toegang tot tijdgevoelige documenten",
+        "case3": "Tijd Beperkte zichtbaarheid voor interne communicatie"
+      }
+    },
+    "howItWorks": {
+      "title": "Hoe tijdsbeperkt zicht werkt",
+      "step1": {
+        "title": "Creëer uw inhoud",
+        "description": "Stel uw inhoud in met tijdsbeperkte zichtbaarheidsinstellingen"
+      },
+      "step2": {
+        "title": "Deel veilig",
+        "description": "Deel uw tijdelijke inhoud met specifieke kijkers"
+      },
+      "step3": {
+        "title": "Automatische vervaldatum",
+        "description": "Inhoud wordt ontoegankelijk na een beperkte periode"
+      }
+    },
+    "cta": {
+      "title": "Begin vandaag nog met tijdbeperkte zichtbaarheid",
+      "description": "Ervaar de kracht van gecontroleerd, tijdsbeperkt delen van inhoud",
+      "button": "Creëer tijdgebonden inhoud"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "Creëer een tijdsbeperkt zichtbaarheidsbericht",
+      "meta_description": "Creëer een in de tijd beperkt zichtbaarheidsbericht met tekst-, beeld- of video-inhoud. Test zijn/haar reactietijd.",
+      "title": "Creëer een tijdsbeperkt zichtbaarheidsbericht",
+      "description": "Maak een in de tijd beperkt zichtbaarheidsbericht met tekst-, afbeeldings- of video-inhoud.<br/>Test zijn/haar reactietijd.",
+      "typeText": "Tekst",
+      "typeImage": "Afbeelding",
+      "typeVideo": "Video",
+      "contentTitle": "Bericht bewerken",
+      "settingsTitle": "Berichtinstellingen",
+      "shareTitle": "Deel bericht",
+      "titlePlaceholder": "Voer de berichttitel in",
+      "contentPlaceholder": "Voer de inhoud van het bericht in",
+      "duration": "Zichtbaarheidsduur (ms)",
+      "maxAttempts": "Maximale weergaven",
+      "next": "Volgende",
+      "submit": "Creëren",
+      "creating": "Creëren...",
+      "copyLink": "Kopieer link",
+      "backToList": "Terug naar Maken",
+      "linkCopied": "Link gekopieerd",
+      "error": "Kan bericht niet maken",
+      "shareVia": "Deel via",
+      "howItWorks": "Hoe tijdsbeperkt zicht werkt",
+      "createStepsTitle": "Creëer uw tijdsbeperkte boodschap",
+      "step1Title": "Creëer uw bericht",
+      "step1Description": "Kies uw berichttype (tekst, afbeelding of video) en voer uw inhoud in. Creëer een in de tijd beperkt bericht dat uw ontvangers uitdaagt.",
+      "step2Title": "Zichtbaarheidsregels instellen",
+      "step2Description": "Bepaal hoe lang uw bericht zichtbaar blijft en hoeveel pogingen kijkers krijgen. Met Time Limited Visibility kunt u de kijkervaring bepalen.",
+      "step3Title": "Deel uw bericht",
+      "step3Description": "Ontvang een unieke link naar uw in de tijd beperkte bericht en deel het met iedereen. Tijdsbeperkte zichtbaarheid maakt het delen van spannende inhoud eenvoudig.",
+      "viewStepsTitle": "Een in de tijd beperkt bericht bekijken",
+      "viewStep1Title": "Maak je klaar",
+      "viewStep1Description": "Klik op 'Klaar' als u klaar bent om de tijdsgebonden inhoud te bekijken. Tijdsbeperkt Zichtbaarheid vereist snelle reacties.",
+      "viewStep2Title": "Reageer snel",
+      "viewStep2Description": "Klik op wanneer u het enveloppictogram ziet verschijnen. Tijdsbeperkte zichtbaarheid test uw reactiesnelheid.",
+      "viewStep3Title": "Bekijk het bericht",
+      "viewStep3Description": "Als je snel genoeg bent, krijg je het bericht met beperkte tijd te zien. Tijdsbeperkte zichtbaarheid beloont snelle reacties.",
+      "featuresTitle": "Tijdgebonden zichtbaarheidsfuncties",
+      "feature1Title": "Getimede toegang",
+      "feature1Description": "Stel nauwkeurige zichtbaarheidsduur voor uw inhoud in met tijdsbeperkte zichtbaarheidsinstellingen.",
+      "feature2Title": "Beperkte pogingen",
+      "feature2Description": "Bepaal hoe vaak kijkers kunnen proberen toegang te krijgen tot uw tijdsbeperkte bericht.",
+      "feature3Title": "Eenvoudig delen",
+      "feature3Description": "Deel uw Time Limited Visibility-inhoud op elk platform met een eenvoudige link."
+    },
+    "list": {
+      "title": "Getimede berichten",
+      "create": "Creëren",
+      "loading": "Laden...",
+      "empty": "Nog geen berichten",
+      "createFirst": "Eerste bericht maken",
+      "attempts": "{huidige}/{max} weergaven",
+      "linkCopied": "Link gekopieerd",
+      "fetchError": "Kan berichten niet ophalen"
+    },
+    "view": {
+      "meta_title": "Je hebt een tijdsbeperkt zichtbaarheidsbericht",
+      "meta_description": "Klik op het scherm voordat het pictogram verdwijnt om de inhoud van het bericht met tijdelijke zichtbaarheid te bekijken.",
+      "loading": "Laden...",
+      "notFound": "Bericht niet gevonden",
+      "notFoundDescription": "Mogelijk is dit bericht verwijderd of is de link ongeldig",
+      "expired": "Bericht verlopen",
+      "expiredDescription": "De kijktijd voor dit bericht is verstreken",
+      "timeLeft": "Resterende tijd: {seconden} s",
+      "attempts": "Weergaven: {current}/{max}",
+      "reload": "Herladen",
+      "share": "Deel",
+      "pageTitle": "Nieuw bericht met beperkte zichtbaarheid",
+      "pageDescription": "Tik op het scherm voordat het pictogram verdwijnt om de inhoud van het bericht te bekijken.",
+      "ready": "Klaar",
+      "waitForIcon": "Tik zo snel mogelijk op het scherm wanneer het pictogram verschijnt",
+      "tooSoon": "Te snel!",
+      "tooSoonDescription": "De klik is pas geldig nadat het pictogram verschijnt.",
+      "iconShownTitle": "Tik op het scherm!",
+      "iconShownDescription": "Het pictogram verdwijnt over {visibleDuration} ms.",
+      "tooSlowTitle": "Je was bijna succesvol!",
+      "tooSlowDescription": "De ingestelde reactietijd voor het bericht is {requiredTime}ms, uw reactietijd is {reactionTime}ms<br/>u heeft nog {attempts} kansen.",
+      "successTitle": "Gefeliciteerd!",
+      "successDescription": "De ingestelde reactietijd voor het bericht is {requiredTime}ms, uw reactietijd is {reactionTime}ms.",
+      "viewMessage": "Bekijk bericht",
+      "timeoutTitle": "Time-out!",
+      "timeoutDescription": "De ingestelde reactietijd voor het bericht is {requiredTime} ms,<br/>Je had op het scherm moeten klikken voordat het pictogram verdween.<br/>Je hebt nog {attempts} kansen.",
+      "maxAttemptsTitle": "Het bericht is nu ontoegankelijk",
+      "maxAttemptsDescription": "Je hebt het maximale aantal pogingen bereikt.",
+      "reactionTime": "Reactietijd: {time} s",
+      "tryAgain": "Probeer het opnieuw",
+      "waitTitle": "Wachten tot het pictogram verschijnt",
+      "clickTitle": "Tik op het scherm om het bericht te bekijken",
+      "clickDescription": "De afzender heeft de tijd ingesteld waarop het geopende pictogram verschijnt.<br/> U moet op het scherm tikken voordat het pictogram verdwijnt om de inhoud van het bericht te bekijken.",
+      "createOwn": "Creëer uw eigen bericht"
+    }
   }
 }

@@ -528,5 +528,155 @@
     "copyCode": "複製程式碼",
     "codeCopied": "代碼已複製到剪貼簿",
     "copyError": "複製失敗，請手動複製"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "您的內容的可見性有時間限制",
+      "description": "建立在設定的時間或瀏覽次數後自動消失的內容。非常適合時間敏感的資訊和獨家內容分享。",
+      "cta": "創建限時內容"
+    },
+    "features": {
+      "timing": {
+        "title": "限時能見度控制",
+        "description": "設定內容可見性的精確持續時間，確保您的資訊僅在需要時可用。"
+      },
+      "attempts": {
+        "title": "查看嘗試限制",
+        "description": "控制您的內容可以被查看的次數，增加額外的限時可見性保護層。"
+      },
+      "sharing": {
+        "title": "安全限時共享",
+        "description": "放心地分享內容，因為知道在「時間限制」可見期之後將無法存取該內容。"
+      }
+    },
+    "useCases": {
+      "title": "限時可見性應用程式",
+      "personal": {
+        "title": "個人限時內容",
+        "case1": "臨時公告的可見性有限",
+        "case2": "限時訪問的自毀個人訊息",
+        "case3": "活動特定資訊的可見性有限"
+      },
+      "business": {
+        "title": "營業時間限制內容",
+        "case1": "促銷優惠的可見性時間有限",
+        "case2": "臨時訪問時間敏感的文檔",
+        "case3": "內部通訊可見性有限"
+      }
+    },
+    "howItWorks": {
+      "title": "限時可見性如何運作",
+      "step1": {
+        "title": "創建您的內容",
+        "description": "使用限時可見性設定設定您的內容"
+      },
+      "step2": {
+        "title": "安全共享",
+        "description": "與特定觀眾分享您的限時內容"
+      },
+      "step3": {
+        "title": "自動過期",
+        "description": "限時後內容將無法訪問"
+      }
+    },
+    "cta": {
+      "title": "立即開始使用限時可見性",
+      "description": "體驗受控、限時內容共享的力量",
+      "button": "創建限時內容"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "建立限時可見性訊息",
+      "meta_description": "使用文字、圖像或影片內容建立限時可見性訊息。",
+      "title": "建立限時可見性訊息",
+      "description": "使用文字、圖像或影片內容建立限時可見性訊息。",
+      "typeText": "文字",
+      "typeImage": "影像",
+      "typeVideo": "影片",
+      "contentTitle": "編輯留言",
+      "settingsTitle": "訊息設定",
+      "shareTitle": "分享留言",
+      "titlePlaceholder": "輸入訊息標題",
+      "contentPlaceholder": "輸入留言內容",
+      "duration": "可見持續時間（毫秒）",
+      "maxAttempts": "最大觀看次數",
+      "next": "下一個",
+      "submit": "創造",
+      "creating": "創造...",
+      "copyLink": "複製連結",
+      "backToList": "返回創建",
+      "linkCopied": "連結已複製",
+      "error": "建立訊息失敗",
+      "shareVia": "分享透過",
+      "howItWorks": "限時可見性如何運作",
+      "createStepsTitle": "建立您的限時訊息",
+      "step1Title": "建立您的訊息",
+      "step1Description": "選擇您的訊息類型（文字、圖像或影片）並輸入您的內容。建立一條有時間限制的訊息來挑戰您的收件人。",
+      "step2Title": "設定可見性規則",
+      "step2Description": "定義您的訊息可見的時間以及查看者嘗試的次數。限時可見性讓您可以控制觀看體驗。",
+      "step3Title": "分享您的訊息",
+      "step3Description": "取得指向您的限時訊息的唯一連結並與任何人分享。限時可見性讓分享令人興奮的內容變得容易。",
+      "viewStepsTitle": "如何查看限時訊息",
+      "viewStep1Title": "準備",
+      "viewStep1Description": "當您準備好查看限時內容時，請點選「準備」。時間有限的可見性需要快速反應。",
+      "viewStep2Title": "反應迅速",
+      "viewStep2Description": "當您看到信封圖示出現時點擊。限時能見度測試你的反應速度。",
+      "viewStep3Title": "查看留言",
+      "viewStep3Description": "如果你夠快，你就會看到限時訊息。時間有限的可見性獎勵快速反應。",
+      "featuresTitle": "限時可見性功能",
+      "feature1Title": "定時訪問",
+      "feature1Description": "使用時間有限可見性控制項為您的內容設定精確的可見性持續時間。",
+      "feature2Title": "有限的嘗試",
+      "feature2Description": "控制觀看者可以嘗試存取您的限時訊息的次數。",
+      "feature3Title": "輕鬆分享",
+      "feature3Description": "透過簡單的連結在任何平台上分享您的限時可見性內容。"
+    },
+    "list": {
+      "title": "定時訊息",
+      "create": "創造",
+      "loading": "載入中...",
+      "empty": "還沒有消息",
+      "createFirst": "建立第一條訊息",
+      "attempts": "{當前}/{最大} 次觀看",
+      "linkCopied": "連結已複製",
+      "fetchError": "取得訊息失敗"
+    },
+    "view": {
+      "meta_title": "您收到一則限時可見訊息",
+      "meta_description": "點選圖示消失前的畫面可查看「限時可見」訊息的內容。",
+      "loading": "載入中...",
+      "notFound": "未找到訊息",
+      "notFoundDescription": "此訊息可能已被刪除或連結無效",
+      "expired": "訊息已過期",
+      "expiredDescription": "此訊息的查看時間已結束",
+      "timeLeft": "剩餘時間：{秒}秒",
+      "attempts": "觀看次數：{目前}/{最大}",
+      "reload": "重新載入",
+      "share": "分享",
+      "pageTitle": "新的時間有限可見性訊息",
+      "pageDescription": "在圖示消失前點擊螢幕即可查看訊息內容。",
+      "ready": "準備好",
+      "waitForIcon": "圖示出現時盡快點擊螢幕",
+      "tooSoon": "太快了！",
+      "tooSoonDescription": "圖示出現後點擊才有效。",
+      "iconShownTitle": "點擊螢幕！",
+      "iconShownDescription": "圖示將在 {visibleDuration} 毫秒後消失。",
+      "tooSlowTitle": "你幾乎就成功了！",
+      "tooSlowDescription": "該訊息設定的反應時間為{requiredTime}毫秒，您的反應時間為{reactionTime}毫秒<br/>您還有{attempts}次機會。",
+      "successTitle": "恭喜！",
+      "successDescription": "訊息設定的反應時間為{requiredTime}ms，您的反應時間為{reactionTime}ms。",
+      "viewMessage": "查看留言",
+      "timeoutTitle": "暫停！",
+      "timeoutDescription": "該訊息設定的反應時間為{requiredTime}毫秒，<br/>您應該在圖示消失之前點擊螢幕。",
+      "maxAttemptsTitle": "該訊息現在無法訪問",
+      "maxAttemptsDescription": "您已達到最大嘗試次數。",
+      "reactionTime": "反應時間：{time}s",
+      "tryAgain": "再試一次",
+      "waitTitle": "等待圖示出現",
+      "clickTitle": "點擊螢幕查看訊息",
+      "clickDescription": "寄件者已設定開啟圖示出現的時間。",
+      "createOwn": "創建您自己的訊息"
+    }
   }
 }

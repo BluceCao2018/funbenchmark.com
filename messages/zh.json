@@ -528,5 +528,155 @@
     "copyCode": "复制代码",
     "codeCopied": "代码已复制到剪贴板",
     "copyError": "复制失败，请手动复制"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "您的内容的可见性有时间限制",
+      "description": "创建在设定的时间或浏览次数后自动消失的内容。非常适合时间敏感的信息和独家内容共享。",
+      "cta": "创建限时内容"
+    },
+    "features": {
+      "timing": {
+        "title": "限时能见度控制",
+        "description": "设置内容可见性的精确持续时间，确保您的信息仅在需要时可用。"
+      },
+      "attempts": {
+        "title": "查看尝试限制",
+        "description": "控制您的内容可以被查看的次数，添加额外的限时可见性保护层。"
+      },
+      "sharing": {
+        "title": "安全限时共享",
+        "description": "放心地分享内容，因为知道在“时间限制”可见期之后将无法访问该内容。"
+      }
+    },
+    "useCases": {
+      "title": "限时可见性应用程序",
+      "personal": {
+        "title": "个人限时内容",
+        "case1": "临时公告的可见性有限",
+        "case2": "限时访问的自毁个人消息",
+        "case3": "活动特定信息的可见性有限"
+      },
+      "business": {
+        "title": "营业时间限制内容",
+        "case1": "促销优惠的可见性时间有限",
+        "case2": "临时访问时间敏感的文档",
+        "case3": "内部通信可见性有限"
+      }
+    },
+    "howItWorks": {
+      "title": "限时可见性如何运作",
+      "step1": {
+        "title": "创建您的内容",
+        "description": "使用限时可见性设置设置您的内容"
+      },
+      "step2": {
+        "title": "安全共享",
+        "description": "与特定观看者分享您的限时内容"
+      },
+      "step3": {
+        "title": "自动过期",
+        "description": "限时后内容将无法访问"
+      }
+    },
+    "cta": {
+      "title": "立即开始使用限时可见性",
+      "description": "体验受控、限时内容共享的力量",
+      "button": "创建限时内容"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "创建限时可见性消息",
+      "meta_description": "使用文本、图像或视频内容创建限时可见性消息。测试他/她的反应时间。",
+      "title": "创建限时可见性消息",
+      "description": "使用文本、图像或视频内容创建限时可见性消息。<br/>测试他/她的反应时间。",
+      "typeText": "文本",
+      "typeImage": "图像",
+      "typeVideo": "视频",
+      "contentTitle": "编辑留言",
+      "settingsTitle": "消息设置",
+      "shareTitle": "分享留言",
+      "titlePlaceholder": "输入消息标题",
+      "contentPlaceholder": "输入留言内容",
+      "duration": "可见持续时间（毫秒）",
+      "maxAttempts": "最大观看次数",
+      "next": "下一个",
+      "submit": "创造",
+      "creating": "创造...",
+      "copyLink": "复制链接",
+      "backToList": "返回创建",
+      "linkCopied": "链接已复制",
+      "error": "创建消息失败",
+      "shareVia": "分享通过",
+      "howItWorks": "限时可见性如何运作",
+      "createStepsTitle": "创建您的限时消息",
+      "step1Title": "创建您的消息",
+      "step1Description": "选择您的消息类型（文本、图像或视频）并输入您的内容。创建一条有时间限制的消息来挑战您的收件人。",
+      "step2Title": "设置可见性规则",
+      "step2Description": "定义您的消息可见的时间以及查看者尝试的次数。限时可见性让您可以控制观看体验。",
+      "step3Title": "分享您的信息",
+      "step3Description": "获取指向您的限时消息的唯一链接并与任何人分享。限时可见性使分享令人兴奋的内容变得容易。",
+      "viewStepsTitle": "如何查看限时消息",
+      "viewStep1Title": "准备",
+      "viewStep1Description": "当您准备好查看限时内容时，请点击“准备”。时间有限的可见性需要快速反应。",
+      "viewStep2Title": "反应迅速",
+      "viewStep2Description": "当您看到信封图标出现时单击。限时能见度测试你的反应速度。",
+      "viewStep3Title": "查看留言",
+      "viewStep3Description": "如果你足够快，你就会看到限时消息。时间有限的可见性奖励快速反应。",
+      "featuresTitle": "限时可见性功能",
+      "feature1Title": "定时访问",
+      "feature1Description": "使用时间有限可见性控件为您的内容设置精确的可见性持续时间。",
+      "feature2Title": "有限的尝试",
+      "feature2Description": "控制观看者可以尝试访问您的限时消息的次数。",
+      "feature3Title": "轻松分享",
+      "feature3Description": "通过简单的链接在任何平台上分享您的限时可见性内容。"
+    },
+    "list": {
+      "title": "定时消息",
+      "create": "创造",
+      "loading": "加载中...",
+      "empty": "还没有消息",
+      "createFirst": "创建第一条消息",
+      "attempts": "{当前}/{最大} 次观看",
+      "linkCopied": "链接已复制",
+      "fetchError": "获取消息失败"
+    },
+    "view": {
+      "meta_title": "您收到一条限时可见消息",
+      "meta_description": "单击图标消失前的屏幕可查看“限时可见”消息的内容。",
+      "loading": "加载中...",
+      "notFound": "未找到消息",
+      "notFoundDescription": "此消息可能已被删除或链接无效",
+      "expired": "消息已过期",
+      "expiredDescription": "此消息的查看时间已结束",
+      "timeLeft": "剩余时间：{秒}秒",
+      "attempts": "观看次数：{当前}/{最大}",
+      "reload": "重新加载",
+      "share": "分享",
+      "pageTitle": "新的时间有限可见性消息",
+      "pageDescription": "在图标消失前点击屏幕即可查看消息内容。",
+      "ready": "准备好",
+      "waitForIcon": "图标出现时尽快点击屏幕",
+      "tooSoon": "太快了！",
+      "tooSoonDescription": "图标出现后点击才有效。",
+      "iconShownTitle": "点击屏幕！",
+      "iconShownDescription": "图标将在 {visibleDuration} 毫秒后消失。",
+      "tooSlowTitle": "你几乎就成功了！",
+      "tooSlowDescription": "该消息设置的反应时间为{requiredTime}毫秒，您的反应时间为{reactionTime}毫秒<br/>您还有{attempts}次机会。",
+      "successTitle": "恭喜！",
+      "successDescription": "消息设置的反应时间为{requiredTime}ms，您的反应时间为{reactionTime}ms。",
+      "viewMessage": "查看留言",
+      "timeoutTitle": "暂停！",
+      "timeoutDescription": "该消息设置的反应时间为{requiredTime}毫秒，<br/>您应该在图标消失之前点击屏幕。<br/>您还有{attempts}次机会。",
+      "maxAttemptsTitle": "该消息现在无法访问",
+      "maxAttemptsDescription": "您已达到最大尝试次数。",
+      "reactionTime": "反应时间：{time}s",
+      "tryAgain": "再试一次",
+      "waitTitle": "等待图标出现",
+      "clickTitle": "点击屏幕即可查看消息",
+      "clickDescription": "发件人已设置打开图标出现的时间。<br/>您需要在图标消失前点击屏幕才能查看消息内容。",
+      "createOwn": "创建您自己的消息"
+    }
   }
 }

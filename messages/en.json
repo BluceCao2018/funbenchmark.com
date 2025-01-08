@@ -542,5 +542,157 @@
     "omissions": "Omissions",
     "averageResponse": "Average Response (ms)",
     "accuracy": "Accuracy"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "Time Limited Visibility for Your Content",
+      "description": "Create content that automatically disappears after a set time or number of views. Perfect for time-sensitive information and exclusive content sharing.",
+      "cta": "Create Time Limited Content"
+    },
+    "features": {
+      "timing": {
+        "title": "Time Limited Visibility Control",
+        "description": "Set precise duration for content visibility, ensuring your information is available only when needed."
+      },
+      "attempts": {
+        "title": "View Attempt Limits",
+        "description": "Control how many times your content can be viewed, adding an extra layer of Time Limited visibility protection."
+      },
+      "sharing": {
+        "title": "Secure Time Limited Sharing",
+        "description": "Share content with confidence, knowing it will become inaccessible after the Time Limited visibility period."
+      }
+    },
+    "useCases": {
+      "title": "Time Limited Visibility Applications",
+      "personal": {
+        "title": "Personal Time Limited Content",
+        "case1": "Time Limited visibility for temporary announcements",
+        "case2": "Self-destructing personal messages with Time Limited access",
+        "case3": "Time Limited visibility for event-specific information"
+      },
+      "business": {
+        "title": "Business Time Limited Content",
+        "case1": "Time Limited visibility for promotional offers",
+        "case2": "Temporary access to time-sensitive documents",
+        "case3": "Time Limited visibility for internal communications"
+      }
+    },
+    "howItWorks": {
+      "title": "How Time Limited Visibility Works",
+      "step1": {
+        "title": "Create Your Content",
+        "description": "Set up your content with Time Limited visibility settings"
+      },
+      "step2": {
+        "title": "Share Securely",
+        "description": "Share your Time Limited content with specific viewers"
+      },
+      "step3": {
+        "title": "Automatic Expiration",
+        "description": "Content becomes inaccessible after Time Limited period"
+      }
+    },
+    "cta": {
+      "title": "Start Using Time Limited Visibility Today",
+      "description": "Experience the power of controlled, Time Limited content sharing",
+      "button": "Create Time-Limited Content"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "Create Time Limited Visibility Message",
+      "meta_description": "Create a time-limited visibility message with text, image, or video content.Test his/her reaction time.",
+      "title": "Create Time Limited Visibility Message",
+      "description": "Create a time-limited visibility message with text, image, or video content.<br/>Test his/her reaction time.",
+      "typeText": "Text",
+      "typeImage": "Image",
+      "typeVideo": "Video",
+      "contentTitle": "Edit Message",
+      "settingsTitle": "Message Settings",
+      "shareTitle": "Share Message",
+      "titlePlaceholder": "Enter message title",
+      "contentPlaceholder": "Enter message content",
+      "duration": "Visibility Duration (ms)",
+      "maxAttempts": "Maximum Views",
+      "next": "Next",
+      "submit": "Create",
+      "creating": "Creating...",
+      "copyLink": "Copy Link",
+      "backToList": "Back to Create",
+      "linkCopied": "Link copied",
+      "error": "Failed to create message",
+      "shareVia": "Share via",
+      "howItWorks": "How Time Limited Visibility Works",
+      "createStepsTitle": "Create Your Time Limited Message",
+      "step1Title": "Create Your Message",
+      "step1Description": "Choose your message type (text, image, or video) and enter your content. Create a time-limited message that will challenge your recipients.",
+      "step2Title": "Set Visibility Rules",
+      "step2Description": "Define how long your message will be visible and how many attempts viewers get. Time Limited Visibility lets you control the viewing experience.",
+      "step3Title": "Share Your Message",
+      "step3Description": "Get a unique link to your time-limited message and share it with anyone. Time Limited Visibility makes sharing exciting content easy.",
+      
+      "viewStepsTitle": "How to View a Time Limited Message",
+      "viewStep1Title": "Get Ready",
+      "viewStep1Description": "Click 'Ready' when you're prepared to view the time-limited content. Time Limited Visibility requires quick reactions.",
+      "viewStep2Title": "React Quickly",
+      "viewStep2Description": "Click when you see the envelope icon appear. Time Limited Visibility tests your reaction speed.",
+      "viewStep3Title": "View the Message",
+      "viewStep3Description": "If you're fast enough, you'll get to see the time-limited message. Time Limited Visibility rewards quick reactions.",
+      
+      "featuresTitle": "Time Limited Visibility Features",
+      "feature1Title": "Timed Access",
+      "feature1Description": "Set precise visibility durations for your content with Time Limited Visibility controls.",
+      "feature2Title": "Limited Attempts",
+      "feature2Description": "Control how many times viewers can attempt to access your Time Limited Message.",
+      "feature3Title": "Easy Sharing",
+      "feature3Description": "Share your Time Limited Visibility content across any platform with a simple link."
+    },
+    "list": {
+      "title": "Timed Messages",
+      "create": "Create",
+      "loading": "Loading...",
+      "empty": "No messages yet",
+      "createFirst": "Create First Message",
+      "attempts": "{current}/{max} views",
+      "linkCopied": "Link copied",
+      "fetchError": "Failed to fetch messages"
+    },
+    "view": {
+      "meta_title": "You've got a Time Limited Visibility Message",
+      "meta_description": "Click the screen before the icon disappears to view the content of the Time Limited Visibility message.",
+      "loading": "Loading...",
+      "notFound": "Message Not Found",
+      "notFoundDescription": "This message may have been deleted or the link is invalid",
+      "expired": "Message Expired",
+      "expiredDescription": "The viewing time for this message has ended",
+      "timeLeft": "Time Left: {seconds}s",
+      "attempts": "Views: {current}/{max}",
+      "reload": "Reload",
+      "share": "Share",
+      "pageTitle": "New time limited visibility message",
+      "pageDescription": "Tap the screen before the icon disappears to view the content of the message.",
+      "ready": "Ready",
+      "waitForIcon": "Tap the screen as quickly as you can when the icon appears",
+      "tooSoon": "Too Soon!",
+      "tooSoonDescription": "The click is valid only after the icon appears.",
+      "iconShownTitle": "Tap the screen!",
+      "iconShownDescription": "The icon will disappear in {visibleDuration} ms.",
+      "tooSlowTitle": "You were almost successful!",
+      "tooSlowDescription": "The reaction time set for the message is {requiredTime}ms, your reaction time is {reactionTime}ms<br/>you still have {attempts} chances.",
+      "successTitle": "Congratulations!",
+      "successDescription": "The reaction time set for the message is {requiredTime}ms, your reactiontime is {reactionTime}ms.",
+      "viewMessage": "View Message",
+      "timeoutTitle": "Time Out!",
+      "timeoutDescription": "The reaction time set for the message is {requiredTime}ms,<br/>You should have clicked the screen before the icon disappears.<br/>You still have {attempts} chances.",
+      "maxAttemptsTitle": "The message is now inaccessible",
+      "maxAttemptsDescription": "You've reached the maximum number of attempts.",
+      "reactionTime": "Reaction Time: {time}s",
+      "tryAgain": "Try Again",
+      "waitTitle": "Waiting for the icon to appear",
+      "clickTitle": "Tap the screen to view the message",
+      "clickDescription": "The sender has set the time for the appearance of the open icon.<br/> You need to tap the screen before the icon disappears to view the content of the message.",
+      "createOwn": "Create Your Own Message"
+    }
   }
 }

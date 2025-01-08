@@ -528,5 +528,155 @@
     "copyCode": "Copier le code",
     "codeCopied": "Code copié dans le presse-papier",
     "copyError": "Échec de la copie, veuillez copier manuellement"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "Visibilité limitée dans le temps pour votre contenu",
+      "description": "Créez du contenu qui disparaît automatiquement après une durée ou un nombre de vues défini. Parfait pour les informations urgentes et le partage de contenu exclusif.",
+      "cta": "Créer du contenu à durée limitée"
+    },
+    "features": {
+      "timing": {
+        "title": "Contrôle de visibilité limité dans le temps",
+        "description": "Définissez une durée précise pour la visibilité du contenu, garantissant que vos informations ne sont disponibles qu'en cas de besoin."
+      },
+      "attempts": {
+        "title": "Afficher les limites de tentatives",
+        "description": "Contrôlez le nombre de fois que votre contenu peut être consulté, en ajoutant une couche supplémentaire de protection contre la visibilité limitée dans le temps."
+      },
+      "sharing": {
+        "title": "Partage sécurisé à durée limitée",
+        "description": "Partagez du contenu en toute confiance, sachant qu'il deviendra inaccessible après la période de visibilité limitée dans le temps."
+      }
+    },
+    "useCases": {
+      "title": "Applications de visibilité limitée dans le temps",
+      "personal": {
+        "title": "Contenu personnel limité dans le temps",
+        "case1": "Visibilité limitée dans le temps pour les annonces temporaires",
+        "case2": "Messages personnels autodestructeurs avec accès limité dans le temps",
+        "case3": "Visibilité limitée dans le temps pour les informations spécifiques à un événement"
+      },
+      "business": {
+        "title": "Contenu à durée limitée",
+        "case1": "Visibilité limitée dans le temps pour les offres promotionnelles",
+        "case2": "Accès temporaire aux documents urgents",
+        "case3": "Visibilité limitée dans le temps pour les communications internes"
+      }
+    },
+    "howItWorks": {
+      "title": "Comment fonctionne la visibilité limitée dans le temps",
+      "step1": {
+        "title": "Créez votre contenu",
+        "description": "Configurez votre contenu avec des paramètres de visibilité limités dans le temps"
+      },
+      "step2": {
+        "title": "Partagez en toute sécurité",
+        "description": "Partagez votre contenu à durée limitée avec des téléspectateurs spécifiques"
+      },
+      "step3": {
+        "title": "Expiration automatique",
+        "description": "Le contenu devient inaccessible après une période limitée dans le temps"
+      }
+    },
+    "cta": {
+      "title": "Commencez à utiliser la visibilité limitée dans le temps dès aujourd'hui",
+      "description": "Découvrez la puissance du partage de contenu contrôlé et limité dans le temps",
+      "button": "Créer du contenu limité dans le temps"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "Créer un message de visibilité limitée dans le temps",
+      "meta_description": "Créez un message à visibilité limitée dans le temps avec du contenu texte, image ou vidéo. Testez son temps de réaction.",
+      "title": "Créer un message de visibilité limitée dans le temps",
+      "description": "Créez un message à visibilité limitée dans le temps avec du contenu texte, image ou vidéo.<br/>Testez son temps de réaction.",
+      "typeText": "Texte",
+      "typeImage": "Image",
+      "typeVideo": "Vidéo",
+      "contentTitle": "Modifier le message",
+      "settingsTitle": "Paramètres des messages",
+      "shareTitle": "Partager un message",
+      "titlePlaceholder": "Entrez le titre du message",
+      "contentPlaceholder": "Saisir le contenu du message",
+      "duration": "Durée de visibilité (ms)",
+      "maxAttempts": "Vues maximales",
+      "next": "Suivant",
+      "submit": "Créer",
+      "creating": "Création...",
+      "copyLink": "Copier le lien",
+      "backToList": "Retour à Créer",
+      "linkCopied": "Lien copié",
+      "error": "Échec de la création du message",
+      "shareVia": "Partager via",
+      "howItWorks": "Comment fonctionne la visibilité limitée dans le temps",
+      "createStepsTitle": "Créez votre message à durée limitée",
+      "step1Title": "Créez votre message",
+      "step1Description": "Choisissez votre type de message (texte, image ou vidéo) et saisissez votre contenu. Créez un message limité dans le temps qui mettra au défi vos destinataires.",
+      "step2Title": "Définir des règles de visibilité",
+      "step2Description": "Définissez la durée pendant laquelle votre message sera visible et le nombre de tentatives que les téléspectateurs auront. La visibilité limitée dans le temps vous permet de contrôler l'expérience visuelle.",
+      "step3Title": "Partagez votre message",
+      "step3Description": "Obtenez un lien unique vers votre message à durée limitée et partagez-le avec n'importe qui. La visibilité limitée dans le temps facilite le partage de contenus passionnants.",
+      "viewStepsTitle": "Comment afficher un message à durée limitée",
+      "viewStep1Title": "Se préparer",
+      "viewStep1Description": "Cliquez sur « Prêt » lorsque vous êtes prêt à afficher le contenu à durée limitée. La visibilité limitée dans le temps nécessite des réactions rapides.",
+      "viewStep2Title": "Réagissez rapidement",
+      "viewStep2Description": "Cliquez lorsque vous voyez l’icône de l’enveloppe apparaître. La visibilité limitée dans le temps teste votre vitesse de réaction.",
+      "viewStep3Title": "Afficher le message",
+      "viewStep3Description": "Si vous êtes assez rapide, vous verrez le message limité dans le temps. La visibilité limitée dans le temps récompense les réactions rapides.",
+      "featuresTitle": "Fonctionnalités de visibilité limitée dans le temps",
+      "feature1Title": "Accès chronométré",
+      "feature1Description": "Définissez des durées de visibilité précises pour votre contenu grâce aux contrôles de visibilité limitée dans le temps.",
+      "feature2Title": "Tentatives limitées",
+      "feature2Description": "Contrôlez le nombre de fois où les téléspectateurs peuvent tenter d'accéder à votre message à durée limitée.",
+      "feature3Title": "Partage facile",
+      "feature3Description": "Partagez votre contenu à visibilité limitée dans le temps sur n'importe quelle plateforme avec un simple lien."
+    },
+    "list": {
+      "title": "Messages programmés",
+      "create": "Créer",
+      "loading": "Chargement...",
+      "empty": "Pas encore de messages",
+      "createFirst": "Créer un premier message",
+      "attempts": "{current}/{max} vues",
+      "linkCopied": "Lien copié",
+      "fetchError": "Échec de la récupération des messages"
+    },
+    "view": {
+      "meta_title": "Vous avez un message de visibilité limité dans le temps",
+      "meta_description": "Cliquez sur l'écran avant que l'icône ne disparaisse pour afficher le contenu du message de visibilité limitée dans le temps.",
+      "loading": "Chargement...",
+      "notFound": "Message introuvable",
+      "notFoundDescription": "Ce message a peut-être été supprimé ou le lien n'est pas valide",
+      "expired": "Message expiré",
+      "expiredDescription": "La durée de visionnage de ce message est terminée",
+      "timeLeft": "Temps restant : {secondes} s",
+      "attempts": "Vues : {current}/{max}",
+      "reload": "Recharger",
+      "share": "Partager",
+      "pageTitle": "Nouveau message de visibilité limitée dans le temps",
+      "pageDescription": "Appuyez sur l'écran avant que l'icône ne disparaisse pour afficher le contenu du message.",
+      "ready": "Prêt",
+      "waitForIcon": "Appuyez sur l'écran aussi rapidement que possible lorsque l'icône apparaît",
+      "tooSoon": "Trop tôt !",
+      "tooSoonDescription": "Le clic n'est valide qu'après l'apparition de l'icône.",
+      "iconShownTitle": "Touchez l'écran !",
+      "iconShownDescription": "L'icône disparaîtra dans {visibleDuration} ms.",
+      "tooSlowTitle": "Vous avez presque réussi !",
+      "tooSlowDescription": "Le temps de réaction défini pour le message est de {requiredTime} ms, votre temps de réaction est de {reactionTime} ms<br/>vous avez encore {attempts} chances.",
+      "successTitle": "Félicitations!",
+      "successDescription": "Le temps de réaction défini pour le message est de {requiredTime} ms, votre temps de réaction est de {reactionTime} ms.",
+      "viewMessage": "Afficher le message",
+      "timeoutTitle": "Temps mort!",
+      "timeoutDescription": "Le temps de réaction défini pour le message est de {requiredTime} ms.<br/>Vous devez avoir cliqué sur l'écran avant que l'icône ne disparaisse.<br/>Vous avez encore {tentatives} chances.",
+      "maxAttemptsTitle": "Le message est désormais inaccessible",
+      "maxAttemptsDescription": "Vous avez atteint le nombre maximum de tentatives.",
+      "reactionTime": "Temps de réaction : {time}s",
+      "tryAgain": "Essayer à nouveau",
+      "waitTitle": "En attendant que l'icône apparaisse",
+      "clickTitle": "Appuyez sur l'écran pour afficher le message",
+      "clickDescription": "L'expéditeur a réglé l'heure d'apparition de l'icône d'ouverture.<br/> Vous devez appuyer sur l'écran avant que l'icône ne disparaisse pour afficher le contenu du message.",
+      "createOwn": "Créez votre propre message"
+    }
   }
 }

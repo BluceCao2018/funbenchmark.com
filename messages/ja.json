@@ -528,5 +528,155 @@
     "copyCode": "コードをコピーする",
     "codeCopied": "コードをクリップボードにコピーしました",
     "copyError": "コピーに失敗しました。手動でコピーしてください"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "コンテンツの期間限定公開",
+      "description": "設定した時間または閲覧回数が経過すると自動的に消えるコンテンツを作成します。時間に敏感な情報や独占的なコンテンツの共有に最適です。",
+      "cta": "期間限定のコンテンツを作成する"
+    },
+    "features": {
+      "timing": {
+        "title": "時間制限のある可視性制御",
+        "description": "コンテンツの表示期間を正確に設定して、必要な場合にのみ情報を利用できるようにします。"
+      },
+      "attempts": {
+        "title": "試行制限の表示",
+        "description": "コンテンツを表示できる回数を制御し、時間制限のある可視性保護の追加レイヤーを追加します。"
+      },
+      "sharing": {
+        "title": "安全な時間制限付き共有",
+        "description": "時間制限付きの公開期間が過ぎるとアクセスできなくなることを承知の上で、自信を持ってコンテンツを共有してください。"
+      }
+    },
+    "useCases": {
+      "title": "期間限定の可視化アプリケーション",
+      "personal": {
+        "title": "個人的な期間限定コンテンツ",
+        "case1": "一時的なアナウンスの時間制限付き表示",
+        "case2": "時間制限付きアクセスによる自己破壊型個人メッセージ",
+        "case3": "イベント固有の情報を時間限定で公開"
+      },
+      "business": {
+        "title": "営業時間限定コンテンツ",
+        "case1": "プロモーションオファーの期間限定公開",
+        "case2": "時間に敏感なドキュメントへの一時的なアクセス",
+        "case3": "社内コミュニケーションの時間制限付き可視化"
+      }
+    },
+    "howItWorks": {
+      "title": "時間制限付き表示の仕組み",
+      "step1": {
+        "title": "コンテンツを作成する",
+        "description": "時間制限付きの公開設定を使用してコンテンツをセットアップする"
+      },
+      "step2": {
+        "title": "安全に共有する",
+        "description": "期間限定コンテンツを特定の視聴者と共有する"
+      },
+      "step3": {
+        "title": "自動有効期限切れ",
+        "description": "期間限定期間を過ぎるとコンテンツにアクセスできなくなります"
+      }
+    },
+    "cta": {
+      "title": "今すぐ時間制限付き公開設定を使い始めましょう",
+      "description": "制御された時間制限のあるコンテンツ共有のパワーを体験してください",
+      "button": "期間限定のコンテンツを作成する"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "期間限定公開メッセージを作成する",
+      "meta_description": "テキスト、画像、またはビデオ コンテンツを使用して、時間制限付きの可視性メッセージを作成します。ユーザーの反応時間をテストします。",
+      "title": "期間限定公開メッセージを作成する",
+      "description": "テキスト、画像、またはビデオ コンテンツを使用して、時間制限付きの公開メッセージを作成します。<br/>ユーザーの反応時間をテストします。",
+      "typeText": "文章",
+      "typeImage": "画像",
+      "typeVideo": "ビデオ",
+      "contentTitle": "メッセージの編集",
+      "settingsTitle": "メッセージ設定",
+      "shareTitle": "メッセージを共有する",
+      "titlePlaceholder": "メッセージのタイトルを入力してください",
+      "contentPlaceholder": "メッセージ内容を入力してください",
+      "duration": "可視期間 (ミリ秒)",
+      "maxAttempts": "最大ビュー数",
+      "next": "次",
+      "submit": "作成する",
+      "creating": "作成...",
+      "copyLink": "リンクをコピー",
+      "backToList": "作成に戻る",
+      "linkCopied": "リンクがコピーされました",
+      "error": "メッセージの作成に失敗しました",
+      "shareVia": "共有方法",
+      "howItWorks": "時間制限付き表示の仕組み",
+      "createStepsTitle": "期間限定のメッセージを作成する",
+      "step1Title": "メッセージを作成する",
+      "step1Description": "メッセージの種類 (テキスト、画像、またはビデオ) を選択し、コンテンツを入力します。受信者に挑戦的な、期間限定のメッセージを作成します。",
+      "step2Title": "可視性ルールの設定",
+      "step2Description": "メッセージが表示される期間と、視聴者が試行する回数を定義します。時間制限付き表示を使用すると、表示エクスペリエンスを制御できます。",
+      "step3Title": "メッセージを共有する",
+      "step3Description": "期間限定メッセージへの固有のリンクを取得して、誰とでも共有します。期間限定公開により、エキサイティングなコンテンツを簡単に共有できます。",
+      "viewStepsTitle": "期間限定メッセージを表示する方法",
+      "viewStep1Title": "準備をしましょう",
+      "viewStep1Description": "期間限定コンテンツを表示する準備ができたら、[準備完了] をクリックします。時間制限のある可視性では素早い反応が必要です。",
+      "viewStep2Title": "迅速に反応する",
+      "viewStep2Description": "封筒アイコンが表示されたらクリックします。時間制限付き可視性は、あなたの反応速度をテストします。",
+      "viewStep3Title": "メッセージを見る",
+      "viewStep3Description": "十分に速ければ、時間制限のあるメッセージが表示されます。時間制限付きの可視性により、素早い反応が得られます。",
+      "featuresTitle": "期間限定の表示機能",
+      "feature1Title": "時間指定アクセス",
+      "feature1Description": "時間制限付き表示コントロールを使用して、コンテンツの正確な表示期間を設定します。",
+      "feature2Title": "限られた試行",
+      "feature2Description": "視聴者が時間制限付きメッセージへのアクセスを試行できる回数を制御します。",
+      "feature3Title": "簡単な共有",
+      "feature3Description": "シンプルなリンクを使用して、時間制限付き公開コンテンツをあらゆるプラットフォームで共有できます。"
+    },
+    "list": {
+      "title": "時限メッセージ",
+      "create": "作成する",
+      "loading": "読み込み中...",
+      "empty": "まだメッセージはありません",
+      "createFirst": "最初のメッセージを作成する",
+      "attempts": "{現在}/{最大} 回のビュー",
+      "linkCopied": "リンクがコピーされました",
+      "fetchError": "メッセージの取得に失敗しました"
+    },
+    "view": {
+      "meta_title": "時間制限付きの公開メッセージがあります",
+      "meta_description": "アイコンが消える前に画面をクリックすると、表示時間制限メッセージの内容が表示されます。",
+      "loading": "読み込み中...",
+      "notFound": "メッセージが見つかりません",
+      "notFoundDescription": "このメッセージは削除されたか、リンクが無効である可能性があります",
+      "expired": "メッセージの有効期限が切れました",
+      "expiredDescription": "このメッセージの閲覧期間は終了しました",
+      "timeLeft": "残り時間: {秒}秒",
+      "attempts": "ビュー: {現在}/{最大}",
+      "reload": "リロード",
+      "share": "共有",
+      "pageTitle": "新しい時間制限付き公開メッセージ",
+      "pageDescription": "アイコンが消える前に画面をタップすると、メッセージの内容が表示されます。",
+      "ready": "準備ができて",
+      "waitForIcon": "アイコンが表示されたらできるだけ早く画面をタップします",
+      "tooSoon": "早すぎる！",
+      "tooSoonDescription": "クリックはアイコンが表示された後でのみ有効です。",
+      "iconShownTitle": "画面をタップしてください！",
+      "iconShownDescription": "アイコンは {visibleDuration} ミリ秒後に消えます。",
+      "tooSlowTitle": "あなたはほぼ成功しました！",
+      "tooSlowDescription": "メッセージに設定された反応時間は {requiredTime} ミリ秒です。あなたの反応時間は {reactionTime} ミリ秒です。<br/>まだ {attempts} 回のチャンスがあります。",
+      "successTitle": "おめでとう！",
+      "successDescription": "メッセージに設定された反応時間は {requiredTime} ミリ秒、あなたの反応時間は {reactionTime} ミリ秒です。",
+      "viewMessage": "メッセージを見る",
+      "timeoutTitle": "タイムアウト！",
+      "timeoutDescription": "メッセージに設定された反応時間は {requiredTime} ミリ秒です。<br/>アイコンが消える前に画面をクリックする必要があります。<br/>まだ {attempts} 回のチャンスがあります。",
+      "maxAttemptsTitle": "メッセージにはアクセスできなくなりました",
+      "maxAttemptsDescription": "最大試行回数に達しました。",
+      "reactionTime": "反応時間: {time}秒",
+      "tryAgain": "もう一度やり直してください",
+      "waitTitle": "アイコンが表示されるのを待っています",
+      "clickTitle": "画面をタップしてメッセージを表示します",
+      "clickDescription": "送信者は、開いているアイコンが表示される時間を設定しています。<br/> メッセージの内容を表示するには、アイコンが消える前に画面をタップする必要があります。",
+      "createOwn": "独自のメッセージを作成する"
+    }
   }
 }

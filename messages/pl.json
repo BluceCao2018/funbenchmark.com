@@ -528,5 +528,155 @@
     "copyCode": "Skopiuj kod",
     "codeCopied": "Kod skopiowany do schowka",
     "copyError": "Kopiowanie nie powiodło się. Skopiuj ręcznie"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "Ograniczona czasowo widoczność Twoich treści",
+      "description": "Twórz treści, które automatycznie znikają po określonym czasie lub liczbie wyświetleń. Idealny do przechowywania wrażliwych informacji i udostępniania ekskluzywnych treści.",
+      "cta": "Twórz treści ograniczone czasowo"
+    },
+    "features": {
+      "timing": {
+        "title": "Ograniczona czasowo kontrola widoczności",
+        "description": "Ustaw dokładny czas widoczności treści, dzięki czemu Twoje informacje będą dostępne tylko wtedy, gdy będą potrzebne."
+      },
+      "attempts": {
+        "title": "Wyświetl limity prób",
+        "description": "Kontroluj, ile razy Twoje treści mogą być oglądane, dodając dodatkową warstwę ochrony widoczności ograniczonej czasowo."
+      },
+      "sharing": {
+        "title": "Bezpieczne udostępnianie ograniczone czasowo",
+        "description": "Udostępniaj treści bez obaw, wiedząc, że po upływie ograniczonego czasowo okresu widoczności staną się one niedostępne."
+      }
+    },
+    "useCases": {
+      "title": "Aplikacje o ograniczonej widoczności czasowej",
+      "personal": {
+        "title": "Treść ograniczona czasowo",
+        "case1": "Ograniczona czasowo widoczność ogłoszeń tymczasowych",
+        "case2": "Samoniszczące wiadomości osobiste z dostępem ograniczonym czasowo",
+        "case3": "Ograniczona czasowo widoczność informacji dotyczących konkretnego wydarzenia"
+      },
+      "business": {
+        "title": "Treść ograniczona czasowo",
+        "case1": "Ograniczona czasowo widoczność ofert promocyjnych",
+        "case2": "Tymczasowy dostęp do dokumentów wrażliwych na czas",
+        "case3": "Ograniczona czasowo widoczność komunikacji wewnętrznej"
+      }
+    },
+    "howItWorks": {
+      "title": "Jak działa ograniczona czasowo widoczność",
+      "step1": {
+        "title": "Stwórz swoją treść",
+        "description": "Skonfiguruj swoją treść za pomocą ustawień widoczności ograniczonej czasowo"
+      },
+      "step2": {
+        "title": "Udostępnij bezpiecznie",
+        "description": "Udostępnij swoje treści ograniczone czasowo określonym widzom"
+      },
+      "step3": {
+        "title": "Automatyczne wygaśnięcie",
+        "description": "Treść staje się niedostępna po upływie okresu ograniczonego czasowo"
+      }
+    },
+    "cta": {
+      "title": "Zacznij już dziś korzystać z ograniczonej czasowo widoczności",
+      "description": "Poznaj moc kontrolowanego, ograniczonego czasowo udostępniania treści",
+      "button": "Twórz treści ograniczone czasowo"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "Utwórz wiadomość o ograniczonej widoczności czasowej",
+      "meta_description": "Utwórz komunikat o widoczności ograniczonej czasowo, zawierający tekst, obraz lub treść wideo. Sprawdź jego czas reakcji.",
+      "title": "Utwórz wiadomość o ograniczonej widoczności czasowej",
+      "description": "Utwórz wiadomość o widoczności ograniczonej czasowo, zawierającą tekst, obraz lub treść wideo.<br/>Sprawdź jego czas reakcji.",
+      "typeText": "Tekst",
+      "typeImage": "Obraz",
+      "typeVideo": "Wideo",
+      "contentTitle": "Edytuj wiadomość",
+      "settingsTitle": "Ustawienia wiadomości",
+      "shareTitle": "Udostępnij wiadomość",
+      "titlePlaceholder": "Wpisz tytuł wiadomości",
+      "contentPlaceholder": "Wpisz treść wiadomości",
+      "duration": "Czas widoczności (ms)",
+      "maxAttempts": "Maksymalna liczba wyświetleń",
+      "next": "Następny",
+      "submit": "Tworzyć",
+      "creating": "Tworzenie...",
+      "copyLink": "Skopiuj link",
+      "backToList": "Powrót do tworzenia",
+      "linkCopied": "Link skopiowany",
+      "error": "Nie udało się utworzyć wiadomości",
+      "shareVia": "Udostępnij przez",
+      "howItWorks": "Jak działa ograniczona czasowo widoczność",
+      "createStepsTitle": "Utwórz wiadomość ograniczoną czasowo",
+      "step1Title": "Utwórz swoją wiadomość",
+      "step1Description": "Wybierz typ wiadomości (tekst, obraz lub wideo) i wprowadź treść. Utwórz wiadomość ograniczoną czasowo, która będzie stanowić wyzwanie dla odbiorców.",
+      "step2Title": "Ustaw reguły widoczności",
+      "step2Description": "Określ, jak długo Twoja wiadomość będzie widoczna i ile prób otrzymają widzowie. Widoczność ograniczona czasowo pozwala kontrolować wrażenia wizualne.",
+      "step3Title": "Udostępnij swoją wiadomość",
+      "step3Description": "Zdobądź unikalny link do swojej ograniczonej czasowo wiadomości i udostępnij ją każdemu. Widoczność ograniczona czasowo ułatwia udostępnianie ekscytujących treści.",
+      "viewStepsTitle": "Jak wyświetlić wiadomość ograniczoną czasowo",
+      "viewStep1Title": "Przygotować",
+      "viewStep1Description": "Kliknij „Gotowe”, gdy będziesz gotowy do obejrzenia treści ograniczonej czasowo. Widoczność ograniczona czasowo wymaga szybkich reakcji.",
+      "viewStep2Title": "Reaguj szybko",
+      "viewStep2Description": "Kliknij, gdy pojawi się ikona koperty. Widoczność ograniczona czasowo sprawdza Twoją szybkość reakcji.",
+      "viewStep3Title": "Wyświetl wiadomość",
+      "viewStep3Description": "Jeśli będziesz wystarczająco szybki, zobaczysz komunikat ograniczony czasowo. Widoczność ograniczona czasowo nagradza szybkie reakcje.",
+      "featuresTitle": "Funkcje widoczności ograniczone czasowo",
+      "feature1Title": "Dostęp czasowy",
+      "feature1Description": "Ustaw dokładny czas widoczności swoich treści za pomocą elementów sterujących widocznością ograniczoną czasowo.",
+      "feature2Title": "Ograniczone próby",
+      "feature2Description": "Kontroluj, ile razy widzowie mogą próbować uzyskać dostęp do Twojej wiadomości ograniczonej czasowo.",
+      "feature3Title": "Łatwe udostępnianie",
+      "feature3Description": "Udostępniaj treści o ograniczonej widoczności na dowolnej platformie za pomocą prostego łącza."
+    },
+    "list": {
+      "title": "Wiadomości o czasie",
+      "create": "Tworzyć",
+      "loading": "Załadunek...",
+      "empty": "Nie ma jeszcze żadnych wiadomości",
+      "createFirst": "Utwórz pierwszą wiadomość",
+      "attempts": "Liczba wyświetleń: {current}/{max}",
+      "linkCopied": "Link skopiowany",
+      "fetchError": "Nie udało się pobrać wiadomości"
+    },
+    "view": {
+      "meta_title": "Masz wiadomość o ograniczonej widoczności czasowej",
+      "meta_description": "Kliknij ekran, zanim ikona zniknie, aby wyświetlić treść komunikatu o ograniczonej widoczności czasowej.",
+      "loading": "Załadunek...",
+      "notFound": "Nie znaleziono wiadomości",
+      "notFoundDescription": "Ta wiadomość mogła zostać usunięta lub link jest nieprawidłowy",
+      "expired": "Wiadomość wygasła",
+      "expiredDescription": "Czas wyświetlania tej wiadomości dobiegł końca",
+      "timeLeft": "Pozostały czas: {sekundy} s",
+      "attempts": "Wyświetlenia: {bieżące}/{maks.}",
+      "reload": "Przeładować",
+      "share": "Udział",
+      "pageTitle": "Nowy komunikat o ograniczonej widoczności czasowej",
+      "pageDescription": "Aby wyświetlić treść wiadomości, dotknij ekranu, zanim ikona zniknie.",
+      "ready": "Gotowy",
+      "waitForIcon": "Gdy pojawi się ikona, dotknij ekranu tak szybko, jak to możliwe",
+      "tooSoon": "Za niedługo!",
+      "tooSoonDescription": "Kliknięcie jest ważne dopiero po pojawieniu się ikony.",
+      "iconShownTitle": "Dotknij ekranu!",
+      "iconShownDescription": "Ikona zniknie za {visibleDuration} ms.",
+      "tooSlowTitle": "Prawie Ci się udało!",
+      "tooSlowDescription": "Czas reakcji ustawiony na wiadomość to {requiredTime}ms, Twój czas reakcji to {reactionTime}ms<br/>nadal masz {attempts} szans.",
+      "successTitle": "Gratulacje!",
+      "successDescription": "Czas reakcji ustawiony na wiadomość to {requiredTime}ms, Twój czas reakcji to {reactionTime}ms.",
+      "viewMessage": "Wyświetl wiadomość",
+      "timeoutTitle": "Koniec czasu!",
+      "timeoutDescription": "Czas reakcji ustawiony na wiadomość to {requiredTime}ms,<br/>Powinieneś kliknąć ekran, zanim ikona zniknie.<br/>Nadal masz {próby} szans.",
+      "maxAttemptsTitle": "Wiadomość jest teraz niedostępna",
+      "maxAttemptsDescription": "Osiągnąłeś maksymalną liczbę prób.",
+      "reactionTime": "Czas reakcji: {time} s",
+      "tryAgain": "Spróbuj ponownie",
+      "waitTitle": "Czekam na pojawienie się ikony",
+      "clickTitle": "Dotknij ekranu, aby wyświetlić wiadomość",
+      "clickDescription": "Nadawca ustalił czas pojawienia się otwartej ikony.<br/> Aby wyświetlić treść wiadomości, musisz dotknąć ekranu, zanim ikona zniknie.",
+      "createOwn": "Utwórz własną wiadomość"
+    }
   }
 }

@@ -528,5 +528,155 @@
     "copyCode": "Sao chép mã",
     "codeCopied": "Đã sao chép mã vào bảng nhớ tạm",
     "copyError": "Sao chép không thành công, vui lòng sao chép thủ công"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "Khả năng hiển thị có giới hạn thời gian cho nội dung của bạn",
+      "description": "Tạo nội dung tự động biến mất sau một thời gian hoặc số lượt xem đã đặt. Hoàn hảo cho thông tin nhạy cảm về thời gian và chia sẻ nội dung độc quyền.",
+      "cta": "Tạo nội dung có giới hạn thời gian"
+    },
+    "features": {
+      "timing": {
+        "title": "Kiểm soát tầm nhìn có giới hạn thời gian",
+        "description": "Đặt thời lượng chính xác cho khả năng hiển thị nội dung, đảm bảo thông tin của bạn chỉ khả dụng khi cần."
+      },
+      "attempts": {
+        "title": "Xem giới hạn lần thử",
+        "description": "Kiểm soát số lần nội dung của bạn có thể được xem, thêm một lớp bảo vệ khả năng hiển thị có giới hạn thời gian."
+      },
+      "sharing": {
+        "title": "Chia sẻ có giới hạn thời gian an toàn",
+        "description": "Chia sẻ nội dung một cách tự tin vì biết rằng nội dung đó sẽ không thể truy cập được sau khoảng thời gian hiển thị có giới hạn thời gian."
+      }
+    },
+    "useCases": {
+      "title": "Ứng dụng hiển thị có giới hạn thời gian",
+      "personal": {
+        "title": "Nội dung có giới hạn thời gian cá nhân",
+        "case1": "Khả năng hiển thị có giới hạn thời gian đối với các thông báo tạm thời",
+        "case2": "Tin nhắn cá nhân tự hủy với quyền truy cập có giới hạn thời gian",
+        "case3": "Khả năng hiển thị có giới hạn về thời gian đối với thông tin cụ thể của sự kiện"
+      },
+      "business": {
+        "title": "Nội dung giới hạn thời gian kinh doanh",
+        "case1": "Khả năng hiển thị có giới hạn thời gian đối với các khuyến mại",
+        "case2": "Truy cập tạm thời vào các tài liệu nhạy cảm với thời gian",
+        "case3": "Khả năng hiển thị có giới hạn về thời gian đối với thông tin liên lạc nội bộ"
+      }
+    },
+    "howItWorks": {
+      "title": "Khả năng hiển thị có giới hạn thời gian hoạt động như thế nào",
+      "step1": {
+        "title": "Tạo nội dung của bạn",
+        "description": "Thiết lập nội dung của bạn với cài đặt hiển thị có giới hạn thời gian"
+      },
+      "step2": {
+        "title": "Chia sẻ an toàn",
+        "description": "Chia sẻ nội dung có giới hạn thời gian của bạn với những người xem cụ thể"
+      },
+      "step3": {
+        "title": "Tự động hết hạn",
+        "description": "Nội dung sẽ không thể truy cập được sau khoảng thời gian giới hạn thời gian"
+      }
+    },
+    "cta": {
+      "title": "Bắt đầu sử dụng khả năng hiển thị có giới hạn thời gian ngay hôm nay",
+      "description": "Trải nghiệm sức mạnh của việc chia sẻ nội dung có giới hạn thời gian và được kiểm soát",
+      "button": "Tạo nội dung có giới hạn thời gian"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "Tạo thông báo hiển thị giới hạn thời gian",
+      "meta_description": "Tạo thông báo hiển thị có giới hạn thời gian bằng nội dung văn bản, hình ảnh hoặc video. Kiểm tra thời gian phản ứng của anh ấy/cô ấy.",
+      "title": "Tạo thông báo hiển thị giới hạn thời gian",
+      "description": "Tạo thông báo hiển thị có giới hạn thời gian bằng nội dung văn bản, hình ảnh hoặc video.<br/>Kiểm tra thời gian phản ứng của anh ấy/cô ấy.",
+      "typeText": "Chữ",
+      "typeImage": "Hình ảnh",
+      "typeVideo": "Băng hình",
+      "contentTitle": "Chỉnh sửa tin nhắn",
+      "settingsTitle": "Cài đặt tin nhắn",
+      "shareTitle": "Chia sẻ tin nhắn",
+      "titlePlaceholder": "Nhập tiêu đề tin nhắn",
+      "contentPlaceholder": "Nhập nội dung tin nhắn",
+      "duration": "Thời lượng hiển thị (ms)",
+      "maxAttempts": "Lượt xem tối đa",
+      "next": "Kế tiếp",
+      "submit": "Tạo nên",
+      "creating": "Đang tạo...",
+      "copyLink": "Sao chép liên kết",
+      "backToList": "Quay lại Tạo",
+      "linkCopied": "Đã sao chép liên kết",
+      "error": "Không tạo được tin nhắn",
+      "shareVia": "Chia sẻ qua",
+      "howItWorks": "Khả năng hiển thị có giới hạn thời gian hoạt động như thế nào",
+      "createStepsTitle": "Tạo tin nhắn giới hạn thời gian của bạn",
+      "step1Title": "Tạo tin nhắn của bạn",
+      "step1Description": "Chọn loại tin nhắn của bạn (văn bản, hình ảnh hoặc video) và nhập nội dung của bạn. Tạo một tin nhắn có giới hạn thời gian sẽ thách thức người nhận của bạn.",
+      "step2Title": "Đặt quy tắc hiển thị",
+      "step2Description": "Xác định thời gian hiển thị tin nhắn của bạn và số lần người xem nhận được. Khả năng hiển thị có giới hạn thời gian cho phép bạn kiểm soát trải nghiệm xem.",
+      "step3Title": "Chia sẻ tin nhắn của bạn",
+      "step3Description": "Nhận một liên kết duy nhất tới tin nhắn có giới hạn thời gian của bạn và chia sẻ nó với bất kỳ ai. Khả năng hiển thị có giới hạn thời gian giúp việc chia sẻ nội dung thú vị trở nên dễ dàng.",
+      "viewStepsTitle": "Cách xem tin nhắn giới hạn thời gian",
+      "viewStep1Title": "Hãy sẵn sàng",
+      "viewStep1Description": "Nhấp vào 'Sẵn sàng' khi bạn sẵn sàng xem nội dung có giới hạn thời gian. Khả năng hiển thị có giới hạn thời gian đòi hỏi phản ứng nhanh.",
+      "viewStep2Title": "Phản ứng nhanh chóng",
+      "viewStep2Description": "Bấm vào khi bạn thấy biểu tượng phong bì xuất hiện. Khả năng hiển thị có giới hạn thời gian kiểm tra tốc độ phản ứng của bạn.",
+      "viewStep3Title": "Xem tin nhắn",
+      "viewStep3Description": "Nếu bạn đủ nhanh, bạn sẽ thấy thông báo có giới hạn thời gian. Khả năng hiển thị có giới hạn thời gian sẽ thưởng cho những phản ứng nhanh chóng.",
+      "featuresTitle": "Tính năng hiển thị có giới hạn thời gian",
+      "feature1Title": "Truy cập theo thời gian",
+      "feature1Description": "Đặt thời lượng hiển thị chính xác cho nội dung của bạn bằng các điều khiển Hiển thị có giới hạn thời gian.",
+      "feature2Title": "Nỗ lực hạn chế",
+      "feature2Description": "Kiểm soát số lần người xem có thể cố gắng truy cập Tin nhắn có giới hạn thời gian của bạn.",
+      "feature3Title": "Chia sẻ dễ dàng",
+      "feature3Description": "Chia sẻ nội dung Hiển thị có giới hạn thời gian của bạn trên mọi nền tảng bằng một liên kết đơn giản."
+    },
+    "list": {
+      "title": "Tin nhắn hẹn giờ",
+      "create": "Tạo nên",
+      "loading": "Đang tải...",
+      "empty": "Chưa có tin nhắn nào",
+      "createFirst": "Tạo tin nhắn đầu tiên",
+      "attempts": "lượt xem {current}/{max}",
+      "linkCopied": "Đã sao chép liên kết",
+      "fetchError": "Không tìm nạp được tin nhắn"
+    },
+    "view": {
+      "meta_title": "Bạn có Thông báo hiển thị có giới hạn thời gian",
+      "meta_description": "Bấm vào màn hình trước khi biểu tượng biến mất để xem nội dung thông báo Khả năng hiển thị có giới hạn thời gian.",
+      "loading": "Đang tải...",
+      "notFound": "Không tìm thấy tin nhắn",
+      "notFoundDescription": "Tin nhắn này có thể đã bị xóa hoặc liên kết không hợp lệ",
+      "expired": "Tin nhắn đã hết hạn",
+      "expiredDescription": "Thời gian xem tin nhắn này đã kết thúc",
+      "timeLeft": "Thời gian còn lại: {giây} giây",
+      "attempts": "Lượt xem: {current}/{max}",
+      "reload": "Tải lại",
+      "share": "Chia sẻ",
+      "pageTitle": "Thông báo hiển thị giới hạn thời gian mới",
+      "pageDescription": "Chạm vào màn hình trước khi biểu tượng biến mất để xem nội dung tin nhắn.",
+      "ready": "Sẵn sàng",
+      "waitForIcon": "Chạm vào màn hình nhanh nhất có thể khi biểu tượng xuất hiện",
+      "tooSoon": "Quá sớm!",
+      "tooSoonDescription": "Nhấp chuột chỉ hợp lệ sau khi biểu tượng xuất hiện.",
+      "iconShownTitle": "Chạm vào màn hình!",
+      "iconShownDescription": "Biểu tượng sẽ biến mất sau {visibleDuration} mili giây.",
+      "tooSlowTitle": "Bạn gần như đã thành công!",
+      "tooSlowDescription": "Thời gian phản ứng được đặt cho tin nhắn là {requiredTime}ms, thời gian phản ứng của bạn là {reactionTime}ms<br/>bạn vẫn còn {attempts} cơ hội.",
+      "successTitle": "Chúc mừng!",
+      "successDescription": "Thời gian phản ứng được đặt cho tin nhắn là {reactionTime}ms, thời gian phản ứng của bạn là {reactionTime}ms.",
+      "viewMessage": "Xem tin nhắn",
+      "timeoutTitle": "Hết giờ!",
+      "timeoutDescription": "Thời gian phản ứng được đặt cho tin nhắn là {requiredTime}ms,<br/>Đáng lẽ bạn phải nhấp vào màn hình trước khi biểu tượng biến mất.<br/>Bạn vẫn còn {attempts} cơ hội.",
+      "maxAttemptsTitle": "Tin nhắn bây giờ không thể truy cập được",
+      "maxAttemptsDescription": "Bạn đã đạt đến số lần thử tối đa.",
+      "reactionTime": "Thời gian phản ứng: {time}s",
+      "tryAgain": "Thử lại",
+      "waitTitle": "Chờ biểu tượng xuất hiện",
+      "clickTitle": "Chạm vào màn hình để xem tin nhắn",
+      "clickDescription": "Người gửi đã đặt thời gian cho biểu tượng mở xuất hiện.<br/> Bạn cần chạm vào màn hình trước khi biểu tượng biến mất để xem nội dung tin nhắn.",
+      "createOwn": "Tạo tin nhắn của riêng bạn"
+    }
   }
 }

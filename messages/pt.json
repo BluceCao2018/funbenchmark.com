@@ -528,5 +528,155 @@
     "copyCode": "Copiar código",
     "codeCopied": "Código copiado para a área de transferência",
     "copyError": "Falha na cópia, copie manualmente"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "Visibilidade limitada por tempo para o seu conteúdo",
+      "description": "Crie conteúdo que desaparece automaticamente após um determinado tempo ou número de visualizações. Perfeito para informações urgentes e compartilhamento de conteúdo exclusivo.",
+      "cta": "Crie conteúdo por tempo limitado"
+    },
+    "features": {
+      "timing": {
+        "title": "Controle de visibilidade por tempo limitado",
+        "description": "Defina uma duração precisa para a visibilidade do conteúdo, garantindo que suas informações estejam disponíveis somente quando necessário."
+      },
+      "attempts": {
+        "title": "Ver limites de tentativas",
+        "description": "Controle quantas vezes seu conteúdo pode ser visualizado, adicionando uma camada extra de proteção de visibilidade por tempo limitado."
+      },
+      "sharing": {
+        "title": "Compartilhamento seguro por tempo limitado",
+        "description": "Compartilhe conteúdo com confiança, sabendo que ele ficará inacessível após o período de visibilidade por tempo limitado."
+      }
+    },
+    "useCases": {
+      "title": "Aplicativos com visibilidade limitada por tempo",
+      "personal": {
+        "title": "Conteúdo pessoal limitado por tempo",
+        "case1": "Visibilidade limitada por tempo para anúncios temporários",
+        "case2": "Mensagens pessoais autodestrutivas com acesso por tempo limitado",
+        "case3": "Visibilidade por tempo limitado para informações específicas do evento"
+      },
+      "business": {
+        "title": "Conteúdo limitado por tempo comercial",
+        "case1": "Visibilidade por tempo limitado para ofertas promocionais",
+        "case2": "Acesso temporário a documentos urgentes",
+        "case3": "Visibilidade limitada por tempo para comunicações internas"
+      }
+    },
+    "howItWorks": {
+      "title": "Como funciona a visibilidade por tempo limitado",
+      "step1": {
+        "title": "Crie seu conteúdo",
+        "description": "Configure seu conteúdo com configurações de visibilidade por tempo limitado"
+      },
+      "step2": {
+        "title": "Compartilhe com segurança",
+        "description": "Compartilhe seu conteúdo por tempo limitado com espectadores específicos"
+      },
+      "step3": {
+        "title": "Expiração Automática",
+        "description": "O conteúdo fica inacessível após um período limitado de tempo"
+      }
+    },
+    "cta": {
+      "title": "Comece a usar a visibilidade limitada por tempo hoje",
+      "description": "Experimente o poder do compartilhamento de conteúdo controlado e por tempo limitado",
+      "button": "Crie conteúdo com tempo limitado"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "Criar mensagem de visibilidade por tempo limitado",
+      "meta_description": "Crie uma mensagem de visibilidade por tempo limitado com conteúdo de texto, imagem ou vídeo. Teste seu tempo de reação.",
+      "title": "Criar mensagem de visibilidade por tempo limitado",
+      "description": "Crie uma mensagem de visibilidade por tempo limitado com conteúdo de texto, imagem ou vídeo.<br/>Teste o tempo de reação dele.",
+      "typeText": "Texto",
+      "typeImage": "Imagem",
+      "typeVideo": "Vídeo",
+      "contentTitle": "Editar mensagem",
+      "settingsTitle": "Configurações de mensagens",
+      "shareTitle": "Compartilhar mensagem",
+      "titlePlaceholder": "Insira o título da mensagem",
+      "contentPlaceholder": "Insira o conteúdo da mensagem",
+      "duration": "Duração da visibilidade (ms)",
+      "maxAttempts": "Máximo de visualizações",
+      "next": "Próximo",
+      "submit": "Criar",
+      "creating": "Criando...",
+      "copyLink": "Copiar link",
+      "backToList": "Voltar para criar",
+      "linkCopied": "Link copiado",
+      "error": "Falha ao criar mensagem",
+      "shareVia": "Compartilhar via",
+      "howItWorks": "Como funciona a visibilidade por tempo limitado",
+      "createStepsTitle": "Crie sua mensagem por tempo limitado",
+      "step1Title": "Crie sua mensagem",
+      "step1Description": "Escolha o tipo de mensagem (texto, imagem ou vídeo) e insira o conteúdo. Crie uma mensagem com tempo limitado que desafiará seus destinatários.",
+      "step2Title": "Definir regras de visibilidade",
+      "step2Description": "Defina por quanto tempo sua mensagem ficará visível e quantas tentativas os espectadores terão. A visibilidade limitada por tempo permite controlar a experiência de visualização.",
+      "step3Title": "Compartilhe sua mensagem",
+      "step3Description": "Obtenha um link exclusivo para sua mensagem por tempo limitado e compartilhe-a com qualquer pessoa. A visibilidade limitada por tempo facilita o compartilhamento de conteúdo interessante.",
+      "viewStepsTitle": "Como visualizar uma mensagem por tempo limitado",
+      "viewStep1Title": "Prepare-se",
+      "viewStep1Description": "Clique em ‘Pronto’ quando estiver preparado para visualizar o conteúdo por tempo limitado. A visibilidade limitada no tempo requer reações rápidas.",
+      "viewStep2Title": "Reaja rapidamente",
+      "viewStep2Description": "Clique quando vir o ícone do envelope aparecer. A visibilidade limitada por tempo testa sua velocidade de reação.",
+      "viewStep3Title": "Veja a mensagem",
+      "viewStep3Description": "Se você for rápido o suficiente, verá a mensagem por tempo limitado. A visibilidade limitada por tempo recompensa reações rápidas.",
+      "featuresTitle": "Recursos de visibilidade por tempo limitado",
+      "feature1Title": "Acesso cronometrado",
+      "feature1Description": "Defina durações precisas de visibilidade para seu conteúdo com controles de visibilidade limitada por tempo.",
+      "feature2Title": "Tentativas Limitadas",
+      "feature2Description": "Controle quantas vezes os espectadores podem tentar acessar sua mensagem por tempo limitado.",
+      "feature3Title": "Compartilhamento fácil",
+      "feature3Description": "Compartilhe seu conteúdo de visibilidade por tempo limitado em qualquer plataforma com um link simples."
+    },
+    "list": {
+      "title": "Mensagens cronometradas",
+      "create": "Criar",
+      "loading": "Carregando...",
+      "empty": "Nenhuma mensagem ainda",
+      "createFirst": "Crie a primeira mensagem",
+      "attempts": "{atual}/{máximo} visualizações",
+      "linkCopied": "Link copiado",
+      "fetchError": "Falha ao buscar mensagens"
+    },
+    "view": {
+      "meta_title": "Você recebeu uma mensagem de visibilidade por tempo limitado",
+      "meta_description": "Clique na tela antes que o ícone desapareça para visualizar o conteúdo da mensagem Visibilidade limitada por tempo.",
+      "loading": "Carregando...",
+      "notFound": "Mensagem não encontrada",
+      "notFoundDescription": "Esta mensagem pode ter sido excluída ou o link é inválido",
+      "expired": "Mensagem expirada",
+      "expiredDescription": "O tempo de visualização desta mensagem terminou",
+      "timeLeft": "Tempo restante: {segundos}s",
+      "attempts": "Visualizações: {atual}/{máx}",
+      "reload": "Recarregar",
+      "share": "Compartilhar",
+      "pageTitle": "Nova mensagem de visibilidade limitada por tempo",
+      "pageDescription": "Toque na tela antes que o ícone desapareça para visualizar o conteúdo da mensagem.",
+      "ready": "Preparar",
+      "waitForIcon": "Toque na tela o mais rápido que puder quando o ícone aparecer",
+      "tooSoon": "Muito em breve!",
+      "tooSoonDescription": "O clique é válido somente após o ícone aparecer.",
+      "iconShownTitle": "Toque na tela!",
+      "iconShownDescription": "O ícone desaparecerá em {visibleDuration} ms.",
+      "tooSlowTitle": "Você quase teve sucesso!",
+      "tooSlowDescription": "O tempo de reação definido para a mensagem é {requiredTime}ms, seu tempo de reação é {reactionTime}ms<br/>você ainda tem {attempts} chances.",
+      "successTitle": "Parabéns!",
+      "successDescription": "O tempo de reação definido para a mensagem é {requiredTime}ms, seu tempo de reação é {reactionTime}ms.",
+      "viewMessage": "Ver mensagem",
+      "timeoutTitle": "Tempo esgotado!",
+      "timeoutDescription": "O tempo de reação definido para a mensagem é {requiredTime}ms.<br/>Você deveria ter clicado na tela antes que o ícone desaparecesse.<br/>Você ainda tem {attempts} chances.",
+      "maxAttemptsTitle": "A mensagem agora está inacessível",
+      "maxAttemptsDescription": "Você atingiu o número máximo de tentativas.",
+      "reactionTime": "Tempo de reação: {time}s",
+      "tryAgain": "Tente novamente",
+      "waitTitle": "Esperando o ícone aparecer",
+      "clickTitle": "Toque na tela para ver a mensagem",
+      "clickDescription": "O remetente definiu o horário para o ícone aberto aparecer.<br/> Você precisa tocar na tela antes que o ícone desapareça para visualizar o conteúdo da mensagem.",
+      "createOwn": "Crie sua própria mensagem"
+    }
   }
 }

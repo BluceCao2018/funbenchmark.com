@@ -528,5 +528,155 @@
     "copyCode": "코드 복사",
     "codeCopied": "코드가 클립보드에 복사되었습니다.",
     "copyError": "복사하지 못했습니다. 수동으로 복사하세요."
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "귀하의 콘텐츠에 대한 시간 제한적 가시성",
+      "description": "설정된 시간 또는 조회수 후에 자동으로 사라지는 콘텐츠를 만듭니다. 시간에 민감한 정보와 독점적인 콘텐츠 공유에 적합합니다.",
+      "cta": "시간 제한이 있는 콘텐츠 만들기"
+    },
+    "features": {
+      "timing": {
+        "title": "시간 제한 가시성 제어",
+        "description": "콘텐츠 공개 기간을 정확하게 설정하여 필요할 때만 정보를 사용할 수 있도록 하세요."
+      },
+      "attempts": {
+        "title": "시도 제한 보기",
+        "description": "시간 제한 가시성 보호 기능을 추가하여 콘텐츠를 볼 수 있는 횟수를 제어하세요."
+      },
+      "sharing": {
+        "title": "안전한 시간 제한 공유",
+        "description": "시간 제한 공개 기간이 지나면 콘텐츠에 액세스할 수 없으므로 안심하고 콘텐츠를 공유하세요."
+      }
+    },
+    "useCases": {
+      "title": "시간 제한 가시성 애플리케이션",
+      "personal": {
+        "title": "개인 시간 제한 콘텐츠",
+        "case1": "임시 공지사항에 대한 시간 제한 가시성",
+        "case2": "시간 제한 액세스를 통해 자체 파괴되는 개인 메시지",
+        "case3": "이벤트별 정보에 대한 시간 제한적 가시성"
+      },
+      "business": {
+        "title": "영업 시간 제한 콘텐츠",
+        "case1": "판촉 행사에 대한 시간 제한적 가시성",
+        "case2": "시간에 민감한 문서에 대한 임시 액세스",
+        "case3": "내부 커뮤니케이션을 위한 시간 제한적 가시성"
+      }
+    },
+    "howItWorks": {
+      "title": "시간 제한 가시성이 작동하는 방식",
+      "step1": {
+        "title": "나만의 콘텐츠 만들기",
+        "description": "시간 제한 공개 설정으로 콘텐츠 설정"
+      },
+      "step2": {
+        "title": "안전하게 공유",
+        "description": "특정 시청자와 시간 제한 콘텐츠를 공유하세요"
+      },
+      "step3": {
+        "title": "자동 만료",
+        "description": "시간 제한 기간이 지나면 콘텐츠에 액세스할 수 없게 됩니다."
+      }
+    },
+    "cta": {
+      "title": "지금부터 시간 제한 가시성을 사용해 보세요",
+      "description": "제어되고 시간 제한이 있는 콘텐츠 공유의 힘을 경험해 보세요",
+      "button": "시간 제한 콘텐츠 만들기"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "시간 제한 가시성 메시지 생성",
+      "meta_description": "텍스트, 이미지 또는 비디오 콘텐츠로 시간 제한이 있는 가시성 메시지를 작성하십시오. 반응 시간을 테스트하십시오.",
+      "title": "시간 제한 가시성 메시지 생성",
+      "description": "텍스트, 이미지, 동영상 콘텐츠로 시간 제한이 있는 공개 메시지를 작성하세요.<br/>반응 시간을 테스트하세요.",
+      "typeText": "텍스트",
+      "typeImage": "영상",
+      "typeVideo": "동영상",
+      "contentTitle": "메시지 편집",
+      "settingsTitle": "메시지 설정",
+      "shareTitle": "메시지 공유",
+      "titlePlaceholder": "메시지 제목을 입력하세요",
+      "contentPlaceholder": "메시지 내용을 입력하세요",
+      "duration": "공개 기간(ms)",
+      "maxAttempts": "최대 조회수",
+      "next": "다음",
+      "submit": "만들다",
+      "creating": "만드는 중...",
+      "copyLink": "링크 복사",
+      "backToList": "만들기로 돌아가기",
+      "linkCopied": "링크가 복사되었습니다",
+      "error": "메시지를 작성하지 못했습니다.",
+      "shareVia": "다음을 통해 공유",
+      "howItWorks": "시간 제한 가시성이 작동하는 방식",
+      "createStepsTitle": "시간 제한 메시지 만들기",
+      "step1Title": "메시지 작성",
+      "step1Description": "메시지 유형(텍스트, 이미지, 동영상)을 선택하고 내용을 입력하세요. 수신자에게 도전할 시간 제한 메시지를 작성하세요.",
+      "step2Title": "가시성 규칙 설정",
+      "step2Description": "메시지가 표시되는 기간과 시청자가 시도할 수 있는 횟수를 정의하세요. Time Limited Visibility를 사용하면 시청 환경을 제어할 수 있습니다.",
+      "step3Title": "메시지를 공유하세요",
+      "step3Description": "시간 제한이 있는 메시지에 대한 고유 링크를 얻고 누구와도 공유하세요. Time Limited Visibility를 통해 흥미로운 콘텐츠를 쉽게 공유할 수 있습니다.",
+      "viewStepsTitle": "시간 제한 메시지를 보는 방법",
+      "viewStep1Title": "준비하세요",
+      "viewStep1Description": "시간 제한 콘텐츠를 볼 준비가 되면 '준비'를 클릭하세요. 시간 제한이 있는 가시성을 확보하려면 빠른 반응이 필요합니다.",
+      "viewStep2Title": "신속하게 대응",
+      "viewStep2Description": "봉투 아이콘이 나타나면 클릭하세요. Time Limited Visibility는 반응 속도를 테스트합니다.",
+      "viewStep3Title": "메시지 보기",
+      "viewStep3Description": "충분히 빠르다면 시간 제한 메시지를 보게 될 것입니다. 시간 제한이 있는 가시성은 빠른 반응을 보상합니다.",
+      "featuresTitle": "시간 제한 가시성 기능",
+      "feature1Title": "시간 제한 액세스",
+      "feature1Description": "Time Limited Visibility 컨트롤을 사용하여 콘텐츠의 정확한 공개 기간을 설정하세요.",
+      "feature2Title": "제한된 시도",
+      "feature2Description": "시청자가 시간 제한 메시지에 액세스를 시도할 수 있는 횟수를 제어하세요.",
+      "feature3Title": "간편한 공유",
+      "feature3Description": "간단한 링크를 통해 모든 플랫폼에서 Time Limited Visibility 콘텐츠를 공유하세요."
+    },
+    "list": {
+      "title": "시간 제한 메시지",
+      "create": "만들다",
+      "loading": "로드 중...",
+      "empty": "아직 메시지가 없습니다",
+      "createFirst": "첫 번째 메시지 만들기",
+      "attempts": "{현재}/{최대} 조회수",
+      "linkCopied": "링크가 복사되었습니다",
+      "fetchError": "메시지를 가져오지 못했습니다."
+    },
+    "view": {
+      "meta_title": "시간 제한 표시 메시지가 있습니다.",
+      "meta_description": "아이콘이 사라지기 전 화면을 클릭하시면 Time Limited Visibility 메시지의 내용을 보실 수 있습니다.",
+      "loading": "로드 중...",
+      "notFound": "메시지를 찾을 수 없음",
+      "notFoundDescription": "이 메시지는 삭제되었거나 링크가 유효하지 않습니다.",
+      "expired": "메시지가 만료되었습니다",
+      "expiredDescription": "이 메시지의 보기 시간이 종료되었습니다.",
+      "timeLeft": "남은 시간: {seconds}s",
+      "attempts": "조회수: {현재}/{최대}",
+      "reload": "새로고침",
+      "share": "공유하다",
+      "pageTitle": "새로운 시간 제한 공개 메시지",
+      "pageDescription": "메시지 내용을 보려면 아이콘이 사라지기 전에 화면을 탭하세요.",
+      "ready": "준비가 된",
+      "waitForIcon": "아이콘이 나타나면 최대한 빠르게 화면을 탭하세요.",
+      "tooSoon": "너무 빨리!",
+      "tooSoonDescription": "클릭은 아이콘이 나타난 후에만 유효합니다.",
+      "iconShownTitle": "화면을 탭하세요!",
+      "iconShownDescription": "아이콘은 {visibleDuration}ms 후에 사라집니다.",
+      "tooSlowTitle": "당신은 거의 성공했습니다!",
+      "tooSlowDescription": "메시지에 설정된 반응 시간은 {requiredTime}ms이고 귀하의 반응 시간은 {reactionTime}ms입니다<br/>아직 {attempts} 기회가 있습니다.",
+      "successTitle": "축하해요!",
+      "successDescription": "메시지에 설정된 반응 시간은 {requiredTime}ms이고, 귀하의 반응 시간은 {reactionTime}ms입니다.",
+      "viewMessage": "메시지 보기",
+      "timeoutTitle": "타임 아웃!",
+      "timeoutDescription": "메시지에 설정된 반응 시간은 {requiredTime}ms입니다.<br/>아이콘이 사라지기 전에 화면을 클릭했어야 합니다.<br/>아직 {attempts} 기회가 있습니다.",
+      "maxAttemptsTitle": "이제 메시지에 액세스할 수 없습니다.",
+      "maxAttemptsDescription": "최대 시도 횟수에 도달했습니다.",
+      "reactionTime": "반응 시간: {time}s",
+      "tryAgain": "다시 시도",
+      "waitTitle": "아이콘이 나타날 때까지 기다리는 중",
+      "clickTitle": "메시지를 보려면 화면을 탭하세요.",
+      "clickDescription": "보낸 사람이 열기 아이콘이 나타나는 시간을 설정했습니다.<br/> 메시지 내용을 보려면 아이콘이 사라지기 전에 화면을 탭해야 합니다.",
+      "createOwn": "나만의 메시지 만들기"
+    }
   }
 }

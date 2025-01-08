@@ -528,5 +528,155 @@
     "copyCode": "Code kopieren",
     "codeCopied": "Code in die Zwischenablage kopiert",
     "copyError": "Der Kopiervorgang ist fehlgeschlagen. Bitte manuell kopieren"
+  },
+  "timeLimitedVisibility": {
+    "hero": {
+      "title": "Zeitlich begrenzte Sichtbarkeit Ihrer Inhalte",
+      "description": "Erstellen Sie Inhalte, die nach einer festgelegten Zeit oder Anzahl der Aufrufe automatisch verschwinden. Perfekt für zeitkritische Informationen und den exklusiven Austausch von Inhalten.",
+      "cta": "Erstellen Sie zeitlich begrenzte Inhalte"
+    },
+    "features": {
+      "timing": {
+        "title": "Zeitlich begrenzte Sichtkontrolle",
+        "description": "Legen Sie die genaue Dauer für die Sichtbarkeit von Inhalten fest und stellen Sie sicher, dass Ihre Informationen nur dann verfügbar sind, wenn sie benötigt werden."
+      },
+      "attempts": {
+        "title": "Versuchslimits anzeigen",
+        "description": "Steuern Sie, wie oft Ihre Inhalte angezeigt werden können, indem Sie eine zusätzliche Ebene des zeitlich begrenzten Sichtbarkeitsschutzes hinzufügen."
+      },
+      "sharing": {
+        "title": "Sicheres, zeitlich begrenztes Teilen",
+        "description": "Teilen Sie Inhalte mit der Gewissheit, dass sie nach dem zeitlich begrenzten Sichtbarkeitszeitraum nicht mehr zugänglich sind."
+      }
+    },
+    "useCases": {
+      "title": "Zeitlich begrenzte Sichtbarkeitsanwendungen",
+      "personal": {
+        "title": "Persönliche, zeitlich begrenzte Inhalte",
+        "case1": "Zeitlich begrenzte Sichtbarkeit für vorübergehende Ankündigungen",
+        "case2": "Selbstzerstörende persönliche Nachrichten mit zeitlich begrenztem Zugriff",
+        "case3": "Zeitlich begrenzte Sichtbarkeit für ereignisspezifische Informationen"
+      },
+      "business": {
+        "title": "Geschäftszeitlich begrenzter Inhalt",
+        "case1": "Zeitlich begrenzte Sichtbarkeit für Werbeangebote",
+        "case2": "Temporärer Zugriff auf zeitkritische Dokumente",
+        "case3": "Zeitlich begrenzte Sichtbarkeit für die interne Kommunikation"
+      }
+    },
+    "howItWorks": {
+      "title": "Wie zeitlich begrenzte Sichtbarkeit funktioniert",
+      "step1": {
+        "title": "Erstellen Sie Ihre Inhalte",
+        "description": "Richten Sie Ihre Inhalte mit zeitlich begrenzten Sichtbarkeitseinstellungen ein"
+      },
+      "step2": {
+        "title": "Sicher teilen",
+        "description": "Teilen Sie Ihre zeitlich begrenzten Inhalte mit bestimmten Zuschauern"
+      },
+      "step3": {
+        "title": "Automatischer Ablauf",
+        "description": "Der Zugriff auf den Inhalt ist nach Ablauf einer begrenzten Zeitspanne nicht mehr möglich"
+      }
+    },
+    "cta": {
+      "title": "Nutzen Sie noch heute die zeitlich begrenzte Sichtbarkeit",
+      "description": "Erleben Sie die Kraft des kontrollierten, zeitlich begrenzten Teilens von Inhalten",
+      "button": "Erstellen Sie zeitlich begrenzte Inhalte"
+    }
+  },
+  "timedMessage": {
+    "create": {
+      "meta_title": "Erstellen Sie eine Nachricht mit zeitlich begrenzter Sichtbarkeit",
+      "meta_description": "Erstellen Sie eine zeitlich begrenzte Sichtbarkeitsnachricht mit Text-, Bild- oder Videoinhalten. Testen Sie seine/ihre Reaktionszeit.",
+      "title": "Erstellen Sie eine Nachricht mit zeitlich begrenzter Sichtbarkeit",
+      "description": "Erstellen Sie eine zeitlich begrenzte Sichtbarkeitsnachricht mit Text-, Bild- oder Videoinhalten.<br/>Testen Sie seine/ihre Reaktionszeit.",
+      "typeText": "Text",
+      "typeImage": "Bild",
+      "typeVideo": "Video",
+      "contentTitle": "Nachricht bearbeiten",
+      "settingsTitle": "Nachrichteneinstellungen",
+      "shareTitle": "Nachricht teilen",
+      "titlePlaceholder": "Geben Sie den Nachrichtentitel ein",
+      "contentPlaceholder": "Geben Sie den Nachrichteninhalt ein",
+      "duration": "Sichtbarkeitsdauer (ms)",
+      "maxAttempts": "Maximale Aufrufe",
+      "next": "Nächste",
+      "submit": "Erstellen",
+      "creating": "Erstellen...",
+      "copyLink": "Link kopieren",
+      "backToList": "Zurück zu Erstellen",
+      "linkCopied": "Link kopiert",
+      "error": "Nachricht konnte nicht erstellt werden",
+      "shareVia": "Teilen über",
+      "howItWorks": "Wie zeitlich begrenzte Sichtbarkeit funktioniert",
+      "createStepsTitle": "Erstellen Sie Ihre zeitlich begrenzte Nachricht",
+      "step1Title": "Erstellen Sie Ihre Nachricht",
+      "step1Description": "Wählen Sie Ihren Nachrichtentyp (Text, Bild oder Video) und geben Sie Ihren Inhalt ein. Erstellen Sie eine zeitlich begrenzte Nachricht, die Ihre Empfänger herausfordert.",
+      "step2Title": "Legen Sie Sichtbarkeitsregeln fest",
+      "step2Description": "Legen Sie fest, wie lange Ihre Nachricht sichtbar sein soll und wie viele Versuche die Zuschauer erhalten. Mit der zeitlich begrenzten Sichtbarkeit können Sie das Seherlebnis steuern.",
+      "step3Title": "Teilen Sie Ihre Nachricht",
+      "step3Description": "Erhalten Sie einen einzigartigen Link zu Ihrer zeitlich begrenzten Nachricht und teilen Sie sie mit jedem. Die zeitlich begrenzte Sichtbarkeit erleichtert das Teilen spannender Inhalte.",
+      "viewStepsTitle": "So zeigen Sie eine zeitlich begrenzte Nachricht an",
+      "viewStep1Title": "Machen Sie sich bereit",
+      "viewStep1Description": "Klicken Sie auf „Bereit“, wenn Sie bereit sind, den zeitlich begrenzten Inhalt anzusehen. Zeitlich begrenzte Sichtbarkeit erfordert schnelle Reaktionen.",
+      "viewStep2Title": "Reagieren Sie schnell",
+      "viewStep2Description": "Klicken Sie, wenn das Umschlagsymbol angezeigt wird. Die zeitlich begrenzte Sichtbarkeit testet Ihre Reaktionsgeschwindigkeit.",
+      "viewStep3Title": "Sehen Sie sich die Nachricht an",
+      "viewStep3Description": "Wenn Sie schnell genug sind, sehen Sie die zeitlich begrenzte Nachricht. Zeitlich begrenzte Sichtbarkeit belohnt schnelle Reaktionen.",
+      "featuresTitle": "Zeitlich begrenzte Sichtbarkeitsfunktionen",
+      "feature1Title": "Zeitgesteuerter Zugang",
+      "feature1Description": "Legen Sie mit den Steuerelementen für die zeitlich begrenzte Sichtbarkeit präzise Sichtbarkeitsdauern für Ihre Inhalte fest.",
+      "feature2Title": "Begrenzte Versuche",
+      "feature2Description": "Steuern Sie, wie oft Zuschauer versuchen können, auf Ihre zeitlich begrenzte Nachricht zuzugreifen.",
+      "feature3Title": "Einfaches Teilen",
+      "feature3Description": "Teilen Sie Ihre Inhalte mit zeitlich begrenzter Sichtbarkeit über einen einfachen Link auf jeder Plattform."
+    },
+    "list": {
+      "title": "Zeitgesteuerte Nachrichten",
+      "create": "Erstellen",
+      "loading": "Laden...",
+      "empty": "Noch keine Nachrichten",
+      "createFirst": "Erstellen Sie die erste Nachricht",
+      "attempts": "{aktuelle}/{max} Aufrufe",
+      "linkCopied": "Link kopiert",
+      "fetchError": "Nachrichten konnten nicht abgerufen werden"
+    },
+    "view": {
+      "meta_title": "Sie haben eine zeitlich begrenzte Sichtbarkeitsmeldung erhalten",
+      "meta_description": "Klicken Sie auf den Bildschirm, bevor das Symbol verschwindet, um den Inhalt der Meldung „Zeitlich begrenzte Sichtbarkeit“ anzuzeigen.",
+      "loading": "Laden...",
+      "notFound": "Nachricht nicht gefunden",
+      "notFoundDescription": "Möglicherweise wurde diese Nachricht gelöscht oder der Link ist ungültig",
+      "expired": "Nachricht abgelaufen",
+      "expiredDescription": "Die Anzeigezeit für diese Nachricht ist abgelaufen",
+      "timeLeft": "Verbleibende Zeit: {Sekunden}s",
+      "attempts": "Aufrufe: {current}/{max}",
+      "reload": "Neu laden",
+      "share": "Aktie",
+      "pageTitle": "Neue zeitlich begrenzte Sichtbarkeitsmeldung",
+      "pageDescription": "Tippen Sie auf den Bildschirm, bevor das Symbol verschwindet, um den Inhalt der Nachricht anzuzeigen.",
+      "ready": "Bereit",
+      "waitForIcon": "Tippen Sie so schnell wie möglich auf den Bildschirm, wenn das Symbol angezeigt wird",
+      "tooSoon": "Zu früh!",
+      "tooSoonDescription": "Der Klick ist erst gültig, nachdem das Symbol angezeigt wird.",
+      "iconShownTitle": "Tippen Sie auf den Bildschirm!",
+      "iconShownDescription": "Das Symbol verschwindet nach {visibleDuration} ms.",
+      "tooSlowTitle": "Du hattest fast Erfolg!",
+      "tooSlowDescription": "Die für die Nachricht festgelegte Reaktionszeit beträgt {requiredTime}ms, Ihre Reaktionszeit beträgt {reactionTime}ms<br/>Sie haben noch {attempts} Chancen.",
+      "successTitle": "Glückwunsch!",
+      "successDescription": "Die für die Nachricht festgelegte Reaktionszeit beträgt {requiredTime}ms, Ihre Reaktionszeit beträgt {reactionTime}ms.",
+      "viewMessage": "Nachricht anzeigen",
+      "timeoutTitle": "Auszeit!",
+      "timeoutDescription": "Die für die Nachricht festgelegte Reaktionszeit beträgt {requiredTime}ms.<br/>Sie hätten auf den Bildschirm klicken sollen, bevor das Symbol verschwindet.<br/>Sie haben noch {versuche} Chancen.",
+      "maxAttemptsTitle": "Die Nachricht ist jetzt nicht mehr zugänglich",
+      "maxAttemptsDescription": "Sie haben die maximale Anzahl an Versuchen erreicht.",
+      "reactionTime": "Reaktionszeit: {time}s",
+      "tryAgain": "Versuchen Sie es erneut",
+      "waitTitle": "Warten auf das Erscheinen des Symbols",
+      "clickTitle": "Tippen Sie auf den Bildschirm, um die Nachricht anzuzeigen",
+      "clickDescription": "Der Absender hat die Zeit für das Erscheinen des geöffneten Symbols festgelegt.<br/> Sie müssen auf den Bildschirm tippen, bevor das Symbol verschwindet, um den Inhalt der Nachricht anzuzeigen.",
+      "createOwn": "Erstellen Sie Ihre eigene Nachricht"
+    }
   }
 }
