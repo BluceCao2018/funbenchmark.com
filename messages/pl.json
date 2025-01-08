@@ -601,6 +601,10 @@
       "contentPlaceholder": "Wpisz treść wiadomości",
       "duration": "Czas widoczności (ms)",
       "maxAttempts": "Maksymalna liczba wyświetleń",
+      "maxViewers": "Maksymalna liczba widzów",
+      "maxViewersHint": "Maksymalna liczba widzów, którzy mogą pomyślnie obejrzeć wiadomość",
+      "maxVisitors": "Maksymalna liczba odwiedzających",
+      "maxVisitorsHint": "Maksymalna liczba odwiedzających, którzy mogą odwiedzić link",
       "next": "Następny",
       "submit": "Tworzyć",
       "creating": "Tworzenie...",
@@ -609,6 +613,8 @@
       "linkCopied": "Link skopiowany",
       "error": "Nie udało się utworzyć wiadomości",
       "shareVia": "Udostępnij przez",
+      "shareViaTitle": "Wiadomość o ograniczonej widoczności czasowej",
+      "shareViaText": "„{title}” czeka, aż go obejrzysz.",
       "howItWorks": "Jak działa ograniczona czasowo widoczność",
       "createStepsTitle": "Utwórz wiadomość ograniczoną czasowo",
       "step1Title": "Utwórz swoją wiadomość",
@@ -631,8 +637,9 @@
       "feature2Description": "Kontroluj, ile razy widzowie mogą próbować uzyskać dostęp do Twojej wiadomości ograniczonej czasowo.",
       "feature3Title": "Łatwe udostępnianie",
       "feature3Description": "Udostępniaj treści o ograniczonej widoczności na dowolnej platformie za pomocą prostego łącza.",
-      "shareViaTitle": "Wiadomość o ograniczonej widoczności czasowej",
-      "shareViaText": "„{title}” czeka, aż go obejrzysz."
+      "limitsTitle": "Limity dostępu",
+      "back": "Z powrotem",
+      "previous": "Poprzedni"
     },
     "list": {
       "title": "Wiadomości o czasie",
@@ -678,7 +685,13 @@
       "waitTitle": "Czekam na pojawienie się ikony",
       "clickTitle": "Dotknij ekranu, aby wyświetlić wiadomość",
       "clickDescription": "Nadawca ustalił czas pojawienia się otwartej ikony.<br/> Aby wyświetlić treść wiadomości, musisz dotknąć ekranu, zanim ikona zniknie.",
-      "createOwn": "Utwórz własną wiadomość"
+      "createOwn": "Utwórz własną wiadomość",
+      "maxVisitorsTitle": "Osiągnięto maksymalną liczbę odwiedzających",
+      "maxVisitorsDescription": "Przepraszamy, ta wiadomość osiągnęła maksymalną liczbę odwiedzających",
+      "maxViewersTitle": "Osiągnięto maksymalną liczbę widzów",
+      "maxViewersDescription": "Przepraszamy, ta wiadomość osiągnęła maksymalną liczbę widzów",
+      "accessDeniedTitle": "Odmowa dostępu",
+      "accessDeniedDescription": "Przepraszamy, nie możesz uzyskać dostępu do tej wiadomości"
     }
   }
 }

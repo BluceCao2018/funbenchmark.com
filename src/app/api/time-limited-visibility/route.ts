@@ -16,6 +16,8 @@ export async function POST(req: Request) {
     const visibleDuration = parseInt(formData.get('visibleDuration') as string);
     const maxAttempts = parseInt(formData.get('maxAttempts') as string);
     const file = formData.get('file') as File;
+    const maxViewers = parseInt(formData.get('maxViewers') as string) || 1;
+    const maxVisitors = parseInt(formData.get('maxVisitors') as string) || 1;
 
     let mediaUrl = '';
     if (file && (messageType === 'IMAGE' || messageType === 'VIDEO')) {
@@ -33,6 +35,8 @@ export async function POST(req: Request) {
       maxAttempts,
       createdAt: new Date().toISOString(),
       creatorId: 'default',
+      maxViewers,
+      maxVisitors,
       users: {}
     };
 
@@ -54,8 +58,8 @@ export async function GET(req: Request) {
   const id = searchParams.get('id');
   const userId = searchParams.get('userId');
 
-  if (!id) {
-    return NextResponse.json({ error: 'Message ID required' }, { status: 400 });
+  if (!id || !userId) {
+    return NextResponse.json({ error: 'Message ID and user ID required' }, { status: 400 });
   }
 
   const data = await getMessagesData();
@@ -65,12 +69,42 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'Message not found' }, { status: 404 });
   }
 
-  const userAttempt = message.users?.[userId || 'default'] || { attempts: 0 };
+  message.users = message.users || {};
+  
+  const currentVisitorCount = Object.keys(message.users).length;
+  const currentViewerCount = Object.values(message.users).filter(u => u.viewed).length;
+  const existingUser = message.users[userId];
+  
+  if (!existingUser && currentVisitorCount >= message.maxVisitors) {
+    return NextResponse.json(
+      { error: 'Max visitors reached' },
+      { status: 403 }
+    );
+  }
+
+  if ((!existingUser || !existingUser.viewed) && currentViewerCount >= message.maxViewers) {
+    return NextResponse.json(
+      { error: 'Max viewers reached' },
+      { status: 403 }
+    );
+  }
+
+  if (!existingUser) {
+    message.users[userId] = {
+      attempts: 0,
+      viewed: false,
+      visitedAt: new Date().toISOString()
+    };
+    await saveMessagesData(data);
+  }
 
   return NextResponse.json({
     ...message,
-    attempts: userAttempt.attempts,
-    reactionTime: userAttempt.reactionTime,
+    attempts: message.users[userId].attempts,
+    reactionTime: message.users[userId].reactionTime,
+    viewed: message.users[userId].viewed,
+    viewerCount: currentViewerCount,
+    visitorCount: currentVisitorCount + (!existingUser ? 1 : 0),
     users: undefined
   });
 }
@@ -81,6 +115,7 @@ export async function PATCH(req: Request) {
     const id = searchParams.get('id');
     const reactionTime = parseInt(searchParams.get('time') as string);
     const userId = searchParams.get('userId') || 'default';
+    const shouldView = searchParams.get('view') === 'true';
 
     if (!id || !reactionTime) {
       return NextResponse.json(
@@ -93,22 +128,41 @@ export async function PATCH(req: Request) {
     const messageIndex = data.messages.findIndex(msg => msg.id === id);
     
     if (messageIndex === -1) {
-      return NextResponse.json(
-        { error: 'Message not found' },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: 'Message not found' }, { status: 404 });
     }
 
     const currentMessage = data.messages[messageIndex];
-    const currentUserAttempt = currentMessage.users?.[userId] || { attempts: 0 };
+    currentMessage.users = currentMessage.users || {};
     
+    const currentUserAttempt = currentMessage.users[userId] || { 
+      attempts: 0, 
+      viewed: false,
+      visitedAt: new Date().toISOString()
+    };
+
+    const isSuccessful = reactionTime <= currentMessage.visibleDuration;
+    
+    if (shouldView && isSuccessful && !currentUserAttempt.viewed) {
+      const viewerCount = Object.values(currentMessage.users)
+        .filter(u => u.viewed).length;
+        
+      if (viewerCount >= currentMessage.maxViewers) {
+        return NextResponse.json(
+          { error: 'Max viewers reached' },
+          { status: 403 }
+        );
+      }
+    }
+
     data.messages[messageIndex] = {
       ...currentMessage,
       users: {
         ...currentMessage.users,
         [userId]: {
+          ...currentUserAttempt,
           attempts: currentUserAttempt.attempts + 1,
-          reactionTime: reactionTime
+          reactionTime: reactionTime,
+          viewed: (shouldView && isSuccessful) || currentUserAttempt.viewed
         }
       }
     };
@@ -116,10 +170,17 @@ export async function PATCH(req: Request) {
     await saveMessagesData(data);
 
     const updatedUserAttempt = data.messages[messageIndex].users[userId];
+    const viewerCount = Object.values(data.messages[messageIndex].users)
+      .filter(u => u.viewed).length;
+    const visitorCount = Object.keys(data.messages[messageIndex].users).length;
+
     return NextResponse.json({
       ...data.messages[messageIndex],
       attempts: updatedUserAttempt.attempts,
       reactionTime: updatedUserAttempt.reactionTime,
+      viewed: updatedUserAttempt.viewed,
+      viewerCount,
+      visitorCount,
       users: undefined
     });
   } catch (error) {

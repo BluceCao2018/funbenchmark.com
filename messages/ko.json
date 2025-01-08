@@ -601,6 +601,10 @@
       "contentPlaceholder": "메시지 내용을 입력하세요",
       "duration": "공개 기간(ms)",
       "maxAttempts": "최대 조회수",
+      "maxViewers": "최대 시청자",
+      "maxViewersHint": "메시지를 성공적으로 볼 수 있는 최대 시청자 수",
+      "maxVisitors": "최대 방문자",
+      "maxVisitorsHint": "링크를 방문할 수 있는 최대 방문자 수",
       "next": "다음",
       "submit": "만들다",
       "creating": "만드는 중...",
@@ -609,6 +613,8 @@
       "linkCopied": "링크가 복사되었습니다",
       "error": "메시지를 작성하지 못했습니다.",
       "shareVia": "다음을 통해 공유",
+      "shareViaTitle": "시간 제한 가시성 메시지",
+      "shareViaText": "\"{title}\"이(가) 귀하의 시청을 기다리고 있습니다.",
       "howItWorks": "시간 제한 가시성이 작동하는 방식",
       "createStepsTitle": "시간 제한 메시지 만들기",
       "step1Title": "메시지 작성",
@@ -631,8 +637,9 @@
       "feature2Description": "시청자가 시간 제한 메시지에 액세스를 시도할 수 있는 횟수를 제어하세요.",
       "feature3Title": "간편한 공유",
       "feature3Description": "간단한 링크를 통해 모든 플랫폼에서 Time Limited Visibility 콘텐츠를 공유하세요.",
-      "shareViaTitle": "시간 제한 가시성 메시지",
-      "shareViaText": "\"{title}\"이(가) 귀하의 시청을 기다리고 있습니다."
+      "limitsTitle": "접근 제한",
+      "back": "뒤쪽에",
+      "previous": "이전의"
     },
     "list": {
       "title": "시간 제한 메시지",
@@ -678,7 +685,13 @@
       "waitTitle": "아이콘이 나타날 때까지 기다리는 중",
       "clickTitle": "메시지를 보려면 화면을 탭하세요.",
       "clickDescription": "보낸 사람이 열기 아이콘이 나타나는 시간을 설정했습니다.<br/> 메시지 내용을 보려면 아이콘이 사라지기 전에 화면을 탭해야 합니다.",
-      "createOwn": "나만의 메시지 만들기"
+      "createOwn": "나만의 메시지 만들기",
+      "maxVisitorsTitle": "최대 방문자 수 도달",
+      "maxVisitorsDescription": "죄송합니다. 이 메시지는 최대 방문자 수에 도달했습니다.",
+      "maxViewersTitle": "최대 시청자 도달",
+      "maxViewersDescription": "죄송합니다. 이 메시지는 최대 시청자 수에 도달했습니다.",
+      "accessDeniedTitle": "접근 불가",
+      "accessDeniedDescription": "죄송합니다. 이 메시지에 액세스할 수 없습니다."
     }
   }
 }

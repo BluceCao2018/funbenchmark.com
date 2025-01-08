@@ -12,6 +12,8 @@ const s3 = new S3Client({
 export interface UserAttempt {
   attempts: number;
   reactionTime?: number;
+  viewed: boolean;
+  visitedAt: string;
 }
 
 export interface TimedMessage {
@@ -22,6 +24,8 @@ export interface TimedMessage {
   mediaUrl: string;
   visibleDuration: number;
   maxAttempts: number;
+  maxViewers: number;
+  maxVisitors: number;
   createdAt: string;
   creatorId: string;
   users: {

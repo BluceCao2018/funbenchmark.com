@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils"
 import Image from 'next/image'
 
 type MessageType = 'TEXT' | 'IMAGE' | 'VIDEO'
-type Step = 'content' | 'settings' | 'share'
+type Step = 'content' | 'settings' | 'limits' | 'share'
 
 export default function CreateTimedMessage() {
   const t = useTranslations('timedMessage')
@@ -26,7 +26,9 @@ export default function CreateTimedMessage() {
     title: '',
     content: '',
     visibleDuration: 500,
-    maxAttempts: 3
+    maxAttempts: 3,
+    maxViewers: 10,
+    maxVisitors: 20
   })
   const [loading, setLoading] = useState(false)
   const [createdMessageId, setCreatedMessageId] = useState<string | null>(null)
@@ -40,6 +42,8 @@ export default function CreateTimedMessage() {
       data.set('messageType', messageType)
       data.set('visibleDuration', formData.visibleDuration.toString())
       data.set('maxAttempts', formData.maxAttempts.toString())
+      data.set('maxViewers', formData.maxViewers.toString())
+      data.set('maxVisitors', formData.maxVisitors.toString())
 
       if (messageType === 'TEXT') {
         data.set('content', formData.content)
@@ -112,9 +116,11 @@ export default function CreateTimedMessage() {
                   required
                 />
               )}
-              <Button onClick={() => setStep('settings')}>
-                {t('create.next')}
-              </Button>
+              <div className="flex justify-end space-x-2">
+                <Button onClick={() => setStep('settings')}>
+                  {t('create.next')}
+                </Button>
+              </div>
             </div>
           </div>
         )
@@ -148,9 +154,63 @@ export default function CreateTimedMessage() {
                   required
                 />
               </div>
-              <Button onClick={handleSubmit} disabled={loading}>
-                {loading ? t('create.creating') : t('create.submit')}
-              </Button>
+              <div className="flex justify-end space-x-2">
+                <Button 
+                  variant="outline" 
+                  onClick={() => setStep('content')}
+                >
+                  {t('create.previous')}
+                </Button>
+                <Button onClick={() => setStep('limits')}>
+                  {t('create.next')}
+                </Button>
+              </div>
+            </div>
+          </div>
+        )
+
+      case 'limits':
+        return (
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold">{t('create.limitsTitle')}</h2>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  {t('create.maxViewers')}
+                </label>
+                <Input
+                  type="number"
+                  value={formData.maxViewers}
+                  onChange={(e) => setFormData(prev => ({ ...prev, maxViewers: parseInt(e.target.value) }))}
+                  min="1"
+                  required
+                />
+                <p className="text-sm text-gray-500 mt-1">{t('create.maxViewersHint')}</p>
+              </div>
+              <div>
+                <label className="block text-sm font-medium mb-1">
+                  {t('create.maxVisitors')}
+                </label>
+                <Input
+                  type="number"
+                  value={formData.maxVisitors}
+                  onChange={(e) => setFormData(prev => ({ ...prev, maxVisitors: parseInt(e.target.value) }))}
+                  min="1"
+                  required
+                />
+                <p className="text-sm text-gray-500 mt-1">{t('create.maxVisitorsHint')}</p>
+              </div>
+              <div className="flex justify-end space-x-2">
+                <Button 
+                  variant="outline" 
+                  onClick={() => setStep('settings')}
+                >
+                  {t('create.previous')}
+                </Button>
+                <Button onClick={handleSubmit} disabled={loading}>
+                  {loading ? t('create.creating') : t('create.submit')}
+                </Button>
+              </div>
             </div>
           </div>
         )

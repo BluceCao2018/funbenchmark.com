@@ -601,6 +601,10 @@
       "contentPlaceholder": "Geben Sie den Nachrichteninhalt ein",
       "duration": "Sichtbarkeitsdauer (ms)",
       "maxAttempts": "Maximale Aufrufe",
+      "maxViewers": "Maximale Zuschauerzahl",
+      "maxViewersHint": "Die maximale Anzahl an Zuschauern, die die Nachricht erfolgreich ansehen können",
+      "maxVisitors": "Maximale Besucherzahl",
+      "maxVisitorsHint": "Die maximale Anzahl an Besuchern, die den Link besuchen können",
       "next": "Nächste",
       "submit": "Erstellen",
       "creating": "Erstellen...",
@@ -609,6 +613,8 @@
       "linkCopied": "Link kopiert",
       "error": "Nachricht konnte nicht erstellt werden",
       "shareVia": "Teilen über",
+      "shareViaTitle": "Zeitlich begrenzte Sichtbarkeitsnachricht",
+      "shareViaText": "„{title}“ wartet darauf, dass Sie es ansehen.",
       "howItWorks": "Wie zeitlich begrenzte Sichtbarkeit funktioniert",
       "createStepsTitle": "Erstellen Sie Ihre zeitlich begrenzte Nachricht",
       "step1Title": "Erstellen Sie Ihre Nachricht",
@@ -631,8 +637,9 @@
       "feature2Description": "Steuern Sie, wie oft Zuschauer versuchen können, auf Ihre zeitlich begrenzte Nachricht zuzugreifen.",
       "feature3Title": "Einfaches Teilen",
       "feature3Description": "Teilen Sie Ihre Inhalte mit zeitlich begrenzter Sichtbarkeit über einen einfachen Link auf jeder Plattform.",
-      "shareViaTitle": "Zeitlich begrenzte Sichtbarkeitsnachricht",
-      "shareViaText": "„{title}“ wartet darauf, dass Sie es ansehen."
+      "limitsTitle": "Zugriffsbeschränkungen",
+      "back": "Zurück",
+      "previous": "Vorherige"
     },
     "list": {
       "title": "Zeitgesteuerte Nachrichten",
@@ -678,7 +685,13 @@
       "waitTitle": "Warten auf das Erscheinen des Symbols",
       "clickTitle": "Tippen Sie auf den Bildschirm, um die Nachricht anzuzeigen",
       "clickDescription": "Der Absender hat die Zeit für das Erscheinen des geöffneten Symbols festgelegt.<br/> Sie müssen auf den Bildschirm tippen, bevor das Symbol verschwindet, um den Inhalt der Nachricht anzuzeigen.",
-      "createOwn": "Erstellen Sie Ihre eigene Nachricht"
+      "createOwn": "Erstellen Sie Ihre eigene Nachricht",
+      "maxVisitorsTitle": "Maximale Besucherzahl erreicht",
+      "maxVisitorsDescription": "Leider hat diese Nachricht ihre maximale Besucherzahl erreicht",
+      "maxViewersTitle": "Maximale Zuschauerzahl erreicht",
+      "maxViewersDescription": "Leider hat diese Nachricht die maximale Anzahl an Zuschauern erreicht",
+      "accessDeniedTitle": "Zugriff verweigert",
+      "accessDeniedDescription": "Leider können Sie nicht auf diese Nachricht zugreifen"
     }
   }
 }

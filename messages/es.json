@@ -601,6 +601,10 @@
       "contentPlaceholder": "Introduzca el contenido del mensaje",
       "duration": "Duración de la visibilidad (ms)",
       "maxAttempts": "Vistas máximas",
+      "maxViewers": "Máximo de espectadores",
+      "maxViewersHint": "El número máximo de espectadores que pueden ver correctamente el mensaje.",
+      "maxVisitors": "Visitantes máximos",
+      "maxVisitorsHint": "El número máximo de visitantes que pueden visitar el enlace.",
       "next": "Próximo",
       "submit": "Crear",
       "creating": "Creando...",
@@ -609,6 +613,8 @@
       "linkCopied": "Enlace copiado",
       "error": "No se pudo crear el mensaje",
       "shareVia": "Compartir vía",
+      "shareViaTitle": "Mensaje de visibilidad por tiempo limitado",
+      "shareViaText": "\"{title}\" está esperando que lo veas.",
       "howItWorks": "Cómo funciona la visibilidad por tiempo limitado",
       "createStepsTitle": "Crea tu mensaje por tiempo limitado",
       "step1Title": "Crea tu mensaje",
@@ -631,8 +637,9 @@
       "feature2Description": "Controle cuántas veces los espectadores pueden intentar acceder a su mensaje por tiempo limitado.",
       "feature3Title": "Compartir fácilmente",
       "feature3Description": "Comparta su contenido de visibilidad por tiempo limitado en cualquier plataforma con un simple enlace.",
-      "shareViaTitle": "Mensaje de visibilidad por tiempo limitado",
-      "shareViaText": "\"{title}\" está esperando que lo veas."
+      "limitsTitle": "Límites de acceso",
+      "back": "Atrás",
+      "previous": "Anterior"
     },
     "list": {
       "title": "Mensajes programados",
@@ -678,7 +685,13 @@
       "waitTitle": "Esperando a que aparezca el icono",
       "clickTitle": "Toca la pantalla para ver el mensaje.",
       "clickDescription": "El remitente ha establecido la hora para la aparición del ícono de apertura.<br/> Debe tocar la pantalla antes de que el ícono desaparezca para ver el contenido del mensaje.",
-      "createOwn": "Crea tu propio mensaje"
+      "createOwn": "Crea tu propio mensaje",
+      "maxVisitorsTitle": "Máximo de visitantes alcanzados",
+      "maxVisitorsDescription": "Lo sentimos, este mensaje ha alcanzado su número máximo de visitantes.",
+      "maxViewersTitle": "Máximo de espectadores alcanzados",
+      "maxViewersDescription": "Lo sentimos, este mensaje ha alcanzado su número máximo de espectadores.",
+      "accessDeniedTitle": "Acceso denegado",
+      "accessDeniedDescription": "Lo sentimos, no puedes acceder a este mensaje."
     }
   }
 }

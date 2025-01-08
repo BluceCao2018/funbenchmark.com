@@ -601,6 +601,10 @@
       "contentPlaceholder": "メッセージ内容を入力してください",
       "duration": "可視期間 (ミリ秒)",
       "maxAttempts": "最大ビュー数",
+      "maxViewers": "最大視聴者数",
+      "maxViewersHint": "メッセージを正常に表示できる最大閲覧者数",
+      "maxVisitors": "最大訪問者数",
+      "maxVisitorsHint": "リンクにアクセスできる最大訪問者数",
       "next": "次",
       "submit": "作成する",
       "creating": "作成...",
@@ -609,6 +613,8 @@
       "linkCopied": "リンクがコピーされました",
       "error": "メッセージの作成に失敗しました",
       "shareVia": "共有方法",
+      "shareViaTitle": "期間限定公開メッセージ",
+      "shareViaText": "「{title}」はあなたの閲覧を待っています。",
       "howItWorks": "時間制限付き表示の仕組み",
       "createStepsTitle": "期間限定のメッセージを作成する",
       "step1Title": "メッセージを作成する",
@@ -631,8 +637,9 @@
       "feature2Description": "視聴者が時間制限付きメッセージへのアクセスを試行できる回数を制御します。",
       "feature3Title": "簡単な共有",
       "feature3Description": "シンプルなリンクを使用して、時間制限付き公開コンテンツをあらゆるプラットフォームで共有できます。",
-      "shareViaTitle": "期間限定公開メッセージ",
-      "shareViaText": "「{title}」はあなたの閲覧を待っています。"
+      "limitsTitle": "アクセス制限",
+      "back": "戻る",
+      "previous": "前の"
     },
     "list": {
       "title": "時限メッセージ",
@@ -678,7 +685,13 @@
       "waitTitle": "アイコンが表示されるのを待っています",
       "clickTitle": "画面をタップしてメッセージを表示します",
       "clickDescription": "送信者は、開いているアイコンが表示される時間を設定しています。<br/> メッセージの内容を表示するには、アイコンが消える前に画面をタップする必要があります。",
-      "createOwn": "独自のメッセージを作成する"
+      "createOwn": "独自のメッセージを作成する",
+      "maxVisitorsTitle": "最大訪問者数に達しました",
+      "maxVisitorsDescription": "申し訳ありませんが、このメッセージは最大訪問者数に達しました",
+      "maxViewersTitle": "最大視聴者数に達しました",
+      "maxViewersDescription": "申し訳ありませんが、このメッセージは最大閲覧者数に達しました",
+      "accessDeniedTitle": "アクセスが拒否されました",
+      "accessDeniedDescription": "申し訳ありませんが、このメッセージにはアクセスできません"
     }
   }
 }

@@ -16,11 +16,28 @@ interface TimedMessage {
   mediaUrl: string;
   visibleDuration: number;
   maxAttempts: number;
+  maxViewers: number;
+  maxVisitors: number;
   attempts: number;
+  viewed: boolean;
+  viewerCount: number;
+  visitorCount: number;
   createdAt: string;
   reactionTime?: number;
-  remainingViews: number;
 }
+
+type GameState = 
+  | 'initial' 
+  | 'waiting' 
+  | 'soon' 
+  | 'icon-shown' 
+  | 'result' 
+  | 'message-shown' 
+  | 'timeout' 
+  | 'max-attempts' 
+  | 'max-visitors'
+  | 'max-viewers'
+  | 'access-denied'
 
 export default function ViewTimedMessage() {
   const router = useRouter()
@@ -31,22 +48,23 @@ export default function ViewTimedMessage() {
   const [loading, setLoading] = useState(true)
   const [timeLeft, setTimeLeft] = useState<number | null>(null)
   
-  const [gameState, setGameState] = useState<'initial' | 'waiting' | 'soon' | 'icon-shown' | 'result' | 'message-shown' | 'timeout' | 'max-attempts'>('initial')
+  const [gameState, setGameState] = useState<GameState>('initial')
   const [iconAppearTime, setIconAppearTime] = useState<number | null>(null)
   const [clickTime, setClickTime] = useState<number | null>(null)
   const [showError, setShowError] = useState(false)
   const [showIcon, setShowIcon] = useState(true)
   const [visitorId, setVisitorId] = useState<string>('');
+  const [isVisitorIdReady, setIsVisitorIdReady] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const timeoutTimerRef = useRef<NodeJS.Timeout | null>(null)
   const iconTimerRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
-    if (visitorId) {  // 只在有 visitorId 时才获取消息
-      fetchMessage()
+    if (isVisitorIdReady && messageId) {  // 只在 visitorId 准备好后获取消息
+      fetchMessage();
     }
-  }, [messageId, visitorId])  // 添加 visitorId 作为依赖
+  }, [messageId, isVisitorIdReady]); // 使用 isVisitorIdReady 替代 visitorId 作为依赖
 
   useEffect(() => {
     if (message && timeLeft === null) {
@@ -89,38 +107,46 @@ export default function ViewTimedMessage() {
   }, [])
 
   const fetchMessage = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
       const response = await fetch(`/api/time-limited-visibility?id=${messageId}&userId=${visitorId}`, {
         cache: 'no-store'
-      })
+      });
+      
+      const data = await response.json();
       
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        if (response.status === 403) {
+          if (data.error.includes('Max visitors')) {
+            setGameState('max-visitors');
+          } else if (data.error.includes('Max viewers')) {
+            setGameState('max-viewers');
+          } else {
+            setGameState('access-denied');
+          }
+          setMessage(null);  // 确保在访问受限时清除消息
+          return;
+        }
+        throw new Error(data.error || 'Failed to fetch message');
       }
+
+      setMessage(data);
       
-      const data = await response.json()
-      setMessage(data)
-      
-      // 检查尝试次数是否超过限制
       if (data.attempts >= data.maxAttempts) {
-        setGameState('max-attempts')
-        return
-      }
-      
-      // 检查当前用户的反应时间
-      if (data.reactionTime &&data.reactionTime>0 && data.reactionTime <= data.visibleDuration) {
-        console.log('reactionTime', data.reactionTime)
-        console.log('visibleDuration', data.visibleDuration)
-        setGameState('message-shown')
+        setGameState('max-attempts');
+      } else if (data.viewed) {
+        setGameState('message-shown');
+      } else {
+        setGameState('initial');
       }
     } catch (error) {
-      console.error('Error fetching message:', error)
-      setMessage(null)
+      console.error('Error fetching message:', error);
+      setMessage(null);
+      setGameState('access-denied');
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const startGame = useCallback(() => {
     setGameState('waiting')
@@ -190,14 +216,13 @@ export default function ViewTimedMessage() {
       setClickTime(now)
       
       try {
-        // 更新反应时间并获取最新的 attempts
+        // 记录反应时间，但不尝试查看消息
         const response = await fetch(`/api/time-limited-visibility?id=${messageId}&time=${reactionTime}&userId=${visitorId}`, {
           method: 'PATCH'
         })
         const updatedMessage = await response.json()
-        setMessage(updatedMessage) // 更新消息状态，包含最新的 attempts
+        setMessage(updatedMessage)
         
-        // 检查是否已达到最大尝试次数
         if (updatedMessage.maxAttempts - updatedMessage.attempts <= 0) {
           setGameState('max-attempts')
           return
@@ -262,13 +287,33 @@ export default function ViewTimedMessage() {
       }
     }
 
+    // 如果没有消息，根据不同状态返回不同的提示
     if (!message) {
-      return {
-        title: t('view.notFound'),
-        description: t('view.notFoundDescription')
+      switch (gameState) {
+        case 'max-visitors':
+          return {
+            title: t('view.maxVisitorsTitle'),
+            description: t('view.maxVisitorsDescription')
+          }
+        case 'max-viewers':
+          return {
+            title: t('view.maxViewersTitle'),
+            description: t('view.maxViewersDescription')
+          }
+        case 'access-denied':
+          return {
+            title: t('view.accessDeniedTitle'),
+            description: t('view.accessDeniedDescription')
+          }
+        default:
+          return {
+            title: t('view.notFound'),
+            description: t('view.notFoundDescription')
+          }
       }
     }
 
+    // 有消息时的其他状态处理
     switch (gameState) {
       case 'initial':
         return {
@@ -332,6 +377,25 @@ export default function ViewTimedMessage() {
             maxAttempts: message?.maxAttempts
           })
         }
+      case 'max-visitors':
+        return {
+          title: t('view.maxVisitorsTitle'),
+          description: t('view.maxVisitorsDescription', { 
+            maxVisitors: message?.maxVisitors 
+          })
+        }
+      case 'max-viewers':
+        return {
+          title: t('view.maxViewersTitle'),
+          description: t('view.maxViewersDescription', { 
+            maxViewers: message?.maxViewers 
+          })
+        }
+      case 'access-denied':
+        return {
+          title: t('view.accessDeniedTitle'),
+          description: t('view.accessDeniedDescription')
+        }
       default:
         return {
           title: t('view.pageTitle'),
@@ -358,6 +422,11 @@ export default function ViewTimedMessage() {
         return <FaEye className="h-20 w-20 text-white mb-8" />
       case 'timeout':
         return <FaClock className="h-20 w-20 text-white mb-8 animate-pulse" />
+      case 'max-visitors':
+      case 'max-viewers':
+        return <FaExclamationTriangle className="h-20 w-20 text-white mb-8" />
+      case 'access-denied':
+        return <FaExclamationTriangle className="h-20 w-20 text-white mb-8" />
       default:
         return <FaEnvelope className="h-20 w-20 text-white mb-8" />
     }
@@ -366,33 +435,70 @@ export default function ViewTimedMessage() {
   // Add fingerprint initialization
   useEffect(() => {
     const initFingerprint = async () => {
-      const fp = await FingerprintJS.load();
-      const result = await fp.get();
-      setVisitorId(result.visitorId);
+      try {
+        const fp = await FingerprintJS.load();
+        const result = await fp.get();
+        setVisitorId(result.visitorId);
+        setIsVisitorIdReady(true);  // 设置准备完成标志
+      } catch (error) {
+        console.error('Error initializing fingerprint:', error);
+        // 发生错误时使用随机ID作为后备方案
+        setVisitorId(Math.random().toString(36).substr(2, 9));
+        setIsVisitorIdReady(true);  // 即使使用后备方案也要设置准备完成
+      }
     };
+    
     initFingerprint();
   }, []);
 
-  if (loading) {
+  const renderErrorState = () => {
+    const { title, description } = getTitleAndDescription()
     return (
+      <>
       <div className="w-full h-[550px] flex items-center justify-center bg-blue-theme">
-        <div className="text-center mb-8">
-        <FaEnvelope className="w-20 h-20 mx-auto text-white animate-bounce mb-8" />
-          <h1 className="text-4xl font-bold text-white mb-4">{t('view.pageTitle')}</h1>
-          <p className="text-xl text-white/80 mb-20" dangerouslySetInnerHTML={{ __html: t('view.pageDescription') }} />
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4" />
-              {/* <p className="text-xl text-white">{t('view.loading')}</p> */}
+        <div className="w-full max-w-4xl px-4 flex flex-col items-center mb-8 text-white">
+          {getStateIcon()}
+          <h2 className="text-2xl font-bold mb-2">{title}</h2>
+          <p className="text-lg opacity-80 mb-12">{description}</p>
+          <Button
+        size="lg"
+        onClick={() => router.push('/time-limited-visibility/create')}
+        className="text-xl px-8 py-6"
+      >
+        {t('view.createOwn')}
+      </Button>
         </div>
-        
-        
       </div>
+      <div>
+      
+    </div>
+    </>
     )
   }
 
-  if (!message) {
+  // 修改渲染逻辑
+  if (!isVisitorIdReady || loading) {
     return (
       <div className="w-full h-[550px] flex items-center justify-center bg-blue-theme">
-        <div className="text-center text-white">
+        <div className="text-center mb-8">
+          <FaEnvelope className="w-20 h-20 mx-auto text-white animate-bounce mb-8" />
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4" />
+        </div>
+      </div>
+    );
+  }
+
+  if (!message) {
+    console.log(gameState)
+    // 如果是访问限制相关的状态，显示对应的错误信息
+    if (['max-visitors', 'max-viewers', 'access-denied'].includes(gameState)) {
+      return renderErrorState()
+    }
+    
+    // 其他情况（如真的找不到消息）显示默认的 not found 信息
+    return (
+      <div className="w-full h-[550px] flex items-center justify-center bg-blue-theme">
+        <div className="w-full max-w-4xl px-4 flex flex-col items-center mb-8 text-white">
           <FaEye className="w-16 h-16 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-2">{t('view.notFound')}</h2>
           <p className="text-lg opacity-80">{t('view.notFoundDescription')}</p>
@@ -474,9 +580,30 @@ export default function ViewTimedMessage() {
               ) : (
                 <Button
                   size="lg"
-                  onClick={(e) => {
+                  onClick={async (e) => {
                     e.stopPropagation()
-                    setGameState('message-shown')
+                    try {
+                      // 尝试查看消息
+                      const response = await fetch(
+                        `/api/time-limited-visibility?id=${messageId}&time=${clickTime - iconAppearTime}&userId=${visitorId}&view=true`,
+                        { method: 'PATCH' }
+                      )
+
+                      if (!response.ok) {
+                        const data = await response.json()
+                        if (response.status === 403) {
+                          setGameState('max-viewers')
+                          return
+                        }
+                        throw new Error(data.error || 'Failed to verify view permission')
+                      }
+
+                      const updatedMessage = await response.json()
+                      setMessage(updatedMessage)
+                      setGameState('message-shown')
+                    } catch (error) {
+                      console.error('Error verifying view permission:', error)
+                    }
                   }}
                   className="text-xl px-8 py-6"
                 >

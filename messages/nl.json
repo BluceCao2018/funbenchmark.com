@@ -601,6 +601,10 @@
       "contentPlaceholder": "Voer de inhoud van het bericht in",
       "duration": "Zichtbaarheidsduur (ms)",
       "maxAttempts": "Maximale weergaven",
+      "maxViewers": "Maximale kijkers",
+      "maxViewersHint": "Het maximale aantal kijkers dat het bericht succesvol kan bekijken",
+      "maxVisitors": "Maximale bezoekers",
+      "maxVisitorsHint": "Het maximale aantal bezoekers dat de link kan bezoeken",
       "next": "Volgende",
       "submit": "Creëren",
       "creating": "Creëren...",
@@ -609,6 +613,8 @@
       "linkCopied": "Link gekopieerd",
       "error": "Kan bericht niet maken",
       "shareVia": "Deel via",
+      "shareViaTitle": "Bericht over beperkte zichtbaarheid in de tijd",
+      "shareViaText": "\"{title}\" wacht tot u deze kunt bekijken.",
       "howItWorks": "Hoe tijdsbeperkt zicht werkt",
       "createStepsTitle": "Creëer uw tijdsbeperkte boodschap",
       "step1Title": "Creëer uw bericht",
@@ -631,8 +637,9 @@
       "feature2Description": "Bepaal hoe vaak kijkers kunnen proberen toegang te krijgen tot uw tijdsbeperkte bericht.",
       "feature3Title": "Eenvoudig delen",
       "feature3Description": "Deel uw Time Limited Visibility-inhoud op elk platform met een eenvoudige link.",
-      "shareViaTitle": "Bericht over beperkte zichtbaarheid in de tijd",
-      "shareViaText": "\"{title}\" wacht tot u deze kunt bekijken."
+      "limitsTitle": "Toegangslimieten",
+      "back": "Rug",
+      "previous": "Vorig"
     },
     "list": {
       "title": "Getimede berichten",
@@ -678,7 +685,13 @@
       "waitTitle": "Wachten tot het pictogram verschijnt",
       "clickTitle": "Tik op het scherm om het bericht te bekijken",
       "clickDescription": "De afzender heeft de tijd ingesteld waarop het geopende pictogram verschijnt.<br/> U moet op het scherm tikken voordat het pictogram verdwijnt om de inhoud van het bericht te bekijken.",
-      "createOwn": "Creëer uw eigen bericht"
+      "createOwn": "Creëer uw eigen bericht",
+      "maxVisitorsTitle": "Maximaal aantal bezoekers bereikt",
+      "maxVisitorsDescription": "Sorry, dit bericht heeft het maximale aantal bezoekers bereikt",
+      "maxViewersTitle": "Maximaal aantal kijkers bereikt",
+      "maxViewersDescription": "Sorry, dit bericht heeft het maximale aantal kijkers bereikt",
+      "accessDeniedTitle": "Toegang geweigerd",
+      "accessDeniedDescription": "Sorry, u heeft geen toegang tot dit bericht"
     }
   }
 }

@@ -615,6 +615,10 @@
       "contentPlaceholder": "Enter message content",
       "duration": "Visibility Duration (ms)",
       "maxAttempts": "Maximum Views",
+      "maxViewers": "Maximum Viewers",
+      "maxViewersHint": "The maximum number of viewers who can successfully view the message",
+      "maxVisitors": "Maximum Visitors",
+      "maxVisitorsHint": "The maximum number of visitors who can visit the link",
       "next": "Next",
       "submit": "Create",
       "creating": "Creating...",
@@ -648,7 +652,10 @@
       "feature2Title": "Limited Attempts",
       "feature2Description": "Control how many times viewers can attempt to access your Time Limited Message.",
       "feature3Title": "Easy Sharing",
-      "feature3Description": "Share your Time Limited Visibility content across any platform with a simple link."
+      "feature3Description": "Share your Time Limited Visibility content across any platform with a simple link.",
+      "limitsTitle": "Access Limits",
+      "back": "Back",
+      "previous": "Previous"
     },
     "list": {
       "title": "Timed Messages",
@@ -694,7 +701,13 @@
       "waitTitle": "Waiting for the icon to appear",
       "clickTitle": "Tap the screen to view the message",
       "clickDescription": "The sender has set the time for the appearance of the open icon.<br/> You need to tap the screen before the icon disappears to view the content of the message.",
-      "createOwn": "Create Your Own Message"
+      "createOwn": "Create Your Own Message",
+      "maxVisitorsTitle": "Maximum Visitors Reached",
+      "maxVisitorsDescription": "Sorry, this message has reached its maximum number of visitors",
+      "maxViewersTitle": "Maximum Viewers Reached",
+      "maxViewersDescription": "Sorry, this message has reached its maximum number of viewers",
+      "accessDeniedTitle": "Access Denied",
+      "accessDeniedDescription": "Sorry, you cannot access this message"
     }
   }
 }

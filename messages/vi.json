@@ -601,6 +601,10 @@
       "contentPlaceholder": "Nhập nội dung tin nhắn",
       "duration": "Thời lượng hiển thị (ms)",
       "maxAttempts": "Lượt xem tối đa",
+      "maxViewers": "Số người xem tối đa",
+      "maxViewersHint": "Số lượng người xem tối đa có thể xem tin nhắn thành công",
+      "maxVisitors": "Số lượt truy cập tối đa",
+      "maxVisitorsHint": "Số lượng khách truy cập tối đa có thể truy cập liên kết",
       "next": "Kế tiếp",
       "submit": "Tạo nên",
       "creating": "Đang tạo...",
@@ -609,6 +613,8 @@
       "linkCopied": "Đã sao chép liên kết",
       "error": "Không tạo được tin nhắn",
       "shareVia": "Chia sẻ qua",
+      "shareViaTitle": "Thông báo hiển thị có giới hạn thời gian",
+      "shareViaText": "\"{title}\" đang chờ bạn xem.",
       "howItWorks": "Khả năng hiển thị có giới hạn thời gian hoạt động như thế nào",
       "createStepsTitle": "Tạo tin nhắn giới hạn thời gian của bạn",
       "step1Title": "Tạo tin nhắn của bạn",
@@ -631,8 +637,9 @@
       "feature2Description": "Kiểm soát số lần người xem có thể cố gắng truy cập Tin nhắn có giới hạn thời gian của bạn.",
       "feature3Title": "Chia sẻ dễ dàng",
       "feature3Description": "Chia sẻ nội dung Hiển thị có giới hạn thời gian của bạn trên mọi nền tảng bằng một liên kết đơn giản.",
-      "shareViaTitle": "Thông báo hiển thị có giới hạn thời gian",
-      "shareViaText": "\"{title}\" đang chờ bạn xem."
+      "limitsTitle": "Giới hạn truy cập",
+      "back": "Mặt sau",
+      "previous": "Trước"
     },
     "list": {
       "title": "Tin nhắn hẹn giờ",
@@ -678,7 +685,13 @@
       "waitTitle": "Chờ biểu tượng xuất hiện",
       "clickTitle": "Chạm vào màn hình để xem tin nhắn",
       "clickDescription": "Người gửi đã đặt thời gian cho biểu tượng mở xuất hiện.<br/> Bạn cần chạm vào màn hình trước khi biểu tượng biến mất để xem nội dung tin nhắn.",
-      "createOwn": "Tạo tin nhắn của riêng bạn"
+      "createOwn": "Tạo tin nhắn của riêng bạn",
+      "maxVisitorsTitle": "Đã tiếp cận số lượng khách truy cập tối đa",
+      "maxVisitorsDescription": "Xin lỗi, tin nhắn này đã đạt số lượng khách truy cập tối đa",
+      "maxViewersTitle": "Số người xem tối đa đã đạt được",
+      "maxViewersDescription": "Rất tiếc, tin nhắn này đã đạt số lượng người xem tối đa",
+      "accessDeniedTitle": "Truy cập bị từ chối",
+      "accessDeniedDescription": "Xin lỗi, bạn không thể truy cập tin nhắn này"
     }
   }
 }
