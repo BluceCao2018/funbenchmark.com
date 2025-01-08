@@ -16,14 +16,14 @@ export async function generateMetadata() {
       title: t("meta_title"),
       description: t("meta_description"),
       site: '@BluceC56570',
-      images: `${w("domain")}/reactiontimetest.png`,
+      images: `${w("domain")}/twitter/time-limited-visibility.png`,
     },
     openGraph: {
       type: 'article',
       title: t("meta_title"),
       description: t("meta_description"),
-      url: `${w("domain")}/tests/reactiontime`,
-      images: `${w("domain")}/reactiontimetest.png`,
+      url: `${w("domain")}/time-limited-visibility/create`,
+      images: `${w("domain")}/twitter/time-limited-visibility.png`,
     },
   };
 }
