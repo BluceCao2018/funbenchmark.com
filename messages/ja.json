@@ -630,7 +630,9 @@
       "feature2Title": "限られた試行",
       "feature2Description": "視聴者が時間制限付きメッセージへのアクセスを試行できる回数を制御します。",
       "feature3Title": "簡単な共有",
-      "feature3Description": "シンプルなリンクを使用して、時間制限付き公開コンテンツをあらゆるプラットフォームで共有できます。"
+      "feature3Description": "シンプルなリンクを使用して、時間制限付き公開コンテンツをあらゆるプラットフォームで共有できます。",
+      "shareViaTitle": "期間限定公開メッセージ",
+      "shareViaText": "「{title}」はあなたの閲覧を待っています。"
     },
     "list": {
       "title": "時限メッセージ",

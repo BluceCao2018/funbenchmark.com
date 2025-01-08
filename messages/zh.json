@@ -630,7 +630,9 @@
       "feature2Title": "有限的尝试",
       "feature2Description": "控制观看者可以尝试访问您的限时消息的次数。",
       "feature3Title": "轻松分享",
-      "feature3Description": "通过简单的链接在任何平台上分享您的限时可见性内容。"
+      "feature3Description": "通过简单的链接在任何平台上分享您的限时可见性内容。",
+      "shareViaTitle": "限时可见性消息",
+      "shareViaText": "“{title}”正在等待您查看。"
     },
     "list": {
       "title": "定时消息",

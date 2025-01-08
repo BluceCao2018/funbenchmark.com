@@ -630,7 +630,9 @@
       "feature2Title": "Intentos limitados",
       "feature2Description": "Controle cuántas veces los espectadores pueden intentar acceder a su mensaje por tiempo limitado.",
       "feature3Title": "Compartir fácilmente",
-      "feature3Description": "Comparta su contenido de visibilidad por tiempo limitado en cualquier plataforma con un simple enlace."
+      "feature3Description": "Comparta su contenido de visibilidad por tiempo limitado en cualquier plataforma con un simple enlace.",
+      "shareViaTitle": "Mensaje de visibilidad por tiempo limitado",
+      "shareViaText": "\"{title}\" está esperando que lo veas."
     },
     "list": {
       "title": "Mensajes programados",

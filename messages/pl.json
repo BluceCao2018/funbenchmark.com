@@ -630,7 +630,9 @@
       "feature2Title": "Ograniczone próby",
       "feature2Description": "Kontroluj, ile razy widzowie mogą próbować uzyskać dostęp do Twojej wiadomości ograniczonej czasowo.",
       "feature3Title": "Łatwe udostępnianie",
-      "feature3Description": "Udostępniaj treści o ograniczonej widoczności na dowolnej platformie za pomocą prostego łącza."
+      "feature3Description": "Udostępniaj treści o ograniczonej widoczności na dowolnej platformie za pomocą prostego łącza.",
+      "shareViaTitle": "Wiadomość o ograniczonej widoczności czasowej",
+      "shareViaText": "„{title}” czeka, aż go obejrzysz."
     },
     "list": {
       "title": "Wiadomości o czasie",

@@ -623,6 +623,8 @@
       "linkCopied": "Link copied",
       "error": "Failed to create message",
       "shareVia": "Share via",
+      "shareViaTitle": "Time Limited Visibility Message",
+      "shareViaText": "\"{title}\" is waiting for you to view it.",
       "howItWorks": "How Time Limited Visibility Works",
       "createStepsTitle": "Create Your Time Limited Message",
       "step1Title": "Create Your Message",

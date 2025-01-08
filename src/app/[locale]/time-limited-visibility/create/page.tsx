@@ -197,7 +197,7 @@ export default function CreateTimedMessage() {
                   if (navigator.share) {
                     navigator.share({
                       title: t('create.shareViaTitle'),
-                      text: t('create.shareViaText'),
+                      text: t('create.shareViaText', { title: formData.title }),
                       url: `${window.location.origin}/time-limited-visibility/${createdMessageId}`
                     })
                   }

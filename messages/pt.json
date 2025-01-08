@@ -630,7 +630,9 @@
       "feature2Title": "Tentativas Limitadas",
       "feature2Description": "Controle quantas vezes os espectadores podem tentar acessar sua mensagem por tempo limitado.",
       "feature3Title": "Compartilhamento fácil",
-      "feature3Description": "Compartilhe seu conteúdo de visibilidade por tempo limitado em qualquer plataforma com um link simples."
+      "feature3Description": "Compartilhe seu conteúdo de visibilidade por tempo limitado em qualquer plataforma com um link simples.",
+      "shareViaTitle": "Mensagem de visibilidade por tempo limitado",
+      "shareViaText": "\"{title}\" está esperando por você para visualizá-lo."
     },
     "list": {
       "title": "Mensagens cronometradas",

@@ -630,7 +630,9 @@
       "feature2Title": "Begrenzte Versuche",
       "feature2Description": "Steuern Sie, wie oft Zuschauer versuchen können, auf Ihre zeitlich begrenzte Nachricht zuzugreifen.",
       "feature3Title": "Einfaches Teilen",
-      "feature3Description": "Teilen Sie Ihre Inhalte mit zeitlich begrenzter Sichtbarkeit über einen einfachen Link auf jeder Plattform."
+      "feature3Description": "Teilen Sie Ihre Inhalte mit zeitlich begrenzter Sichtbarkeit über einen einfachen Link auf jeder Plattform.",
+      "shareViaTitle": "Zeitlich begrenzte Sichtbarkeitsnachricht",
+      "shareViaText": "„{title}“ wartet darauf, dass Sie es ansehen."
     },
     "list": {
       "title": "Zeitgesteuerte Nachrichten",

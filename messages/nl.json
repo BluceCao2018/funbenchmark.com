@@ -630,7 +630,9 @@
       "feature2Title": "Beperkte pogingen",
       "feature2Description": "Bepaal hoe vaak kijkers kunnen proberen toegang te krijgen tot uw tijdsbeperkte bericht.",
       "feature3Title": "Eenvoudig delen",
-      "feature3Description": "Deel uw Time Limited Visibility-inhoud op elk platform met een eenvoudige link."
+      "feature3Description": "Deel uw Time Limited Visibility-inhoud op elk platform met een eenvoudige link.",
+      "shareViaTitle": "Bericht over beperkte zichtbaarheid in de tijd",
+      "shareViaText": "\"{title}\" wacht tot u deze kunt bekijken."
     },
     "list": {
       "title": "Getimede berichten",

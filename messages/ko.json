@@ -630,7 +630,9 @@
       "feature2Title": "제한된 시도",
       "feature2Description": "시청자가 시간 제한 메시지에 액세스를 시도할 수 있는 횟수를 제어하세요.",
       "feature3Title": "간편한 공유",
-      "feature3Description": "간단한 링크를 통해 모든 플랫폼에서 Time Limited Visibility 콘텐츠를 공유하세요."
+      "feature3Description": "간단한 링크를 통해 모든 플랫폼에서 Time Limited Visibility 콘텐츠를 공유하세요.",
+      "shareViaTitle": "시간 제한 가시성 메시지",
+      "shareViaText": "\"{title}\"이(가) 귀하의 시청을 기다리고 있습니다."
     },
     "list": {
       "title": "시간 제한 메시지",

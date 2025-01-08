@@ -630,7 +630,9 @@
       "feature2Title": "有限的嘗試",
       "feature2Description": "控制觀看者可以嘗試存取您的限時訊息的次數。",
       "feature3Title": "輕鬆分享",
-      "feature3Description": "透過簡單的連結在任何平台上分享您的限時可見性內容。"
+      "feature3Description": "透過簡單的連結在任何平台上分享您的限時可見性內容。",
+      "shareViaTitle": "限時可見性訊息",
+      "shareViaText": "「{title}」正在等待您查看。"
     },
     "list": {
       "title": "定時訊息",

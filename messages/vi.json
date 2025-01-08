@@ -630,7 +630,9 @@
       "feature2Title": "Nỗ lực hạn chế",
       "feature2Description": "Kiểm soát số lần người xem có thể cố gắng truy cập Tin nhắn có giới hạn thời gian của bạn.",
       "feature3Title": "Chia sẻ dễ dàng",
-      "feature3Description": "Chia sẻ nội dung Hiển thị có giới hạn thời gian của bạn trên mọi nền tảng bằng một liên kết đơn giản."
+      "feature3Description": "Chia sẻ nội dung Hiển thị có giới hạn thời gian của bạn trên mọi nền tảng bằng một liên kết đơn giản.",
+      "shareViaTitle": "Thông báo hiển thị có giới hạn thời gian",
+      "shareViaText": "\"{title}\" đang chờ bạn xem."
     },
     "list": {
       "title": "Tin nhắn hẹn giờ",
