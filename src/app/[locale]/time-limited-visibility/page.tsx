@@ -24,7 +24,7 @@ export default function TimeLimitedVisibilityIntro() {
         <Button 
           size="lg"
           className="bg-blue-500 hover:bg-blue-600 text-white transition-colors duration-200"
-          onClick={() => router.push('/time-limited-visibility/list')}
+          onClick={() => router.push('/time-limited-visibility/create')}
         >
           {t('hero.cta')}
         </Button>
@@ -118,7 +118,7 @@ export default function TimeLimitedVisibilityIntro() {
         <Button 
           size="lg"
           className="bg-blue-500 hover:bg-blue-600 text-white transition-colors duration-200"
-          onClick={() => router.push('/time-limited-visibility/list')}
+          onClick={() => router.push('/time-limited-visibility/create')}
         >
           {t('cta.button')}
         </Button>
