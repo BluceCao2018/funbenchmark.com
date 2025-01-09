@@ -44,6 +44,7 @@ export default function CreateTimedMessage() {
   }
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('File change triggered');
     const files = Array.from(e.target.files || []);
     
     if (messageType === 'VIDEO') {
@@ -66,13 +67,18 @@ export default function CreateTimedMessage() {
 
     // 图片可以选择多个
     if (messageType === 'IMAGE') {
+      console.log('Processing image files:', files);
       const totalFiles = [...selectedFiles, ...files];
       if (totalFiles.length > 9) {
         // 如果总数超过9张，只取前9张
         setSelectedFiles(totalFiles.slice(0, 9));
-        return;
+        const newUrls = totalFiles.slice(0, 9).map(file => URL.createObjectURL(file));
+        setPreviewUrls(newUrls);
+      } else {
+        setSelectedFiles(totalFiles);
+        const newUrls = totalFiles.map(file => URL.createObjectURL(file));
+        setPreviewUrls(newUrls);
       }
-      setSelectedFiles(totalFiles);
       return;
     }
 
@@ -80,41 +86,51 @@ export default function CreateTimedMessage() {
   };
 
   const handleSubmit = async () => {
-    setLoading(true)
+    console.log('Submitting...', { messageType, selectedFiles });
+    setLoading(true);
 
     try {
-      const data = new FormData()
-      data.set('title', formData.title)
-      data.set('messageType', messageType)
-      data.set('visibleDuration', formData.visibleDuration.toString())
-      data.set('maxAttempts', formData.maxAttempts.toString())
-      data.set('maxViewers', formData.maxViewers.toString())
-      data.set('maxVisitors', formData.maxVisitors.toString())
+      const data = new FormData();
+      data.set('title', formData.title);
+      data.set('messageType', messageType);
+      data.set('visibleDuration', formData.visibleDuration.toString());
+      data.set('maxAttempts', formData.maxAttempts.toString());
+      data.set('maxViewers', formData.maxViewers.toString());
+      data.set('maxVisitors', formData.maxVisitors.toString());
 
       if (messageType === 'TEXT') {
-        data.set('content', formData.content)
+        data.set('content', formData.content);
       } else if (messageType === 'IMAGE') {
-        files.forEach((file, index) => {
-          data.append('files', file)
-        })
+        selectedFiles.forEach((file, index) => {
+          data.append('files', file);
+        });
+        console.log('Uploading files:', selectedFiles);
+      } else if (messageType === 'VIDEO' && selectedFiles.length > 0) {
+        data.append('file', selectedFiles[0]);
       }
+
+      // Print FormData contents
+      Array.from(data.entries()).forEach(([key, value]) => {
+        console.log(key, value);
+      });
 
       const response = await fetch('/api/time-limited-visibility', {
         method: 'POST',
         body: data
-      })
+      });
 
-      if (!response.ok) throw new Error('Failed to create message')
+      if (!response.ok) throw new Error('Failed to create message');
       
-      const result = await response.json()
-      setCreatedMessageId(result.id)
-      setStep('share')
+      const result = await response.json();
+      setCreatedMessageId(result.id);
+      setStep('share');
     } catch (error) {
-      toast.error(t('create.error'))
+      console.error('Error submitting:', error);
+      toast.error(t('create.error'));
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const handleShare = async () => {
     const shareUrl = `${window.location.origin}/time-limited-visibility/${createdMessageId}`
@@ -180,14 +196,17 @@ export default function CreateTimedMessage() {
                         type="file"
                         accept="image/*"
                         multiple
-                        onChange={handleFileChange}
-                        className="hidden"
+                        onChange={(e) => {
+                          console.log('File input change detected');
+                          handleFileChange(e);
+                        }}
+                        className="absolute inset-0 opacity-0 w-full h-full cursor-pointer z-10"
                         id="image-upload"
                       />
                       <label
                         htmlFor="image-upload"
                         className="absolute inset-0 rounded-lg border-2 border-dashed
-                                 flex items-center justify-center cursor-pointer
+                                 flex items-center justify-center
                                  hover:border-blue-500 transition-colors bg-gray-50"
                       >
                         <div className="text-4xl text-gray-400">+</div>
@@ -329,8 +348,21 @@ export default function CreateTimedMessage() {
                 >
                   {t('create.previous')}
                 </Button>
-                <Button onClick={handleSubmit} disabled={loading}>
-                  {loading ? t('create.creating') : t('create.submit')}
+                <Button 
+                  onClick={handleSubmit} 
+                  disabled={loading}
+                  className="relative"
+                >
+                  {loading ? (
+                    <>
+                      <span className="opacity-0">{t('create.submit')}</span>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      </div>
+                    </>
+                  ) : (
+                    t('create.submit')
+                  )}
                 </Button>
               </div>
             </div>
