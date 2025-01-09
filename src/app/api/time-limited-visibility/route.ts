@@ -15,13 +15,20 @@ export async function POST(req: Request) {
     const content = formData.get('content') as string;
     const visibleDuration = parseInt(formData.get('visibleDuration') as string);
     const maxAttempts = parseInt(formData.get('maxAttempts') as string);
-    const file = formData.get('file') as File;
     const maxViewers = parseInt(formData.get('maxViewers') as string) || 1;
     const maxVisitors = parseInt(formData.get('maxVisitors') as string) || 1;
 
     let mediaUrl = '';
-    if (file && (messageType === 'IMAGE' || messageType === 'VIDEO')) {
-      mediaUrl = await uploadMedia(file, 'default');
+    if (messageType === 'IMAGE') {
+      const files = formData.getAll('files');
+      const uploadPromises = files.map(file => uploadMedia(file as File, 'default'));
+      const urls = await Promise.all(uploadPromises);
+      mediaUrl = urls.join(',');
+    } else if (messageType === 'VIDEO') {
+      const file = formData.get('file') as File;
+      if (file) {
+        mediaUrl = await uploadMedia(file, 'default');
+      }
     }
 
     const data = await getMessagesData();

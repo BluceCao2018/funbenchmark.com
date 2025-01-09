@@ -7,10 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { FaFileAlt, FaImage, FaVideo, FaClock, FaEye, FaShare } from 'react-icons/fa'
+import { FaFileAlt, FaImage, FaVideo, FaClock, FaEye, FaShare, FaTimes } from 'react-icons/fa'
 import { toast } from 'sonner'
 import { cn } from "@/lib/utils"
 import Image from 'next/image'
+import { ImageGrid } from "@/components/ui/image-grid"
 
 type MessageType = 'TEXT' | 'IMAGE' | 'VIDEO'
 type Step = 'content' | 'settings' | 'limits' | 'share'
@@ -32,6 +33,51 @@ export default function CreateTimedMessage() {
   })
   const [loading, setLoading] = useState(false)
   const [createdMessageId, setCreatedMessageId] = useState<string | null>(null)
+  const [files, setFiles] = useState<File[]>([])
+  const [previewUrls, setPreviewUrls] = useState<string[]>([])
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([])
+
+  const removeImage = (index: number) => {
+    URL.revokeObjectURL(previewUrls[index])
+    setPreviewUrls(prev => prev.filter((_, i) => i !== index))
+    setFiles(prev => prev.filter((_, i) => i !== index))
+  }
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    
+    if (messageType === 'VIDEO') {
+      if (files.length > 0) {
+        const file = files[0];
+        // 检查文件类型
+        if (!file.type.startsWith('video/')) {
+          alert('Please upload a valid video file');
+          return;
+        }
+        // 检查文件大小（例如：100MB限制）
+        if (file.size > 100 * 1024 * 1024) {
+          alert('Video file size should be less than 100MB');
+          return;
+        }
+        setSelectedFiles([file]);
+      }
+      return;
+    }
+
+    // 图片可以选择多个
+    if (messageType === 'IMAGE') {
+      const totalFiles = [...selectedFiles, ...files];
+      if (totalFiles.length > 9) {
+        // 如果总数超过9张，只取前9张
+        setSelectedFiles(totalFiles.slice(0, 9));
+        return;
+      }
+      setSelectedFiles(totalFiles);
+      return;
+    }
+
+    setSelectedFiles(files);
+  };
 
   const handleSubmit = async () => {
     setLoading(true)
@@ -47,8 +93,10 @@ export default function CreateTimedMessage() {
 
       if (messageType === 'TEXT') {
         data.set('content', formData.content)
-      } else if (file) {
-        data.set('file', file)
+      } else if (messageType === 'IMAGE') {
+        files.forEach((file, index) => {
+          data.append('files', file)
+        })
       }
 
       const response = await fetch('/api/time-limited-visibility', {
@@ -108,13 +156,87 @@ export default function CreateTimedMessage() {
                   placeholder={t('create.contentPlaceholder')}
                   required
                 />
+              ) : messageType === 'IMAGE' ? (
+                <div className="grid grid-cols-3 gap-4 w-full">
+                  {previewUrls.map((url, index) => (
+                    <div key={url} className="relative aspect-square w-full">
+                      <img
+                        src={url}
+                        alt={`Image ${index + 1}`}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <button
+                        onClick={() => removeImage(index)}
+                        className="absolute top-2 right-2 p-1.5 bg-black/50 hover:bg-black/70 
+                                 rounded-full text-white transition-colors duration-200 z-10"
+                      >
+                        <FaTimes size={12} />
+                      </button>
+                    </div>
+                  ))}
+                  {previewUrls.length < 9 && (
+                    <div className="relative aspect-square w-full">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={handleFileChange}
+                        className="hidden"
+                        id="image-upload"
+                      />
+                      <label
+                        htmlFor="image-upload"
+                        className="absolute inset-0 rounded-lg border-2 border-dashed
+                                 flex items-center justify-center cursor-pointer
+                                 hover:border-blue-500 transition-colors bg-gray-50"
+                      >
+                        <div className="text-4xl text-gray-400">+</div>
+                      </label>
+                    </div>
+                  )}
+                </div>
               ) : (
-                <input
-                  type="file"
-                  accept={messageType === 'IMAGE' ? 'image/*' : 'video/*'}
-                  onChange={(e) => setFile(e.target.files?.[0] || null)}
-                  required
-                />
+                <div className="mt-4">
+                  <div className="relative aspect-video w-full">
+                    <input
+                      type="file"
+                      accept="video/mp4,video/quicktime,video/x-m4v"
+                      onChange={handleFileChange}
+                      className="hidden"
+                      id="video-upload"
+                    />
+                    {selectedFiles.length > 0 ? (
+                      <div className="w-full h-full relative">
+                        <video
+                          key={URL.createObjectURL(selectedFiles[0])}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="w-full h-full rounded-lg object-cover"
+                        >
+                          <source src={URL.createObjectURL(selectedFiles[0])} type={selectedFiles[0].type} />
+                          Your browser does not support the video tag.
+                        </video>
+                        <button
+                          onClick={() => setSelectedFiles([])}
+                          className="absolute top-2 right-2 p-1.5 bg-black/50 hover:bg-black/70 
+                                   rounded-full text-white transition-colors duration-200 z-10"
+                        >
+                          <FaTimes size={12} />
+                        </button>
+                      </div>
+                    ) : (
+                      <label
+                        htmlFor="video-upload"
+                        className="absolute inset-0 rounded-lg border-2 border-dashed
+                                 flex items-center justify-center cursor-pointer
+                                 hover:border-blue-500 transition-colors bg-gray-50"
+                      >
+                        <div className="text-4xl text-gray-400">+</div>
+                      </label>
+                    )}
+                  </div>
+                </div>
               )}
               <div className="flex justify-end space-x-2">
                 <Button onClick={() => setStep('settings')}>
@@ -293,7 +415,7 @@ export default function CreateTimedMessage() {
         <div className="grid grid-cols-3 gap-12 mt-12">
           {[
             { type: 'TEXT', icon: FaFileAlt, label: t('create.typeText') },
-            { type: 'IMAGE', icon: FaImage, label: t('create.typeImage') , disabled: true},
+            { type: 'IMAGE', icon: FaImage, label: t('create.typeImage') , disabled: false},
             { type: 'VIDEO', icon: FaVideo, label: t('create.typeVideo') , disabled: true}
           ].map(({ type, icon: Icon, label, disabled }) => (
             <button

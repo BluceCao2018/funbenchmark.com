@@ -9,6 +9,8 @@ const s3 = new S3Client({
   },
 });
 
+const MEDIA_BASE_URL = `https://cdn.funbenchmark.com`;
+
 export interface UserAttempt {
   attempts: number;
   reactionTime?: number;
@@ -59,15 +61,21 @@ export async function saveMessagesData(data: { messages: TimedMessage[] }) {
 }
 
 export async function uploadMedia(file: File, userId: string): Promise<string> {
-  const fileBuffer = await file.arrayBuffer();
-  const key = `media/${userId}/${Date.now()}-${file.name}`;
-  
-  await s3.send(new PutObjectCommand({
-    Bucket: process.env.R2_BUCKET_NAME,
-    Key: key,
-    Body: Buffer.from(fileBuffer),
-    ContentType: file.type,
-  }));
+  try {
+    const fileName = `${Date.now()}-${file.name}`;
+    const path = `media/${userId}/${fileName}`;
+    
+    await s3.send(new PutObjectCommand({
+      Bucket: process.env.R2_BUCKET_NAME,
+      Key: path,
+      Body: Buffer.from(await file.arrayBuffer()),
+      ContentType: file.type,
+      ACL: 'public-read',
+    }));
 
-  return `${process.env.R2_PUBLIC_URL}/${key}`;
+    return `${MEDIA_BASE_URL}/${path}`;
+  } catch (error) {
+    console.error('Error uploading media:', error);
+    throw error;
+  }
 } 

@@ -55,6 +55,8 @@ export default function ViewTimedMessage() {
   const [showIcon, setShowIcon] = useState(true)
   const [visitorId, setVisitorId] = useState<string>('');
   const [isVisitorIdReady, setIsVisitorIdReady] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const timeoutTimerRef = useRef<NodeJS.Timeout | null>(null)
@@ -254,25 +256,204 @@ export default function ViewTimedMessage() {
           </div>
         )
       case 'IMAGE':
+        const imageUrls = message.mediaUrl.split(',');
+
+        const handlePrevImage = (e: React.MouseEvent) => {
+          e.stopPropagation();
+          setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : imageUrls.length - 1));
+        };
+
+        const handleNextImage = (e: React.MouseEvent) => {
+          e.stopPropagation();
+          setCurrentImageIndex((prev) => (prev < imageUrls.length - 1 ? prev + 1 : 0));
+        };
+
         return (
-          <div className="relative aspect-video rounded-lg overflow-hidden shadow-sm">
-            <Image
-              src={message.mediaUrl}
-              alt={message.title}
-              fill
-              className="object-contain"
-            />
-          </div>
+          <>
+            {/* 正常显示的图片 */}
+            <div className="relative w-full h-full max-h-[calc(100vh-300px)] min-h-[200px] bg-black/5 rounded-lg">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img
+                  src={imageUrls[currentImageIndex]}
+                  alt={`${message.title} - Image ${currentImageIndex + 1}`}
+                  className="max-w-full max-h-full object-contain rounded-lg cursor-zoom-in"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsFullscreen(true);
+                  }}
+                />
+              </div>
+              
+              {/* 导航按钮 */}
+              {imageUrls.length > 1 && (
+                <>
+                  <button
+                    onClick={handlePrevImage}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 
+                             bg-black/50 hover:bg-black/70 text-white p-2 rounded-full
+                             transition-colors duration-200 z-10
+                             md:p-3"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         className="h-4 w-4 md:h-6 md:w-6" 
+                         fill="none" 
+                         viewBox="0 0 24 24" 
+                         stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={handleNextImage}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 
+                             bg-black/50 hover:bg-black/70 text-white p-2 rounded-full
+                             transition-colors duration-200 z-10
+                             md:p-3"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         className="h-4 w-4 md:h-6 md:w-6" 
+                         fill="none" 
+                         viewBox="0 0 24 24" 
+                         stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </>
+              )}
+
+              {/* 图片计数器 */}
+              {imageUrls.length > 1 && (
+                <div className="absolute bottom-2 right-2 bg-black/50 text-white 
+                              px-2 py-1 rounded-md text-xs md:text-sm z-10">
+                  {currentImageIndex + 1} / {imageUrls.length}
+                </div>
+              )}
+            </div>
+
+            {/* 全屏预览模态框 */}
+            {isFullscreen && (
+              <div 
+                className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+                onClick={() => setIsFullscreen(false)}
+              >
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <img
+                    src={imageUrls[currentImageIndex]}
+                    alt={`${message.title} - Image ${currentImageIndex + 1}`}
+                    className="max-w-[90vw] max-h-[90vh] object-contain"
+                  />
+                  
+                  {/* 全屏模式下的导航按钮 */}
+                  {imageUrls.length > 1 && (
+                    <>
+                      <button
+                        onClick={handlePrevImage}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 
+                                 bg-black/50 hover:bg-black/70 text-white p-4 rounded-full
+                                 transition-colors duration-200"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
+                      <button
+                        onClick={handleNextImage}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 
+                                 bg-black/50 hover:bg-black/70 text-white p-4 rounded-full
+                                 transition-colors duration-200"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </>
+                  )}
+
+                  {/* 关闭按钮 */}
+                  <button
+                    onClick={() => setIsFullscreen(false)}
+                    className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 
+                             text-white p-2 rounded-full transition-colors duration-200"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+
+                  {/* 全屏模式下的图片计数器 */}
+                  {imageUrls.length > 1 && (
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 
+                                  bg-black/50 text-white px-4 py-2 rounded-full text-sm">
+                      {currentImageIndex + 1} / {imageUrls.length}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </>
         )
       case 'VIDEO':
         return (
-          <div className="rounded-lg overflow-hidden shadow-sm">
-            <video
-              src={message.mediaUrl}
-              controls
-              className="w-full"
-            />
-          </div>
+          <>
+            {/* 正常显示的视频 */}
+            <div className="relative w-full h-full max-h-[calc(100vh-300px)] min-h-[200px] bg-black/5 rounded-lg">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <video
+                  src={message.mediaUrl}
+                  controls
+                  controlsList="nodownload" // 禁止下载
+                  playsInline // 移动端内联播放
+                  preload="metadata" // 预加载元数据
+                  className="max-w-full max-h-full rounded-lg cursor-zoom-in"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsFullscreen(true);
+                  }}
+                >
+                  <source src={message.mediaUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            {/* 全屏预览模态框 */}
+            {isFullscreen && (
+              <div 
+                className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+                onClick={() => setIsFullscreen(false)}
+              >
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <video
+                    src={message.mediaUrl}
+                    controls
+                    autoPlay
+                    controlsList="nodownload"
+                    playsInline
+                    preload="auto"
+                    className="max-w-[90vw] max-h-[90vh] rounded-lg"
+                  >
+                    <source src={message.mediaUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  {/* 关闭按钮 */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsFullscreen(false);
+                    }}
+                    className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 
+                             text-white p-2 rounded-full transition-colors duration-200"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
         )
       default:
         return null
