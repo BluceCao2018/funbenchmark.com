@@ -2,9 +2,14 @@ import {getTranslations, getLocale} from 'next-intl/server';
 import { ToolsPage } from '@/components/ToolsList'
 import { Breadcrumb, BreadcrumbLink, BreadcrumbItem, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }: { 
+  params: { 
+    locale: string 
+  } 
+}) {
   const t = await getTranslations('timedMessage.create');
   const w = await getTranslations('website');
+  const imageSuffix = params.locale === 'zh' ? '-zh' : '';
   return {
     title: t("meta_title"),
     description: t("meta_description"),
@@ -16,7 +21,7 @@ export async function generateMetadata() {
       title: t("meta_title"),
       description: t("meta_description"),
       site: '@BluceC56570',
-      images: `${w("domain")}/twitter/time-limited-visibility.png`,
+      images: `${w("domain")}/twitter/time-limited-visibility${imageSuffix}.png`,
     },
     openGraph: {
       type: 'article',
