@@ -129,6 +129,42 @@
       "share": "공유하다",
       "title": "반응시간 테스트 결과",
       "text": "내 반응 시간은 {time}ms이며 #{rank} 등급입니다! 와서 시험해 보세요!"
+    },
+    "introduce": {
+      "averageReactionTitle": "평균 반응 시간",
+      "averageReactionDesc": "인간의 평균 반응 시간은 연령대에 따라 다릅니다.",
+      "definitionTitle": "반응 시간의 정의",
+      "definitionDesc": "반응 시간은 자극 제시와 반응 시작 사이의 간격입니다.",
+      "meaningTitle": "반응 시간 의미",
+      "meaningDesc": "반응 시간은 개인이 자극을 얼마나 빨리 처리하고 반응할 수 있는지를 반영하는 인지 및 운동 기능의 중요한 척도입니다.",
+      "professionalTitle": "전문적인 요구 사항",
+      "professionalDesc": "직업마다 다양한 수준의 반응 시간 성능이 필요합니다.",
+      "animalTitle": "동물 반응 시간",
+      "animalDesc": "다양한 동물들은 생존 요구에 따라 다양한 반응 시간을 발전시켜 왔습니다.",
+      "AverageReactionTime": "평균 반응 시간",
+      "reactionTimeAverage": "인간이 자극에 반응하는 데 걸리는 일반적인 시간은 일반적으로 150~300밀리초입니다."
+    },
+    "professionals": {
+      "athlete": "운동선수",
+      "raceDriver": "경주용 자동차 운전자",
+      "pilot": "전투기 조종사",
+      "surgeon": "외과의사",
+      "esportsPlayer": "E-스포츠 선수",
+      "airTrafficController": "항공 교통 관제사",
+      "military": "병원",
+      "boxer": "프로 복서",
+      "tableTennisPlayer": "탁구 선수"
+    },
+    "animals": {
+      "fly": "하우스 플라이",
+      "dog": "개",
+      "cat": "고양이",
+      "cheetah": "치타",
+      "snake": "뱀",
+      "eagle": "이글스",
+      "dragonfly": "잠자리",
+      "squirrel": "다람쥐",
+      "rabbit": "토끼"
     }
   },
   "sequence": {

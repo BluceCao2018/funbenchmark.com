@@ -129,6 +129,42 @@
       "share": "Aktie",
       "title": "Ergebnis des Reaktionszeittests",
       "text": "Meine Reaktionszeit beträgt {time}ms, Rang #{rank}! Kommen Sie und probieren Sie es aus!"
+    },
+    "introduce": {
+      "averageReactionTitle": "Durchschnittliche Reaktionszeit",
+      "averageReactionDesc": "Die durchschnittliche Reaktionszeit des Menschen variiert je nach Altersgruppe:",
+      "definitionTitle": "Definition der Reaktionszeit",
+      "definitionDesc": "Die Reaktionszeit ist die Zeitspanne zwischen der Präsentation eines Reizes und dem Einleiten einer Reaktion.",
+      "meaningTitle": "Bedeutung der Reaktionszeit",
+      "meaningDesc": "Die Reaktionszeit ist ein entscheidendes Maß für die kognitive und motorische Funktion und spiegelt wider, wie schnell eine Person Reize verarbeiten und auf sie reagieren kann.",
+      "professionalTitle": "Berufliche Anforderungen",
+      "professionalDesc": "Verschiedene Berufe erfordern unterschiedliche Reaktionszeiten:",
+      "animalTitle": "Reaktionszeiten von Tieren",
+      "animalDesc": "Verschiedene Tiere haben basierend auf ihren Überlebensbedürfnissen unterschiedliche Reaktionszeiten entwickelt:",
+      "AverageReactionTime": "Durchschnittliche Reaktionszeit",
+      "reactionTimeAverage": "Die typische Zeit, die ein Mensch benötigt, um auf einen Reiz zu reagieren, liegt normalerweise zwischen 150 und 300 Millisekunden."
+    },
+    "professionals": {
+      "athlete": "Sportler",
+      "raceDriver": "Rennfahrer",
+      "pilot": "Kampfpiloten",
+      "surgeon": "Chirurgen",
+      "esportsPlayer": "E-Sport-Spieler",
+      "airTrafficController": "Fluglotsen",
+      "military": "Militärpersonal",
+      "boxer": "Professionelle Boxer",
+      "tableTennisPlayer": "Tischtennisspieler"
+    },
+    "animals": {
+      "fly": "Stubenfliege",
+      "dog": "Hunde",
+      "cat": "Katzen",
+      "cheetah": "Gepard",
+      "snake": "Schlangen",
+      "eagle": "Adler",
+      "dragonfly": "Libelle",
+      "squirrel": "Eichhörnchen",
+      "rabbit": "Kaninchen"
     }
   },
   "sequence": {

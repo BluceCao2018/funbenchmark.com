@@ -129,6 +129,42 @@
       "share": "Partager",
       "title": "Résultat du test de temps de réaction",
       "text": "Mon temps de réaction est de {time} ms, classé #{rank} ! Venez l'essayer!"
+    },
+    "introduce": {
+      "averageReactionTitle": "Temps de réaction moyen",
+      "averageReactionDesc": "Le temps de réaction moyen des humains varie selon le groupe d’âge :",
+      "definitionTitle": "Définition du temps de réaction",
+      "definitionDesc": "Le temps de réaction est l'intervalle entre la présentation d'un stimulus et le déclenchement d'une réponse.",
+      "meaningTitle": "Signification du temps de réaction",
+      "meaningDesc": "Le temps de réaction est une mesure cruciale de la fonction cognitive et motrice, reflétant la rapidité avec laquelle un individu peut traiter et répondre aux stimuli.",
+      "professionalTitle": "Exigences professionnelles",
+      "professionalDesc": "Différentes professions nécessitent différents niveaux de performance en matière de temps de réaction :",
+      "animalTitle": "Temps de réaction des animaux",
+      "animalDesc": "Différents animaux ont développé différents temps de réaction en fonction de leurs besoins de survie :",
+      "AverageReactionTime": "Temps de réaction moyen",
+      "reactionTimeAverage": "Le temps typique qu'il faut à un humain pour répondre à un stimulus, se situe généralement entre 150 et 300 millisecondes."
+    },
+    "professionals": {
+      "athlete": "Athlètes",
+      "raceDriver": "Pilotes de voitures de course",
+      "pilot": "Pilotes de chasse",
+      "surgeon": "Chirurgiens",
+      "esportsPlayer": "Joueurs de sports électroniques",
+      "airTrafficController": "Contrôleurs de la circulation aérienne",
+      "military": "Personnel militaire",
+      "boxer": "Boxeurs professionnels",
+      "tableTennisPlayer": "Joueurs de tennis de table"
+    },
+    "animals": {
+      "fly": "Mouche domestique",
+      "dog": "Chiens",
+      "cat": "Chats",
+      "cheetah": "Guépard",
+      "snake": "Serpents",
+      "eagle": "Aigles",
+      "dragonfly": "Libellule",
+      "squirrel": "Écureuils",
+      "rabbit": "Lapins"
     }
   },
   "sequence": {

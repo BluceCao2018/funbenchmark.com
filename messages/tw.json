@@ -129,6 +129,42 @@
       "share": "分享",
       "title": "反應時間測試結果",
       "text": "我的反應時間是{time}ms，排名#{rank}！快來嘗試一下吧！"
+    },
+    "introduce": {
+      "averageReactionTitle": "平均反應時間",
+      "averageReactionDesc": "人類的平均反應時間因年齡層而異：",
+      "definitionTitle": "反應時間的定義",
+      "definitionDesc": "反應時間是指呈現刺激和開始反應之間的時間間隔。",
+      "meaningTitle": "反應時間 意義",
+      "meaningDesc": "反應時間是認知和運動功能的重要衡量標準，反映了個別處理和反應刺激的速度。",
+      "professionalTitle": "專業要求",
+      "professionalDesc": "不同的職業需要不同程度的反應時間表現：",
+      "animalTitle": "動物反應時間",
+      "animalDesc": "不同的動物根據生存需求進化出了不同的反應時間：",
+      "AverageReactionTime": "平均反應時間",
+      "reactionTimeAverage": "人類對刺激作出反應所需的典型時間，通常在 150-300 毫秒之間。"
+    },
+    "professionals": {
+      "athlete": "運動員",
+      "raceDriver": "賽車手",
+      "pilot": "戰鬥機飛行員",
+      "surgeon": "外科醫生",
+      "esportsPlayer": "電競選手",
+      "airTrafficController": "空中交通管制員",
+      "military": "軍事人員",
+      "boxer": "職業拳擊手",
+      "tableTennisPlayer": "乒乓球運動員"
+    },
+    "animals": {
+      "fly": "家蠅",
+      "dog": "狗",
+      "cat": "貓",
+      "cheetah": "獵豹",
+      "snake": "蛇",
+      "eagle": "老鷹隊",
+      "dragonfly": "蜻蜓",
+      "squirrel": "松鼠",
+      "rabbit": "兔子"
     }
   },
   "sequence": {

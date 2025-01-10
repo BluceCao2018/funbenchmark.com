@@ -142,6 +142,42 @@
       "share": "Share",
       "title": "Reaction Time Test Result",
       "text": "My reaction time is {time}ms, ranked #{rank}! Come and try it!"
+    },
+    "introduce": {
+      "averageReactionTitle": "Average Reaction Time",
+      "averageReactionDesc": "The average reaction time for humans varies by age group:",
+      "definitionTitle": "Definition of Reaction Time",
+      "definitionDesc": "Reaction time is the interval between the presentation of a stimulus and the initiation of a response.",
+      "meaningTitle": "Reaction Time Meaning",
+      "meaningDesc": "Reaction time is a crucial measure of cognitive and motor function, reflecting how quickly an individual can process and respond to stimuli.",
+      "professionalTitle": "Professional Requirements",
+      "professionalDesc": "Different professions require varying levels of reaction time performance:",
+      "animalTitle": "Animal Reaction Times",
+      "animalDesc": "Different animals have evolved various reaction times based on their survival needs:",
+      "AverageReactionTime": "Average Reaction Time",
+      "reactionTimeAverage": "The typical time it takes for a human to respond to a stimulus, usually ranging between 150-300 milliseconds."
+    },
+    "professionals": {
+      "athlete": "Athletes",
+      "raceDriver": "Race Car Drivers",
+      "pilot": "Fighter Pilots",
+      "surgeon": "Surgeons",
+      "esportsPlayer": "E-Sports Players",
+      "airTrafficController": "Air Traffic Controllers",
+      "military": "Military Personnel",
+      "boxer": "Professional Boxers",
+      "tableTennisPlayer": "Table Tennis Players"
+    },
+    "animals": {
+      "fly": "House Fly",
+      "dog": "Dogs",
+      "cat": "Cats",
+      "cheetah": "Cheetah",
+      "snake": "Snakes",
+      "eagle": "Eagles",
+      "dragonfly": "Dragonfly",
+      "squirrel": "Squirrels",
+      "rabbit": "Rabbits"
     }
   },
   "sequence": {

@@ -129,6 +129,42 @@
       "share": "Deel",
       "title": "Reactietijdtestresultaat",
       "text": "Mijn reactietijd is {time} ms, gerangschikt op #{rank}! Kom en probeer het!"
+    },
+    "introduce": {
+      "averageReactionTitle": "Gemiddelde reactietijd",
+      "averageReactionDesc": "De gemiddelde reactietijd voor mensen varieert per leeftijdsgroep:",
+      "definitionTitle": "Definitie van reactietijd",
+      "definitionDesc": "Reactietijd is het interval tussen de presentatie van een stimulus en het initiëren van een reactie.",
+      "meaningTitle": "Reactietijd Betekenis",
+      "meaningDesc": "Reactietijd is een cruciale maatstaf voor de cognitieve en motorische functie en weerspiegelt hoe snel een individu prikkels kan verwerken en erop kan reageren.",
+      "professionalTitle": "Professionele vereisten",
+      "professionalDesc": "Verschillende beroepen vereisen verschillende niveaus van reactietijdprestaties:",
+      "animalTitle": "Reactietijden van dieren",
+      "animalDesc": "Verschillende dieren hebben verschillende reactietijden ontwikkeld op basis van hun overlevingsbehoeften:",
+      "AverageReactionTime": "Gemiddelde reactietijd",
+      "reactionTimeAverage": "De typische tijd die een mens nodig heeft om op een stimulus te reageren, varieert gewoonlijk tussen 150 en 300 milliseconden."
+    },
+    "professionals": {
+      "athlete": "Atleten",
+      "raceDriver": "Autocoureurs",
+      "pilot": "Gevechtspiloten",
+      "surgeon": "Chirurgen",
+      "esportsPlayer": "E-Sports-spelers",
+      "airTrafficController": "Luchtverkeersleiders",
+      "military": "Militair personeel",
+      "boxer": "Professionele boksers",
+      "tableTennisPlayer": "Tafeltennisspelers"
+    },
+    "animals": {
+      "fly": "Huis vlieg",
+      "dog": "Honden",
+      "cat": "Katten",
+      "cheetah": "Cheetah",
+      "snake": "Slangen",
+      "eagle": "Adelaars",
+      "dragonfly": "Libel",
+      "squirrel": "Eekhoorns",
+      "rabbit": "Konijnen"
     }
   },
   "sequence": {

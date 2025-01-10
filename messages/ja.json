@@ -129,6 +129,42 @@
       "share": "共有",
       "title": "反応時間テスト結果",
       "text": "私の反応時間は {time} ミリ秒、ランクは #{rank} です!ぜひ試してみてください！"
+    },
+    "introduce": {
+      "averageReactionTitle": "平均反応時間",
+      "averageReactionDesc": "人間の平均反応時間は年齢層によって異なります。",
+      "definitionTitle": "反応時間の定義",
+      "definitionDesc": "反応時間は、刺激の提示から反応の開始までの間隔です。",
+      "meaningTitle": "反応時間の意味",
+      "meaningDesc": "反応時間は認知機能と運動機能の重要な尺度であり、個人がどれだけ早く刺激を処理して反応できるかを反映します。",
+      "professionalTitle": "専門的な要件",
+      "professionalDesc": "職業が異なれば、要求される反応時間のパフォーマンスも異なります。",
+      "animalTitle": "動物の反応時間",
+      "animalDesc": "さまざまな動物が、生存ニーズに基づいてさまざまな反応時間を進化させてきました。",
+      "AverageReactionTime": "平均反応時間",
+      "reactionTimeAverage": "人間が刺激に反応するまでにかかる一般的な時間は、通常 150 ～ 300 ミリ秒の範囲です。"
+    },
+    "professionals": {
+      "athlete": "アスリート",
+      "raceDriver": "レースカードライバー",
+      "pilot": "戦闘機パイロット",
+      "surgeon": "外科医",
+      "esportsPlayer": "eスポーツプレイヤー",
+      "airTrafficController": "航空管制官",
+      "military": "軍人",
+      "boxer": "プロボクサー",
+      "tableTennisPlayer": "卓球選手"
+    },
+    "animals": {
+      "fly": "イエバエ",
+      "dog": "犬",
+      "cat": "猫",
+      "cheetah": "チーター",
+      "snake": "ヘビ",
+      "eagle": "イーグルス",
+      "dragonfly": "トンボ",
+      "squirrel": "リス",
+      "rabbit": "ウサギ"
     }
   },
   "sequence": {

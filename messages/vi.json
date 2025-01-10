@@ -129,6 +129,42 @@
       "share": "Chia sẻ",
       "title": "Kết quả kiểm tra thời gian phản ứng",
       "text": "Thời gian phản ứng của tôi là {time}ms, xếp hạng #{rank}! Hãy đến và thử nó!"
+    },
+    "introduce": {
+      "averageReactionTitle": "Thời gian phản ứng trung bình",
+      "averageReactionDesc": "Thời gian phản ứng trung bình của con người thay đổi theo nhóm tuổi:",
+      "definitionTitle": "Định nghĩa thời gian phản ứng",
+      "definitionDesc": "Thời gian phản ứng là khoảng thời gian giữa lúc xuất hiện kích thích và lúc bắt đầu phản ứng.",
+      "meaningTitle": "Ý nghĩa thời gian phản ứng",
+      "meaningDesc": "Thời gian phản ứng là thước đo quan trọng của chức năng nhận thức và vận động, phản ánh tốc độ một cá nhân có thể xử lý và phản ứng với các kích thích.",
+      "professionalTitle": "Yêu cầu chuyên môn",
+      "professionalDesc": "Các ngành nghề khác nhau đòi hỏi mức độ hiệu suất thời gian phản ứng khác nhau:",
+      "animalTitle": "Thời gian phản ứng của động vật",
+      "animalDesc": "Các loài động vật khác nhau đã tiến hóa theo thời gian phản ứng khác nhau dựa trên nhu cầu sinh tồn của chúng:",
+      "AverageReactionTime": "Thời gian phản ứng trung bình",
+      "reactionTimeAverage": "Thời gian thông thường để con người phản ứng với kích thích, thường dao động trong khoảng 150-300 mili giây."
+    },
+    "professionals": {
+      "athlete": "vận động viên",
+      "raceDriver": "Người lái xe đua",
+      "pilot": "Phi công chiến đấu",
+      "surgeon": "bác sĩ phẫu thuật",
+      "esportsPlayer": "Người chơi thể thao điện tử",
+      "airTrafficController": "Kiểm soát viên không lưu",
+      "military": "Quân nhân",
+      "boxer": "Võ sĩ chuyên nghiệp",
+      "tableTennisPlayer": "Người chơi bóng bàn"
+    },
+    "animals": {
+      "fly": "Nhà bay",
+      "dog": "chó",
+      "cat": "Mèo",
+      "cheetah": "báo gêpa",
+      "snake": "Rắn",
+      "eagle": "đại bàng",
+      "dragonfly": "Chuồn chuồn",
+      "squirrel": "Sóc",
+      "rabbit": "Thỏ"
     }
   },
   "sequence": {

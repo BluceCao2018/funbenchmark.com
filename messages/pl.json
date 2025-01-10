@@ -129,6 +129,42 @@
       "share": "Udział",
       "title": "Wynik testu czasu reakcji",
       "text": "Mój czas reakcji to {time} ms, miejsce w rankingu #{rank}! Przyjdź i spróbuj!"
+    },
+    "introduce": {
+      "averageReactionTitle": "Średni czas reakcji",
+      "averageReactionDesc": "Średni czas reakcji u ludzi różni się w zależności od grupy wiekowej:",
+      "definitionTitle": "Definicja czasu reakcji",
+      "definitionDesc": "Czas reakcji to odstęp między prezentacją bodźca a zapoczątkowaniem reakcji.",
+      "meaningTitle": "Znaczenie czasu reakcji",
+      "meaningDesc": "Czas reakcji jest kluczową miarą funkcji poznawczych i motorycznych, odzwierciedlającą szybkość, z jaką dana osoba może przetwarzać bodźce i reagować na nie.",
+      "professionalTitle": "Wymagania zawodowe",
+      "professionalDesc": "Różne zawody wymagają różnych poziomów wydajności czasu reakcji:",
+      "animalTitle": "Czasy reakcji zwierząt",
+      "animalDesc": "Różne zwierzęta wyewoluowały różne czasy reakcji w zależności od ich potrzeb przetrwania:",
+      "AverageReactionTime": "Średni czas reakcji",
+      "reactionTimeAverage": "Typowy czas potrzebny człowiekowi na reakcję na bodziec, zwykle mieszczący się w przedziale 150–300 milisekund."
+    },
+    "professionals": {
+      "athlete": "Sportowcy",
+      "raceDriver": "Kierowcy samochodów wyścigowych",
+      "pilot": "Piloci myśliwców",
+      "surgeon": "Chirurdzy",
+      "esportsPlayer": "Gracze e-sportu",
+      "airTrafficController": "Kontrolerzy ruchu lotniczego",
+      "military": "Personel wojskowy",
+      "boxer": "Zawodowi bokserzy",
+      "tableTennisPlayer": "Gracze w tenisa stołowego"
+    },
+    "animals": {
+      "fly": "Domowa mucha",
+      "dog": "Psy",
+      "cat": "Koty",
+      "cheetah": "Gepard",
+      "snake": "Węże",
+      "eagle": "Orły",
+      "dragonfly": "Ważka",
+      "squirrel": "Wiewiórki",
+      "rabbit": "Króliki"
     }
   },
   "sequence": {

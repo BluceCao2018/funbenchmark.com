@@ -129,6 +129,42 @@
       "share": "Compartir",
       "title": "Resultado de la prueba de tiempo de reacción",
       "text": "¡Mi tiempo de reacción es {time}ms, clasificado #{rank}! ¡Ven y pruébalo!"
+    },
+    "introduce": {
+      "averageReactionTitle": "Tiempo medio de reacción",
+      "averageReactionDesc": "El tiempo medio de reacción de los humanos varía según el grupo de edad:",
+      "definitionTitle": "Definición de tiempo de reacción",
+      "definitionDesc": "El tiempo de reacción es el intervalo entre la presentación de un estímulo y el inicio de una respuesta.",
+      "meaningTitle": "Significado del tiempo de reacción",
+      "meaningDesc": "El tiempo de reacción es una medida crucial de la función cognitiva y motora, que refleja la rapidez con la que un individuo puede procesar y responder a los estímulos.",
+      "professionalTitle": "Requisitos profesionales",
+      "professionalDesc": "Las diferentes profesiones requieren distintos niveles de rendimiento del tiempo de reacción:",
+      "animalTitle": "Tiempos de reacción de los animales",
+      "animalDesc": "Los diferentes animales han desarrollado distintos tiempos de reacción según sus necesidades de supervivencia:",
+      "AverageReactionTime": "Tiempo medio de reacción",
+      "reactionTimeAverage": "El tiempo típico que tarda un ser humano en responder a un estímulo, que suele oscilar entre 150 y 300 milisegundos."
+    },
+    "professionals": {
+      "athlete": "Atletas",
+      "raceDriver": "Pilotos de coches de carreras",
+      "pilot": "Pilotos de combate",
+      "surgeon": "cirujanos",
+      "esportsPlayer": "Jugadores de deportes electrónicos",
+      "airTrafficController": "Controladores de tráfico aéreo",
+      "military": "Personal militar",
+      "boxer": "Boxeadores profesionales",
+      "tableTennisPlayer": "Jugadores de tenis de mesa"
+    },
+    "animals": {
+      "fly": "mosca doméstica",
+      "dog": "Perros",
+      "cat": "gatos",
+      "cheetah": "Guepardo",
+      "snake": "serpientes",
+      "eagle": "Águilas",
+      "dragonfly": "Libélula",
+      "squirrel": "Ardillas",
+      "rabbit": "Conejos"
     }
   },
   "sequence": {

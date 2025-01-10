@@ -129,6 +129,42 @@
       "share": "分享",
       "title": "反应时间测试结果",
       "text": "我的反应时间是{time}ms，排名#{rank}！快来尝试一下吧！"
+    },
+    "introduce": {
+      "averageReactionTitle": "平均反应时间",
+      "averageReactionDesc": "人类的平均反应时间因年龄组而异：",
+      "definitionTitle": "反应时间的定义",
+      "definitionDesc": "反应时间是指呈现刺激和开始反应之间的时间间隔。",
+      "meaningTitle": "反应时间 含义",
+      "meaningDesc": "反应时间是认知和运动功能的重要衡量标准，反映了个体处理和响应刺激的速度。",
+      "professionalTitle": "专业要求",
+      "professionalDesc": "不同的职业需要不同水平的反应时间表现：",
+      "animalTitle": "动物反应时间",
+      "animalDesc": "不同的动物根据生存需要进化出了不同的反应时间：",
+      "AverageReactionTime": "平均反应时间",
+      "reactionTimeAverage": "人类对刺激作出反应所需的典型时间，通常在 150-300 毫秒之间。"
+    },
+    "professionals": {
+      "athlete": "运动员",
+      "raceDriver": "赛车手",
+      "pilot": "战斗机飞行员",
+      "surgeon": "外科医生",
+      "esportsPlayer": "电子竞技选手",
+      "airTrafficController": "空中交通管制员",
+      "military": "军事人员",
+      "boxer": "职业拳击手",
+      "tableTennisPlayer": "乒乓球运动员"
+    },
+    "animals": {
+      "fly": "家蝇",
+      "dog": "狗",
+      "cat": "猫",
+      "cheetah": "猎豹",
+      "snake": "蛇",
+      "eagle": "老鹰队",
+      "dragonfly": "蜻蜓",
+      "squirrel": "松鼠",
+      "rabbit": "兔子"
     }
   },
   "sequence": {

@@ -129,6 +129,42 @@
       "share": "Compartilhar",
       "title": "Resultado do teste de tempo de reação",
       "text": "Meu tempo de reação é {time}ms, classificado em #{rank}! Venha e experimente!"
+    },
+    "introduce": {
+      "averageReactionTitle": "Tempo médio de reação",
+      "averageReactionDesc": "O tempo médio de reação para humanos varia de acordo com a faixa etária:",
+      "definitionTitle": "Definição de Tempo de Reação",
+      "definitionDesc": "O tempo de reação é o intervalo entre a apresentação de um estímulo e o início de uma resposta.",
+      "meaningTitle": "Significado do tempo de reação",
+      "meaningDesc": "O tempo de reação é uma medida crucial da função cognitiva e motora, refletindo a rapidez com que um indivíduo pode processar e responder aos estímulos.",
+      "professionalTitle": "Requisitos Profissionais",
+      "professionalDesc": "Diferentes profissões exigem níveis variados de desempenho no tempo de reação:",
+      "animalTitle": "Tempos de reação animal",
+      "animalDesc": "Diferentes animais evoluíram vários tempos de reação com base nas suas necessidades de sobrevivência:",
+      "AverageReactionTime": "Tempo médio de reação",
+      "reactionTimeAverage": "O tempo típico que um ser humano leva para responder a um estímulo, geralmente varia entre 150-300 milissegundos."
+    },
+    "professionals": {
+      "athlete": "Atletas",
+      "raceDriver": "Pilotos de carros de corrida",
+      "pilot": "Pilotos de caça",
+      "surgeon": "Cirurgiões",
+      "esportsPlayer": "Jogadores de esportes eletrônicos",
+      "airTrafficController": "Controladores de tráfego aéreo",
+      "military": "Pessoal militar",
+      "boxer": "Pugilistas profissionais",
+      "tableTennisPlayer": "Jogadores de tênis de mesa"
+    },
+    "animals": {
+      "fly": "Mosca doméstica",
+      "dog": "Cães",
+      "cat": "Gatos",
+      "cheetah": "Chita",
+      "snake": "Cobras",
+      "eagle": "Águias",
+      "dragonfly": "Libélula",
+      "squirrel": "Esquilos",
+      "rabbit": "Coelhos"
     }
   },
   "sequence": {
