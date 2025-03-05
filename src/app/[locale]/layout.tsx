@@ -77,7 +77,7 @@ export default async function RootLayout({
         <head />
         <body className={cn(inter.className, sansFont.variable)}>
           <NextIntlClientProvider messages={messages}>
-            <ThemeProvider attribute="class">
+            <ThemeProvider attribute="class" forcedTheme="light">
               <GoogleOAuthProvider clientId={clientId}>
                 <Layout params={params} searchParams={searchParams}>{children}</Layout>
                 <GoogleAdsenseScript />

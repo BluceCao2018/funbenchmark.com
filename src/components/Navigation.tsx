@@ -188,9 +188,9 @@ export const Navigation = ({ categories }: navigationProp ) => {
             <Button variant="outline" className='text-sm tracking-tight'>{t('submitToolBtn')}</Button>
           </Link>*/}
           <div className="flex items-center gap-1">
-            <ThemeModeButton />
+            {/* <ThemeModeButton /> */}
             <LocaleButton />
-            <LoginButton />
+            {/* <LoginButton /> */}
           </div>
           {/*<Link
             href={"https://github.com/iAmCorey/devtoolset"}
