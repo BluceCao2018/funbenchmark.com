@@ -54,6 +54,16 @@ export function Footer() {
                   Reaction Time Test
                 </Link>
               </li>
+              <li>
+                <Link href="https://humanbenchmark.app/" className="text-base">
+                  Human Benchmark
+                </Link>
+              </li>
+              <li>
+                <Link href="https://humanbenchmark.app/tests/reactiontime" className="text-base">
+                  Human Benchmark Reaction Time Test
+                </Link>
+              </li>
               {/* <li>
                 <Link href="/article" className="text-base">
                   {t('article')}
